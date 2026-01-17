@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -288,7 +291,67 @@
                         <p>Det er ingen skam å brodde....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/m8RVnLS5ILfXjQdDlwfv1Ay5sa84S6qJJ3Z53UQj55PQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 15:54:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/nye-utsleppskrav-gjer-at-passasjerbatar-og-ferjer-ikkje-far-segle-fritt-i-verdsarvfjordane-lengre-1.17727939" target="_blank">Her får ikkje ferjene segle med utslepp lenger – men cruise­skipa får lov</a></h2>
+                        <p>Nye utsleppskrav gjer at passasjer­båtar og ferjer ikkje lengre får segle fritt i Geiranger­fjorden. Mangel på land­straum gjer at fleire må vente til sommaren før dei er tilbake i...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vG-RqDwH-a_A095tjQaa8grfC16tem83noHsp4CpXC0A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 16:01:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/lederflukt-i-generasjonspartiet_-nesten-alle-fylkesledere-har-trukket-seg-1.17725163" target="_blank">Lederflukt i Generasjonspartiet</a></h2>
+                        <p>Sammen med de fem som har blitt ekskludert på livstid, har nesten alle fylkeslederne i Generasjonspartiet trukket seg....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/VLW0RwbYnrDPLs8d0q7iUQqMrYaNS0we5bU26FJfRRuw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 16:52:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/nobelinstituttets-harpviken-svarer-etter-at-machado-ga-medaljen-til-trump-1.17731139" target="_blank">Nobelinstituttet: – Det er fredsprisvinner Machados valg</a></h2>
+                        <p>Nobelinstituttets leder sier de ikke fredsprisvinneres valg, men instituttet skriver på sine nettsider at æren og anerkjennelsen ikke kan overføres....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/F68xDKMXeZOw7bsUWiUEgAYHDVr5POmU7HJq1Gd4Q-GQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 15:54:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/ferja-norrona-i-oslo-_-med-1000-handballsupporterar-1.17730375" target="_blank">– Vi kan kjøpe heile Noreg om vi vil</a></h2>
+                        <p>Ferja Norröna la til kai fredag, lasta med 1000 færøyske handballfans som håpar å heie herrelandslaget sitt fram til siger i EM....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/VKx3ll_TRP3W9Zf3wtvhHQzfsEl76v-W2pvyK5rLaMgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 17:22:51 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/slapp-gjenstand-pa-gulvet_-krasjet-i-79-km_t-og-domt-til-fengsel-1.17730389" target="_blank">Trailersjåfør mistet vannflaske: Krasjet i 79 km/t</a></h2>
+                        <p>En yrkessjåfør bøyde seg ned for å plukke opp en flaske foran passasjersetet. Sekunder senere smalt det på E6....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F119053351.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D7e91e9a32378fb082d6d22a846aa7fb1c3edc7e95b01d360452a95e3376b5e1d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -565,67 +628,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/m8RVnLS5ILfXjQdDlwfv1Ay5sa84S6qJJ3Z53UQj55PQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 15:54:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/nye-utsleppskrav-gjer-at-passasjerbatar-og-ferjer-ikkje-far-segle-fritt-i-verdsarvfjordane-lengre-1.17727939" target="_blank">Her får ikkje ferjene segle med utslepp lenger – men cruise­skipa får lov</a></h2>
-                        <p>Nye utsleppskrav gjer at passasjer­båtar og ferjer ikkje lengre får segle fritt i Geiranger­fjorden. Mangel på land­straum gjer at fleire må vente til sommaren før dei er tilbake i...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vG-RqDwH-a_A095tjQaa8grfC16tem83noHsp4CpXC0A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 16:01:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/lederflukt-i-generasjonspartiet_-nesten-alle-fylkesledere-har-trukket-seg-1.17725163" target="_blank">Lederflukt i Generasjonspartiet</a></h2>
-                        <p>Sammen med de fem som har blitt ekskludert på livstid, har nesten alle fylkeslederne i Generasjonspartiet trukket seg....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/VLW0RwbYnrDPLs8d0q7iUQqMrYaNS0we5bU26FJfRRuw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 16:52:20 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/nobelinstituttets-harpviken-svarer-etter-at-machado-ga-medaljen-til-trump-1.17731139" target="_blank">Nobelinstituttet: – Det er fredsprisvinner Machados valg</a></h2>
-                        <p>Nobelinstituttets leder sier de ikke fredsprisvinneres valg, men instituttet skriver på sine nettsider at æren og anerkjennelsen ikke kan overføres....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/F68xDKMXeZOw7bsUWiUEgAYHDVr5POmU7HJq1Gd4Q-GQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 15:54:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/ferja-norrona-i-oslo-_-med-1000-handballsupporterar-1.17730375" target="_blank">– Vi kan kjøpe heile Noreg om vi vil</a></h2>
-                        <p>Ferja Norröna la til kai fredag, lasta med 1000 færøyske handballfans som håpar å heie herrelandslaget sitt fram til siger i EM....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/VKx3ll_TRP3W9Zf3wtvhHQzfsEl76v-W2pvyK5rLaMgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 17:22:51 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/slapp-gjenstand-pa-gulvet_-krasjet-i-79-km_t-og-domt-til-fengsel-1.17730389" target="_blank">Trailersjåfør mistet vannflaske: Krasjet i 79 km/t</a></h2>
-                        <p>En yrkessjåfør bøyde seg ned for å plukke opp en flaske foran passasjersetet. Sekunder senere smalt det på E6....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 17.01.2026 16:21</div>
+                <div class="footer">Sist oppdatert: 17.01.2026 16:25</div>
             </div>
         </body>
         </html>
