@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -120,7 +123,20 @@
                         <p>– Noen ganger er det en fordel og bedre enn det vi har utviklet selv, sier IT-direktøren....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 17:28:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
+                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
+– Jeg har gjort noe jeg angrer dypt på, si...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142515601.jpg%3F%26accessToken%3D43b19c86e2131207f99a74ac3b3db204c460441ff783304f419f7bb3c0a9ab95" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -178,19 +194,6 @@
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/431KRE/svaert-alvorlig-paa-flere-maater" target="_blank">– Svært alvorlig på flere måter</a></h2>
                         <p>Donald Trumps press mot Europa ligger som en skygge over uken som kommer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 17:28:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
-                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
-– Jeg har gjort noe jeg angrer dypt på, si...</p>
                     </div>
                 </div>
             
@@ -782,7 +785,7 @@
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 18.01.2026 20:21</div>
+                <div class="footer">Sist oppdatert: 18.01.2026 20:25</div>
             </div>
         </body>
         </html>
