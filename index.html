@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,7 +135,68 @@
                         <p>– Noen ganger er det en fordel og bedre enn det vi har utviklet selv, sier IT-direktøren....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/gb9DigdtnbLnkknyxnBZkA_FIfT8C3II11edjLOALN6Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 15:29:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mgp/ylvis-har-trekt-seg-fra-melodi-grand-prix-1.17729576" target="_blank">Trekte seg frå MGP – vil ikkje stå på same scene som Israel</a></h2>
+                        <p>Ylvis skulle eigentleg ha delteke i MGP-finalen 28. februar. No har brørne vald å trekke seg frå konkurransen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 17:28:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
+                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
+– Jeg har gjort noe jeg angrer dypt på, si...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142593029.jpg%3F%26accessToken%3Df04027a7bc848c4ca7567733eec720472d47e9df22451aeedcfdd074f8b97399" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 05:22:55 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/19/8321642/dollaren-under-press-etter-trumps-tolltrusler" target="_blank">Dollaren under press etter Trumps tolltrusler</a></h2>
+                        <p>Dollaren svekket seg i asiatisk handel mandag, og investorer som er urolige etter USAs president Donald Trumps siste tolltrusler mot Europa søkte i stedet til sikre havner som japa...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142593035.jpg%3F%26accessToken%3D92bfb86ddebf4a63681972630d683a1deca380ceaaefb43d4e840b75b2fc7e78" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 05:24:45 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/19/8321644/eus-gjengjeldelsestoll-kan-bli-pa-1-billion-kroner" target="_blank">EUs gjengjeldelsestoll: Kan bli på 1 billion kroner</a></h2>
+                        <p>EU vurderer tollsatser verdt 93 milliarder euro mot USA som svar på Trumps trusler, skriver avisa Financial Times....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 05:22:08 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/XM8egx/to-ungdommer-med-hjemme-alene-fest" target="_blank">– To ungdommer med hjemme alene-fest</a></h2>
+                        <p>Forvalter langer ut mot Equinor-topper i en ny rapport. Han mener de kaster bort «enorme» pengebeløp....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142593004.jpg%3F%26accessToken%3Da7b679031ab792829887ce89a171a997ab704ec4f33eaf9d03a644aa904573b1" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -166,18 +230,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/valuta/2026/01/19/8321640/bitcoin-faller-markant-etter-trumps-tolltrusler" target="_blank">Bitcoin faller markant etter Trumps tolltrusler</a></h2>
                         <p>Kryptovalutaer faller kraftig og etterspørselen etter sikre havner øker, etter USAs president Donald Trumps utspill om straffetoll mot åtte europeiske land....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/gb9DigdtnbLnkknyxnBZkA_FIfT8C3II11edjLOALN6Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 15:29:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mgp/ylvis-har-trekt-seg-fra-melodi-grand-prix-1.17729576" target="_blank">Trekte seg frå MGP – vil ikkje stå på same scene som Israel</a></h2>
-                        <p>Ylvis skulle eigentleg ha delteke i MGP-finalen 28. februar. No har brørne vald å trekke seg frå konkurransen....</p>
                     </div>
                 </div>
             
@@ -250,19 +302,6 @@
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/431KRE/svaert-alvorlig-paa-flere-maater" target="_blank">– Svært alvorlig på flere måter</a></h2>
                         <p>Donald Trumps press mot Europa ligger som en skygge over uken som kommer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 17:28:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
-                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
-– Jeg har gjort noe jeg angrer dypt på, si...</p>
                     </div>
                 </div>
             
@@ -746,43 +785,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F136272352.jpg%3F%26accessToken%3D87b15d9e54f98dea0627ed91ee40f836efd55f5d7779a037688904dc1fab62fe" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 07:38:27 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/makro/2026/01/18/8321538/jan-ludvig-andreassen-om-iran-venezuela-og-kuba-varsler-mulig-regimeskifte-i-tre-parasittstater" target="_blank">Jan Ludvig Andreassen: Varsler mulig regimeskifte i tre «parasittstater»</a></h2>
-                        <p>Sjeføkonomen mener krisene i Iran, Venezuela og Kuba er så dype at regimeendring kan bli uunngåelig....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F133826544.jpg%3F%26accessToken%3D97b8d519a47873e05f2e972b28e64e1606b38ed723aace9feb102c54fa02c0e4" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 07:55:00 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/shipping/2026/01/18/8321548/tankratene-eksploderer-naermer-seg-toppnivaer" target="_blank">Tankratene eksploderer - nærmer seg toppnivåer</a></h2>
-                        <p>Oljetankmarkedet løftes kraftig. VLCC-ratene er opp over 20 prosent siste uken og nærmer seg toppnivåene fra november....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142525081.jpg%3F%26accessToken%3D0ea059c4d0fde136d721c60f3d8f31a2c6185ecc35e6c23e375a4d0334d4aa1f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 08:15:57 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/18/8321365/sondagens-aksjetips-lange-renten-rett-opp-salgssignal-i-medistim-photocure-er-usikker" target="_blank">Søndagens aksjetips: All-time high for syvende gang i år. Salgssignal i Medistim. Photocure er usikker.</a></h2>
-                        <p>Søndagens aksjetips er en teknisk analyse av hovedindeksen på Oslo Børs, Brent, oljeprisen og den amerikanske 10-årsrenten, aksjer, valuta, råvarer som olje og gull, og kryptovalut...</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 19.01.2026 05:21</div>
+                <div class="footer">Sist oppdatert: 19.01.2026 05:25</div>
             </div>
         </body>
         </html>
