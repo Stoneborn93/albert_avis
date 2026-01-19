@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -98,6 +101,30 @@
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
                 <div class="card">
+                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/bfdf7279-a331-4861-ac09-9809f1996ea3?fit=crop&format=auto&h=900&w=1600&s=ce6310cb675ec2750b605919d458147fead2c739" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Teknologi">Teknologi</span> 
+                            Mon, 19 Jan 2026 13:57:40 GMT
+                        </div>
+                        <h2><a href="https://www.tek.no/i/9pOAvr" target="_blank">Kreftsyk fan skal ha fått spille «GTA 6» tidlig</a></h2>
+                        <p>Fikk beskjed om at han bare har seks til tolv måneder igjen å leve....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/2022efd6-e2e5-4074-9de3-ccad01d10c38?fit=crop&format=auto&h=900&w=1600&s=1a1c532bb4157dbec9457dfa9c165834f956c02e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Teknologi">Teknologi</span> 
+                            Mon, 19 Jan 2026 14:00:00 GMT
+                        </div>
+                        <h2><a href="https://www.tek.no/i/431GWe" target="_blank">Honor tilbyr den smidigste brukeropplevelsen</a></h2>
+                        <p>Magic8 Pro starter mobilåret med et pang....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
                     <div class="card-image"><img src="https://images.gfx.no/1000/2907/2907894/COLOURBOX43719120.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -132,7 +159,7 @@
                         <p>Selskapet flytter ressurser til roboter og smartbriller....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142650806.jpg%3F%26accessToken%3D80e2e5b8425ad6e3c235bbee3263dee76128a718594e463d72967421661e58c8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -757,31 +784,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F102676789.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D96fa3251f2c3ff1b57ab277b672daf900c0667758e9b41254e1f3acc1dfe2460" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 06:03:34 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/19/8321650/mandagens-hoydepunkter" target="_blank">Mandagens høydepunkter</a></h2>
-                        <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F113477820.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D5b3e6ebc9b841a6c159d52dad1013ffdfdf146ddc173cd4b018228a7895091eb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 06:06:24 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/19/8321559/magnus-norderhaug-har-funnet-fem-nordiske-aksjer-som-er-blitt-billige" target="_blank">Magnus Norderhaug har funnet fem nordiske aksjer som er blitt billige</a></h2>
-                        <p>Investeringsdirektør Magnus Norderhaug diskuterer selskaper som har møtt midlertidig motvind, men nå ligger an til å få et godt 2026....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 19.01.2026 14:21</div>
+                <div class="footer">Sist oppdatert: 19.01.2026 14:25</div>
             </div>
         </body>
         </html>
