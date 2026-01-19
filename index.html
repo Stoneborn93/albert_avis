@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -61,6 +64,18 @@
             <div class="container">
                 <h1>📰 Albert Avis</h1>
                 <h2 class='section-title'>🎮 Spill</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://i.bo3.no/image/389900/Vice_City_03.jpg?c=0&h=337&w=599" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Spill">Spill</span> 
+                            Mon, 19 Jan 2026 11:23:00 +0100
+                        </div>
+                        <h2><a href="https://www.gamer.no/artikler/eksplosjon-i-rockstar-north-bygningen/519861" target="_blank">Eksplosjon i Rockstar North-bygningen</a></h2>
+                        <p>Årsaken er foreløpig uklar....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://i.bo3.no/image/389888/Skjermbilde%202026-01-19%20155602.png?c=0&h=337&w=600" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -96,18 +111,6 @@
                         <p>Mener arbeidsgiveren presset ham ut....</p>
                     </div>
                 </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://i.bo3.no/image/389802/hans-zimmer-og-bleed_69697cf525c1a.jpg?c=0&h=337&w=599" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Spill">Spill</span> 
-                            Sun, 18 Jan 2026 17:55:00 +0100
-                        </div>
-                        <h2><a href="https://www.gamer.no/artikler/hans-zimmer-skal-lage-musikk-til-harry-potter-serien/519844" target="_blank">Hans Zimmer skal lage musikk til Harry Potter-serien</a></h2>
-                        <p>...</p>
-                    </div>
-                </div>
             <h2 class='section-title'>💻 Teknologi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/23713ae7-523a-40e2-9fc5-49269afed1b6?fit=crop&format=auto&h=900&w=1600&s=8a728722d4149386afba01d333cc01aaef6feb66" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
@@ -120,7 +123,68 @@
                         <p>Selskapet flytter ressurser til roboter og smartbriller....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/gb9DigdtnbLnkknyxnBZkA_FIfT8C3II11edjLOALN6Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 15:29:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mgp/ylvis-har-trekt-seg-fra-melodi-grand-prix-1.17729576" target="_blank">Trekte seg frå MGP – vil ikkje stå på same scene som Israel</a></h2>
+                        <p>Ylvis skulle eigentleg ha delteke i MGP-finalen 28. februar. No har brørne vald å trekke seg frå konkurransen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 17:28:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
+                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
+– Jeg har gjort noe jeg angrer dypt på, si...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142627846.jpg%3F%26accessToken%3Dbea608367823a0b28d0e2ed668aa9da8860cd64ccaf1f7e361a3f01051096b45" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 10:22:54 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/01/19/8321730/produserer-mer-kull-enn-noensinne" target="_blank">Produserer mer kull enn noensinne</a></h2>
+                        <p>Kinas kullproduksjon steg til ny rekord i 2025, selv om forbruket gikk ned....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57378060.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D7263d2185f11e15141e0dc1cfa26d207c459621900bb86d0603fc7e37a1dfbfe" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 10:23:14 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/motor/2026/01/19/8321725/volvo-og-tesla-vinner-pa-tollavtale-som-trosser-trump" target="_blank">Volvo og Tesla vinner på tollavtale som trosser Trump</a></h2>
+                        <p>Canada åpner for 49.000 Kina-produserte elbiler i året til 6,1 prosent toll. Tesla og Geely-eide Volvo og Polestar ligger an til å bli de første vinnerne....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142626059.jpg%3F%26accessToken%3D13003983048887243951730816256d5af464bf0c3f906b8ad2e85888a9f30596" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 10:24:59 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/19/8321717/rekordlav-fodselsrate-i-kina-vanskelig-trend-a-snu-mener-eksperter" target="_blank">Kinas store hodepine: – En kampestein i utforbakke</a></h2>
+                        <p>Beijing prøver «alt» for å få fart på fødselsraten, men ingenting virker. I fjor falt antall fødsler til det laveste noensinne registrert....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142618647.jpg%3F%26accessToken%3D6a96cfe9ac33f4815ce1b9d1d8ed7b9b47044aa329ca9cdd4031f937aec44e6c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -614,18 +678,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/gb9DigdtnbLnkknyxnBZkA_FIfT8C3II11edjLOALN6Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 15:29:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mgp/ylvis-har-trekt-seg-fra-melodi-grand-prix-1.17729576" target="_blank">Trekte seg frå MGP – vil ikkje stå på same scene som Israel</a></h2>
-                        <p>Ylvis skulle eigentleg ha delteke i MGP-finalen 28. februar. No har brørne vald å trekke seg frå konkurransen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -698,19 +750,6 @@
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 17:28:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
-                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
-– Jeg har gjort noe jeg angrer dypt på, si...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F139455356.jpg%3F%26accessToken%3Dbc9a47316dbba22218be7fd9b316177c962fd9712f86f0816853d7c496879fea" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -746,43 +785,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 17:13:09 GMT
-                        </div>
-                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/y5Rrdg/eide-svaert-dramatiske-og-historiske-tider" target="_blank">Eide: – Svært dramatiske og historiske tider</a></h2>
-                        <p>Utenriksminister Espen Barth Eide er tydelig på at Norge og Danmark ikke vil la seg presse gjennom amerikanske trusler om toll....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F117842233.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D585cd1343055e9d801a6f9b75c5b15b892007ec86b581dbaec53073d8f3726bd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 15:37:13 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/personlig-okonomi/2026/01/18/8321485/eksperter-uenige-om-ips-vs.-ask-kommer-soleklart-bedre-ut" target="_blank">IPS eller ASK: Eksperter er uenige</a></h2>
-                        <p>Eksperter fra DNB og Nordnet har helt motsatt anbefaling i valget mellom ASK og IPS. Sparehorisont og forventet avkastning er to av faktorene som snur opp ned på regnestykket. - IP...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142582840.jpg%3F%26accessToken%3D982c78fa54e96caaa2417367956334e992af869c2ca6c423f468f025e3ed119d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 15:55:28 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/18/8321627/usas-finansminister-europa-utstraler-svakhet" target="_blank">USAs finansminister: – Europa utstråler svakhet</a></h2>
-                        <p>Europa utstråler svakhet når det gjelder Grønland-spørsmålet, sier USAs finansminister Scott Bessent etter Donald Trumps tollvarsler mot Norge og andre land....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 19.01.2026 10:21</div>
+                <div class="footer">Sist oppdatert: 19.01.2026 10:25</div>
             </div>
         </body>
         </html>
