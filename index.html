@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -144,7 +147,80 @@
                         <p>Selskapet flytter ressurser til roboter og smartbriller....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/12FzdtuuBMMRtjlgrQnX9w6YcfrJnWHBGGapxgRFlstg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 04:17:33 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/trump-med-ny-gronland-melding_-_-na-er-tiden-inne-1.17733081" target="_blank">Trump om Nobels fredspris: – Norge kontrollerer den</a></h2>
+                        <p>USAs president Donald Trump tror ikke på at norske myndigheter ikke kontrollerer utdelingen av Nobels fredspris....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/XZUYFL5lmMDptolryuoOBwgtQ6Xskqq4Kv7-4rqnCTrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:48:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/i-dag-er-_quitter_s-day_-_-dette-skal-til-for-a-holde-nyttarsforsettene-1.17730629" target="_blank">I dag slutter mange å trene – slik holder du nyttårsforsettene hele året</a></h2>
+                        <p>Mange gir seg i dag, men Sats-medlemmer har blitt flinkere til å holde på nyttårsløftene sine. Her er ekspertenes beste tips for å holde ut....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:52:37 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/avis_-motelegende-valentino-garavani-er-dod-1.17734392" target="_blank">Avis: Motelegende Valentino Garavani er død</a></h2>
+                        <p>Motelegenden og designeren Valentino Garavani er død, 93 år gammel. Det melder avisa La Repubblica.
+Garavani står bak merket «Valentino», som er kjent for både klær og parfymer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MgWEj5-5n3d7t3CNLioN9ApY9dvF9fWfMnu9SUjH4c4w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:49:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/flytrafikken-i-noreg-2025_-tilbake-til-nivaet-for-pandemien-1.17730940" target="_blank">Avinor friskmeldt: Passasjertala nærmar seg 2019-nivå</a></h2>
+                        <p>Seks år etter at trafikken kollapsa under pandemien, er talet på reisande tilbake til «normalen». Det er godt nytt for den norske flyplasseigaren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:59:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/motelegende-valentino-garavani-er-dod-1.17734406" target="_blank">Motelegende Valentino Garavani er død</a></h2>
+                        <p>Den italienske motedesigneren Valentino Garavani ble 93 år....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142677333.jpg%3F%26accessToken%3Dbcd55773a37453d7d42f7814b04e1baa47e028cbe8c7a8976e551529991ddf4e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 17:21:59 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/19/8321822/stoltenberg-frykter-toll-pa-40-prosent" target="_blank">Stoltenberg: Frykter toll på 40 prosent</a></h2>
+                        <p>Stoltenberg advarer mot skyhøy amerikansk toll. Men han vil ikke ha en handelsavtale for enhver pris: – Grenser for hva Norge bør gi....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142685459.jpg%3F%26accessToken%3D5a07651f72a1c715095fdb0be1a21c04c549afff4d953aa993af819f1de4b459" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -214,67 +290,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/16B9Xe/tollfrykt-gir-smell-for-europeiske-bilaksjer-analytikere-ser-mulig-milliardsmell" target="_blank">Tollfrykt gir smell for europeiske bilaksjer</a></h2>
                         <p>Tyske bilgiganter falt tungt på børsen. Analytikere beregner mulig milliardsmell....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/12FzdtuuBMMRtjlgrQnX9w6YcfrJnWHBGGapxgRFlstg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 04:17:33 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/trump-med-ny-gronland-melding_-_-na-er-tiden-inne-1.17733081" target="_blank">Trump om Nobels fredspris: – Norge kontrollerer den</a></h2>
-                        <p>USAs president Donald Trump tror ikke på at norske myndigheter ikke kontrollerer utdelingen av Nobels fredspris....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/XZUYFL5lmMDptolryuoOBwgtQ6Xskqq4Kv7-4rqnCTrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:48:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/i-dag-er-_quitter_s-day_-_-dette-skal-til-for-a-holde-nyttarsforsettene-1.17730629" target="_blank">I dag slutter mange å trene – slik holder du nyttårsforsettene hele året</a></h2>
-                        <p>Mange gir seg i dag, men Sats-medlemmer har blitt flinkere til å holde på nyttårsløftene sine. Her er ekspertenes beste tips for å holde ut....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:52:37 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/avis_-motelegende-valentino-garavani-er-dod-1.17734392" target="_blank">Avis: Motelegende Valentino Garavani er død</a></h2>
-                        <p>Motelegenden og designeren Valentino Garavani er død, 93 år gammel. Det melder avisa La Repubblica.
-Garavani står bak merket «Valentino», som er kjent for både klær og parfymer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MgWEj5-5n3d7t3CNLioN9ApY9dvF9fWfMnu9SUjH4c4w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:49:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/flytrafikken-i-noreg-2025_-tilbake-til-nivaet-for-pandemien-1.17730940" target="_blank">Avinor friskmeldt: Passasjertala nærmar seg 2019-nivå</a></h2>
-                        <p>Seks år etter at trafikken kollapsa under pandemien, er talet på reisande tilbake til «normalen». Det er godt nytt for den norske flyplasseigaren....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:59:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/motelegende-valentino-garavani-er-dod-1.17734406" target="_blank">Motelegende Valentino Garavani er død</a></h2>
-                        <p>Den italienske motedesigneren Valentino Garavani ble 93 år....</p>
                     </div>
                 </div>
             
@@ -770,19 +785,7 @@ Garavani står bak merket «Valentino», som er kjent for både klær og parfyme
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 08:55:41 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/8p6GPQ/dette-tror-dnb-toppen-om-2026" target="_blank">DNB-toppens 2026-bekymringer</a></h2>
-                        <p>Selv om det for mange kan virke som at verden går av hengslene, har DNB-toppen klokkertro på flere norske næringer i året som nå kommer....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 19.01.2026 17:21</div>
+                <div class="footer">Sist oppdatert: 19.01.2026 17:25</div>
             </div>
         </body>
         </html>
