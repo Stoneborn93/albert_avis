@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -96,7 +99,44 @@
                         <p>...</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/gb9DigdtnbLnkknyxnBZkA_FIfT8C3II11edjLOALN6Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 15:29:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mgp/ylvis-har-trekt-seg-fra-melodi-grand-prix-1.17729576" target="_blank">Trekte seg frå MGP – vil ikkje stå på same scene som Israel</a></h2>
+                        <p>Ylvis skulle eigentleg ha delteke i MGP-finalen 28. februar. No har brørne vald å trekke seg frå konkurransen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 16 Jan 2026 17:28:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
+                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
+– Jeg har gjort noe jeg angrer dypt på, si...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F139554208.jpg%3F%26accessToken%3D55f456f6d631a93ba1499724cc15b0d4284f177de461b7a29dd258bb6df3730a" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 08:21:50 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/sjomat/2026/01/19/8321671/ny-tolluro-disse-aksjene-kan-rammes" target="_blank">Nye tolltrusler gir kursfall for oppdretterne – her er aksjene som kommer best og verst ut</a></h2>
+                        <p>Nye tolltrusler gir kursfall for oppdretterne. Dette er aksjene som kommer best og verst ut, ifølge analytikerne....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F138313705.jpg%3F%26accessToken%3D72082b62c84ae669d23a807f2e30ad535b4866ea3ba1123d51f2019f3a5d0631" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -422,18 +462,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/gb9DigdtnbLnkknyxnBZkA_FIfT8C3II11edjLOALN6Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 15:29:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mgp/ylvis-har-trekt-seg-fra-melodi-grand-prix-1.17729576" target="_blank">Trekte seg frå MGP – vil ikkje stå på same scene som Israel</a></h2>
-                        <p>Ylvis skulle eigentleg ha delteke i MGP-finalen 28. februar. No har brørne vald å trekke seg frå konkurransen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -502,19 +530,6 @@
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/431KRE/svaert-alvorlig-paa-flere-maater" target="_blank">– Svært alvorlig på flere måter</a></h2>
                         <p>Donald Trumps press mot Europa ligger som en skygge over uken som kommer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 16 Jan 2026 17:28:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/nordlys_-sandra-borch-tatt-to-ganger-for-promillekjoring-1.17731275" target="_blank">Nordlys: Sandra Borch tatt to ganger for promillekjøring</a></h2>
-                        <p>Tidligere statsråd Sandra Borch (37) innrømmer overfor avisa Nordlys å ha blitt tatt for å ha kjørt i alkoholpåvirket tilstand to ganger.
-– Jeg har gjort noe jeg angrer dypt på, si...</p>
                     </div>
                 </div>
             
@@ -770,19 +785,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 18 Jan 2026 12:53:14 GMT
-                        </div>
-                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/16BGnl/finnes-det-en-vei-ut-av-konflikten-mellom-trump-og-powell" target="_blank">Finnes det en vei ut av konflikten mellom Trump og Powell?</a></h2>
-                        <p>Forholdet mellom Trump-administrasjonen og den amerikanske sentralbanken har blitt stadig mer anspent i løpet av det siste året og ser nå ut til å ha nådd bristepunktet....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 19.01.2026 08:21</div>
+                <div class="footer">Sist oppdatert: 19.01.2026 08:25</div>
             </div>
         </body>
         </html>
