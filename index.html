@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -108,7 +111,7 @@
                         <p>Magic8 Pro starter mobilåret med et pang....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/oycQ3VgjF8E4wTBsBQTXggSjXBA_yVZ6F9o8MCwStzYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -134,18 +137,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F99552472.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D4c4ba6d243457e5f77bf160e74a5a6a0c70fa61f57ec5e76daf11fed7be5cb82" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 21:32:33 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/01/19/8321871/krever-restaurant-i-hjembyen-konkurs" target="_blank">Krever restaurant i hjembyen konkurs</a></h2>
-                        <p>Petter Stordalen begjærer konkurs for restaurant som bærer hans navn – etter langvarig navnestrid i Porsgrunn....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/VmxIUO0wCCELTpRSTISDswIj5oDzcxSK9wvYvk5hoSgw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -154,42 +145,6 @@
                         </div>
                         <h2><a href="https://www.nrk.no/nordland/sosiale-medium-og-krenking_-kvinne-held-fram-med-videoar-trass-dom-1.17726874" target="_blank">Dømd for videohets mot offentlege tilsette – held fram med å legge ut videoar</a></h2>
                         <p>Tingretten frådømde kvinne retten til å bruke sosiale medium-kontoar, men ho held fram med å publisere videoar i påvente av ankesaka. Det reagerer dei fornærma på....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142691713.png%3F%26accessToken%3D0839f0731dfdc219b565d4c07963341c352a6461f8f9269d0df8092068f0c424" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 20:46:30 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/19/8321866/apent-frontalangrep-han-er-en-idiot" target="_blank">Åpent frontalangrep: – Han er en idiot</a></h2>
-                        <p>Elon Musk og Ryanair-sjef Michael O’Leary har havnet i en offentlig krangel om Starlink og Wi-Fi-tilbudet om bord i fly....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142691917.jpg%3F%26accessToken%3D0fba5ff87fb17acb6630c50ca9bdf969d3ead070801a7317329d1d6899293056" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 21:09:31 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/19/8321869/norfund-sjefen-gar-av" target="_blank">Norfund-sjefen går av</a></h2>
-                        <p>Tellef Thorleifsson, som har ledet statens investeringsfond for utviklingsland, forlater Norfund etter sju år. Han kaller Norges klimabidrag «puslete»....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 20:34:07 GMT
-                        </div>
-                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/aJPk7O/ett-aar-med-trump-en-parodi" target="_blank">Ett år med Trump: – En parodi</a></h2>
-                        <p>Handelskrigen som stadig blusser opp, peker seg ut etter Donald Trumps første år tilbake i Det hvite hus....</p>
                     </div>
                 </div>
             
@@ -242,42 +197,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142691172.jpg%3F%26accessToken%3Da6a2da51b9e18ba074c6be01030c685c8c92385cab0dd3e7ca44855934161261" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 19:54:49 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/01/19/8321864/historisk-skifte-for-carlsberg" target="_blank">Historisk skifte for Carlsberg</a></h2>
-                        <p>Carlsbergs ølsalg faller til under 50 prosent for første gang. Nå vokser konsernet raskt på brus, alkoholfritt øl og partnerskap med Pepsi....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F94918488.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dcbbf3cf0a0f82eba79dbf0fa3ef6d4c81fb3fd291e7626946315dcda34377c74" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 20:00:02 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/bolig/2026/01/19/8321788/norges-storste-skatteparadis" target="_blank">Norges største skatteparadis: Bygdøy-villa solgt for 145 mill. – skatteverdi 24 mill.</a></h2>
-                        <p>Store mengder nordmenn får skattesjokk etter kjempehopp i skatteverdien på boliger. Mens vanlige boligeiere på Oslo vest og Bærum må punge ut med fulle verdier, får fortsatt krembo...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 19 Jan 2026 20:10:05 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/PdRx85/stordalen-begjaerer-porsgrunn-restaurant-konkurs" target="_blank">Stordalen begjærer Porsgrunn-restaurant konkurs</a></h2>
-                        <p>Hotellmilliardær Petter Stordalen er navnekrangel med en restauranteier i hjembyen Porsgrunn. Nå får striden en ny omdreining....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/YJKDy5Ooa-nfwpsGpmhGZAWb_LxOyBtiLzzWbGZUjsNg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -312,6 +231,235 @@
                         <p>Strømsgodset og hovedtrener Dag-Eilev Fagermo er blitt enige om å avslutte arbeidsforholdet.
 Det skriver klubben i en pressemelding mandag kveld:
 «Partene er uenige om hva slags ko...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Q0bu9ECM_M-IjF06-Bn2mAXVXDr7Rt6fkCm6NMpSIw9g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 14:57:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/tiltalt-for-drapsforsok-med-ein-mercedes-i-sarpsborg_-koyrde-pa-ein-mann-i-28-km_t-1.17726803" target="_blank">Tiltalt for drapsforsøk: Køyrde på ein mann i 28 km/t</a></h2>
+                        <p>Ein 27-åring er tiltalt for to drapsforsøk med bil, grov vald og grove truslar. No risikerer han å bli dømd til forvaring....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/J9IZEgDLX5o7xGXDP3xBvwG5OrMvdYDMviSjtC05kcvQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 18:54:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/gullprisen-skyt-til-vers-etter-trumps-tolltruslar-1.17733363" target="_blank">Trump truar med toll: Gullprisen skyt til vêrs</a></h2>
+                        <p>Usikkerheit i verda gjer ofte at fleire investerer i gull. Nå knuser gullprisen alle rekordar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/eTm5vYAJs2UmnU-MyIR5AQpTCBOjqcbd7HDMv3tOwucA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 14:45:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/forvirret-om-gronland_-trump-og-nato_-send-inn-sporsmal-her_-1.17734070" target="_blank">Forvirret om Grønland, Trump og Nato? Send inn spørsmål her!</a></h2>
+                        <p>Send inn dine spørsmål, og få svar på det du lurer på i Debatten tirsdag kveld....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:59:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/motelegende-valentino-garavani-er-dod-1.17734406" target="_blank">Motelegende Valentino Garavani er død</a></h2>
+                        <p>Den italienske motedesigneren Valentino Garavani ble 93 år gammel....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ac_wzqHazSFIhNozmAh33gxHWvbtlieT3CVBWS5Vg1AQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 17:06:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/danmark-foreslar-nato-styrke-pa-gronland-_-vil-ha-med-norge-1.17734394" target="_blank">Danmark foreslår Nato-styrke på Grønland – vil ha med Norge</a></h2>
+                        <p>På et møte med Nato-sjef Mark Rutte mandag har Danmarks forsvarsminister Troels Lund Poulsen og Grønlands utenriksminister Vivian Motzfeldt foreslått en Nato-styrke på Grønland og ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/azYdNjcN5gjriMGq6YWSBgAr8kykKsVl1iVbaJJ87mLg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:03:57 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/kaldare-ver-i-heile-noreg-_-gode-sjansar-for-a-sja-nordlys-i-nord-noreg-1.17733977" target="_blank">No blir det kaldare i heile landet – gode nordlyssjansar i nord</a></h2>
+                        <p>Vintertemperaturen kjem tilbake i heile Noreg dei neste dagane. I Nord-Noreg er det sjansar for himmelshow....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ac_wzqHazSFIhNozmAh33gxHWvbtlieT3CVBWS5Vg1AQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 17:06:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/danmark-foreslo-nato-styrke-pa-gronland-og-i-arktis-for-nato-sjefen-1.17734394" target="_blank">Danmark foreslo Nato-styrke på Grønland og i Arktis for Nato-sjefen</a></h2>
+                        <p>På et møte med Nato-sjef Mark Rutte mandag har Danmarks forsvarsminister Troels Lund Poulsen og Grønlands utenriksminister Vivian Motzfeldt foreslått en Nato-styrke på Grønland og ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/12FzdtuuBMMRtjlgrQnX9w6YcfrJnWHBGGapxgRFlstg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 04:17:33 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/trump-med-ny-gronland-melding_-_-na-er-tiden-inne-1.17733081" target="_blank">Trump om Nobels fredspris: – Norge kontrollerer den</a></h2>
+                        <p>USAs president Donald Trump tror ikke på at norske myndigheter ikke kontrollerer utdelingen av Nobels fredspris....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/XZUYFL5lmMDptolryuoOBwgtQ6Xskqq4Kv7-4rqnCTrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:48:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/i-dag-er-_quitter_s-day_-_-dette-skal-til-for-a-holde-nyttarsforsettene-1.17730629" target="_blank">I dag slutter mange å trene – slik holder du nyttårsforsettene hele året</a></h2>
+                        <p>Mange gir seg i dag, men Sats-medlemmer har blitt flinkere til å holde på nyttårsløftene sine. Her er ekspertenes beste tips for å holde ut....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:52:37 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/avis_-motelegende-valentino-garavani-er-dod-1.17734392" target="_blank">Avis: Motelegende Valentino Garavani er død</a></h2>
+                        <p>Motelegenden og designeren Valentino Garavani er død, 93 år gammel. Det melder avisa La Repubblica.
+Garavani står bak merket «Valentino», som er kjent for både klær og parfymer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MgWEj5-5n3d7t3CNLioN9ApY9dvF9fWfMnu9SUjH4c4w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:49:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/flytrafikken-i-noreg-2025_-tilbake-til-nivaet-for-pandemien-1.17730940" target="_blank">Avinor friskmeldt: Passasjertala nærmar seg 2019-nivå</a></h2>
+                        <p>Seks år etter at trafikken kollapsa under pandemien, er talet på reisande tilbake til «normalen». Det er godt nytt for den norske flyplasseigaren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 16:59:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/motelegende-valentino-garavani-er-dod-1.17734406" target="_blank">Motelegende Valentino Garavani er død</a></h2>
+                        <p>Den italienske motedesigneren Valentino Garavani ble 93 år....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F99552472.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D4c4ba6d243457e5f77bf160e74a5a6a0c70fa61f57ec5e76daf11fed7be5cb82" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 21:32:33 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/01/19/8321871/krever-restaurant-i-hjembyen-konkurs" target="_blank">Krever restaurant i hjembyen konkurs</a></h2>
+                        <p>Petter Stordalen begjærer konkurs for restaurant som bærer hans navn – etter langvarig navnestrid i Porsgrunn....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142691713.png%3F%26accessToken%3D0839f0731dfdc219b565d4c07963341c352a6461f8f9269d0df8092068f0c424" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 20:46:30 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/01/19/8321866/apent-frontalangrep-han-er-en-idiot" target="_blank">Åpent frontalangrep: – Han er en idiot</a></h2>
+                        <p>Elon Musk og Ryanair-sjef Michael O’Leary har havnet i en offentlig krangel om Starlink og Wi-Fi-tilbudet om bord i fly....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142691917.jpg%3F%26accessToken%3D0fba5ff87fb17acb6630c50ca9bdf969d3ead070801a7317329d1d6899293056" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 21:09:31 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/19/8321869/norfund-sjefen-gar-av" target="_blank">Norfund-sjefen går av</a></h2>
+                        <p>Tellef Thorleifsson, som har ledet statens investeringsfond for utviklingsland, forlater Norfund etter sju år. Han kaller Norges klimabidrag «puslete»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 20:34:07 GMT
+                        </div>
+                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/aJPk7O/ett-aar-med-trump-en-parodi" target="_blank">Ett år med Trump: – En parodi</a></h2>
+                        <p>Handelskrigen som stadig blusser opp, peker seg ut etter Donald Trumps første år tilbake i Det hvite hus....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142691172.jpg%3F%26accessToken%3Da6a2da51b9e18ba074c6be01030c685c8c92385cab0dd3e7ca44855934161261" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 19:54:49 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/01/19/8321864/historisk-skifte-for-carlsberg" target="_blank">Historisk skifte for Carlsberg</a></h2>
+                        <p>Carlsbergs ølsalg faller til under 50 prosent for første gang. Nå vokser konsernet raskt på brus, alkoholfritt øl og partnerskap med Pepsi....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F94918488.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dcbbf3cf0a0f82eba79dbf0fa3ef6d4c81fb3fd291e7626946315dcda34377c74" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 20:00:02 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/bolig/2026/01/19/8321788/norges-storste-skatteparadis" target="_blank">Norges største skatteparadis: Bygdøy-villa solgt for 145 mill. – skatteverdi 24 mill.</a></h2>
+                        <p>Store mengder nordmenn får skattesjokk etter kjempehopp i skatteverdien på boliger. Mens vanlige boligeiere på Oslo vest og Bærum må punge ut med fulle verdier, får fortsatt krembo...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 19 Jan 2026 20:10:05 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/PdRx85/stordalen-begjaerer-porsgrunn-restaurant-konkurs" target="_blank">Stordalen begjærer Porsgrunn-restaurant konkurs</a></h2>
+                        <p>Hotellmilliardær Petter Stordalen er navnekrangel med en restauranteier i hjembyen Porsgrunn. Nå får striden en ny omdreining....</p>
                     </div>
                 </div>
             
@@ -400,42 +548,6 @@ Det skriver klubben i en pressemelding mandag kveld:
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Q0bu9ECM_M-IjF06-Bn2mAXVXDr7Rt6fkCm6NMpSIw9g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 14:57:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/tiltalt-for-drapsforsok-med-ein-mercedes-i-sarpsborg_-koyrde-pa-ein-mann-i-28-km_t-1.17726803" target="_blank">Tiltalt for drapsforsøk: Køyrde på ein mann i 28 km/t</a></h2>
-                        <p>Ein 27-åring er tiltalt for to drapsforsøk med bil, grov vald og grove truslar. No risikerer han å bli dømd til forvaring....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/J9IZEgDLX5o7xGXDP3xBvwG5OrMvdYDMviSjtC05kcvQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 18:54:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/gullprisen-skyt-til-vers-etter-trumps-tolltruslar-1.17733363" target="_blank">Trump truar med toll: Gullprisen skyt til vêrs</a></h2>
-                        <p>Usikkerheit i verda gjer ofte at fleire investerer i gull. Nå knuser gullprisen alle rekordar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/eTm5vYAJs2UmnU-MyIR5AQpTCBOjqcbd7HDMv3tOwucA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 14:45:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/forvirret-om-gronland_-trump-og-nato_-send-inn-sporsmal-her_-1.17734070" target="_blank">Forvirret om Grønland, Trump og Nato? Send inn spørsmål her!</a></h2>
-                        <p>Send inn dine spørsmål, og få svar på det du lurer på i Debatten tirsdag kveld....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135257692.jpg%3F%26accessToken%3Da3bcff6a0527b88687110ffd688f0fc4240f4c5bf1c406c9bd496b01f7e3cd33" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -456,54 +568,6 @@ Det skriver klubben i en pressemelding mandag kveld:
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/19/8321792/kompetansekrise-i-sakte-film" target="_blank">Kompetansekrise i sakte film</a></h2>
                         <p>Vi ber ungdom forberede seg på morgendagens arbeidsliv, men utdanningssektoren henger etter, skriver Hege Ulveland i NKI Nettstudier....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:59:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/motelegende-valentino-garavani-er-dod-1.17734406" target="_blank">Motelegende Valentino Garavani er død</a></h2>
-                        <p>Den italienske motedesigneren Valentino Garavani ble 93 år gammel....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ac_wzqHazSFIhNozmAh33gxHWvbtlieT3CVBWS5Vg1AQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 17:06:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/danmark-foreslar-nato-styrke-pa-gronland-_-vil-ha-med-norge-1.17734394" target="_blank">Danmark foreslår Nato-styrke på Grønland – vil ha med Norge</a></h2>
-                        <p>På et møte med Nato-sjef Mark Rutte mandag har Danmarks forsvarsminister Troels Lund Poulsen og Grønlands utenriksminister Vivian Motzfeldt foreslått en Nato-styrke på Grønland og ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/azYdNjcN5gjriMGq6YWSBgAr8kykKsVl1iVbaJJ87mLg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:03:57 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/kaldare-ver-i-heile-noreg-_-gode-sjansar-for-a-sja-nordlys-i-nord-noreg-1.17733977" target="_blank">No blir det kaldare i heile landet – gode nordlyssjansar i nord</a></h2>
-                        <p>Vintertemperaturen kjem tilbake i heile Noreg dei neste dagane. I Nord-Noreg er det sjansar for himmelshow....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ac_wzqHazSFIhNozmAh33gxHWvbtlieT3CVBWS5Vg1AQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 17:06:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/danmark-foreslo-nato-styrke-pa-gronland-og-i-arktis-for-nato-sjefen-1.17734394" target="_blank">Danmark foreslo Nato-styrke på Grønland og i Arktis for Nato-sjefen</a></h2>
-                        <p>På et møte med Nato-sjef Mark Rutte mandag har Danmarks forsvarsminister Troels Lund Poulsen og Grønlands utenriksminister Vivian Motzfeldt foreslått en Nato-styrke på Grønland og ...</p>
                     </div>
                 </div>
             
@@ -588,67 +652,6 @@ Det skriver klubben i en pressemelding mandag kveld:
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/16B9Xe/tollfrykt-gir-smell-for-europeiske-bilaksjer-analytikere-ser-mulig-milliardsmell" target="_blank">Tollfrykt gir smell for europeiske bilaksjer</a></h2>
                         <p>Tyske bilgiganter falt tungt på børsen. Analytikere beregner mulig milliardsmell....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/12FzdtuuBMMRtjlgrQnX9w6YcfrJnWHBGGapxgRFlstg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 04:17:33 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/trump-med-ny-gronland-melding_-_-na-er-tiden-inne-1.17733081" target="_blank">Trump om Nobels fredspris: – Norge kontrollerer den</a></h2>
-                        <p>USAs president Donald Trump tror ikke på at norske myndigheter ikke kontrollerer utdelingen av Nobels fredspris....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/XZUYFL5lmMDptolryuoOBwgtQ6Xskqq4Kv7-4rqnCTrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:48:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/i-dag-er-_quitter_s-day_-_-dette-skal-til-for-a-holde-nyttarsforsettene-1.17730629" target="_blank">I dag slutter mange å trene – slik holder du nyttårsforsettene hele året</a></h2>
-                        <p>Mange gir seg i dag, men Sats-medlemmer har blitt flinkere til å holde på nyttårsløftene sine. Her er ekspertenes beste tips for å holde ut....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:52:37 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/avis_-motelegende-valentino-garavani-er-dod-1.17734392" target="_blank">Avis: Motelegende Valentino Garavani er død</a></h2>
-                        <p>Motelegenden og designeren Valentino Garavani er død, 93 år gammel. Det melder avisa La Repubblica.
-Garavani står bak merket «Valentino», som er kjent for både klær og parfymer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MgWEj5-5n3d7t3CNLioN9ApY9dvF9fWfMnu9SUjH4c4w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:49:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/flytrafikken-i-noreg-2025_-tilbake-til-nivaet-for-pandemien-1.17730940" target="_blank">Avinor friskmeldt: Passasjertala nærmar seg 2019-nivå</a></h2>
-                        <p>Seks år etter at trafikken kollapsa under pandemien, er talet på reisande tilbake til «normalen». Det er godt nytt for den norske flyplasseigaren....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/bnnBwF6BLwFiMdEmsirHkAhKsDe3NObdrF20fSTdvHJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 16:59:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/motelegende-valentino-garavani-er-dod-1.17734406" target="_blank">Motelegende Valentino Garavani er død</a></h2>
-                        <p>Den italienske motedesigneren Valentino Garavani ble 93 år....</p>
                     </div>
                 </div>
             
@@ -784,7 +787,7 @@ Garavani står bak merket «Valentino», som er kjent for både klær og parfyme
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 20.01.2026 00:21</div>
+                <div class="footer">Sist oppdatert: 20.01.2026 00:25</div>
             </div>
         </body>
         </html>
