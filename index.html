@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,55 +135,7 @@
                         <p>Sier de er første aktør som tilbyr ekte digitalsuverenitet i Norden....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142724247.jpg%3F%26accessToken%3D2dca9147b8d547d92e76b8eefd886454924e4b6c0adbea308a7aa821f8483448" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 20 Jan 2026 10:35:35 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/20/8322005/ikke-sikkert-om-zelenskyj-kommer-russland-usa-mote-er-ventet-i-davos" target="_blank">Ikke sikkert om Zelenskyj kommer: Russland-USA-møte er ventet i Davos</a></h2>
-                        <p>Russlands spesialutsending Kirill Dmjitrev har ankomet Davos i forbindelse med Verdens økonomiske forum. Der skal han møte amerikanske tjenestepersoner, sier Kreml....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 20 Jan 2026 11:20:39 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/20/8322011/helseaksje-faller-til-all-time-low" target="_blank">Nedgang på Oslo Børs: Link Mobility stiger 2 prosent – Oncoinvent faller 5 prosent til all-time low.</a></h2>
-                        <p>Børsoppdatering: Oslo Børs faller 0,5 prosent tirsdag. Oljeprisen er opp 0,4 prosent, men oljeaksjene faller. Oncoinvent faller til all-time low....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 20 Jan 2026 10:48:59 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/xr302B/oslo-taper-mot-kastrup" target="_blank">Oslo taper mot Kastrup</a></h2>
-                        <p>Ny rapport fra Avinor lagt fram i dag....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 20 Jan 2026 10:50:30 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/9pOw0d/wall-street-styrer-mot-markant-nedgang" target="_blank">Wall Street styrer mot markant nedgang</a></h2>
-                        <p>USA-børsene reagerer etter Donald Trumps Grønland-trusler....</p>
-                    </div>
-                </div>
-            
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/lwp2WHvyl2C9AdICQazKTwQHkxn-QwrPjRi5u4hgOrKA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -251,6 +206,163 @@ EU-kommisjonens leder tar til orde for en retningsendring i møte med «verdensp
                         </div>
                         <h2><a href="https://www.nrk.no/rogaland/vil-skrote-tusenlappen_-men-denne-er-de-kriminelles-favoritt-1.17730505" target="_blank">Vil skrote tusenlappen, men denne er de kriminelles favoritt</a></h2>
                         <p>Stoltenberg vil skrote 1000-lappen, men Økokrim håper 500-lappen forsvinner i samme runde....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/SHxc7GNdaJBJ80ULGLdulATVPmtZl3ALpUPIcQXWOz3g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 09:24:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/norske-moseprodukter-saksokte-arbeids--og-inkluderingsdepartementet-_-tapte-fullstendig-1.17708708" target="_blank">Tapte mot staten, rasar mot «skrivebords­byråkrati»</a></h2>
+                        <p>– For dei er det ikkje så nøye om det er dagtid eller midt på natta, hevdar eigaren av verksemda om arbeidstida til midlertidige sesongarbeidarar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/fC6u526WnSYWNPPMzqwsKQHYpHlrbkU6QRM4rJCpsP5A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 08:56:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/_bettan_-anker-i-hyttestrid-med-asker-kommune-1.17734933" target="_blank">«Bettan» anker i hyttestrid med Asker kommune</a></h2>
+                        <p>Artisten Elisabeth «Bettan» Andreassen har i en årrekke vært i strid med Asker kommune om hytta si på Brønnøya. Hun tapte saken i tingretten, men anker nå.
+Det opplyser advokatfull...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UNfpG9fATJu1H0XDeF1LXQvRgpil3g-C_WyL29qMvidQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 07:36:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/sykepleierindeksen-2025_-stadig-vanskeligere-a-kjope-bolig-rundt-oslo-1.17733701" target="_blank">Sykepleierindeksen: Stadig vanskeligere å kjøpe bolig rundt Oslo</a></h2>
+                        <p>I 2025 kunne single med sykepleierlønn kjøpe 30,1 prosent av de tilgjengelige boligene her i landet. I Oslo er situasjonen en helt annen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/-sGlN-iaCg3VDeA0SEsNXg-8nTXGkm6coGNF3c9xpdeg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 08:08:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/norsk-stotte-til-ukraina_-kraftmateriell-og-hjelp-i-vinterkulda-1.17623370" target="_blank">Iskaldt og mørkt i krigsherja Ukraina: – Vanskelegaste situasjonane så langt</a></h2>
+                        <p>Dagleg blir ukrainske byar mørklagde etter russiske angrep, og folk frys i vinterkulda. Norsk kraftbransje bidreg til å få lys og varme tilbake....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/TAQclWQ9imG4e9zIkug44g-qcjBnQWhjRQkIe0ioRupQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 07:24:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/ingen-fakkeltog-for-toget-1.17734538" target="_blank">Ingen fakkeltog for toget</a></h2>
+                        <p>Jernbanen er en omdømmekatastrofe, uten at politikerne ser ut til å bry seg. Regjeringa sier det går rett vei, men flere spør seg om ikke tog koster mer enn det smaker....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/0ScMvuH95f4LejOuozl2rgL1r5VaXWRBjA9-0czVc9kQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 07:00:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/xl/no-kan-du-stemme-pa-din-favoritt-til-den-siste-finaleplassen-i-mgp-1.17733900" target="_blank">Desse skal kjempe om den siste finalebilletten i MGP</a></h2>
+                        <p>Frå og med i dag kan du stemme på kven du meiner bør få den siste finaleplassen i årets Melodi Grand Prix....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/eptmo5KdGGswrPtT4spYvgB9vYTkD4BqmVWutsPifsXg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 04:26:05 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/syria_-uklart-kor-mange-is-fangar-som-er-pa-frifot-1.17734689" target="_blank">Syria: Uklart kor mange IS-fangar som er på frifot</a></h2>
+                        <p>Tala spriker etter kampar ved eit fengsel nordaust i Syria....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/tDS3K-LGPpQoFUTRr0kdQgcOJzh_XDczcCxw1KCrgjWw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 05:41:52 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/knusende-havarirapport_-derfor-ble-valget-en-fiasko-for-venstre-1.17734071" target="_blank">Knusende havarirapport: Derfor ble valget en fiasko for Venstre</a></h2>
+                        <p>Venstre drev valgkamp for et regjeringsprosjekt partiet ikke trodde på. Det er den knallharde dommen i en intern evaluering....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/h3I9w-r5O_OfoCyOSVjbwwxamucPiTb6VNjhkNwgBo9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 06:08:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/ol-storsatsing-vekker-sterke-reaksjonar_-_-ikkje-verdig-1.17730930" target="_blank">OL-storsatsing vekker sterke reaksjonar: – Ikkje verdig</a></h2>
+                        <p>NHL-stjernene deltek for første gang på tolv år, men skal spele på ein arena som ligg langt unna standarden dei er vande med....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142724247.jpg%3F%26accessToken%3D2dca9147b8d547d92e76b8eefd886454924e4b6c0adbea308a7aa821f8483448" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 20 Jan 2026 10:35:35 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/20/8322005/ikke-sikkert-om-zelenskyj-kommer-russland-usa-mote-er-ventet-i-davos" target="_blank">Ikke sikkert om Zelenskyj kommer: Russland-USA-møte er ventet i Davos</a></h2>
+                        <p>Russlands spesialutsending Kirill Dmjitrev har ankomet Davos i forbindelse med Verdens økonomiske forum. Der skal han møte amerikanske tjenestepersoner, sier Kreml....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 20 Jan 2026 11:20:39 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/01/20/8322011/helseaksje-faller-til-all-time-low" target="_blank">Nedgang på Oslo Børs: Link Mobility stiger 2 prosent – Oncoinvent faller 5 prosent til all-time low.</a></h2>
+                        <p>Børsoppdatering: Oslo Børs faller 0,5 prosent tirsdag. Oljeprisen er opp 0,4 prosent, men oljeaksjene faller. Oncoinvent faller til all-time low....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 20 Jan 2026 10:48:59 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/xr302B/oslo-taper-mot-kastrup" target="_blank">Oslo taper mot Kastrup</a></h2>
+                        <p>Ny rapport fra Avinor lagt fram i dag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 20 Jan 2026 10:50:30 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/9pOw0d/wall-street-styrer-mot-markant-nedgang" target="_blank">Wall Street styrer mot markant nedgang</a></h2>
+                        <p>USA-børsene reagerer etter Donald Trumps Grønland-trusler....</p>
                     </div>
                 </div>
             
@@ -347,31 +459,6 @@ EU-kommisjonens leder tar til orde for en retningsendring i møte med «verdensp
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/pBAj6E/avinor-advarer-om-smell-paa-250-milliarder" target="_blank">Avinor advarer om smell på 250 milliarder</a></h2>
                         <p>København rykker kraftig ifra. Avinor-sjef Abraham Foss vil snu utviklingen, og byr opp til debatt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/SHxc7GNdaJBJ80ULGLdulATVPmtZl3ALpUPIcQXWOz3g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 09:24:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/norske-moseprodukter-saksokte-arbeids--og-inkluderingsdepartementet-_-tapte-fullstendig-1.17708708" target="_blank">Tapte mot staten, rasar mot «skrivebords­byråkrati»</a></h2>
-                        <p>– For dei er det ikkje så nøye om det er dagtid eller midt på natta, hevdar eigaren av verksemda om arbeidstida til midlertidige sesongarbeidarar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/fC6u526WnSYWNPPMzqwsKQHYpHlrbkU6QRM4rJCpsP5A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 08:56:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/_bettan_-anker-i-hyttestrid-med-asker-kommune-1.17734933" target="_blank">«Bettan» anker i hyttestrid med Asker kommune</a></h2>
-                        <p>Artisten Elisabeth «Bettan» Andreassen har i en årrekke vært i strid med Asker kommune om hytta si på Brønnøya. Hun tapte saken i tingretten, men anker nå.
-Det opplyser advokatfull...</p>
                     </div>
                 </div>
             
@@ -532,42 +619,6 @@ Det opplyser advokatfull...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UNfpG9fATJu1H0XDeF1LXQvRgpil3g-C_WyL29qMvidQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 07:36:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/sykepleierindeksen-2025_-stadig-vanskeligere-a-kjope-bolig-rundt-oslo-1.17733701" target="_blank">Sykepleierindeksen: Stadig vanskeligere å kjøpe bolig rundt Oslo</a></h2>
-                        <p>I 2025 kunne single med sykepleierlønn kjøpe 30,1 prosent av de tilgjengelige boligene her i landet. I Oslo er situasjonen en helt annen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/-sGlN-iaCg3VDeA0SEsNXg-8nTXGkm6coGNF3c9xpdeg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 08:08:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/norsk-stotte-til-ukraina_-kraftmateriell-og-hjelp-i-vinterkulda-1.17623370" target="_blank">Iskaldt og mørkt i krigsherja Ukraina: – Vanskelegaste situasjonane så langt</a></h2>
-                        <p>Dagleg blir ukrainske byar mørklagde etter russiske angrep, og folk frys i vinterkulda. Norsk kraftbransje bidreg til å få lys og varme tilbake....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/TAQclWQ9imG4e9zIkug44g-qcjBnQWhjRQkIe0ioRupQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 07:24:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/ingen-fakkeltog-for-toget-1.17734538" target="_blank">Ingen fakkeltog for toget</a></h2>
-                        <p>Jernbanen er en omdømmekatastrofe, uten at politikerne ser ut til å bry seg. Regjeringa sier det går rett vei, men flere spør seg om ikke tog koster mer enn det smaker....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F131878084.jpg%3F%26accessToken%3Dacd2f8c09fb05702f44261a85497780eaf8ed792816ff8a4a50c383c350ad10f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -652,18 +703,6 @@ Det opplyser advokatfull...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/0ScMvuH95f4LejOuozl2rgL1r5VaXWRBjA9-0czVc9kQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 07:00:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/xl/no-kan-du-stemme-pa-din-favoritt-til-den-siste-finaleplassen-i-mgp-1.17733900" target="_blank">Desse skal kjempe om den siste finalebilletten i MGP</a></h2>
-                        <p>Frå og med i dag kan du stemme på kven du meiner bør få den siste finaleplassen i årets Melodi Grand Prix....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142693850.jpg%3F%26accessToken%3D2073e83fde813ba5176c383d7b74cfc9e02ccebef1733ad0f30865538fa9ccac" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -736,42 +775,6 @@ Det opplyser advokatfull...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/eptmo5KdGGswrPtT4spYvgB9vYTkD4BqmVWutsPifsXg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 04:26:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/syria_-uklart-kor-mange-is-fangar-som-er-pa-frifot-1.17734689" target="_blank">Syria: Uklart kor mange IS-fangar som er på frifot</a></h2>
-                        <p>Tala spriker etter kampar ved eit fengsel nordaust i Syria....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/tDS3K-LGPpQoFUTRr0kdQgcOJzh_XDczcCxw1KCrgjWw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 05:41:52 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/knusende-havarirapport_-derfor-ble-valget-en-fiasko-for-venstre-1.17734071" target="_blank">Knusende havarirapport: Derfor ble valget en fiasko for Venstre</a></h2>
-                        <p>Venstre drev valgkamp for et regjeringsprosjekt partiet ikke trodde på. Det er den knallharde dommen i en intern evaluering....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/h3I9w-r5O_OfoCyOSVjbwwxamucPiTb6VNjhkNwgBo9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 06:08:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/ol-storsatsing-vekker-sterke-reaksjonar_-_-ikkje-verdig-1.17730930" target="_blank">OL-storsatsing vekker sterke reaksjonar: – Ikkje verdig</a></h2>
-                        <p>NHL-stjernene deltek for første gang på tolv år, men skal spele på ein arena som ligg langt unna standarden dei er vande med....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -783,7 +786,7 @@ Det opplyser advokatfull...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 20.01.2026 11:21</div>
+                <div class="footer">Sist oppdatert: 20.01.2026 11:25</div>
             </div>
         </body>
         </html>
