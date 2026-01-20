@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -96,7 +99,231 @@
                         <p>Norge er 7/8 hav. Likevel foreslår statens eksperter en sikkerhetsløsning for nøyaktig tid som i praksis stopper ved strandlinja....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/tWW2TBBQp6rxPB_31NTUJgrm2RWCmIjOChviqaLu5UUQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 17:43:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/canadas-statsminister-mark-carney-moter-i-davos-med-en-fersk-erkjennelse_-__en-ny-verdensorden-1.17733933" target="_blank">Canadas statsminister: – En ny verdensorden</a></h2>
+                        <p>For et halvt år siden sa han at Kina var den største trusselen mot Canadas sikkerhet. Nå mener statsminister Carney at Kina er «mer forutsigbart» enn USA....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/C94Vtry_6QsxS9CoxaPPNQEE_9CKigJvs7DqhU6NE1HQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 18:14:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/bodo_glimt-sjokkerer-haaland-og-manchester-city-1.17736068" target="_blank">Bodø/Glimt sjokkerer Haaland og Manchester City: Leder 2–0</a></h2>
+                        <p>To scoringer fra Kasper Høgh gjør at Glimt leder 2–0 etter knappe 25 minutter mot Manchester City....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/QkTa_tf6HXqgjKN09yEQgA9H0S3UsMLhBGM3aA_By46g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 16:30:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/haaland-starter-pa-aspmyra-1.17735904" target="_blank">Haaland starter på Aspmyra</a></h2>
+                        <p>Erling Braut Haaland starter i mesterligakampen mot Bodø/Glimt på Aspmyra tirsdag kveld.
+Etter ligacupseieren mot Newcastle i forrige uke sa Guardiola at han trengte hvile. Under g...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 16:41:01 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/europeiske-ledere-tar-til-motmaele-dagen-for-trump-ankommer-davos.-1.17735711" target="_blank">Macron i Sveits: – Jeg har ingen planer om å snakke med Trump</a></h2>
+                        <p>Verdens mektigste er samlet i Sveits for å snakke om økonomi, men kampen om Grønland dominerer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 16:55:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/dovrebanen-stengt-_-passasjertog-uten-strom-sperrer-sporet-1.17735797" target="_blank">Dovrebanen stengt – passasjertog uten strøm sperrer sporet</a></h2>
+                        <p>Et passasjertog med 500 reisende i retning Lillehammer står fast mellom Eidsvoll og Tangen.
+Toget får ikke strømtilførsel og må trekkes vekk, passasjerene kan ikke evakueres.
+Bane ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ou3RQjBs2SwIVevU7lWZ_wqiqefLjfB0Q3EjpImpfpwQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 17:06:19 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/statsministerens-kontor_-sier-nei-til-trumps-_fredsrad_-1.17736048" target="_blank">Statsministerens kontor: Sier nei til Trumps «fredsråd»</a></h2>
+                        <p>Statsministerens kontor bekrefter til NTB at de sier nei til Donald Trumps såkalte «fredsråd».
+– Det amerikanske forslaget reiser en rekke spørsmål som krever videre dialog med USA...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ou3RQjBs2SwIVevU7lWZ_wqiqefLjfB0Q3EjpImpfpwQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 17:12:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/norge-sier-nei-til-trump-sitt-_fredsrad_-1.17736053" target="_blank">Norge sier nei til Trump sitt «fredsråd»</a></h2>
+                        <p>Statsministerens kontor bekrefter at de sier nei til Donald Trumps såkalte «fredsråd»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/v48otWa3QVW4m3k-G5CglwRFxlJOoeJ2ylewCJhmmT_w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 15:30:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/reuters_-belarus-blir-med-i-trumps-_fredsrad_-1.17735879" target="_blank">Reuters: Belarus blir med i Trumps «fredsråd»</a></h2>
+                        <p>President Aleksandr Lukasjenko i Belarus har signert avtalen for å bli med i Donald Trumps såkalte «fredsråd», skriver Reuters, som viser til en Telegram-kanal tilknyttet president...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/iWBZf_FWFqdrWHIPq50bdQ-cjnPOIyrnThgvVyvHK7NA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 15:47:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/statens-vegvesen-vurderer-auka-bruk-av-70-soner-1.17725948" target="_blank">Vil ha fleire 70-soner for å spare liv</a></h2>
+                        <p>Statens vegvesen føreslår fleire 70-soner på landevegar. Det liker ikkje NAF....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/K8lEBeO0xxfLSiTHnqf6wwFx4AQsZaXgQmcgygL7eJ5w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 14:31:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/wall-street-faller-kraftig-fra-start-1.17735836" target="_blank">Wall Street faller kraftig fra start</a></h2>
+                        <p>Det er blodrøde tall på de amerikanske børsene tirsdag ettermiddag. Børsene holdt stengt i går i forbindelse med Martin Luther King Day.
+Slik ser det ut kort tid etter åpningstid p...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/K8lEBeO0xxfLSiTHnqf6wwFx4AQsZaXgQmcgygL7eJ5w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 14:44:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/wall-street-faller-kraftig-fra-start-1.17735864" target="_blank">Wall Street faller kraftig fra start</a></h2>
+                        <p>Da børsene i USA åpnet tirsdag ettermiddag, viser de mest toneangivende indeksene røde tall....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/maM_iVtqu0RJ8zYGlWP3MAhpsH_AKBi14NHZpZRJWjuA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 14:40:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/finnmarkssykehuset-far-ikkje-selt-hammerfest-sjukehus-1.17735437" target="_blank">Får ikkje selt det gamle sjukehuset: – Kostar 35 millionar å rive det</a></h2>
+                        <p>Verdien på gamle Hammerfest sjukehus har falt frå 120 til 10 millionar. Sjølv om prisen er kutta, så blir borte kjøparane. Bygningane kostar Finnmarkssykehuset mellom 350.000-400.0...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FQ8Dgn7oclLwSFaxUF8l1AkEX-a7c93cl-yHbmJuHuSw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 14:09:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/macron_-planlegger-ikke-a-snakke-med-trump-1.17735682" target="_blank">Macron: Planlegger ikke å snakke med Trump</a></h2>
+                        <p>Emmanuel Macron tok like etter klokken 14.00 ordet i Davos og startet talen med å beskrive en verden som blir mer lovløs og advarer mot en verden der den sterkeste styrer.
+I talen ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/fjIkyTy9umtNiEm0sFXC8weyrFgxhlXCFVp5CILxM7ug.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 12:31:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/langrenn_-emil-iversen-og-oskar-opstad-vike-far-dei-siste-ol-plassane-1.17734979" target="_blank">Knust etter OL-vraking: – Klarer ikkje setje ord på kor skuffa eg er</a></h2>
+                        <p>Olympiatoppen har tatt ut langrennstroppen til OL, på lista står ikkje Andreas Fjorden Ree....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/AUTV38lpv9keMeLd-zB1NwpaVGe2eKIjGDxzFnq5ltDQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 12:38:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/klima/enorme-skogbrannar-herjar-argentina-og-chile-1.17723461" target="_blank">Nokre av dei eldste trea i verda trua av skogbrannar i Argentina</a></h2>
+                        <p>Minst 20 menneske er døde i skogbrannar i Chile og Argentina....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/sID3amcZJAnm7zU8Ens0bgIWxFXTqfeEX1bZOK-GbM1g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 12:16:09 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/netflix-med-nytt-warner-bros-tilbud-1.17735448" target="_blank">Netflix med nytt Warner Bros-tilbud</a></h2>
+                        <p>Netflix har levert et nytt tilbud om å kjøpe Warner Bros.
+Nå tilbyr de å betale kjøpesummen i sin helhet, og får støtte av styret. Det melder nyhetsbyrået Reuters.
+Det forrige tilb...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142714037.jpg%3F%26accessToken%3D028dc1073743753d9ecf3c10cbb19d3d861db64fe227773c7fb1f7cb873cee7a" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 20 Jan 2026 18:22:34 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/01/20/8321959/kutt-ettersporselen-ikke-tilbudet" target="_blank">Kutt etterspørselen, ikke tilbudet</a></h2>
+                        <p>Veivalget står ikke mellom «mer olje» eller «ingen olje», men mellom å produsere den energien verden etterspør med lavest mulig utslipp, eller overlate det til andre, skriver Jakob...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 20 Jan 2026 18:21:23 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/2pdOrG/japans-finansminister-ber-markedene-roe-seg-etter-rentesjokk" target="_blank">Japans finansminister ber markedene roe seg etter rentesjokk</a></h2>
+                        <p>Statsrenter i Japan gjorde et kraftig hopp til rekordnivåer. USAs finansminister Scott Bessent sier han har vært i kontakt med sin japanske motpart....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142779252.jpg%3F%26accessToken%3D9d653e1521cc24a96d9cac2f7065e4e10d64aaf5189473067e2db4b7a69cf53f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -166,30 +393,6 @@
                         </div>
                         <h2><a href="https://e24.no/privatoekonomi/i/j0By6n/leilighet-solgt-6-5-millioner-kroner-over-prisantydning-hoey-temperatur" target="_blank">Leilighet solgt 6,5 millioner kroner over prisantydning: – Høy temperatur</a></h2>
                         <p>Etter stor interesse ble leiligheten på St. Hanshaugen solgt etter første budrunde....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/tWW2TBBQp6rxPB_31NTUJgrm2RWCmIjOChviqaLu5UUQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 17:43:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/canadas-statsminister-mark-carney-moter-i-davos-med-en-fersk-erkjennelse_-__en-ny-verdensorden-1.17733933" target="_blank">Canadas statsminister: – En ny verdensorden</a></h2>
-                        <p>For et halvt år siden sa han at Kina var den største trusselen mot Canadas sikkerhet. Nå mener statsminister Carney at Kina er «mer forutsigbart» enn USA....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/C94Vtry_6QsxS9CoxaPPNQEE_9CKigJvs7DqhU6NE1HQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 18:14:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/bodo_glimt-sjokkerer-haaland-og-manchester-city-1.17736068" target="_blank">Bodø/Glimt sjokkerer Haaland og Manchester City: Leder 2–0</a></h2>
-                        <p>To scoringer fra Kasper Høgh gjør at Glimt leder 2–0 etter knappe 25 minutter mot Manchester City....</p>
                     </div>
                 </div>
             
@@ -266,70 +469,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/QkTa_tf6HXqgjKN09yEQgA9H0S3UsMLhBGM3aA_By46g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 16:30:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/haaland-starter-pa-aspmyra-1.17735904" target="_blank">Haaland starter på Aspmyra</a></h2>
-                        <p>Erling Braut Haaland starter i mesterligakampen mot Bodø/Glimt på Aspmyra tirsdag kveld.
-Etter ligacupseieren mot Newcastle i forrige uke sa Guardiola at han trengte hvile. Under g...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 16:41:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/europeiske-ledere-tar-til-motmaele-dagen-for-trump-ankommer-davos.-1.17735711" target="_blank">Macron i Sveits: – Jeg har ingen planer om å snakke med Trump</a></h2>
-                        <p>Verdens mektigste er samlet i Sveits for å snakke om økonomi, men kampen om Grønland dominerer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 16:55:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/dovrebanen-stengt-_-passasjertog-uten-strom-sperrer-sporet-1.17735797" target="_blank">Dovrebanen stengt – passasjertog uten strøm sperrer sporet</a></h2>
-                        <p>Et passasjertog med 500 reisende i retning Lillehammer står fast mellom Eidsvoll og Tangen.
-Toget får ikke strømtilførsel og må trekkes vekk, passasjerene kan ikke evakueres.
-Bane ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ou3RQjBs2SwIVevU7lWZ_wqiqefLjfB0Q3EjpImpfpwQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 17:06:19 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/statsministerens-kontor_-sier-nei-til-trumps-_fredsrad_-1.17736048" target="_blank">Statsministerens kontor: Sier nei til Trumps «fredsråd»</a></h2>
-                        <p>Statsministerens kontor bekrefter til NTB at de sier nei til Donald Trumps såkalte «fredsråd».
-– Det amerikanske forslaget reiser en rekke spørsmål som krever videre dialog med USA...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ou3RQjBs2SwIVevU7lWZ_wqiqefLjfB0Q3EjpImpfpwQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 17:12:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/norge-sier-nei-til-trump-sitt-_fredsrad_-1.17736053" target="_blank">Norge sier nei til Trump sitt «fredsråd»</a></h2>
-                        <p>Statsministerens kontor bekrefter at de sier nei til Donald Trumps såkalte «fredsråd»....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F94220749.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3De450fd4b93eb64525c501ac2923e3ad019af6b39e06ec3104182c8c9ff858f58" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -390,30 +529,6 @@ Bane ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/v48otWa3QVW4m3k-G5CglwRFxlJOoeJ2ylewCJhmmT_w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 15:30:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/reuters_-belarus-blir-med-i-trumps-_fredsrad_-1.17735879" target="_blank">Reuters: Belarus blir med i Trumps «fredsråd»</a></h2>
-                        <p>President Aleksandr Lukasjenko i Belarus har signert avtalen for å bli med i Donald Trumps såkalte «fredsråd», skriver Reuters, som viser til en Telegram-kanal tilknyttet president...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/iWBZf_FWFqdrWHIPq50bdQ-cjnPOIyrnThgvVyvHK7NA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 15:47:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/statens-vegvesen-vurderer-auka-bruk-av-70-soner-1.17725948" target="_blank">Vil ha fleire 70-soner for å spare liv</a></h2>
-                        <p>Statens vegvesen føreslår fleire 70-soner på landevegar. Det liker ikkje NAF....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57528272.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D442c65d9066926f8ee2c0ae2fe42771f5a200bb51bbd8d01618a986d2f9425d2" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -470,43 +585,6 @@ Bane ...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/pBA896/perx-bostyrer-ber-om-500-kroner-per-person-for-aa-fortsette-jobben" target="_blank">Perx-bostyrer ber om 500 kroner per person for å fortsette jobben</a></h2>
                         <p>Advokat Morten Haugen mottar daglig et «stort antall henvendelser» om konkursen i Perx Folkefinansiering, som har skapt «stor belastning» på midlene i konkursboet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/K8lEBeO0xxfLSiTHnqf6wwFx4AQsZaXgQmcgygL7eJ5w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 14:31:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/wall-street-faller-kraftig-fra-start-1.17735836" target="_blank">Wall Street faller kraftig fra start</a></h2>
-                        <p>Det er blodrøde tall på de amerikanske børsene tirsdag ettermiddag. Børsene holdt stengt i går i forbindelse med Martin Luther King Day.
-Slik ser det ut kort tid etter åpningstid p...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/K8lEBeO0xxfLSiTHnqf6wwFx4AQsZaXgQmcgygL7eJ5w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 14:44:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/wall-street-faller-kraftig-fra-start-1.17735864" target="_blank">Wall Street faller kraftig fra start</a></h2>
-                        <p>Da børsene i USA åpnet tirsdag ettermiddag, viser de mest toneangivende indeksene røde tall....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/maM_iVtqu0RJ8zYGlWP3MAhpsH_AKBi14NHZpZRJWjuA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 14:40:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/finnmarkssykehuset-far-ikkje-selt-hammerfest-sjukehus-1.17735437" target="_blank">Får ikkje selt det gamle sjukehuset: – Kostar 35 millionar å rive det</a></h2>
-                        <p>Verdien på gamle Hammerfest sjukehus har falt frå 120 til 10 millionar. Sjølv om prisen er kutta, så blir borte kjøparane. Bygningane kostar Finnmarkssykehuset mellom 350.000-400.0...</p>
                     </div>
                 </div>
             
@@ -591,19 +669,6 @@ Slik ser det ut kort tid etter åpningstid p...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/16BnvG/dansk-pensjonsfond-vil-selge-seg-ut-av-usa" target="_blank">Dansk pensjonsfond vil selge seg ut av USA</a></h2>
                         <p>President Donald Trumps trusler om å ta over Grønland er en del av årsaken, ifølge toppsjef....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FQ8Dgn7oclLwSFaxUF8l1AkEX-a7c93cl-yHbmJuHuSw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 14:09:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/macron_-planlegger-ikke-a-snakke-med-trump-1.17735682" target="_blank">Macron: Planlegger ikke å snakke med Trump</a></h2>
-                        <p>Emmanuel Macron tok like etter klokken 14.00 ordet i Davos og startet talen med å beskrive en verden som blir mer lovløs og advarer mot en verden der den sterkeste styrer.
-I talen ...</p>
                     </div>
                 </div>
             
@@ -716,44 +781,6 @@ I talen ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/fjIkyTy9umtNiEm0sFXC8weyrFgxhlXCFVp5CILxM7ug.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 12:31:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/langrenn_-emil-iversen-og-oskar-opstad-vike-far-dei-siste-ol-plassane-1.17734979" target="_blank">Knust etter OL-vraking: – Klarer ikkje setje ord på kor skuffa eg er</a></h2>
-                        <p>Olympiatoppen har tatt ut langrennstroppen til OL, på lista står ikkje Andreas Fjorden Ree....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/AUTV38lpv9keMeLd-zB1NwpaVGe2eKIjGDxzFnq5ltDQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 12:38:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/klima/enorme-skogbrannar-herjar-argentina-og-chile-1.17723461" target="_blank">Nokre av dei eldste trea i verda trua av skogbrannar i Argentina</a></h2>
-                        <p>Minst 20 menneske er døde i skogbrannar i Chile og Argentina....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/sID3amcZJAnm7zU8Ens0bgIWxFXTqfeEX1bZOK-GbM1g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 12:16:09 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/netflix-med-nytt-warner-bros-tilbud-1.17735448" target="_blank">Netflix med nytt Warner Bros-tilbud</a></h2>
-                        <p>Netflix har levert et nytt tilbud om å kjøpe Warner Bros.
-Nå tilbyr de å betale kjøpesummen i sin helhet, og får støtte av styret. Det melder nyhetsbyrået Reuters.
-Det forrige tilb...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142738126.jpg%3F%26accessToken%3Dd6aee93ff728c8b36b2a7dcc34041249e022268584ed03db0c7204a91c2ed93e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -765,32 +792,7 @@ Det forrige tilb...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Q4vqj00npvPPxlx7khVLEAOn45uLvaVKrLWzAuGZuyUg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 12:15:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/danmarks-statsminister_-_-det-verste-kan-fremdeles-vaere-foran-oss-1.17735439" target="_blank">Danmarks statsminister: – Det verste kan fremdeles være foran oss</a></h2>
-                        <p>– Vi kan ikke forhandle om suverenitet, identitet, grenser og demokrati, sier Mette Frederiksen under spørretimen i det danske Folketinget.
-Danmark vil svare på en eventuell handel...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142737932.jpg%3F%26accessToken%3D337598de6e51b5cf0854ef71ef833cff2d86ec86f81835300b786a977acbe3a0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 20 Jan 2026 12:03:06 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/20/8322051/okokrim-vil-ha-bort-500-lappen" target="_blank">Økokrim vil ha bort 500-lappen</a></h2>
-                        <p>Finansdepartementet sier 1000-lappen misbrukes av kriminelle miljøer og vil derfor skrote den. Økokrim mener det samme gjelder 500-lappen....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 20.01.2026 18:21</div>
+                <div class="footer">Sist oppdatert: 20.01.2026 18:25</div>
             </div>
         </body>
         </html>
