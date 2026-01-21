@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,7 +135,141 @@
                         <p>Kan ta lang, lang tid. Hør siste episode av Tek-podden....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/XecimRWY6YUFr9dTrUXEvA6uLTzjTmlgMxrqxlx5qGGA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 19 Jan 2026 19:44:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/isar-aerospace-har-gjort-justeringer-pa-raketten-_spectrum-2_-1.17734428" target="_blank">Gjør klar til historisk oppskytning i kveld: – Viktig sikkerhetspolitisk</a></h2>
+                        <p>Romfartsselskapet Isar Aerospace gjør seg klar for en ny rakettoppskyting fra Andøya Space allerede onsdag kveld. Lykkes oppskytingen blir det en historisk milepæl....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/eYk5dl9r6bqpuwpdS3UgxA6NSpM2_Yd2TdrmHVPcGyxw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 09:43:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/mange-endar-som-ufore_-daniel-tysland-fann-opp-eige-utstyr-for-a-jobbe-i-ambulanse-1.17725141" target="_blank">Mange endar som uføre: Daniel fann opp utstyr for å jobbe i ambulanse</a></h2>
+                        <p>Utan høyreapparat seier Daniel Tysland (22) at han er «stokk døv». Med hyllevarer frå Clas Ohlson har han bygd ei løysing som gjer draumen mogleg....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wBCyiwrOO493Gxm1TYSRHApRdcuYAHlrrcv7lEDMnluQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 09:43:21 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/mykje-gammalt-snadder_-sja-nar-du-ma-kaste-maten-i-frysaren-1.17725060" target="_blank">«Mykje gammalt snadder»: Sjå når du MÅ kaste maten i frysaren</a></h2>
+                        <p>Det er fort gjort å gløyme frysaren, og ikkje minst gløyme kva du eigentleg har der. Men kan vi ete mat som har lege i frysaren sidan 2014?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/1OYpWMJOncSRFLUmaZyT_AGhUV5C3xrxS2FLcYiVUSsQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 09:51:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/blendet-av-nordlyset-1.17736326" target="_blank">Blendet av nordlyset</a></h2>
+                        <p>Manchester City har ett stort problem. På Aspmyra fikk de servert den perfekte løsningen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/2Eixu31ztyqGBWO20G6dPQzG7CMpBwylrcD3gUNO3I-w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 09:30:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/flyktninger-til-norge-2026_-udi-legger-fram-nye-prognoser-1.17733327" target="_blank">Forventer flere asylsøkere: – En urolig verdenssituasjon</a></h2>
+                        <p>Norge er landet i Norden med flest ukrainere med kollektiv beskyttelse. Krig og uro flere steder i verden setter UDI i høy beredskap fremover....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/A0QQHH1018LjmuZxBjdnFwjJca2MytDHaVWaTh4940TA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 05:14:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/na-starter-rettssak-mot-15-aring-etter-bussbrannen-i-nordre-follo-1.17730028" target="_blank">Bussbrannen i Nordre Follo: To har fått varige fysiske skader</a></h2>
+                        <p>En kvinne døde av skadene, og to andre ble alvorlig skadet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/40lkV_oakVVyoeXg6qovYQvr8ATnKg9BnOPFlFn_jkYA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 07:36:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/udi-toppens-anslag_-12.000-familieinnvandrere-i-ar-1.17735298" target="_blank">UDI-toppens anslag: 12.000 familieinnvandrere i år</a></h2>
+                        <p>Før jul varslet Jonas Gahr Støre innstramming i familieinnvandringen. Men UDI forventer å innvilge like mange søknader som i fjor....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/scGq9PDB4Xd2-rh-_Bwbaw1uPyQO58jNKaHx_rWLcY0Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 07:53:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/tidlegare-norsk-industri-sjef-stein-lier-hansen-i-retten-1.17735245" target="_blank">Tidlegare Norsk Industri-topp seier seg delvis skuldig i grov økonomisk utruskap</a></h2>
+                        <p>Tidlegare Norsk Industri-sjef Stein Lier-Hansen erkjenner seg ikkje skuldig i grov korrupsjon. Men han svarer delvis ja til punktet om grov økonomisk utruskap....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hqk0pgPqrdJ5C3q-zLq2cQD0anRb7nonNHbRXXu6fdCA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 20 Jan 2026 21:40:11 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/finnmarkssykehuset-ville-trekke-advarsel-hvis-overlege-tone-hagerup-sluttet-i-jobben-1.17736201" target="_blank">Ville trekke advarselen hvis overlegen sluttet</a></h2>
+                        <p>Finnmarkssykehuset har prøvd å kvitte seg med en av overlegene som signerte varselet mot direktør Ole Hope. Men Tone Hagerup sa nei til forliket....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/xZEO3BmQDQxIv40HJL7IVQi8oRpPMOmqKLjAhmAGW_VQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 06:38:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/_onkel-skrue_-tiltalt-for-trusler-og-trakassering-1.17736451" target="_blank">«Onkel Skrue» tiltalt for trusler og trakassering</a></h2>
+                        <p>I sommer ble Imran Saber, bedre kjent som «Onkel Skrue», fengsla i en trusselsak.
+Han var sikta for nærmere tjue forhold. Blant annet for å ha sendt flere truende meldinger.
+Nå har...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142820657.jpg%3F%26accessToken%3D8bb6fb2add0d7eddd15c4b8bbfdd2c042fbb4fa8ea0325879974135199e6fc6e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 21 Jan 2026 11:25:04 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/01/21/8322335/berkshire-hathaway-vurderer-exit-i-kraft-heinz" target="_blank">Fiaskoaksje på vei ut?</a></h2>
+                        <p>Den nye Berkshire Hathaway-sjefen vurderer å selge seg ut av Kraft Heinz, en av Warren Buffetts svakeste investeringer....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142809465.jpg%3F%26accessToken%3Dd5f00c8591c7d74a67fbf19dae8aefbdb285f810b910cc13d5d3ab8f6898069a" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -214,18 +351,6 @@
                         </div>
                         <h2><a href="https://e24.no/energi-og-klima/i/xr3BAV/loenner-klimapolitikk-seg" target="_blank">Lønner klimapolitikk seg?</a></h2>
                         <p>Kostnadene ved klimaendringer er heldigvis beskjedne. Kan kostnadene ved klimapolitikk være enda lavere?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/XecimRWY6YUFr9dTrUXEvA6uLTzjTmlgMxrqxlx5qGGA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 19 Jan 2026 19:44:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/isar-aerospace-har-gjort-justeringer-pa-raketten-_spectrum-2_-1.17734428" target="_blank">Gjør klar til historisk oppskytning i kveld: – Viktig sikkerhetspolitisk</a></h2>
-                        <p>Romfartsselskapet Isar Aerospace gjør seg klar for en ny rakettoppskyting fra Andøya Space allerede onsdag kveld. Lykkes oppskytingen blir det en historisk milepæl....</p>
                     </div>
                 </div>
             
@@ -314,54 +439,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/eYk5dl9r6bqpuwpdS3UgxA6NSpM2_Yd2TdrmHVPcGyxw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 09:43:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/mange-endar-som-ufore_-daniel-tysland-fann-opp-eige-utstyr-for-a-jobbe-i-ambulanse-1.17725141" target="_blank">Mange endar som uføre: Daniel fann opp utstyr for å jobbe i ambulanse</a></h2>
-                        <p>Utan høyreapparat seier Daniel Tysland (22) at han er «stokk døv». Med hyllevarer frå Clas Ohlson har han bygd ei løysing som gjer draumen mogleg....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wBCyiwrOO493Gxm1TYSRHApRdcuYAHlrrcv7lEDMnluQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 09:43:21 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/mykje-gammalt-snadder_-sja-nar-du-ma-kaste-maten-i-frysaren-1.17725060" target="_blank">«Mykje gammalt snadder»: Sjå når du MÅ kaste maten i frysaren</a></h2>
-                        <p>Det er fort gjort å gløyme frysaren, og ikkje minst gløyme kva du eigentleg har der. Men kan vi ete mat som har lege i frysaren sidan 2014?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/1OYpWMJOncSRFLUmaZyT_AGhUV5C3xrxS2FLcYiVUSsQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 09:51:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/blendet-av-nordlyset-1.17736326" target="_blank">Blendet av nordlyset</a></h2>
-                        <p>Manchester City har ett stort problem. På Aspmyra fikk de servert den perfekte løsningen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/2Eixu31ztyqGBWO20G6dPQzG7CMpBwylrcD3gUNO3I-w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 09:30:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/flyktninger-til-norge-2026_-udi-legger-fram-nye-prognoser-1.17733327" target="_blank">Forventer flere asylsøkere: – En urolig verdenssituasjon</a></h2>
-                        <p>Norge er landet i Norden med flest ukrainere med kollektiv beskyttelse. Krig og uro flere steder i verden setter UDI i høy beredskap fremover....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F59851954.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D614336efd78505d0fda6be3f9da3825ffe13b24fcfec42bccda5cba9df82192c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -446,18 +523,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/A0QQHH1018LjmuZxBjdnFwjJca2MytDHaVWaTh4940TA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 05:14:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/na-starter-rettssak-mot-15-aring-etter-bussbrannen-i-nordre-follo-1.17730028" target="_blank">Bussbrannen i Nordre Follo: To har fått varige fysiske skader</a></h2>
-                        <p>En kvinne døde av skadene, og to andre ble alvorlig skadet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F140577227.jpg%3F%26accessToken%3De6614e4649e5cfdb086b8543e006455906acfb63f0b118dc28ce623e3dbfaf21" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -538,30 +603,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/pBAyxo/markedsuroen-fortsetter-oslo-boers-faller-fra-start" target="_blank">Markedsuroen fortsetter – Oslo Børs faller</a></h2>
                         <p>Børsen faller etter fortsatt uro rundt Grønland og tolltrusler mot Norge....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/40lkV_oakVVyoeXg6qovYQvr8ATnKg9BnOPFlFn_jkYA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 07:36:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/udi-toppens-anslag_-12.000-familieinnvandrere-i-ar-1.17735298" target="_blank">UDI-toppens anslag: 12.000 familieinnvandrere i år</a></h2>
-                        <p>Før jul varslet Jonas Gahr Støre innstramming i familieinnvandringen. Men UDI forventer å innvilge like mange søknader som i fjor....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/scGq9PDB4Xd2-rh-_Bwbaw1uPyQO58jNKaHx_rWLcY0Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 07:53:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/tidlegare-norsk-industri-sjef-stein-lier-hansen-i-retten-1.17735245" target="_blank">Tidlegare Norsk Industri-topp seier seg delvis skuldig i grov økonomisk utruskap</a></h2>
-                        <p>Tidlegare Norsk Industri-sjef Stein Lier-Hansen erkjenner seg ikkje skuldig i grov korrupsjon. Men han svarer delvis ja til punktet om grov økonomisk utruskap....</p>
                     </div>
                 </div>
             
@@ -662,32 +703,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hqk0pgPqrdJ5C3q-zLq2cQD0anRb7nonNHbRXXu6fdCA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 20 Jan 2026 21:40:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/finnmarkssykehuset-ville-trekke-advarsel-hvis-overlege-tone-hagerup-sluttet-i-jobben-1.17736201" target="_blank">Ville trekke advarselen hvis overlegen sluttet</a></h2>
-                        <p>Finnmarkssykehuset har prøvd å kvitte seg med en av overlegene som signerte varselet mot direktør Ole Hope. Men Tone Hagerup sa nei til forliket....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/xZEO3BmQDQxIv40HJL7IVQi8oRpPMOmqKLjAhmAGW_VQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 06:38:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/_onkel-skrue_-tiltalt-for-trusler-og-trakassering-1.17736451" target="_blank">«Onkel Skrue» tiltalt for trusler og trakassering</a></h2>
-                        <p>I sommer ble Imran Saber, bedre kjent som «Onkel Skrue», fengsla i en trusselsak.
-Han var sikta for nærmere tjue forhold. Blant annet for å ha sendt flere truende meldinger.
-Nå har...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142784000.jpg%3F%26accessToken%3D2ada13744063f47a1ca7cc5419ce85c830a00efb33bf1dfc906b1981410590cd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -771,19 +786,7 @@ Nå har...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 21 Jan 2026 06:11:57 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/Exp1Rj/nedgang-i-asia" target="_blank">Nedgang i Asia</a></h2>
-                        <p>Gullprisen fortsetter rekordferden....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 21.01.2026 11:21</div>
+                <div class="footer">Sist oppdatert: 21.01.2026 11:25</div>
             </div>
         </body>
         </html>
