@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -98,6 +101,18 @@
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
                 <div class="card">
+                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/4bf1551a-375b-4829-ae8c-f626182f0d8e?fit=crop&format=auto&h=900&w=1600&s=2a0ff0be4d0c2cdf7dd159a8261e4480a8cd54a8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Teknologi">Teknologi</span> 
+                            Wed, 21 Jan 2026 19:08:30 GMT
+                        </div>
+                        <h2><a href="https://www.tek.no/i/6qzGve" target="_blank">Volvos nye elbil får 810 km rekkevidde og skal produseres i Sverige</a></h2>
+                        <p>Her er nye EX60 - med de norske prisene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
                     <div class="card-image"><img src="https://images.gfx.no/1000/2908/2908392/Moxie_Marlinspike_in_2022_05.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -120,7 +135,115 @@
                         <p>Billigere å reise til Sør-Korea og kjøpe den selv....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/2aCRxv1WrojrMTVioBzBvgGX20qALXp1oUEd2zqFoPag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 18:14:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/anker-sak-om-strandsone-til-hoyesterett-1.17736964" target="_blank">Hytteeierens levegg og platting til Høyesterett: Avgjørelse kan sette ny strandsonestandard</a></h2>
+                        <p>Over 40 år etter at inngrepene ble gjort tar Færder kommune opp kampen med hytteeieren. Målet er et tydeligere og enklere regelverk for hele landet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/IepPUQkxrn1FcPQZyXHY6giI_d_6gfYwJl-ijT9vkh1Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 18:05:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/erling-braut-haaland-far-kritikk-for-maltorke-1.17736774" target="_blank">Haaland-trøbbel bekymrer NRK-ekspert: – Sensasjonelt svakt</a></h2>
+                        <p>Erling Braut Haaland har ikke scoret ett mål i åpent spill siden desember. Eksperter mener de vet årsaken til nordmannens måltørke....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/1GMvgB_gxlsdT7jIrPKPrAlyEiqgOlBpfa_pm1emF7Sg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 16:28:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/folkehogskule-gir-no-moglegheit-for-studiepoeng-1.17657710" target="_blank">Kan få studie­poeng av å gå på folke­høgskule</a></h2>
+                        <p>Folkehøgskule i Stavanger er først ut med ei unik ordning. Målet er å gjere overgangen til høgare utdanning enklare. No vurderer fleire folkehøgskular over landet det same....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/mqXA_826MQhbdEASmYQ46wYo_XP30JhTn8oe8s1url-g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 15:32:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/tuva-stavo-og-minna-skjevling-ble-nordens-forste-kvinner-til-a-friklatre-el-capitan.-1.17661132" target="_blank">Midt i klatreveggen gikk det galt: – Det var vondt å puste</a></h2>
+                        <p>Mange hundre meter over bakken kjente klatreren Tuva Stavø at noe ikke var som det skulle....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/uJF-bAeBcvw0eX47BxmNgQyxFiOrk7HapgcU7u8xywnA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 15:55:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/ekspertene-er-uenige-om-hva-trumps-tale-betydde-1.17737478" target="_blank">Støre: – Trump har en fremstilling av Nato som jeg ikke deler</a></h2>
+                        <p>Statsminister Jonas Gahr Støre minner om at Nato også er viktig for USA....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/K17nIt8hhri9X3H1X95W3wMn2mLGGHVH9jsH1M-iVdCw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 15:00:05 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/det-er-nesten-sa-man-ikke-helt-tror-det-1.17736800" target="_blank">Det er nesten så man ikke helt tror det</a></h2>
+                        <p>Donald Trumps tale ble høydepunktet – og bristepunktet – på årets Davos-møte. Fornærmelser mot Europa og utspill om Grønland forsterket uroen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/dTAxJ9YApY_RBvlNKqVYfwAc0u0paNfKvEchkl0fJF6w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 13:40:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/donald-trump-talar-i-davos-1.17737204" target="_blank">Trump: – Eg vil ikkje bruke makt</a></h2>
+                        <p>USAs president Donald Trump seier USA treng Grønland, men seier han ikkje vil bruke makt for å få øya....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/O34LoLi3lGo5jtTG5kiBZgUvZvcDnONDGTpIqPFMO_Gg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 13:53:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/samboerpar-skal-ha-spilt-bort-arven-til-12-ar-gammel-gutt-1.17737180" target="_blank">Verge skal ha spilt bort arven til 12-åring</a></h2>
+                        <p>Gutten arvet over én million kroner da moren døde. Nå er et samboerpar i 50-årene tiltalt for å ha spilt bort mesteparten av pengene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LkBu-Zrniykep5CDpqvvFgV4ao8xcNjVXoKBNVjayjxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 21 Jan 2026 13:17:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/langrenn_-iversen-hevdar-nrks-ekspertar-ikkje-nemnde-han-i-ol-diskusjonen-_-golberg-er-ueinig-1.17736034" target="_blank">Iversen hudflettar NRKs ekspertar: – Dårleg jobba</a></h2>
+                        <p>Emil Iversen har hamna i ordkrig med NRKs ekspertar. Han meiner dei ikkje nemnde han på TV under NM....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142865895.jpg%3F%26accessToken%3Dbe664b4843166c182c8c3fb78a82022989bedb79cb57c56a3c2ab9dcc935c24e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -190,18 +313,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/wreWl4/storinvestor-advarer-usa-etter-japansk-rentesjokk" target="_blank">Storinvestor advarer USA etter japansk rentesjokk</a></h2>
                         <p>Japans kraftige rentehopp sender en «tydelig advarsel» til USA om å få orden på statsfinansene, sier den amerikanske finanstoppen Ken Griffin....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/2aCRxv1WrojrMTVioBzBvgGX20qALXp1oUEd2zqFoPag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 18:14:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/anker-sak-om-strandsone-til-hoyesterett-1.17736964" target="_blank">Hytteeierens levegg og platting til Høyesterett: Avgjørelse kan sette ny strandsonestandard</a></h2>
-                        <p>Over 40 år etter at inngrepene ble gjort tar Færder kommune opp kampen med hytteeieren. Målet er et tydeligere og enklere regelverk for hele landet....</p>
                     </div>
                 </div>
             
@@ -278,18 +389,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/IepPUQkxrn1FcPQZyXHY6giI_d_6gfYwJl-ijT9vkh1Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 18:05:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/erling-braut-haaland-far-kritikk-for-maltorke-1.17736774" target="_blank">Haaland-trøbbel bekymrer NRK-ekspert: – Sensasjonelt svakt</a></h2>
-                        <p>Erling Braut Haaland har ikke scoret ett mål i åpent spill siden desember. Eksperter mener de vet årsaken til nordmannens måltørke....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F133279638.jpg%3F%26accessToken%3D9571d5db05958b9316a73f38434907be3b26677168cdff0b288840df229a5cae" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -322,18 +421,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/21/8322489/saudi-arabia-og-tyrkia-blir-med-pa-trumps-fredsrad" target="_blank">Saudi-Arabia og Tyrkia: Blir med på Trumps fredsråd</a></h2>
                         <p>Saudi-Arabia og Tyrkia er blant sju muslimske land i Midtøsten og Asia som i en felles uttalelse sier ja til å bli med i fredsrådet til president Donald Trump....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/1GMvgB_gxlsdT7jIrPKPrAlyEiqgOlBpfa_pm1emF7Sg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 16:28:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/folkehogskule-gir-no-moglegheit-for-studiepoeng-1.17657710" target="_blank">Kan få studie­poeng av å gå på folke­høgskule</a></h2>
-                        <p>Folkehøgskule i Stavanger er først ut med ei unik ordning. Målet er å gjere overgangen til høgare utdanning enklare. No vurderer fleire folkehøgskular over landet det same....</p>
                     </div>
                 </div>
             
@@ -446,30 +533,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/mqXA_826MQhbdEASmYQ46wYo_XP30JhTn8oe8s1url-g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 15:32:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/tuva-stavo-og-minna-skjevling-ble-nordens-forste-kvinner-til-a-friklatre-el-capitan.-1.17661132" target="_blank">Midt i klatreveggen gikk det galt: – Det var vondt å puste</a></h2>
-                        <p>Mange hundre meter over bakken kjente klatreren Tuva Stavø at noe ikke var som det skulle....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/uJF-bAeBcvw0eX47BxmNgQyxFiOrk7HapgcU7u8xywnA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 15:55:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/ekspertene-er-uenige-om-hva-trumps-tale-betydde-1.17737478" target="_blank">Støre: – Trump har en fremstilling av Nato som jeg ikke deler</a></h2>
-                        <p>Statsminister Jonas Gahr Støre minner om at Nato også er viktig for USA....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F50963462.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Df9f523ed006b6506c25375ce1f0e4ffa4102ae53463557bfe85efc3e2f2868e5" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -566,18 +629,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/K17nIt8hhri9X3H1X95W3wMn2mLGGHVH9jsH1M-iVdCw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 15:00:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/det-er-nesten-sa-man-ikke-helt-tror-det-1.17736800" target="_blank">Det er nesten så man ikke helt tror det</a></h2>
-                        <p>Donald Trumps tale ble høydepunktet – og bristepunktet – på årets Davos-møte. Fornærmelser mot Europa og utspill om Grønland forsterket uroen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142842460.jpg%3F%26accessToken%3D44b0a7a56d3ae754c0ce2c2c78286807f035464a4de3f00145f27d551f42d399" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -662,30 +713,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/dTAxJ9YApY_RBvlNKqVYfwAc0u0paNfKvEchkl0fJF6w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 13:40:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/donald-trump-talar-i-davos-1.17737204" target="_blank">Trump: – Eg vil ikkje bruke makt</a></h2>
-                        <p>USAs president Donald Trump seier USA treng Grønland, men seier han ikkje vil bruke makt for å få øya....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/O34LoLi3lGo5jtTG5kiBZgUvZvcDnONDGTpIqPFMO_Gg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 13:53:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/samboerpar-skal-ha-spilt-bort-arven-til-12-ar-gammel-gutt-1.17737180" target="_blank">Verge skal ha spilt bort arven til 12-åring</a></h2>
-                        <p>Gutten arvet over én million kroner da moren døde. Nå er et samboerpar i 50-årene tiltalt for å ha spilt bort mesteparten av pengene....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F118179018.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D62627f5893962e19d672f837cc9a99700b1fb89c1a27e1e02c9691d401ee5c14" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -694,18 +721,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/01/21/8322369/rykter-om-kjop-analytikere-spar-fusjon-i-nordsjoen" target="_blank">Rykter om kjøp – analytikere spår fusjon i Nordsjøen</a></h2>
                         <p>– Det er et stort behov for konsolidering i Nordsjøen, mener analytikere, som ikke utelukker sammenslåinger....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LkBu-Zrniykep5CDpqvvFgV4ao8xcNjVXoKBNVjayjxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 21 Jan 2026 13:17:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/langrenn_-iversen-hevdar-nrks-ekspertar-ikkje-nemnde-han-i-ol-diskusjonen-_-golberg-er-ueinig-1.17736034" target="_blank">Iversen hudflettar NRKs ekspertar: – Dårleg jobba</a></h2>
-                        <p>Emil Iversen har hamna i ordkrig med NRKs ekspertar. Han meiner dei ikkje nemnde han på TV under NM....</p>
                     </div>
                 </div>
             
@@ -769,19 +784,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142836995.jpg%3F%26accessToken%3D62e8b7c2853865a54eaeb0f4905e9088a07cade789ecf10cf58308c1015ae159" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 21 Jan 2026 13:12:38 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/21/8322432/brak-i-davos-sentralbanksjef-lagarde-stormet-ut-av-middag-etter-kritikk-fra-usas-handelsminister" target="_blank">Bråk i Davos: Lagarde stormet ut av middag etter kritikk</a></h2>
-                        <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 21.01.2026 19:21</div>
+                <div class="footer">Sist oppdatert: 21.01.2026 19:25</div>
             </div>
         </body>
         </html>
