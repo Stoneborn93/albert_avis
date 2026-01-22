@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,7 +135,228 @@
                         <p>Spillselskapet går gjennom en massiv omorganisering....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/NGY94sds8aKpQ4nrsWlhUAPwny24swpVahVqP3EXGzNA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 10:44:19 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/evakuerte-skiturister-fra-gondol-i-trysil-1.17738610" target="_blank">Evakuerte skit­urister fra gondol i Trysil</a></h2>
+                        <p>Evakueringen er over etter at en gondol på Trysil Alpinanlegg stoppa....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Mu6mP0uRmIDP_ioiJYRacwziUtkLrYhqnufWS1fd-ROg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 13:04:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/ruud-enkelt-videre-i-australian-open-1.17738942" target="_blank">Ruud enkelt videre i Australian Open</a></h2>
+                        <p>Casper Ruud leverte nok en gang varene i Australian Open og tok seg enkelt videre fra andre runde.
+Torsdag var det spanske Jaume Munar som sto på andre siden av nettet. Ruud pangåp...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hOZpPW5u9QuOPzMruZJa5QhFAoh05CD0KMvwb-o-X7Cg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 13:00:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/_affeksjonsverdi_-kan-fa-oscar-nominasjon-1.17737152" target="_blank">Oscar-nominasjoner: «Affeksjonsverdi» kan bli historisk</a></h2>
+                        <p>Nominasjonene til Oscar blir offentliggjort i dag. Stor spenning rundt mulighetene til norske «Affeksjonsverdi»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pvQSUK2IQ3k9oTlGz2iJ-gKHwShJlJMsN-adRULFgUOA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 11:27:14 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/vesten-mot-trump-1.17738594" target="_blank">Vesten mot Trump</a></h2>
+                        <p>Den canadiske statsministeren leder an i en ny og mer konfronterende tone mot USAs president....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/oh-InFXERRl-XNAXzpv9jQvL7CIpkdGJFkvrWvDeiZKA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 12:01:09 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/politiet-mener-north-tandem-fortsatte-med-kriminell-virksomhet-etter-nrk-avsloring-1.17733428" target="_blank">Politiet mener lakse­selskap fortsatte med kriminell virksom­het etter NRK-­avsløring</a></h2>
+                        <p>­...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/QmAF1bFXB5dxunx7RuCW0gR86TAza7k8Ll_RxgXJeUjw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 08:36:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/selger-fritidsleilighet-i-hemsedal-til-60-millioner-kroner-1.17734986" target="_blank">Luksusleilighet i Hemsedal til salgs for 60 millioner kroner</a></h2>
+                        <p>Drømmer du om luksus i fjellet? Norges dyreste fritidsleilighet kan bli din hvis du blar opp 60 millioner kroner....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://static.nrk.no/kartoteket/01KFJP85NNYTEM22Y1JDJAGJRE/F169/1000w.png" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 10:44:19 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/gondol-i-trysil-star-_-har-starta-evakuering-1.17738610" target="_blank">Gondol i Trysil står – har starta evakuering</a></h2>
+                        <p>– Vi har iverksatt evakuering. Vi vet ikke årsak, men er i full gang med å utrede, sier Gudrun Sanaker Lohne, destinasjonssjef for SkiStar i Trysil....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 09:50:22 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/dagbladet_-15-aring-siktet-for-grove-trusler-_-lagde-manifest-med-drapsplaner-1.17738465" target="_blank">Dagbladet: 15-åring siktet for grove trusler – lagde manifest med drapsplaner</a></h2>
+                        <p>En 15 år gammel gutt er siktet for grove trusler for å ha laget et manifest der han skrev om planer om å drepe alle muslimer, jøder og «svartinger», melder Dagbladet.
+Seniorrådgive...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/BxT5iUJKR480J6Hfy8ZxeQGemET7kz5eb3VdTh5YttgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 10:07:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/mindrearig-i-finnmark-siktet-for-a-ha-kommet-med-grove-trusler-1.17738511" target="_blank">Mindreårig siktet for grove trusler: – Ivaretas av helsevesenet</a></h2>
+                        <p>En ung gutt skal ha laget et manifest. Saken er nå under etterforskning....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/f3o5YXOCRm8ujzr8M7W-DQI3pwdoHwADaXtbV39bc91g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 09:28:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/zelenskyj-og-trump-motest-i-davos-1.17738319" target="_blank">Zelenskyj i Sveits for samtalar om Ukraina</a></h2>
+                        <p>Torsdag er Ukraina tema under Verdas økonomiske forum, i det landet sin president møter Donald Trump....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 09:50:22 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/dagbladet_-15-aring-siktet-for-terror-_-lagde-manifest-med-drapsplaner-1.17738465" target="_blank">Dagbladet: 15-åring siktet for terror – lagde manifest med drapsplaner</a></h2>
+                        <p>En 15 år gammel gutt er siktet for terror for å ha laget et manifest der han skrev om planer om å drepe alle muslimer, jøder og «svartinger», melder Dagbladet.
+Seniorrådgiver Eirik...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/kPw_8KE6MTpVXOZqu1Q_8wdSHUwo6-URVsHuX52R5TMg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 09:56:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/kpmg-granskingen-etter-drapet-pa-tamima-nibras-juhar-pa-kampen-er-klar-1.17725421" target="_blank">Knusende konklusjon om Kampen-drapet: – Oslo kommune har brutt loven</a></h2>
+                        <p>Tamima Nibras Juhar ble drept av en beboer på botrening. Nå er konklusjonen fra granskinga av kommunen klar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/BxT5iUJKR480J6Hfy8ZxeQGemET7kz5eb3VdTh5YttgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 10:07:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/15-aring-bosatt-i-finnmark-siktet-for-terror-1.17738511" target="_blank">Mindreårig siktet for grove trusler: – Ivaretas av helsevesenet</a></h2>
+                        <p>En ung gutt skal ha laget et manifest. Saken er nå under etterforskning....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3Niha_3714SHx4SdxpqPpwbdrqiy7VExwewgZd_eni2A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 10:11:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/statsadvokaten-ber-om-lenger-straff-for-mannen-som-er-tiltalt-for-drapet-pa-linea-bjornnes-1.17738236" target="_blank">Drapet på Linea Bjørnnes: Ber om lenger straff</a></h2>
+                        <p>Statsadvokaten mener den tiltalte mannen må dømmes til 13 år i fengsel for å ha tatt livet av 20 år gamle Bjørnnes....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FYJgipFILr_qkV-KFsZ9zAex84ACZ6z6uvKYVJ_Xucqg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 07:29:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/zelenskyj-pa-plass-i-sveits---skal-mote-trump-i-davos-1.17738211" target="_blank">Zelenskyj på plass i Sveits - skal møte Trump i Davos</a></h2>
+                        <p>Ukrainas president Volodymyr Zelenskyj har landet i Sveits, bekrefter rådgiveren hans, ifølge Reuters.
+Han er på vei til Verdens økonomiske forum (WEF) i Davos for å møte USAs pres...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 09:00:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/renten-holdes-uendret-pa-4-prosent_-_-vi-har-ikke-hastverk-1.17738205" target="_blank">Renten holdes uendret på 4 prosent: – Vi har ikke hastverk</a></h2>
+                        <p>Norges Bank holder styringsrenten uendret på 4 prosent. Det har den ligget på siden september i fjor – da ble den satt ned fra 4,5 prosent.
+– Vi har ikke hastverk med å sette rente...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/lEmJ9_MAtDhhegkYgfjuAQeXjTt8chRJ6MP6b5oLMZbg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 08:09:36 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/oslo-kjoper-t-banevogner-fra-omstridt-selskap-1.17738282" target="_blank">Oslo kjøper T-banevogner fra omstridt selskap</a></h2>
+                        <p>Byrådet bekrefter at de kjøper ytterligere 24 vognsett til T-banen fra spanske CAF....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142918116.jpg%3F%26accessToken%3D4220d46f658cf58c221ade65cb59dd91518817f8c63da251b1f89b72778aef5b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 22 Jan 2026 13:21:46 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/22/8322705/trump-og-zelenskyj-mottes-mulig-fredsavtale-for-ukraina-pa-agendaen" target="_blank">Trump og Zelenskyj møttes: Mulig fredsavtale for Ukraina på agendaen</a></h2>
+                        <p>Møtet mellom Donald Trump og Volodymyr Zelenskyj er ferdig i Davos, og USAs utkast til fredsavtale for Ukraina ligger på bordet....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142904455.jpg%3F%26accessToken%3Db53b1a861fab423291d60db485ada5ecd24ee88a2c6f4558f77bdf5a17d6548d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -182,43 +406,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/NGY94sds8aKpQ4nrsWlhUAPwny24swpVahVqP3EXGzNA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 10:44:19 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/evakuerte-skiturister-fra-gondol-i-trysil-1.17738610" target="_blank">Evakuerte skit­urister fra gondol i Trysil</a></h2>
-                        <p>Evakueringen er over etter at en gondol på Trysil Alpinanlegg stoppa....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Mu6mP0uRmIDP_ioiJYRacwziUtkLrYhqnufWS1fd-ROg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 13:04:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/ruud-enkelt-videre-i-australian-open-1.17738942" target="_blank">Ruud enkelt videre i Australian Open</a></h2>
-                        <p>Casper Ruud leverte nok en gang varene i Australian Open og tok seg enkelt videre fra andre runde.
-Torsdag var det spanske Jaume Munar som sto på andre siden av nettet. Ruud pangåp...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hOZpPW5u9QuOPzMruZJa5QhFAoh05CD0KMvwb-o-X7Cg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 13:00:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/_affeksjonsverdi_-kan-fa-oscar-nominasjon-1.17737152" target="_blank">Oscar-nominasjoner: «Affeksjonsverdi» kan bli historisk</a></h2>
-                        <p>Nominasjonene til Oscar blir offentliggjort i dag. Stor spenning rundt mulighetene til norske «Affeksjonsverdi»....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142902273.jpg%3F%26accessToken%3De20a741d49087ca340e74a9038aeadd8f1383eba412b8e3831f17e6f360dcf6e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -251,30 +438,6 @@ Torsdag var det spanske Jaume Munar som sto på andre siden av nettet. Ruud pang
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/22/8322636/thai-fest-pa-oslo-bors-en-rekke-aksjer-loftes-av-kjopsanbefalinger" target="_blank">Oppgangen avtar på Oslo Børs: Telenor-byks etter Thailand-salg – flere aksjer stiger på nye analyser</a></h2>
                         <p>Oppgangen avtar på Oslo Børs: Telenor-byks etter Thailand-salg – flere aksjer stiger på nye analyser....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pvQSUK2IQ3k9oTlGz2iJ-gKHwShJlJMsN-adRULFgUOA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 11:27:14 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/vesten-mot-trump-1.17738594" target="_blank">Vesten mot Trump</a></h2>
-                        <p>Den canadiske statsministeren leder an i en ny og mer konfronterende tone mot USAs president....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/oh-InFXERRl-XNAXzpv9jQvL7CIpkdGJFkvrWvDeiZKA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 12:01:09 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/politiet-mener-north-tandem-fortsatte-med-kriminell-virksomhet-etter-nrk-avsloring-1.17733428" target="_blank">Politiet mener lakse­selskap fortsatte med kriminell virksom­het etter NRK-­avsløring</a></h2>
-                        <p>­...</p>
                     </div>
                 </div>
             
@@ -363,30 +526,6 @@ Torsdag var det spanske Jaume Munar som sto på andre siden av nettet. Ruud pang
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/QmAF1bFXB5dxunx7RuCW0gR86TAza7k8Ll_RxgXJeUjw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 08:36:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/selger-fritidsleilighet-i-hemsedal-til-60-millioner-kroner-1.17734986" target="_blank">Luksusleilighet i Hemsedal til salgs for 60 millioner kroner</a></h2>
-                        <p>Drømmer du om luksus i fjellet? Norges dyreste fritidsleilighet kan bli din hvis du blar opp 60 millioner kroner....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://static.nrk.no/kartoteket/01KFJP85NNYTEM22Y1JDJAGJRE/F169/1000w.png" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 10:44:19 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/gondol-i-trysil-star-_-har-starta-evakuering-1.17738610" target="_blank">Gondol i Trysil står – har starta evakuering</a></h2>
-                        <p>– Vi har iverksatt evakuering. Vi vet ikke årsak, men er i full gang med å utrede, sier Gudrun Sanaker Lohne, destinasjonssjef for SkiStar i Trysil....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142892342.jpg%3F%26accessToken%3D9618ea80c69ddc0cc950f2dd084cec45cbe8a44b9bb50d7b5c9ccd0035bf540a" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -407,31 +546,6 @@ Torsdag var det spanske Jaume Munar som sto på andre siden av nettet. Ruud pang
                         </div>
                         <h2><a href="https://www.finansavisen.no/skatt/2026/01/22/8322602/bommet-pa-de-rikeste-skattebombe-traff-vanlige-folk" target="_blank">Skattebombe bommet på de rikeste – traff vanlige folk</a></h2>
                         <p>Kan Jens Stoltenberg leve med å ha fyrt av en formuesskattebombe som bommet på de rike, men traff vanlige folk? Her er svaret fra Det kongelige finansdepartementet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 09:50:22 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/dagbladet_-15-aring-siktet-for-grove-trusler-_-lagde-manifest-med-drapsplaner-1.17738465" target="_blank">Dagbladet: 15-åring siktet for grove trusler – lagde manifest med drapsplaner</a></h2>
-                        <p>En 15 år gammel gutt er siktet for grove trusler for å ha laget et manifest der han skrev om planer om å drepe alle muslimer, jøder og «svartinger», melder Dagbladet.
-Seniorrådgive...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/BxT5iUJKR480J6Hfy8ZxeQGemET7kz5eb3VdTh5YttgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 10:07:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/mindrearig-i-finnmark-siktet-for-a-ha-kommet-med-grove-trusler-1.17738511" target="_blank">Mindreårig siktet for grove trusler: – Ivaretas av helsevesenet</a></h2>
-                        <p>En ung gutt skal ha laget et manifest. Saken er nå under etterforskning....</p>
                     </div>
                 </div>
             
@@ -492,67 +606,6 @@ Seniorrådgive...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/22/8322620/mette-frederiksen-vi-avgir-selvfolgelig-ikke-suverenitet" target="_blank">Grønland-striden: Klar Nato-beskjed</a></h2>
                         <p>Danmark avgir selvfølgelig ikke suverenitet over Grønland, sier danskenes statsminister Mette Frederiksen etter at Nato og USA landet rammene for en avtale....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/f3o5YXOCRm8ujzr8M7W-DQI3pwdoHwADaXtbV39bc91g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 09:28:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/zelenskyj-og-trump-motest-i-davos-1.17738319" target="_blank">Zelenskyj i Sveits for samtalar om Ukraina</a></h2>
-                        <p>Torsdag er Ukraina tema under Verdas økonomiske forum, i det landet sin president møter Donald Trump....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 09:50:22 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/dagbladet_-15-aring-siktet-for-terror-_-lagde-manifest-med-drapsplaner-1.17738465" target="_blank">Dagbladet: 15-åring siktet for terror – lagde manifest med drapsplaner</a></h2>
-                        <p>En 15 år gammel gutt er siktet for terror for å ha laget et manifest der han skrev om planer om å drepe alle muslimer, jøder og «svartinger», melder Dagbladet.
-Seniorrådgiver Eirik...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/kPw_8KE6MTpVXOZqu1Q_8wdSHUwo6-URVsHuX52R5TMg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 09:56:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/kpmg-granskingen-etter-drapet-pa-tamima-nibras-juhar-pa-kampen-er-klar-1.17725421" target="_blank">Knusende konklusjon om Kampen-drapet: – Oslo kommune har brutt loven</a></h2>
-                        <p>Tamima Nibras Juhar ble drept av en beboer på botrening. Nå er konklusjonen fra granskinga av kommunen klar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/BxT5iUJKR480J6Hfy8ZxeQGemET7kz5eb3VdTh5YttgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 10:07:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/15-aring-bosatt-i-finnmark-siktet-for-terror-1.17738511" target="_blank">Mindreårig siktet for grove trusler: – Ivaretas av helsevesenet</a></h2>
-                        <p>En ung gutt skal ha laget et manifest. Saken er nå under etterforskning....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3Niha_3714SHx4SdxpqPpwbdrqiy7VExwewgZd_eni2A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 10:11:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/statsadvokaten-ber-om-lenger-straff-for-mannen-som-er-tiltalt-for-drapet-pa-linea-bjornnes-1.17738236" target="_blank">Drapet på Linea Bjørnnes: Ber om lenger straff</a></h2>
-                        <p>Statsadvokaten mener den tiltalte mannen må dømmes til 13 år i fengsel for å ha tatt livet av 20 år gamle Bjørnnes....</p>
                     </div>
                 </div>
             
@@ -653,32 +706,6 @@ Seniorrådgiver Eirik...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FYJgipFILr_qkV-KFsZ9zAex84ACZ6z6uvKYVJ_Xucqg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 07:29:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/zelenskyj-pa-plass-i-sveits---skal-mote-trump-i-davos-1.17738211" target="_blank">Zelenskyj på plass i Sveits - skal møte Trump i Davos</a></h2>
-                        <p>Ukrainas president Volodymyr Zelenskyj har landet i Sveits, bekrefter rådgiveren hans, ifølge Reuters.
-Han er på vei til Verdens økonomiske forum (WEF) i Davos for å møte USAs pres...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 09:00:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/renten-holdes-uendret-pa-4-prosent_-_-vi-har-ikke-hastverk-1.17738205" target="_blank">Renten holdes uendret på 4 prosent: – Vi har ikke hastverk</a></h2>
-                        <p>Norges Bank holder styringsrenten uendret på 4 prosent. Det har den ligget på siden september i fjor – da ble den satt ned fra 4,5 prosent.
-– Vi har ikke hastverk med å sette rente...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -687,18 +714,6 @@ Han er på vei til Verdens økonomiske forum (WEF) i Davos for å møte USAs pre
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/431ME9/ber-trump-om-aa-faa-slippe-ut-av-fengsel" target="_blank">Ber Trump om å få slippe ut av fengsel</a></h2>
                         <p>Theranos-gründeren soner 11 år for svindel....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/lEmJ9_MAtDhhegkYgfjuAQeXjTt8chRJ6MP6b5oLMZbg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 08:09:36 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/oslo-kjoper-t-banevogner-fra-omstridt-selskap-1.17738282" target="_blank">Oslo kjøper T-banevogner fra omstridt selskap</a></h2>
-                        <p>Byrådet bekrefter at de kjøper ytterligere 24 vognsett til T-banen fra spanske CAF....</p>
                     </div>
                 </div>
             
@@ -774,19 +789,7 @@ Han er på vei til Verdens økonomiske forum (WEF) i Davos for å møte USAs pre
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 22 Jan 2026 08:01:56 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/oEAXW0/oslo-boers-stiger-en-prosent-etter-u-sving-fra-donald-trump" target="_blank">Markant oppgang på Oslo Børs</a></h2>
-                        <p>Telenor-aksjen stiger kraftig etter Thailand-salg....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 22.01.2026 13:21</div>
+                <div class="footer">Sist oppdatert: 22.01.2026 13:25</div>
             </div>
         </body>
         </html>
