@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -120,31 +123,7 @@
                         <p>Teknologi og frekvenser er bare to av utfordringene for mobilsamtaler til satellitt. Tillitsgrøfta mellom USA og Europa en tredje....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142946974.jpg%3F%26accessToken%3D00b2669fbcafb24bab0a3daaa8c6b7b11315cdd147bd3c5ab4a6e586bda94a8d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 22 Jan 2026 18:40:06 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/22/8322833/forholdet-til-usa-under-lupen" target="_blank">Forholdet til USA under lupen</a></h2>
-                        <p>Med Donald Trump går den gamle verdensordenen opp i limingen. Nå manes EU-landenes ledere om å stå sammen mot USA....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142899512.jpg%3F%26accessToken%3Dc788c93b90ae444f941713917e46c73eba62af20c1d3c9a5daf4f195294b7023" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 22 Jan 2026 19:00:03 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/22/8322648/trump-reddet-fotball-vm" target="_blank">Fotball-VM – den moroa skal vi ikke la gå fra oss. Men hva var det med de Qatar-greiene igjen?</a></h2>
-                        <p>Norge er jo med i fotball-VM igjen. For første gang på 28 år. Den moroa skal vi ikke la gå fra oss. Men hvis Trump likevel vil ta Grønland? Da trekker vi oss. Håper vi. Prinsipper ...</p>
-                    </div>
-                </div>
-            
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/Q5FJ0QN2-FJq6DVpOoB3agrfTqX4NTFISuV6uDVcDKqg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -166,6 +145,166 @@
                         </div>
                         <h2><a href="https://www.nrk.no/tromsogfinnmark/harstad-kommune-og-unn-krangler-om-regning-for-20-meters-lang-gang-1.17729417" target="_blank">Tunnelen til 15 millioner kroner ender i denne veggen: – En parodi</a></h2>
                         <p>Pasienter må ta taxi eller ambulanse i 150 meter, fordi UNN og Harstad kommune ikke blir enige om regningen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UGPhf9ahdAymS5_2Zss2_wT7Fn8cmIZxqi7JdLKGcqLw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 16:55:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/geopolitiske-spenningar-paverkar-naeringslivet-i-davos-2026-1.17738433" target="_blank">Toppsjef fryktar USA–diskusjonar i Davos</a></h2>
+                        <p>Lasse Kristoffersen må moderere seg sjølv medan han er i Davos. Han fryktar represaliar dersom selskapet hans blir trekt inn i USAs politiske debatt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UrOQvf1LDq-zw0z9xPTrpQeuI_pOyW4EOL867q2pJNmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 17:18:36 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/pst_-nord-korea-bruker-falske-identitetar-for-a-spionere-pa-norske-bedrifter-1.17727609" target="_blank">Nordkoreanske IT-ekspertar lurer norske bedrifter</a></h2>
+                        <p>Nordkoreanske IT-ekspertar lurer norske bedrifter trill rundt. PST har avdekt fleire saker....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ewcRlVUh9XxYmPWGFqhPZAzqWOcPBW6e3iH6av4Db9NQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 15:50:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/_albert-einstein_-erkjenner-massivt-kokainsal-i-bergen-1.17736621" target="_blank">Skjult etterforsking avslørte «Albert Einstein» – erkjenner massivt kokainsal</a></h2>
+                        <p>I løpet av eitt år skal mennene ha forsynt Bergen med minst 17,5 kilo kokain. Politiet meiner dei tente 11 millionar kroner på geskjeften....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/AJTcqAn2jiilZoqUvDrj6QgwY8HD5UFLzgHkq1EJefmg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 15:58:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/opplever-hoye-hastigheter-forbi-ulykkessteder_-_-vi-redder-liv-med-livet-som-innsats-1.17730140" target="_blank">Kjører som svin forbi ulykkessteder: – Vi redder liv med livet som innsats</a></h2>
+                        <p>Til tross for at ulykkesstedet er markert med blålys, ulykkesskilt og fartsgrensen er satt ned kjører mange bilister altfor fort forbi. Trygg Trafikk mener det er skremmende....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UWxv7f1ZJGAfNnEp-86pVQm7Ka5yQCdRBTnnmrI8mrFg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 15:07:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/kulde-gir-mindre-effekt-inn-pa-elbilbatteriet-dersom-ein-ikkje-brukar-eit-triks-1.17721070" target="_blank">Fem ting du må vite om lading av elbil i kulda</a></h2>
+                        <p>Elbilen ladar saktare i kalde omgivnader dersom du ikkje bruker eit spesielt triks. Her får du fem tips til eit lykkelegare ladeliv....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 14:18:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/de-nordiske-statsministerne-utsetter-tur-til-gronland-1.17739124" target="_blank">De nordiske statsministerne utsetter tur til Grønland</a></h2>
+                        <p>Statsminister Jonas Gahr Støre skulle dra til Grønland fredag, sammen med Statsministerne fra Danmark, Finland og Island.
+Nå er turen utsatt.
+– Det stemmer at det var planlagt en r...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/WgnDPCZho5RpRstiH8ogaQm-wT4r6R2GlpE8rQncBjvA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 14:26:29 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/utsetter-nordisk-krisemote-om-gronland-i-nuuk-1.17738357" target="_blank">De nordiske statsministrene utsetter tur til Grønland</a></h2>
+                        <p>Statsministrene i alle de nordiske landene skulle etter planen til Nuuk på Grønland....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 14:18:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/vg_-de-nordiske-statsministerne-utsetter-tur-til-gronland-1.17739124" target="_blank">VG: De nordiske statsministerne utsetter tur til Grønland</a></h2>
+                        <p>Statsminister Jonas Gahr Støre skulle dra til Grønland fredag, sammen med Statsministerne fra Danmark, Finland og Island.
+Nå er turen utsatt, skriver VG.
+– Det stemmer at det var p...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hOZpPW5u9QuOPzMruZJa5QhFAoh05CD0KMvwb-o-X7Cg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 13:00:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/_affeksjonsverdi_-med-ni-oscar-nominasjoner_-_-historisk_-1.17737152" target="_blank">«Affeksjonsverdi» Oscar-nominert til beste film: – En historisk dag!</a></h2>
+                        <p>Nominasjonsdryss til «Affeksjonsverdi» i Oscar. Triers film er blant annet nominert til den gjeveste prisen: beste film. Historisk for norsk film....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/HfBHqthbdDL6Eu5Rz-z5hwiaDuNfn_002B3KVsJPRLJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 14:07:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/spansk-politi_-svenske-gjengkriminelle-pagripne-etter-kidnapping-av-nordmann-i-spania-1.17739026" target="_blank">Spansk politi: Svenske gjengkriminelle pågripne etter kidnapping av nordmann i Spania</a></h2>
+                        <p>Fire svenske statsborgarar er pågripne i Spania. Spansk politi meiner at dei har kidnappa ein nordmann....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/BwRybXoQI1mnbRnIA8kAwwPZoAmHCRET1-HbvC6Km1wg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 14:13:59 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/himmel-og-hav_-for-en-bragd_-1.17738466" target="_blank">Himmel og hav, for en bragd!</a></h2>
+                        <p>Dagen i dag blir stående med store bokstaver i norsk filmhistorie....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142946974.jpg%3F%26accessToken%3D00b2669fbcafb24bab0a3daaa8c6b7b11315cdd147bd3c5ab4a6e586bda94a8d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 22 Jan 2026 18:40:06 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/22/8322833/forholdet-til-usa-under-lupen" target="_blank">Forholdet til USA under lupen</a></h2>
+                        <p>Med Donald Trump går den gamle verdensordenen opp i limingen. Nå manes EU-landenes ledere om å stå sammen mot USA....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142899512.jpg%3F%26accessToken%3Dc788c93b90ae444f941713917e46c73eba62af20c1d3c9a5daf4f195294b7023" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 22 Jan 2026 19:00:03 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/22/8322648/trump-reddet-fotball-vm" target="_blank">Fotball-VM – den moroa skal vi ikke la gå fra oss. Men hva var det med de Qatar-greiene igjen?</a></h2>
+                        <p>Norge er jo med i fotball-VM igjen. For første gang på 28 år. Den moroa skal vi ikke la gå fra oss. Men hvis Trump likevel vil ta Grønland? Da trekker vi oss. Håper vi. Prinsipper ...</p>
                     </div>
                 </div>
             
@@ -302,30 +441,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UGPhf9ahdAymS5_2Zss2_wT7Fn8cmIZxqi7JdLKGcqLw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 16:55:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/geopolitiske-spenningar-paverkar-naeringslivet-i-davos-2026-1.17738433" target="_blank">Toppsjef fryktar USA–diskusjonar i Davos</a></h2>
-                        <p>Lasse Kristoffersen må moderere seg sjølv medan han er i Davos. Han fryktar represaliar dersom selskapet hans blir trekt inn i USAs politiske debatt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UrOQvf1LDq-zw0z9xPTrpQeuI_pOyW4EOL867q2pJNmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 17:18:36 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/pst_-nord-korea-bruker-falske-identitetar-for-a-spionere-pa-norske-bedrifter-1.17727609" target="_blank">Nordkoreanske IT-ekspertar lurer norske bedrifter</a></h2>
-                        <p>Nordkoreanske IT-ekspertar lurer norske bedrifter trill rundt. PST har avdekt fleire saker....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -394,30 +509,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/22/8322809/mette-frederiksen-om-gronland-i-gang-med-diplomatisk-og-politisk-arbeid-med-usa" target="_blank">Mette Frederiksen om Grønland: Diplomatisk og politisk arbeid med USA er startet</a></h2>
                         <p>Det er satt i gang diplomatisk og politisk arbeid mellom Danmark, Grønland og USA, sier Danmarks statsminister Mette Frederiksen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ewcRlVUh9XxYmPWGFqhPZAzqWOcPBW6e3iH6av4Db9NQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 15:50:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/_albert-einstein_-erkjenner-massivt-kokainsal-i-bergen-1.17736621" target="_blank">Skjult etterforsking avslørte «Albert Einstein» – erkjenner massivt kokainsal</a></h2>
-                        <p>I løpet av eitt år skal mennene ha forsynt Bergen med minst 17,5 kilo kokain. Politiet meiner dei tente 11 millionar kroner på geskjeften....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/AJTcqAn2jiilZoqUvDrj6QgwY8HD5UFLzgHkq1EJefmg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 15:58:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/opplever-hoye-hastigheter-forbi-ulykkessteder_-_-vi-redder-liv-med-livet-som-innsats-1.17730140" target="_blank">Kjører som svin forbi ulykkessteder: – Vi redder liv med livet som innsats</a></h2>
-                        <p>Til tross for at ulykkesstedet er markert med blålys, ulykkesskilt og fartsgrensen er satt ned kjører mange bilister altfor fort forbi. Trygg Trafikk mener det er skremmende....</p>
                     </div>
                 </div>
             
@@ -530,44 +621,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UWxv7f1ZJGAfNnEp-86pVQm7Ka5yQCdRBTnnmrI8mrFg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 15:07:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/kulde-gir-mindre-effekt-inn-pa-elbilbatteriet-dersom-ein-ikkje-brukar-eit-triks-1.17721070" target="_blank">Fem ting du må vite om lading av elbil i kulda</a></h2>
-                        <p>Elbilen ladar saktare i kalde omgivnader dersom du ikkje bruker eit spesielt triks. Her får du fem tips til eit lykkelegare ladeliv....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 14:18:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/de-nordiske-statsministerne-utsetter-tur-til-gronland-1.17739124" target="_blank">De nordiske statsministerne utsetter tur til Grønland</a></h2>
-                        <p>Statsminister Jonas Gahr Støre skulle dra til Grønland fredag, sammen med Statsministerne fra Danmark, Finland og Island.
-Nå er turen utsatt.
-– Det stemmer at det var planlagt en r...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/WgnDPCZho5RpRstiH8ogaQm-wT4r6R2GlpE8rQncBjvA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 14:26:29 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/utsetter-nordisk-krisemote-om-gronland-i-nuuk-1.17738357" target="_blank">De nordiske statsministrene utsetter tur til Grønland</a></h2>
-                        <p>Statsministrene i alle de nordiske landene skulle etter planen til Nuuk på Grønland....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142927310.jpg%3F%26accessToken%3D89e453ce4ae8433c77f65e1b5ae3b48eeae4361f51f33f0f6004047e21caa9b3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -576,20 +629,6 @@ Nå er turen utsatt.
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/22/8322765/zelenskyj-refser-europa-maduro-star-for-retten-men-ikke-putin" target="_blank">Refser Europa: – Maduro står for retten, men ikke Putin</a></h2>
                         <p>Ukrainas president Volodymyr Zelenskyj kommer med krass kritikk av Europa i sin tale til Verdens økonomiske forum (WEF)....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 14:18:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/vg_-de-nordiske-statsministerne-utsetter-tur-til-gronland-1.17739124" target="_blank">VG: De nordiske statsministerne utsetter tur til Grønland</a></h2>
-                        <p>Statsminister Jonas Gahr Støre skulle dra til Grønland fredag, sammen med Statsministerne fra Danmark, Finland og Island.
-Nå er turen utsatt, skriver VG.
-– Det stemmer at det var p...</p>
                     </div>
                 </div>
             
@@ -678,42 +717,6 @@ Nå er turen utsatt, skriver VG.
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hOZpPW5u9QuOPzMruZJa5QhFAoh05CD0KMvwb-o-X7Cg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 13:00:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/_affeksjonsverdi_-med-ni-oscar-nominasjoner_-_-historisk_-1.17737152" target="_blank">«Affeksjonsverdi» Oscar-nominert til beste film: – En historisk dag!</a></h2>
-                        <p>Nominasjonsdryss til «Affeksjonsverdi» i Oscar. Triers film er blant annet nominert til den gjeveste prisen: beste film. Historisk for norsk film....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/HfBHqthbdDL6Eu5Rz-z5hwiaDuNfn_002B3KVsJPRLJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 14:07:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/spansk-politi_-svenske-gjengkriminelle-pagripne-etter-kidnapping-av-nordmann-i-spania-1.17739026" target="_blank">Spansk politi: Svenske gjengkriminelle pågripne etter kidnapping av nordmann i Spania</a></h2>
-                        <p>Fire svenske statsborgarar er pågripne i Spania. Spansk politi meiner at dei har kidnappa ein nordmann....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/BwRybXoQI1mnbRnIA8kAwwPZoAmHCRET1-HbvC6Km1wg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 14:13:59 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/himmel-og-hav_-for-en-bragd_-1.17738466" target="_blank">Himmel og hav, for en bragd!</a></h2>
-                        <p>Dagen i dag blir stående med store bokstaver i norsk filmhistorie....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142915928.jpg%3F%26accessToken%3D1495cbe3ccfcc68e3c276fa32cbfc61ed7a29a27abc68e194390be46a26380d5" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -785,7 +788,7 @@ Nå er turen utsatt, skriver VG.
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 22.01.2026 19:21</div>
+                <div class="footer">Sist oppdatert: 22.01.2026 19:25</div>
             </div>
         </body>
         </html>
