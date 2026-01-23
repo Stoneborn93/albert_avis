@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,19 +135,7 @@
                         <p>Helse Midt-Norge vurderer å flytte brukerne sine over på ChromeOS eller det tyske Linux-alternativet Igel av økonomiske og geopolitiske hensyn....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142950009.jpg%3F%26accessToken%3D5c712613dcb7b087b9ca8b6d84646dccf00eb23eb5693a94638a9f06b2c37a30" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Fri, 23 Jan 2026 05:19:09 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/01/23/8322858/tiktok-salget-er-gjennomfort-i-usa-trump-takker-xi" target="_blank">Endelig: Tiktok-salg i boks</a></h2>
-                        <p>Kinesiske Bytedance har gjennomført salget av den amerikanske delen av Tiktok til en gruppe investorer, melder The New York Times. USAs president takker Kina....</p>
-                    </div>
-                </div>
-            
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/wzOd5vLoHwamijxrxdAVLQBI7tSbTM-pZkyB0_UcuAQA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -306,6 +297,138 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                 </div>
             
                 <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MLLH8NPK2H1WP8goKs_FLw1st952NTjczdQz8sAs4tDA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 20:39:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/taekwondoutovar-selma-oen-li-har-operert-for-tredje-gongen-1.17725998" target="_blank">Selma (25) fann styrke etter tredje operasjon – gir ikkje opp draumen</a></h2>
+                        <p>Tre gonger har Selma Øen Li lege på operasjonsbordet. Likevel nektar verdsmeisteren å gi opp draumen om eit nytt gull....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FG8bETPnxSHiP7KOEv8aaA1m0QNB-CIaWx-m3lgDIrDg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 21:00:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/leif-lende-lante-ut-flere-millioner-til-per-asle-ousdal-i-advokatskandalen-1.17736953" target="_blank">Lånte ut 12 millioner til advokaten: – Ingen røde lys</a></h2>
+                        <p>De var begge ofre for en av norgeshistoriens største låneskandaler. Nå har maskinoperatøren Leif Lende saksøkt pensjonisten Kjell Sviland for millioner, fordi begge stolte blindt p...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/7sQOGyoucb8M6Tj_ubPVJAqQlpV5f324gFQcwbUMgtuQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 19:51:05 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/kinobransjen-bekymra-for-netflix-sitt-oppkjop-av-warner-bros.-1.17736648" target="_blank">Kinobransjen om Netflix-kjøp: – Vi er svært bekymra</a></h2>
+                        <p>Netflix ligg an til å vinne bodkrigen om Warner Bros. Discovery. Kinobransjen roper varsku om færre filmar på kino....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ZVxiJMlrAKr0cKZ8N6zNjw4mljN1c1IFPZuZx-gnkbNw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 19:19:09 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/skiskyting_-eric-perrot-og-martin-nevland-er-barndomsvenner-1.17721904" target="_blank">Er barndomsvenn med Frankrikes største stjerne: – Vi er egentlig like gode</a></h2>
+                        <p>Han ene er Frankrikes beste skiskytter og vant kortnormalen i Nove Mesto, mens han andre har nettopp fått gjennombruddet i og tok sin beste plassering i samme renn....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Q5FJ0QN2-FJq6DVpOoB3agrfTqX4NTFISuV6uDVcDKqg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 18:37:10 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/spania-norge-em-handball-1.17739286" target="_blank">To VAR-situasjoner de siste 11 sekundene: – Han redder oss</a></h2>
+                        <p>Norges EM-håp lever videre etter et ellevilt drama som endte med 35-34 seier over Spania. August Baskår Pedersen (31) ble den store helten....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/tBJh3z-x9FoAizBJ7oZFegio6Fq0i4ApkLXbgDhgEaGw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 19:18:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/harstad-kommune-og-unn-krangler-om-regning-for-20-meters-lang-gang-1.17729417" target="_blank">Tunnelen til 15 millioner kroner ender i denne veggen: – En parodi</a></h2>
+                        <p>Pasienter må ta taxi eller ambulanse i 150 meter, fordi UNN og Harstad kommune ikke blir enige om regningen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UGPhf9ahdAymS5_2Zss2_wT7Fn8cmIZxqi7JdLKGcqLw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 16:55:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/geopolitiske-spenningar-paverkar-naeringslivet-i-davos-2026-1.17738433" target="_blank">Toppsjef fryktar USA–diskusjonar i Davos</a></h2>
+                        <p>Lasse Kristoffersen må moderere seg sjølv medan han er i Davos. Han fryktar represaliar dersom selskapet hans blir trekt inn i USAs politiske debatt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UrOQvf1LDq-zw0z9xPTrpQeuI_pOyW4EOL867q2pJNmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 17:18:36 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/pst_-nord-korea-bruker-falske-identitetar-for-a-spionere-pa-norske-bedrifter-1.17727609" target="_blank">Nordkoreanske IT-ekspertar lurer norske bedrifter</a></h2>
+                        <p>Nordkoreanske IT-ekspertar lurer norske bedrifter trill rundt. PST har avdekt fleire saker....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ewcRlVUh9XxYmPWGFqhPZAzqWOcPBW6e3iH6av4Db9NQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 15:50:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/_albert-einstein_-erkjenner-massivt-kokainsal-i-bergen-1.17736621" target="_blank">Skjult etterforsking avslørte «Albert Einstein» – erkjenner massivt kokainsal</a></h2>
+                        <p>I løpet av eitt år skal mennene ha forsynt Bergen med minst 17,5 kilo kokain. Politiet meiner dei tente 11 millionar kroner på geskjeften....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/AJTcqAn2jiilZoqUvDrj6QgwY8HD5UFLzgHkq1EJefmg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 15:58:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/opplever-hoye-hastigheter-forbi-ulykkessteder_-_-vi-redder-liv-med-livet-som-innsats-1.17730140" target="_blank">Kjører som svin forbi ulykkessteder: – Vi redder liv med livet som innsats</a></h2>
+                        <p>Til tross for at ulykkesstedet er markert med blålys, ulykkesskilt og fartsgrensen er satt ned kjører mange bilister altfor fort forbi. Trygg Trafikk mener det er skremmende....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142950009.jpg%3F%26accessToken%3D5c712613dcb7b087b9ca8b6d84646dccf00eb23eb5693a94638a9f06b2c37a30" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Fri, 23 Jan 2026 05:19:09 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/01/23/8322858/tiktok-salget-er-gjennomfort-i-usa-trump-takker-xi" target="_blank">Endelig: Tiktok-salg i boks</a></h2>
+                        <p>Kinesiske Bytedance har gjennomført salget av den amerikanske delen av Tiktok til en gruppe investorer, melder The New York Times. USAs president takker Kina....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F96275205.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D48140add9988e982c90a73524f2840fb063035a4a82cf39ee17da0068b035840" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -354,30 +477,6 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MLLH8NPK2H1WP8goKs_FLw1st952NTjczdQz8sAs4tDA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 20:39:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/taekwondoutovar-selma-oen-li-har-operert-for-tredje-gongen-1.17725998" target="_blank">Selma (25) fann styrke etter tredje operasjon – gir ikkje opp draumen</a></h2>
-                        <p>Tre gonger har Selma Øen Li lege på operasjonsbordet. Likevel nektar verdsmeisteren å gi opp draumen om eit nytt gull....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FG8bETPnxSHiP7KOEv8aaA1m0QNB-CIaWx-m3lgDIrDg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 21:00:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/leif-lende-lante-ut-flere-millioner-til-per-asle-ousdal-i-advokatskandalen-1.17736953" target="_blank">Lånte ut 12 millioner til advokaten: – Ingen røde lys</a></h2>
-                        <p>De var begge ofre for en av norgeshistoriens største låneskandaler. Nå har maskinoperatøren Leif Lende saksøkt pensjonisten Kjell Sviland for millioner, fordi begge stolte blindt p...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142935423.jpg%3F%26accessToken%3Ddd9ce1f0f75cec6fd4cebc15ec35f80ac19da397a304e7a54f4b07ea943e783f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -402,30 +501,6 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/7sQOGyoucb8M6Tj_ubPVJAqQlpV5f324gFQcwbUMgtuQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 19:51:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/kinobransjen-bekymra-for-netflix-sitt-oppkjop-av-warner-bros.-1.17736648" target="_blank">Kinobransjen om Netflix-kjøp: – Vi er svært bekymra</a></h2>
-                        <p>Netflix ligg an til å vinne bodkrigen om Warner Bros. Discovery. Kinobransjen roper varsku om færre filmar på kino....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ZVxiJMlrAKr0cKZ8N6zNjw4mljN1c1IFPZuZx-gnkbNw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 19:19:09 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/skiskyting_-eric-perrot-og-martin-nevland-er-barndomsvenner-1.17721904" target="_blank">Er barndomsvenn med Frankrikes største stjerne: – Vi er egentlig like gode</a></h2>
-                        <p>Han ene er Frankrikes beste skiskytter og vant kortnormalen i Nove Mesto, mens han andre har nettopp fått gjennombruddet i og tok sin beste plassering i samme renn....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142946974.jpg%3F%26accessToken%3D00b2669fbcafb24bab0a3daaa8c6b7b11315cdd147bd3c5ab4a6e586bda94a8d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -446,30 +521,6 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/22/8322648/trump-reddet-fotball-vm" target="_blank">Fotball-VM – den moroa skal vi ikke la gå fra oss. Men hva var det med de Qatar-greiene igjen?</a></h2>
                         <p>Norge er jo med i fotball-VM igjen. For første gang på 28 år. Den moroa skal vi ikke la gå fra oss. Men hvis Trump likevel vil ta Grønland? Da trekker vi oss. Håper vi. Prinsipper ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Q5FJ0QN2-FJq6DVpOoB3agrfTqX4NTFISuV6uDVcDKqg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 18:37:10 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/spania-norge-em-handball-1.17739286" target="_blank">To VAR-situasjoner de siste 11 sekundene: – Han redder oss</a></h2>
-                        <p>Norges EM-håp lever videre etter et ellevilt drama som endte med 35-34 seier over Spania. August Baskår Pedersen (31) ble den store helten....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/tBJh3z-x9FoAizBJ7oZFegio6Fq0i4ApkLXbgDhgEaGw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 19:18:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/harstad-kommune-og-unn-krangler-om-regning-for-20-meters-lang-gang-1.17729417" target="_blank">Tunnelen til 15 millioner kroner ender i denne veggen: – En parodi</a></h2>
-                        <p>Pasienter må ta taxi eller ambulanse i 150 meter, fordi UNN og Harstad kommune ikke blir enige om regningen....</p>
                     </div>
                 </div>
             
@@ -606,30 +657,6 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UGPhf9ahdAymS5_2Zss2_wT7Fn8cmIZxqi7JdLKGcqLw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 16:55:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/geopolitiske-spenningar-paverkar-naeringslivet-i-davos-2026-1.17738433" target="_blank">Toppsjef fryktar USA–diskusjonar i Davos</a></h2>
-                        <p>Lasse Kristoffersen må moderere seg sjølv medan han er i Davos. Han fryktar represaliar dersom selskapet hans blir trekt inn i USAs politiske debatt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UrOQvf1LDq-zw0z9xPTrpQeuI_pOyW4EOL867q2pJNmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 17:18:36 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/pst_-nord-korea-bruker-falske-identitetar-for-a-spionere-pa-norske-bedrifter-1.17727609" target="_blank">Nordkoreanske IT-ekspertar lurer norske bedrifter</a></h2>
-                        <p>Nordkoreanske IT-ekspertar lurer norske bedrifter trill rundt. PST har avdekt fleire saker....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -702,30 +729,6 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ewcRlVUh9XxYmPWGFqhPZAzqWOcPBW6e3iH6av4Db9NQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 15:50:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/_albert-einstein_-erkjenner-massivt-kokainsal-i-bergen-1.17736621" target="_blank">Skjult etterforsking avslørte «Albert Einstein» – erkjenner massivt kokainsal</a></h2>
-                        <p>I løpet av eitt år skal mennene ha forsynt Bergen med minst 17,5 kilo kokain. Politiet meiner dei tente 11 millionar kroner på geskjeften....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/AJTcqAn2jiilZoqUvDrj6QgwY8HD5UFLzgHkq1EJefmg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 15:58:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/opplever-hoye-hastigheter-forbi-ulykkessteder_-_-vi-redder-liv-med-livet-som-innsats-1.17730140" target="_blank">Kjører som svin forbi ulykkessteder: – Vi redder liv med livet som innsats</a></h2>
-                        <p>Til tross for at ulykkesstedet er markert med blålys, ulykkesskilt og fartsgrensen er satt ned kjører mange bilister altfor fort forbi. Trygg Trafikk mener det er skremmende....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F130555001.jpg%3F%26accessToken%3D0b0fb7ce246026837ecdb3ad76018a06afa5bffd352c9ec01b52136c2d7bd718" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -785,7 +788,7 @@ Dermed er en seks år lang strid tilbakelagt, skri...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 23.01.2026 05:21</div>
+                <div class="footer">Sist oppdatert: 23.01.2026 05:25</div>
             </div>
         </body>
         </html>
