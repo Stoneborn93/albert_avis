@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -108,7 +111,252 @@
                         <p>Helse Midt-Norge vurderer å flytte brukerne sine over på ChromeOS eller det tyske Linux-alternativet Igel av økonomiske og geopolitiske hensyn....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LOYD3ulytuMeqfAICQoRPg2anbt8D_r_V0qICADMYYXw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 09:42:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/avgjorelse-fra-hoyesterett-25-ar-etter-drapene-i-baneheia_-endelig-dom-for-jan-helge-andersen-1.17739455" target="_blank">Baneheia-saken: Jan Helge Andersen dømt til to års forvaring i Høyesterett</a></h2>
+                        <p>Jan Helge Andersen skal dømmes til forvaring for drapet på Lena Sløgedal Paulsen i Baneheia i år 2000. En av dommerne er uenig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/6i0_TPJcG1GUsh1lmlzY7ABCbdQoC5b7Vr1jTbOU8X8w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 09:43:19 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/journalsystemet-nede-pa-alle-sykehus-i-nord-norge-1.17740061" target="_blank">Journalsystemet var nede på alle sykehus i Nord-Norge: Nå er problemet løst</a></h2>
+                        <p>Fredag formiddag var det problemer med journalsystemet til sykehusene i Nord-Norge....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/aXcHl2pU-k6Hje4GbNOQZAKxlCntNkrwuBUtnfKv0t0w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 09:55:51 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/vinmonopolet_-rodvin_-hvitvin_-musserende-og-alkoholfri-vin.-gode-tips-for-2026-1.17718956" target="_blank">Drikkevanene våre endrer seg: – Vi må nok rydde plass til flere slike viner</a></h2>
+                        <p>Vi drikker mindre og kjøper vin fra mange nye steder, viser tall fra Vinmonopolet. Ekspertene tror alle har godt av å prøve noe nytt iblant....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/TAboQniPVgdVecH4jI0vrAHNylRBkT2Z5nxdcLj6JWsw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 09:56:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/hunden-varslet-thor-einar-om-lynet-lenge-for-han-selv-merket-noe-1.17737256" target="_blank">Hero varslet om livsfare lenge før matfar merket noe: – Han ville vekk med en gang</a></h2>
+                        <p>Hunder kan varsle fare lenge før mennesket forstår alvoret. Men hva skjuler seg bak den «sjette sansen»?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 09:28:16 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/tiltalt-for-a-ha-kjort-i-218-km_t-i-80-sone-1.17740003" target="_blank">Tiltalt for å ha kjørt i 218 km/t i 80-sone</a></h2>
+                        <p>En mann i 20-åra fra Trøndelag er tiltalt for å ha kjørt i 218 kilometer i timen i 80-sone.
+Det kommer fram i tiltalen fra Gudbrandsdal tingrett....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/mnIeWazQcPYMN_PhveduQAP_M8ax8L9Ew5DEoDNClZ4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 06:55:05 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/michael-turte-nesten-ikke-publisere-dette-bildet_-_-dette-er-faktisk-ikke-ai-1.17738521" target="_blank">Michael turte nesten ikke publisere bildet: – Dette er faktisk ikke AI</a></h2>
+                        <p>Han hadde knapt følelse i fingre og tær etter flere timer ute i kulden, men fikk sin villeste nordlysopplevelse noensinne denne uken....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/rjMgGPg2cjvyNx1xv50hwQtOzMK49hiltwY60vrECi8Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 08:01:04 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/regjeringen-kommer-med-nye-krav-til-flyktninger-1.17739839" target="_blank">Regjeringen vil fjerne flyktningers rett til sosialhjelp og bostøtte</a></h2>
+                        <p>Endringene vil være den største omleggingen på 20 år. Regjeringen mener det er på tide å «rydde opp»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LasMvIsP-plDKywbpBXL-gISwAcpd1OidyD4EanpSQhA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 21:00:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/bilen-ble-stjalet-med-hunden-ifra-parkeringshus-i-trondheim-1.17739567" target="_blank">Valpen Yanka stjålet i parkeringshus: – Vi er opprørt</a></h2>
+                        <p>Hunden er savna etter en bil ble stjålet i Trondheim torsdag kveld. Fredag morgen er verken hund eller bil funnet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/sVE2xSW27qd9aJEJFiLlHwnSjr1HLT3hQKzJ9VWqvDhA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 06:36:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/leirsjef-frykter-tap-av-kontroll-i-is-fangeleir_-_-de-feirer-med-kake-1.17738915" target="_blank">Leirsjef frykter tap av kontroll i IS-fangeleir: – De feirer med kake</a></h2>
+                        <p>Redd Barna frykter at en norsk gutt havner i kryssilden i kampene mellom kurdere og syriske regjeringsstyrker....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/6dKvw-TsBDt-8dfW0waLswg6a9idVZvpRp7jhMLyzNoA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 06:50:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/zelenskyj-for-forhandlinger__-alt-vil-handle-om-landomrader-1.17739696" target="_blank">Zelenskyj før forhandlinger: – Alt vil handle om landområder</a></h2>
+                        <p>Delegasjoner fra Ukraina, Russland og USA er på vei til forhandlinger i Abu Dhabi. Diplomati og forhandlinger pågår på høygir....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/G69SkgMEdAFQy9ALg4duQgPVGlgU10QPFuOU7ojEMvDQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 07:15:39 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/rekordbeslag_-fant-200-kilo-marihuana-i-posten-1.17739794" target="_blank">Rekordbeslag: Fant 200 kilo marihuana i posten</a></h2>
+                        <p>Tolletaten har gjort et av de største marihuanabeslagene i poststrømmen noensinne.
+200 kilo ble funnet i åtte pappesker sendt fra USA, på flyfraktseksjonen på Oslo lufthavn i augus...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/K8lEBeO0xxfLSiTHnqf6wwFx4AQsZaXgQmcgygL7eJ5w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 05:44:37 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/rommer-usa-fond-1.17737943" target="_blank">Fondsspararane rømmer USA-fond</a></h2>
+                        <p>Ingen aksjefond er meir upopulære blant norske fondsspararar enn dei som har USA i namnet. Samtidig eig mange mykje amerikanske aksjar utan at dei er klare over det....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wzOd5vLoHwamijxrxdAVLQBI7tSbTM-pZkyB0_UcuAQA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 04:45:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/kraftige-reaksjoner-pa-helseministerens-pauseromlofte-1.17735373" target="_blank">Kraftige reaksjoner på helseministerens pauseromløfte</a></h2>
+                        <p>Fra et helt nytt sykehus der en rekke ansatte ikke har pauserom, lovte helseministeren at andre nye sykehus skulle få pauserom. Flere stortingspolitikere reagerer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hvndXrALyOPaVRP7afFAzQz7mvhVmu9H84CoUQReXeiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 04:49:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/trump_-_-haper-jeg-blir-husket-langt-inn-i-fremtiden-av-tiktok-brukere-1.17739640" target="_blank">Trump: – Håper jeg blir husket langt inn i fremtiden av TikTok-brukere</a></h2>
+                        <p>USAs president Donald Trump kunngjorde natt til fredag at TikTok fortsatt vil være tilgjengelig i USA, etter en avtale som sikrer amerikansk eierskap....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/CR81xyxKAO5IPz9AqoB6xwbi7MmjmB5q_uSoqVOx_jpQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 23:01:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/p3/best-akkurat-naa/best-akkurat-na-uke-4-1.17734160" target="_blank">«Blir truffet knallhardt!»</a></h2>
+                        <p>ANBEFALING: Disse låtene er «Best akkurat nå»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 22 Jan 2026 23:14:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/usa-sier-uttrekkingen-fra-who-er-fullfort-1.17739622" target="_blank">USA sier uttrekkingen fra WHO er fullført</a></h2>
+                        <p>USA har fullført uttrekkingen fra Verdens helseorganisasjon (WHO), opplyser myndighetene i Washington.
+Det var 20. januar 2025 at USAs president Donald Trump signerte en presidento...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/qQp-xs3ITjiBeZXIHEDwnwrpBvT7Joid_YAsMKTOIQFA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 04:14:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/eksplosiv-vekst-av-risikospillere-i-norge_-81.000-flere-pa-tre-ar-1.17723883" target="_blank">Eksplosiv vekst av risikospillere i Norge: 81.000 flere på tre år</a></h2>
+                        <p>De siste årene har regjeringen innført en rekke strenge tiltak for å bekjempe spillavhengighet. Allikevel har antallet mennesker i risikosonen økt år for år....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/zAwm3EXTbhwUP6s6zvsVnAkrJbEg_QWXP6Vu4L-rQMOQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 04:15:04 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/1-av-4-sykepleierstudenter-stryker-pa-anatomieksamen.-i-forsvaret-bestar-alle-1.17735427" target="_blank">1 av 4 sykepleierstudenter stryker – i Forsvaret består alle</a></h2>
+                        <p>Hva er hemmeligheten?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 01:41:29 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/russland-sier-ja-til-trumps-fredsrad-1.17739639" target="_blank">Russland sier ja til Trumps fredsråd</a></h2>
+                        <p>Russland bekrefter at det er klare til å betale 1 milliard dollar for å bli medlem i USAs president fredsråd, det bekrefter Kreml natt til fredag.
+Meldingen vil bli oppdatert...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/0dPHcTeYrqPXQO9jXaLu_APkQ7X1eZxrZQwkefA-p6fA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 01:58:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/trump-trekker-tilbake-sin-invitasjon-til-canada-om-a-bli-medlem-i-fredsradet-1.17739642" target="_blank">Trump trekker tilbake sin invitasjon til Canada om å bli medlem i fredsrådet</a></h2>
+                        <p>USAs president Donald Trump trekker tilbake sin invitasjon til Canada om å bli medlem i fredsrådet.
+– Kjære statsminister Carney. Vennligst betrakt dette brevet som en bekreftelse ...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57446442.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dc7db93d25d3df7fc1c6697816ad30f0a4f2547dba6021043abb04834c946bc73" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -182,54 +430,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LOYD3ulytuMeqfAICQoRPg2anbt8D_r_V0qICADMYYXw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 09:42:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/avgjorelse-fra-hoyesterett-25-ar-etter-drapene-i-baneheia_-endelig-dom-for-jan-helge-andersen-1.17739455" target="_blank">Baneheia-saken: Jan Helge Andersen dømt til to års forvaring i Høyesterett</a></h2>
-                        <p>Jan Helge Andersen skal dømmes til forvaring for drapet på Lena Sløgedal Paulsen i Baneheia i år 2000. En av dommerne er uenig....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6i0_TPJcG1GUsh1lmlzY7ABCbdQoC5b7Vr1jTbOU8X8w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 09:43:19 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/journalsystemet-nede-pa-alle-sykehus-i-nord-norge-1.17740061" target="_blank">Journalsystemet var nede på alle sykehus i Nord-Norge: Nå er problemet løst</a></h2>
-                        <p>Fredag formiddag var det problemer med journalsystemet til sykehusene i Nord-Norge....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/aXcHl2pU-k6Hje4GbNOQZAKxlCntNkrwuBUtnfKv0t0w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 09:55:51 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/vinmonopolet_-rodvin_-hvitvin_-musserende-og-alkoholfri-vin.-gode-tips-for-2026-1.17718956" target="_blank">Drikkevanene våre endrer seg: – Vi må nok rydde plass til flere slike viner</a></h2>
-                        <p>Vi drikker mindre og kjøper vin fra mange nye steder, viser tall fra Vinmonopolet. Ekspertene tror alle har godt av å prøve noe nytt iblant....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/TAboQniPVgdVecH4jI0vrAHNylRBkT2Z5nxdcLj6JWsw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 09:56:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/hunden-varslet-thor-einar-om-lynet-lenge-for-han-selv-merket-noe-1.17737256" target="_blank">Hero varslet om livsfare lenge før matfar merket noe: – Han ville vekk med en gang</a></h2>
-                        <p>Hunder kan varsle fare lenge før mennesket forstår alvoret. Men hva skjuler seg bak den «sjette sansen»?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F137186250.jpg%3F%26accessToken%3D5228bf18c358c3118630e6d3085cfda24c137d76492393df0f06bec0ca4f056e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -262,19 +462,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/zOgRrO/huseierne-om-skattebomben-slett-arbeid-av-regjeringen" target="_blank">Huseierne om «skattebomben»: – Slett arbeid av regjeringen</a></h2>
                         <p>For å motvirke skattesjokk bør grensen for hva som er en dyr bolig heves fra 10 til 20 millioner, mener boligtopper. – Kan gjøres umiddelbart, sier Huseierne-sjef Morten Meyer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 09:28:16 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/tiltalt-for-a-ha-kjort-i-218-km_t-i-80-sone-1.17740003" target="_blank">Tiltalt for å ha kjørt i 218 km/t i 80-sone</a></h2>
-                        <p>En mann i 20-åra fra Trøndelag er tiltalt for å ha kjørt i 218 kilometer i timen i 80-sone.
-Det kommer fram i tiltalen fra Gudbrandsdal tingrett....</p>
                     </div>
                 </div>
             
@@ -435,30 +622,6 @@ Det kommer fram i tiltalen fra Gudbrandsdal tingrett....</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/mnIeWazQcPYMN_PhveduQAP_M8ax8L9Ew5DEoDNClZ4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 06:55:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/michael-turte-nesten-ikke-publisere-dette-bildet_-_-dette-er-faktisk-ikke-ai-1.17738521" target="_blank">Michael turte nesten ikke publisere bildet: – Dette er faktisk ikke AI</a></h2>
-                        <p>Han hadde knapt følelse i fingre og tær etter flere timer ute i kulden, men fikk sin villeste nordlysopplevelse noensinne denne uken....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rjMgGPg2cjvyNx1xv50hwQtOzMK49hiltwY60vrECi8Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 08:01:04 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/regjeringen-kommer-med-nye-krav-til-flyktninger-1.17739839" target="_blank">Regjeringen vil fjerne flyktningers rett til sosialhjelp og bostøtte</a></h2>
-                        <p>Endringene vil være den største omleggingen på 20 år. Regjeringen mener det er på tide å «rydde opp»....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135885330.jpg%3F%26accessToken%3D2d72608379c90a06270aa240bfacb123784851121ab33640f40366c3dc9c7acd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -515,55 +678,6 @@ Det kommer fram i tiltalen fra Gudbrandsdal tingrett....</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/23/7806953/10-ting-du-ma-vite-for-borsapning" target="_blank">10 ting du må vite før børsåpning: Iran, sølv-rally og Cloudberry-nedgradering.</a></h2>
                         <p>10 ting du må vite før børsåpning...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LasMvIsP-plDKywbpBXL-gISwAcpd1OidyD4EanpSQhA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 21:00:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/bilen-ble-stjalet-med-hunden-ifra-parkeringshus-i-trondheim-1.17739567" target="_blank">Valpen Yanka stjålet i parkeringshus: – Vi er opprørt</a></h2>
-                        <p>Hunden er savna etter en bil ble stjålet i Trondheim torsdag kveld. Fredag morgen er verken hund eller bil funnet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/sVE2xSW27qd9aJEJFiLlHwnSjr1HLT3hQKzJ9VWqvDhA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 06:36:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/leirsjef-frykter-tap-av-kontroll-i-is-fangeleir_-_-de-feirer-med-kake-1.17738915" target="_blank">Leirsjef frykter tap av kontroll i IS-fangeleir: – De feirer med kake</a></h2>
-                        <p>Redd Barna frykter at en norsk gutt havner i kryssilden i kampene mellom kurdere og syriske regjeringsstyrker....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6dKvw-TsBDt-8dfW0waLswg6a9idVZvpRp7jhMLyzNoA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 06:50:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/zelenskyj-for-forhandlinger__-alt-vil-handle-om-landomrader-1.17739696" target="_blank">Zelenskyj før forhandlinger: – Alt vil handle om landområder</a></h2>
-                        <p>Delegasjoner fra Ukraina, Russland og USA er på vei til forhandlinger i Abu Dhabi. Diplomati og forhandlinger pågår på høygir....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/G69SkgMEdAFQy9ALg4duQgPVGlgU10QPFuOU7ojEMvDQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 07:15:39 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/rekordbeslag_-fant-200-kilo-marihuana-i-posten-1.17739794" target="_blank">Rekordbeslag: Fant 200 kilo marihuana i posten</a></h2>
-                        <p>Tolletaten har gjort et av de største marihuanabeslagene i poststrømmen noensinne.
-200 kilo ble funnet i åtte pappesker sendt fra USA, på flyfraktseksjonen på Oslo lufthavn i augus...</p>
                     </div>
                 </div>
             
@@ -652,18 +766,6 @@ Det kommer fram i tiltalen fra Gudbrandsdal tingrett....</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/K8lEBeO0xxfLSiTHnqf6wwFx4AQsZaXgQmcgygL7eJ5w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 05:44:37 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/rommer-usa-fond-1.17737943" target="_blank">Fondsspararane rømmer USA-fond</a></h2>
-                        <p>Ingen aksjefond er meir upopulære blant norske fondsspararar enn dei som har USA i namnet. Samtidig eig mange mykje amerikanske aksjar utan at dei er klare over det....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -687,106 +789,7 @@ Det kommer fram i tiltalen fra Gudbrandsdal tingrett....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wzOd5vLoHwamijxrxdAVLQBI7tSbTM-pZkyB0_UcuAQA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 04:45:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/kraftige-reaksjoner-pa-helseministerens-pauseromlofte-1.17735373" target="_blank">Kraftige reaksjoner på helseministerens pauseromløfte</a></h2>
-                        <p>Fra et helt nytt sykehus der en rekke ansatte ikke har pauserom, lovte helseministeren at andre nye sykehus skulle få pauserom. Flere stortingspolitikere reagerer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hvndXrALyOPaVRP7afFAzQz7mvhVmu9H84CoUQReXeiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 04:49:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/trump_-_-haper-jeg-blir-husket-langt-inn-i-fremtiden-av-tiktok-brukere-1.17739640" target="_blank">Trump: – Håper jeg blir husket langt inn i fremtiden av TikTok-brukere</a></h2>
-                        <p>USAs president Donald Trump kunngjorde natt til fredag at TikTok fortsatt vil være tilgjengelig i USA, etter en avtale som sikrer amerikansk eierskap....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/CR81xyxKAO5IPz9AqoB6xwbi7MmjmB5q_uSoqVOx_jpQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 23:01:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/p3/best-akkurat-naa/best-akkurat-na-uke-4-1.17734160" target="_blank">«Blir truffet knallhardt!»</a></h2>
-                        <p>ANBEFALING: Disse låtene er «Best akkurat nå»....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 22 Jan 2026 23:14:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/usa-sier-uttrekkingen-fra-who-er-fullfort-1.17739622" target="_blank">USA sier uttrekkingen fra WHO er fullført</a></h2>
-                        <p>USA har fullført uttrekkingen fra Verdens helseorganisasjon (WHO), opplyser myndighetene i Washington.
-Det var 20. januar 2025 at USAs president Donald Trump signerte en presidento...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/qQp-xs3ITjiBeZXIHEDwnwrpBvT7Joid_YAsMKTOIQFA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 04:14:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/eksplosiv-vekst-av-risikospillere-i-norge_-81.000-flere-pa-tre-ar-1.17723883" target="_blank">Eksplosiv vekst av risikospillere i Norge: 81.000 flere på tre år</a></h2>
-                        <p>De siste årene har regjeringen innført en rekke strenge tiltak for å bekjempe spillavhengighet. Allikevel har antallet mennesker i risikosonen økt år for år....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/zAwm3EXTbhwUP6s6zvsVnAkrJbEg_QWXP6Vu4L-rQMOQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 04:15:04 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/1-av-4-sykepleierstudenter-stryker-pa-anatomieksamen.-i-forsvaret-bestar-alle-1.17735427" target="_blank">1 av 4 sykepleierstudenter stryker – i Forsvaret består alle</a></h2>
-                        <p>Hva er hemmeligheten?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 01:41:29 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/russland-sier-ja-til-trumps-fredsrad-1.17739639" target="_blank">Russland sier ja til Trumps fredsråd</a></h2>
-                        <p>Russland bekrefter at det er klare til å betale 1 milliard dollar for å bli medlem i USAs president fredsråd, det bekrefter Kreml natt til fredag.
-Meldingen vil bli oppdatert...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/0dPHcTeYrqPXQO9jXaLu_APkQ7X1eZxrZQwkefA-p6fA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 01:58:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/trump-trekker-tilbake-sin-invitasjon-til-canada-om-a-bli-medlem-i-fredsradet-1.17739642" target="_blank">Trump trekker tilbake sin invitasjon til Canada om å bli medlem i fredsrådet</a></h2>
-                        <p>USAs president Donald Trump trekker tilbake sin invitasjon til Canada om å bli medlem i fredsrådet.
-– Kjære statsminister Carney. Vennligst betrakt dette brevet som en bekreftelse ...</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 23.01.2026 10:21</div>
+                <div class="footer">Sist oppdatert: 23.01.2026 10:25</div>
             </div>
         </body>
         </html>
