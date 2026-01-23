@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -156,7 +159,212 @@
                         <p>Skaperen tjener 700.000 kroner i måneden....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/rqu2Rvi4lVxxH3-9DSjq_wruDpBuOeoV2RuYEg4h5MBg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 15:25:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/slik-fyrer-du-best-i-ovnen-1.17675634" target="_blank">Slik fyrer du best i ovnen</a></h2>
+                        <p>Kulda fører til hard fyring. Her er tipsene du trenger for å fyre effektivt og brannsikkert....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/NIMweSl3hknPLfCyvoplLQi4G_Afx1A85R8Pr99_QzJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 15:18:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/mann-omkom-i-trefellingsulykke-i-kvinesdal-1.17740738" target="_blank">Mann omkom i trefellingsulykke i Kvinesdal</a></h2>
+                        <p>En mann i 60-årene mistet livet i forbindelse med trefelling på egen eiendom i Kvinesdal. Mannen kom i klem under et større tre....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LEfQnU78CIsez7wxLG30egt809XusA3eKIqSEhC2qv4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 13:04:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/container-falt-av-lastebil-pa-feda-bru.-e39-ble-stengt-1.17740495" target="_blank">Container falt av lastebil på E39</a></h2>
+                        <p>En container på 4,5 tonn har falt av en lastebil på E39 på Fedafjorden bru i Kvinesdal....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/d6AD-eSewABJreP6kquBZQ3F-3L892XeINE1JIZ3kNQg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 14:37:11 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/harald-ostberg-amundsen-og-einar-hedegart-imponerte-under-lagsprinten-i-goms-1.17740525" target="_blank">Feiret knusende seier med gest: – Den var ny!</a></h2>
+                        <p>Einar Hedegart kunne gå det norske laget til overlegen seier. Nå mener eksperten at kometen bør få gå øvelsen i OL....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FA44H2B0qbrFrJJgKHNDkgIHsocRADYj_7T_kVdFOLog.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 14:24:16 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/borge-brende-i-verdens-okonomiske-forum-om-arets-toppmote-1.17740157" target="_blank">Børge Brende om Grønlands-krisa:– Eg var ganske pessimistisk</a></h2>
+                        <p>Leiaren i Verdas økonomiske forum vil ikkje svare på om han er spurt om å delta i Trumps nye fredsråd....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ge2KN-95khPtcuL4FAYS7AOUJaBmKLjSeexGhw9DE8Lg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 14:43:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/hund-og-bil-ble-stjalet-fra-parkeringshus-i-trondheim-_-har-blitt-funnet-1.17740363" target="_blank">Hund og bil ble stjålet fra parkeringshus i Trondheim – har blitt funnet</a></h2>
+                        <p>Nesten et døgn etter tyveriet har eierne blitt gjenforent med valpen Yanka....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/q4rZHfCJ6Gg67fTKbkuswwDAE_OwiUkuROJw3nQ87JSA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 15:01:21 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/ny-innkrevingslov_-forbrukerradet-frykter-evigvarende-lonnstrekk-for-de-med-mye-gjeld-1.17698370" target="_blank">Frykter evighetsgjeld etter ny lov: – Ikke noe særlig fremtid</a></h2>
+                        <p>En ny lov samler all gjeld i ett lønnstrekk. Kritikere advarer mot evigvarende trekk for dem med høy gjeld. – Mer låsende enn rehabiliterende, sier «Stian»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 12:28:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/une-stanser-midlertidig-utreiseplikten-til-iran-1.17740332" target="_blank">UNE stanser midlertidig utreiseplikten til Iran</a></h2>
+                        <p>Utlendingsnemnda (UNE) har besluttet å midlertidig stanse utreiseplikten til Iran med umiddelbar virkning.
+Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/sdWaJZIy7AUN-oe_OWIM5Aw8v3ElWkKFGuhsZNB_GcOQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 12:39:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/kledd-naken-1.17737300" target="_blank">Kledd naken</a></h2>
+                        <p>Når KI kler av våre mødre og døtre, er det på tide å sette grenser....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LEfQnU78CIsez7wxLG30egt809XusA3eKIqSEhC2qv4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 13:04:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/container-stenger-bro-pa-e39-1.17740495" target="_blank">Container stenger bro på E39</a></h2>
+                        <p>En container på 4,5 tonn har falt av en lastebil på E39 på Feda bru i Kvinesdal. Nå vurderes det om broa må stenges....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/xivLNpPUEHZLzuQpnbxlRAMAyxnxSFwv0iC1QCRO8XVA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 12:16:56 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/storaksjon-i-aust-politidistrikt_-arresterte-20-personar-pa-fire-dagar-1.17738237" target="_blank">Storaksjon i Aust politidistrikt: – Kan dreie seg om fleire tusen barn</a></h2>
+                        <p>Ein lokalpolitikar, ein lagermedarbeidar og ein rekneskapsførar er blant dei som nå er sikta for å ha overgrepsmateriale av barn....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/fsrfu8Yui29daeMz_oKdGwFKfzreFq343t3B0dpUgCkg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 12:09:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/filmpolitiet/sja-ein-oscar-film-i-helga-1.17739940" target="_blank">Sjå ein Oscar-film i helga</a></h2>
+                        <p>Desse filmane kan du sjå på ei strøymeteneste eller kino akkurat no....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/oE_NWAfCnwQz6_cjt43qhwEajwo4bEmxGlslVgYVOH1A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 11:22:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/alpint_-ol-hapet-adrian-smiseth-sejersted-naer-skrekkfall-i-kitzbuhel-_-_-det-verste-jeg-har-sett-1.17740128" target="_blank">OL-håp nær skrekkfall: – Det verste jeg har sett</a></h2>
+                        <p>Det så ut til at Adrian Smiseth Sejersted skulle forsvinne ut av løypa i super-G-rennet i Kitzbühel, men nordmannen ville det annerledes....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 10:35:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/regjeringa-kjoper-to-nye-sar-queen-helikopter-til-tromso-1.17739279" target="_blank">Regjeringa kjøper to nye SAR Queen-helikopter til Tromsø</a></h2>
+                        <p>Regjeringa har pekt ut veien for redningsbasen. Basen blir militær i 2030. Prislappen er 4,2 milliarder....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/XuL6Lozrqid1BVKCFlFcAAHI2HSFC_7OiNobvo_QG40w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 11:02:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/en-av-tre-unge-sliter-med-a-folge-nyhetene_-_-det-blir-for-mye-1.17728865" target="_blank">En av tre unge sliter med å følge nyhetene: – Det blir for mye</a></h2>
+                        <p>Det er ikke mangelen på nyheter som gjør at de unge sliter med å henge med, det er mengden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/H8ECHFqWx9AoRbwKxuvhzQ0W4Iuap2YxNR-1Kz8NTlOw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 11:03:56 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/raja-i-usa_---mange-amerikanere-som-skammer-seg-1.17739744" target="_blank">Raja i USA: - Mange amerikanere som skammer seg</a></h2>
+                        <p>Abid Raja (V) er i USA sammen med norske politikere mens landets president er i fokus om Grønland. Han møter amerikanere som sier at europeiske ledere må slutte å logre med halen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/RMhaEy4uvln7ar2660bpVgATwtfHaJVHSi6WKRDsEztg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 23 Jan 2026 09:57:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/tiltalt-for-a-ha-kjort-i-218-km_t-i-80-sone-1.17740113" target="_blank">Tiltalt for å ha kjørt i 218 km/t i 80-sone</a></h2>
+                        <p>En mann i 20-åra fra Trøndelag er tiltalt for å ha kjørt motorsykkel i 218 kilometer i timen i 80-sone....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F122667198.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D6a72e78a762b4ca5e3241d65e5db0b46f2e8c9a031c731a6dfb1b5334e0bb306" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -202,30 +410,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/M71wqr/ny-soelvrekord-over-100-dollar" target="_blank">Ny sølvrekord: Over 100 dollar</a></h2>
                         <p>Sølvprisen stiger til nye høyder og handles nå for over 100 dollar per unse....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rqu2Rvi4lVxxH3-9DSjq_wruDpBuOeoV2RuYEg4h5MBg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 15:25:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/slik-fyrer-du-best-i-ovnen-1.17675634" target="_blank">Slik fyrer du best i ovnen</a></h2>
-                        <p>Kulda fører til hard fyring. Her er tipsene du trenger for å fyre effektivt og brannsikkert....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/NIMweSl3hknPLfCyvoplLQi4G_Afx1A85R8Pr99_QzJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 15:18:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/mann-omkom-i-trefellingsulykke-i-kvinesdal-1.17740738" target="_blank">Mann omkom i trefellingsulykke i Kvinesdal</a></h2>
-                        <p>En mann i 60-årene mistet livet i forbindelse med trefelling på egen eiendom i Kvinesdal. Mannen kom i klem under et større tre....</p>
                     </div>
                 </div>
             
@@ -298,66 +482,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/6qzrEe/billigste-euro-paa-et-halvt-aar-apetitten-har-oekt" target="_blank">Billigste euro på et halvt år: – Apetitten har økt</a></h2>
                         <p>Kronen har styrket seg etter en urolig uke....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LEfQnU78CIsez7wxLG30egt809XusA3eKIqSEhC2qv4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 13:04:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/container-falt-av-lastebil-pa-feda-bru.-e39-ble-stengt-1.17740495" target="_blank">Container falt av lastebil på E39</a></h2>
-                        <p>En container på 4,5 tonn har falt av en lastebil på E39 på Fedafjorden bru i Kvinesdal....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/d6AD-eSewABJreP6kquBZQ3F-3L892XeINE1JIZ3kNQg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 14:37:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/harald-ostberg-amundsen-og-einar-hedegart-imponerte-under-lagsprinten-i-goms-1.17740525" target="_blank">Feiret knusende seier med gest: – Den var ny!</a></h2>
-                        <p>Einar Hedegart kunne gå det norske laget til overlegen seier. Nå mener eksperten at kometen bør få gå øvelsen i OL....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FA44H2B0qbrFrJJgKHNDkgIHsocRADYj_7T_kVdFOLog.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 14:24:16 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/borge-brende-i-verdens-okonomiske-forum-om-arets-toppmote-1.17740157" target="_blank">Børge Brende om Grønlands-krisa:– Eg var ganske pessimistisk</a></h2>
-                        <p>Leiaren i Verdas økonomiske forum vil ikkje svare på om han er spurt om å delta i Trumps nye fredsråd....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ge2KN-95khPtcuL4FAYS7AOUJaBmKLjSeexGhw9DE8Lg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 14:43:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/hund-og-bil-ble-stjalet-fra-parkeringshus-i-trondheim-_-har-blitt-funnet-1.17740363" target="_blank">Hund og bil ble stjålet fra parkeringshus i Trondheim – har blitt funnet</a></h2>
-                        <p>Nesten et døgn etter tyveriet har eierne blitt gjenforent med valpen Yanka....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/q4rZHfCJ6Gg67fTKbkuswwDAE_OwiUkuROJw3nQ87JSA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 15:01:21 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/ny-innkrevingslov_-forbrukerradet-frykter-evigvarende-lonnstrekk-for-de-med-mye-gjeld-1.17698370" target="_blank">Frykter evighetsgjeld etter ny lov: – Ikke noe særlig fremtid</a></h2>
-                        <p>En ny lov samler all gjeld i ett lønnstrekk. Kritikere advarer mot evigvarende trekk for dem med høy gjeld. – Mer låsende enn rehabiliterende, sier «Stian»....</p>
                     </div>
                 </div>
             
@@ -458,43 +582,6 @@
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 12:28:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/une-stanser-midlertidig-utreiseplikten-til-iran-1.17740332" target="_blank">UNE stanser midlertidig utreiseplikten til Iran</a></h2>
-                        <p>Utlendingsnemnda (UNE) har besluttet å midlertidig stanse utreiseplikten til Iran med umiddelbar virkning.
-Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/sdWaJZIy7AUN-oe_OWIM5Aw8v3ElWkKFGuhsZNB_GcOQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 12:39:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/kledd-naken-1.17737300" target="_blank">Kledd naken</a></h2>
-                        <p>Når KI kler av våre mødre og døtre, er det på tide å sette grenser....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LEfQnU78CIsez7wxLG30egt809XusA3eKIqSEhC2qv4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 13:04:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/container-stenger-bro-pa-e39-1.17740495" target="_blank">Container stenger bro på E39</a></h2>
-                        <p>En container på 4,5 tonn har falt av en lastebil på E39 på Feda bru i Kvinesdal. Nå vurderes det om broa må stenges....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142997189.jpg%3F%26accessToken%3D9f634e825137e5294114515f00a2552af92bb805b43ebd1fead91487cebda6e2" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -503,18 +590,6 @@ Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...<
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/23/8323052/trengte-politi-eskorte-hindret-trump-nederlag" target="_blank">Trump unngikk tap med et nødskrik</a></h2>
                         <p>Egentlig hadde republikanerne tapt voteringen, men med utsatt frist og politi-eskorte, unngikk de et viktig Trump-nederlag....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/xivLNpPUEHZLzuQpnbxlRAMAyxnxSFwv0iC1QCRO8XVA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 12:16:56 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/storaksjon-i-aust-politidistrikt_-arresterte-20-personar-pa-fire-dagar-1.17738237" target="_blank">Storaksjon i Aust politidistrikt: – Kan dreie seg om fleire tusen barn</a></h2>
-                        <p>Ein lokalpolitikar, ein lagermedarbeidar og ein rekneskapsførar er blant dei som nå er sikta for å ha overgrepsmateriale av barn....</p>
                     </div>
                 </div>
             
@@ -591,18 +666,6 @@ Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...<
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/fsrfu8Yui29daeMz_oKdGwFKfzreFq343t3B0dpUgCkg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 12:09:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/filmpolitiet/sja-ein-oscar-film-i-helga-1.17739940" target="_blank">Sjå ein Oscar-film i helga</a></h2>
-                        <p>Desse filmane kan du sjå på ei strøymeteneste eller kino akkurat no....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142709626.jpg%3F%26accessToken%3D015e9304e7eff6ddec2b22f59d96c13808db4de8d0fc69d7330eedff7c216b7c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -635,18 +698,6 @@ Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...<
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/23/8323015/oslo-bors-stiger-bredt-fall-i-shippingaksjer-yara-er-opp-2-9-prosent" target="_blank">Oslo Børs stiger ved lunsjtider. Bred nedgang i shippingaksjer – Yara-aksjen er opp 2,9 prosent.</a></h2>
                         <p>Oslo Børs stiger ved lunsjtider. Bredt fall i shippingaksjer – Yara er opp 2,9 prosent....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/oE_NWAfCnwQz6_cjt43qhwEajwo4bEmxGlslVgYVOH1A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 11:22:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/alpint_-ol-hapet-adrian-smiseth-sejersted-naer-skrekkfall-i-kitzbuhel-_-_-det-verste-jeg-har-sett-1.17740128" target="_blank">OL-håp nær skrekkfall: – Det verste jeg har sett</a></h2>
-                        <p>Det så ut til at Adrian Smiseth Sejersted skulle forsvinne ut av løypa i super-G-rennet i Kitzbühel, men nordmannen ville det annerledes....</p>
                     </div>
                 </div>
             
@@ -723,54 +774,6 @@ Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...<
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 10:35:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/regjeringa-kjoper-to-nye-sar-queen-helikopter-til-tromso-1.17739279" target="_blank">Regjeringa kjøper to nye SAR Queen-helikopter til Tromsø</a></h2>
-                        <p>Regjeringa har pekt ut veien for redningsbasen. Basen blir militær i 2030. Prislappen er 4,2 milliarder....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/XuL6Lozrqid1BVKCFlFcAAHI2HSFC_7OiNobvo_QG40w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 11:02:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/en-av-tre-unge-sliter-med-a-folge-nyhetene_-_-det-blir-for-mye-1.17728865" target="_blank">En av tre unge sliter med å følge nyhetene: – Det blir for mye</a></h2>
-                        <p>Det er ikke mangelen på nyheter som gjør at de unge sliter med å henge med, det er mengden....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/H8ECHFqWx9AoRbwKxuvhzQ0W4Iuap2YxNR-1Kz8NTlOw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 11:03:56 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/raja-i-usa_---mange-amerikanere-som-skammer-seg-1.17739744" target="_blank">Raja i USA: - Mange amerikanere som skammer seg</a></h2>
-                        <p>Abid Raja (V) er i USA sammen med norske politikere mens landets president er i fokus om Grønland. Han møter amerikanere som sier at europeiske ledere må slutte å logre med halen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/RMhaEy4uvln7ar2660bpVgATwtfHaJVHSi6WKRDsEztg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 23 Jan 2026 09:57:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/tiltalt-for-a-ha-kjort-i-218-km_t-i-80-sone-1.17740113" target="_blank">Tiltalt for å ha kjørt i 218 km/t i 80-sone</a></h2>
-                        <p>En mann i 20-åra fra Trøndelag er tiltalt for å ha kjørt motorsykkel i 218 kilometer i timen i 80-sone....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57446442.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dc7db93d25d3df7fc1c6697816ad30f0a4f2547dba6021043abb04834c946bc73" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -782,7 +785,7 @@ Det betyr at personer som har fått endelig avslag på asylsøknaden sin, in...<
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 23.01.2026 16:21</div>
+                <div class="footer">Sist oppdatert: 23.01.2026 16:25</div>
             </div>
         </body>
         </html>
