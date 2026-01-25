@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -72,7 +69,7 @@
                             Sun, 25 Jan 2026 15:17:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/her-er-den-nye-mario-traileren/519892" target="_blank">Her er den nye Mario-traileren</a></h2>
-                        <p>I det som må være den korteste Nintendo Direct-sendingen noensinne, viste Nintendo litt mer av den kommende <em>Super Mario Galaxy</em>-filmen. Se den nye traileren her, som gir et etterlengtet gjensyn med Yoshi.</p>
+                        <p>I det som må være den korteste Nintendo Direct-sendingen noensinne, viste Nintendo litt mer av den kommende <em>Super Mario Galaxy</em>-filmen. Se den nye traileren her, som gir et...</p>
                     </div>
                 </div>
             
@@ -84,7 +81,7 @@
                             Sun, 25 Jan 2026 08:40:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/fjernet-samtlige-vr-modifikasjoner-etter-nok-et-dmca-krav/519889" target="_blank">Fjernet samtlige VR-modifikasjoner etter nok et DMCA-krav</a></h2>
-                        <p></p>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -96,7 +93,7 @@
                             Sun, 25 Jan 2026 07:51:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/valves-hemmelige-skytespill-fikk-akkurat-en-svaer-oppdatering/519890" target="_blank">Valves «hemmelige» skytespill fikk akkurat en svær oppdatering</a></h2>
-                        <p>Ny modus og en haug med figurer inntar Deadlock.</p>
+                        <p>Ny modus og en haug med figurer inntar Deadlock....</p>
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
@@ -108,7 +105,7 @@
                             Sun, 25 Jan 2026 15:05:00 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/slik-fungerer-irans-halal-internett/567300" target="_blank">[Ekstra] Slik fungerer Irans «halal-internett»</a></h2>
-                        <p>Irans internett består av fire lag som prestestyret kan åpne og stenge. Selv landets politiske maktfordeling er bygget inn i IT-infrastrukturen.</p>
+                        <p>Irans internett består av fire lag som prestestyret kan åpne og stenge. Selv landets politiske maktfordeling er bygget inn i IT-infrastrukturen....</p>
                     </div>
                 </div>
             
@@ -120,7 +117,7 @@
                             Sun, 25 Jan 2026 08:45:54 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/kvinner-ringer-mest-menn-bruker-klart-mest-mobildata/567396" target="_blank">Stor forskjell på kvinners og menns mobilbruk</a></h2>
-                        <p>Nye tall fra Telenor viser tydelige kjønnsforskjeller i mobilbruken.</p>
+                        <p>Nye tall fra Telenor viser tydelige kjønnsforskjeller i mobilbruken....</p>
                     </div>
                 </div>
             
@@ -132,238 +129,34 @@
                             Sun, 25 Jan 2026 07:00:00 GMT
                         </div>
                         <h2><a href="https://www.tek.no/i/Gxav2J" target="_blank">Hues «veggvaskere» gir deg avansert «Ambilight» bak TV-en</a></h2>
-                        <p>«Ambilight», som det opprinnelig ble døpt, var egentlig en innovasjon som kom til Philips-TV-er helt tilbake i 2004. Konseptet med lys rettet mot veggen bak TV-en og som synkroniseres med hva som skjer på skjermen har imidlertid siden blitt adoptert av en rekke selskaper, kanskje med Philips Hue i spissen.</p>
+                        <p>«Ambilight», som det opprinnelig ble døpt, var egentlig en innovasjon som kom til Philips-TV-er helt tilbake i 2004. Konseptet med lys rettet mot veggen bak TV-en og som synkronise...</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/XjYvXxRCOMRh6WYTLnhxMQxOg0e5GyDkccGaHu4gzRQw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143078762.jpg%3F%26accessToken%3Dcc1e809ec14e79146910ea5a888615de94beb91d5c27de5359c24236764c5c08" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 14:03:17 GMT
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Sun, 25 Jan 2026 14:56:27 GMT
                         </div>
-                        <h2><a href="https://www.nrk.no/sport/johannes-hosflot-klaebo-banket-konkurrentene-pa-20-kilometer-langrenn-i-goms-1.17742243" target="_blank">Rådville etter Klæbos oppvisning: – Han kan vinne på den måten han vil</a></h2>
-                        <p>Johannes Høsflot Klæbo viste kanonform kun to uker før OL. Parkerte konkurrentene lenge før mål.</p>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/25/8323269/750.000-hus-uten-strom-under-vinterstorm-i-usa" target="_blank">750.000 hus uten strøm under vinterstorm i USA</a></h2>
+                        <p>Snøvær rammer rundt to tredeler av Fastlands-USA denne helgen. 600.000 husstander er uten strøm sør og øst i landet....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/2VCCdjx3XxBoNSPZFU0aag3ZqIjN77K2EMugx5xiVu3Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://gfx.nrk.no/HbGMa4KxOQ0Lr6OOO0wcBQhnmcJuucbY5-_uWncn3u0A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
                             <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 12:32:03 GMT
+                            Sun, 25 Jan 2026 14:51:30 GMT
                         </div>
-                        <h2><a href="https://www.nrk.no/trondelag/nodsignal-utenfor-kysten-av-trondelag_-hrs-har-sendt-flere-ressurser-1.17742171" target="_blank">Nødsignal utenfor kysten av Trøndelag– HRS har avsluttet søket</a></h2>
-                        <p>HRS sendte ut flere ressurser etter at det ble fanget opp et mayday-signal på kystradioen.</p>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/xl/i-en-mer-utrygg-verden-mangler-longyearbyen-rent-drikkevann.-svaert-hoyt-innhold-av-nikkel-og-mangan-1.17730281" target="_blank">Da vannet forsvant</a></h2>
+                        <p>I en mer utrygg verden må folk nær klodens utkant klare seg uten det viktigste av alt....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 12:56:51 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/emilie-fleten-vant-marcialonga-_-fastkjort-skuter-skapte-problemer-i-siste-bakke-1.17742150" target="_blank">Skuter blokkerte løypa rett før mål: – Jeg tenkte «What the f***!?»</a></h2>
-                        <p>En fastkjørt skuter sto mellom Emilie Fleten og en mulig seier i Marcialonga. Nå beklager arrangøren.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/kBJbmmCyk50Skcol_ZCGMw6fxU9fn8uU_2AU9_bA4hvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 13:15:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/vinterstormen-herjer-i-usa-1.17742074" target="_blank">Vinterstormen herjer i USA</a></h2>
-                        <p>Over en halv million husstander er uten strøm og hvert fjerde fly står på bakken.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 11:55:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/nodsignal-utenfor-trondheim-_-hrs-har-sendt-flere-ressurser--1.17742089" target="_blank">Nødsignal utenfor Trondheim – HRS har sendt flere ressurser</a></h2>
-                        <p>Redningsskøyte, brannbåt og redningshelikopter er sendt ut etter at kystradioen fanget opp mayday-signal. Det bekrefter redningsleder i Hovedredningssentralen, Jonas Andersen til NRK. Han forteller at det kom inn et mayday-rop over kystradioen.
-– Mayday brukes når noen er i nød på sjøen. Man forventer en fullstendig melding etterpå, men det har vi ikke fått i denne situasjonen, sier Andersen.
-HRS har dermed ingen posisjon å gå etter i søket. Til Adresseavisen sier HRS at de søker mellom Trondheim og Steinkjer. Det er ikke mulig at dette var gjort ved et feiltrykk, opplyser redningslederen.
-– De som har blitt kontaktet av båter i området, har ikke hørt noe.
-Brannvesenet har blitt varslet av HRS om nødsignalet.
-– Vi har ikke startet en aksjon fra land fra brann sin side, sier vaktleder i brannvesenet, Frank Hansen.
-– Usikker på om det er en reell hendelse eller en falsk melding, sier Hansen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rq__-0lNJGd4cIUWg14EYAbB7yatpIzhkhYLAKaM_Yfg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 11:30:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/en-fjellrev-forvilla-seg-inn-pa-et-havneomradet-i-trondheim-1.17740935" target="_blank">Fjellrev forvilla seg inn på havneområdet i Trondheim</a></h2>
-                        <p>Driftsarbeideren har gått i fjellet i 50 år uten å se en eneste fjellrev. Denne uka møtte han en flere dager – på jobb i byen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 11:55:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/har-fatt-mayday-signal-_-hrs-har-sendt-flere-ressurser--1.17742089" target="_blank">Har fått mayday signal – HRS har sendt flere ressurser</a></h2>
-                        <p>Redningsskøyte, brannbåt og redningshelikopter er sendt ut etter at kystradioen fanget opp mayday-signal. Det bekrefter redningsleder i Hovedredningssentralen, Jonas Andersen til NRK. Han forteller at det kom inn et mayday-rop over kystradioen.
-– Mayday brukes når noen er i nød på sjøen. Man forventer en fullstendig melding etterpå, men det har vi ikke fått i denne situasjonen, sier Andersen.
-HRS har dermed ingen posisjon å gå etter i søket. Til Adresseavisen sier HRS at de søker mellom Trondheim og Steinkjer. Det er ikke mulig at dette var gjort ved et feiltrykk, opplyser redningslederen.
-– De som har blitt kontaktet av båter i området, har ikke hørt noe.
-Brannvesenet har blitt varslet av HRS om nødsignalet.
-– Vi har ikke startet en aksjon fra land fra brann sin side, sier vaktleder i brannvesenet, Frank Hansen.
-– Usikker på om det er en reell hendelse eller en falsk melding, sier Hansen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/L5q__hjGQk7Ls0w3X9eZ5g4ZvLnip4rxsPq6klgNNweA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 12:15:52 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/ludvig-_5_-tok-sine-forste-skritt-_-pa-sin-egen-mate-1.17719004" target="_blank">Ludvig (5) tok sine første skritt – på sin egen måte</a></h2>
-                        <p>Med en alvorlig diagnose betyr hvert framskritt ekstra mye. – Det rant noen tårer, sier mammaen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Xw_KEtnO_5aKsrXKzVJYMwuQvUW349lEDMXn8tz9zUaA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 10:46:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/ki-gjer-at-ingvild-stoler-mindre-pa-utanlandsk-innhald_-sjolv-fra-redaktorstyrte-medium-1.17727702" target="_blank">Fleire synest KI gjer det vanskeleg å vite kva som er ekte</a></h2>
-                        <p>Ingvild Féline Winther er skeptisk til nyheiter, og lurer på om innhald kan vere KI-generert, sjølv frå redaktørstyrte medium.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/PqhqbdRmEUdxWT1QO6bGHgK7NkGL_Ot6zeh1Vr3eLyLg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 11:06:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/rogina-demonstrerer-i-iran_-_-vi-trenger-hjelp-fra-trump-1.17741384" target="_blank">Rogina demonstrerer i Iran: – Vi trenger hjelp fra Trump</a></h2>
-                        <p>Internett har vært stengt i over to uker. Natt til lørdag sendte hun den første meldingen: «Jeg lever».</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/VY-CBvOq0NNefGSyT7ewxghhabgVpF7JQwUnyqHFROOw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 10:02:39 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/xl/linn-er-alvorleg-sjuk-med-anoreksi_-men-mister-behandlingsplassen-pa-senter-for-spiseforstyrrelser-1.17721030" target="_blank">Når maten er fienden</a></h2>
-                        <p>Linn vil så gjerne leve. Men ho fryktar ho er i ferd med å tape kampen mot anoreksien. No må ho ut frå den staden der ho klarer å få i seg mat.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/7goqIKIGfYxWt_M7KvqlwQ0n2vFx_vRvKdIGexz0OTBA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 09:06:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/sterke-reaksjoner-ved-skuddstedet-i-minneapolis-1.17741975" target="_blank">– Ingen annen forklaring enn at han forsøkte å gjøre en god handling</a></h2>
-                        <p>Folk strømmet i natt til stedet i Minneapolis der Alex Pretti skutt og drept lørdag. – Det er «fucking terrible» – «jævlig grusomt» – sier Karl Meier til NRK.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/p9rlWk0gE5Pm1rhk_5ANNweMg8z1YWprOJRCcJ6NRLhQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 07:32:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/ruter-oker-billettprisene-pa-kollektivtrafikken-i-oslo-og-akershus-1.17740256" target="_blank">Ruter skrur opp prisen: Nå er det dyrere å reise kollektivt</a></h2>
-                        <p>Fagre løfter om billigere billetter til tross: Søndag morgen øker Ruter prisen for alle kollektivreisende i Oslo og Akershus.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/R2iJnHkYqOkxKWzk9UHx_AkKu1CCS7OH0NPXRH2MfxSA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 06:38:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/to-homofile-ishockeyspillere-far-kvinner-til-a-dane.-noe-har-skjedd.-1.17740808" target="_blank">To homofile ishockey­spillere får kvinner til å dåne. Noe har skjedd.</a></h2>
-                        <p>«Heated Rivalry» har kommet fra ingenting og blitt et fenomen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Z2p709pqEKfXOAdJCANebgWi4oRjV1qtPKyKqMeQWWKQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 06:31:30 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/marcialonga-2026_-still-sporsmal-til-vare-eksperter-1.17740333" target="_blank">Gukild og Northug før Marcialonga: – Målet mitt er å peake som skiløper</a></h2>
-                        <p>Noen satser på å vinne Marcialonga. Petter Northug satser på å henge med feltet inn i den avgjørende bakken. Se løpet nå!</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/D0NtlMU7h2II2nteHi933QxqVeG4oJg-Ytnhe4C7ROGw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 07:18:22 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/store-protester-over-hele-usa-etter-ny-skyting-i-minneapolis-1.17741906" target="_blank">Store protester over hele USA etter ny skyting i Minneapolis</a></h2>
-                        <p>Protester har blusset opp over hele USA etter at Alex Pretti ble skutt og drept under en demonstrasjon i Minneapolis lørdag</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6d8QFT_BuhouRMTL_HxhNA3Y6jaaXvoFtkV42EZcjlBw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 06:00:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/nrks-dopingundersokelse-sjokkerer-jonna-sundling_-birk-ruud-og-thea-louise-stjernesund-1.17725171" target="_blank">NRKs dopingundersøkelse sjokkerer utøverne: – Altfor høyt</a></h2>
-                        <p>I en stor nordisk undersøkelse har landslagsutøvere svart på spørsmål om doping. Nå reagerer de sterkt på det som kommer frem.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/PafWjhXyzegMGcYNvzW92Q6xsEJbYQN4ZQAO8Jguji8w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 25 Jan 2026 04:45:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/dette-vet-vi-om-alex-jeffrey-pretti-1.17741883" target="_blank">Dette vet vi om Alex Jeffrey Pretti</a></h2>
-                        <p>Intensivsykepleieren Alex Jeffrey Pretti (37) ble skutt og drept av føderale agenter i Minneapolis lørdag. Familien reagerer mot Trump-administrasjonens omtaler av sønnen.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143076955.jpg%3F%26accessToken%3Dd98c5ec659465eeeaa793cc8970f1f723d5802994285ae972c4a0ba77ac23ca7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -372,7 +165,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 14:27:14 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/jus/2026/01/25/8323266/elliott-og-lloyds-i-rettstvist-om-milliardregning" target="_blank">Går til sak mot storbank: Milliardkrangel om brannfarlig kledning</a></h2>
-                        <p>Et joint venture-selskap tilknyttet aktivistinvestoren Elliott saksøker Lloyds i milliardstrid om brannfarlig kledning.</p>
+                        <p>Et joint venture-selskap tilknyttet aktivistinvestoren Elliott saksøker Lloyds i milliardstrid om brannfarlig kledning....</p>
                     </div>
                 </div>
             
@@ -384,7 +177,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:53:16 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/bygg-og-anlegg/2026/01/25/8323256/neom-kuttene-blir-virkelighet" target="_blank">Neom-kuttene blir virkelighet</a></h2>
-                        <p>I oktober skrev Finansavisen om PIFs helomvending. Nå melder Financial Times at Neom skal nedskaleres og tegnes om, mens The Line og Trojena strammes inn.</p>
+                        <p>I oktober skrev Finansavisen om PIFs helomvending. Nå melder Financial Times at Neom skal nedskaleres og tegnes om, mens The Line og Trojena strammes inn....</p>
                     </div>
                 </div>
             
@@ -396,7 +189,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 14:01:48 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/handel/2026/01/25/8322732/bohus-rigges-for-bors-etter-kjempevekst" target="_blank">Bohus rigges for børs etter kjempevekst – kan være verdt rundt 4 milliarder</a></h2>
-                        <p>Bohus leverte knallsterke 2025-tall. Nå går børsryktene, men sjefen understreker at det også finnes andre alternativer.</p>
+                        <p>Bohus leverte knallsterke 2025-tall. Nå går børsryktene, men sjefen understreker at det også finnes andre alternativer....</p>
                     </div>
                 </div>
             
@@ -408,7 +201,19 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 13:41:09 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/vrAq4L/kunsthandler-konsekvensene-har-vaert-katastrofale" target="_blank">Kunsthandler: – Konsekvensene har vært katastrofale</a></h2>
-                        <p>Da galleriet hans ble stengt uten forvarsel, mistet Pål Sagen både arbeidssted og inntekt. I retten rettet forsvareren kraftig kritikk mot politiets fremgangsmåte.</p>
+                        <p>Da galleriet hans ble stengt uten forvarsel, mistet Pål Sagen både arbeidssted og inntekt. I retten rettet forsvareren kraftig kritikk mot politiets fremgangsmåte....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/XjYvXxRCOMRh6WYTLnhxMQxOg0e5GyDkccGaHu4gzRQw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 14:03:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/johannes-hosflot-klaebo-banket-konkurrentene-pa-20-kilometer-langrenn-i-goms-1.17742243" target="_blank">Rådville etter Klæbos oppvisning: – Han kan vinne på den måten han vil</a></h2>
+                        <p>Johannes Høsflot Klæbo viste kanonform kun to uker før OL. Parkerte konkurrentene lenge før mål....</p>
                     </div>
                 </div>
             
@@ -420,7 +225,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 13:24:33 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/01/25/8323260/valutakaos-i-tokyo-statsministeren-advarer-spekulanter" target="_blank">Valutakaos i Tokyo: Statsministeren advarer spekulanter</a></h2>
-                        <p>Den japanske yenen styrket seg kraftig sent fredag kveld. Statsministeren varsler at det vil tas grep mot spekulative markedsbevegelser.</p>
+                        <p>Den japanske yenen styrket seg kraftig sent fredag kveld. Statsministeren varsler at det vil tas grep mot spekulative markedsbevegelser....</p>
                     </div>
                 </div>
             
@@ -432,7 +237,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:38:43 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/bolig/2026/01/25/8321106/rekordvolumer-i-luksusmarkedet-mange-dyre-salg-men-ogsa-mye-rabatter" target="_blank">Rekordvolumer i luksusmarkedet: – Mange dyre salg, men også mye rabatter, forteller meglertopp.</a></h2>
-                        <p>I løpet av de siste to årene, er det solgt flere dyre luksusboliger enn noen gang. – Salgsvolumet har vært kjempehøyt, men tilbudssiden har vært enda høyere. Mange av selgerne får ikke prisen de ønsker seg. Men det selges fortsatt dyre boliger, forteller meglertopp.</p>
+                        <p>I løpet av de siste to årene, er det solgt flere dyre luksusboliger enn noen gang. – Salgsvolumet har vært kjempehøyt, men tilbudssiden har vært enda høyere. Mange av selgerne får ...</p>
                     </div>
                 </div>
             
@@ -444,7 +249,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:53:16 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/bygg-og-anlegg/2026/01/25/8323256/giga-drommen-krymper-ved-rodehavet" target="_blank">Giga-drømmen krymper ved Rødehavet</a></h2>
-                        <p>Etter år med forsinkelser og budsjettsprekker skal Neom nedskaleres. The Line tegnes om, og datasentre kan bli en ny kjerne.</p>
+                        <p>Etter år med forsinkelser og budsjettsprekker skal Neom nedskaleres. The Line tegnes om, og datasentre kan bli en ny kjerne....</p>
                     </div>
                 </div>
             
@@ -456,7 +261,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 13:18:29 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/transport/2026/01/25/8323262/airbus-advarer-om-nye-sjokk-etter-tollsmell" target="_blank">Airbus advarer om nye sjokk etter tollsmell</a></h2>
-                        <p>Airbus-sjef Guillaume Faury ber de ansatte gjøre seg klare for mer uro, etter at handelskonflikter ga betydelige ekstraregninger i fjor.</p>
+                        <p>Airbus-sjef Guillaume Faury ber de ansatte gjøre seg klare for mer uro, etter at handelskonflikter ga betydelige ekstraregninger i fjor....</p>
                     </div>
                 </div>
             
@@ -468,7 +273,43 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:58:39 GMT
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/2p3nPB/scott-bessent-forholder-seg-ikke-til-de-oekonomiske-realitetene" target="_blank">Forholder seg ikke til de økonomiske realitetene</a></h2>
-                        <p>WASHINGTON D.C. – Aktørene i obligasjonsmarkedet følger med</p>
+                        <p>WASHINGTON D.C. – Aktørene i obligasjonsmarkedet følger med...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/2VCCdjx3XxBoNSPZFU0aag3ZqIjN77K2EMugx5xiVu3Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 12:32:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/nodsignal-utenfor-kysten-av-trondelag_-hrs-har-sendt-flere-ressurser-1.17742171" target="_blank">Nødsignal utenfor kysten av Trøndelag– HRS har avsluttet søket</a></h2>
+                        <p>HRS sendte ut flere ressurser etter at det ble fanget opp et mayday-signal på kystradioen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 12:56:51 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/emilie-fleten-vant-marcialonga-_-fastkjort-skuter-skapte-problemer-i-siste-bakke-1.17742150" target="_blank">Skuter blokkerte løypa rett før mål: – Jeg tenkte «What the f***!?»</a></h2>
+                        <p>En fastkjørt skuter sto mellom Emilie Fleten og en mulig seier i Marcialonga. Nå beklager arrangøren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/kBJbmmCyk50Skcol_ZCGMw6fxU9fn8uU_2AU9_bA4hvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 13:15:01 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/vinterstormen-herjer-i-usa-1.17742074" target="_blank">Vinterstormen herjer i USA</a></h2>
+                        <p>Over en halv million husstander er uten strøm og hvert fjerde fly står på bakken....</p>
                     </div>
                 </div>
             
@@ -480,7 +321,19 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:28:21 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/25/8323252/ice-drap-vekker-reaksjoner-mot-ny-shutdown-i-usa" target="_blank">ICE-drap vekker reaksjoner: Mot ny shutdown i USA</a></h2>
-                        <p>Demokratene går inn for å blokkere et budsjettforslag i Senatet etter at immigrasjonsmyndigheten drepte en amerikansk borger i helgen.</p>
+                        <p>Demokratene går inn for å blokkere et budsjettforslag i Senatet etter at immigrasjonsmyndigheten drepte en amerikansk borger i helgen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 11:55:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/nodsignal-utenfor-trondheim-_-hrs-har-sendt-flere-ressurser--1.17742089" target="_blank">Nødsignal utenfor Trondheim – HRS har sendt flere ressurser</a></h2>
+                        <p>Redningsskøyte, brannbåt og redningshelikopter er sendt ut etter at kystradioen fanget opp mayday-signal. Det bekrefter redningsleder i Hovedredningssentralen, Jonas Andersen til N...</p>
                     </div>
                 </div>
             
@@ -492,7 +345,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:02:46 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/01/25/8323047/rakfiskkonge-jorn-faerden-wangen-satser-pa-ost-og-spekemat-bygger-konsern-i-nisjemat" target="_blank">Rakfiskkonge bygger nisjemat-konsern: Sikter mot 100 millioner i salg</a></h2>
-                        <p>Rakfiskkonge Jørn Færden Wangen satser på ost og spekemat: Bygger konsern i nisjemat.</p>
+                        <p>Rakfiskkonge Jørn Færden Wangen satser på ost og spekemat: Bygger konsern i nisjemat....</p>
                     </div>
                 </div>
             
@@ -504,7 +357,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:04:02 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/25/8323253/eu-presidenten-i-india-haper-a-sluttfore-handelsavtale" target="_blank">EU-presidenten i India – håper å sluttføre handelsavtale</a></h2>
-                        <p>EU-president Antonio Costa ankom søndag India i håp om å få ferdig en frihandelsavtale etter nesten 20 år med forhandlinger.</p>
+                        <p>EU-president Antonio Costa ankom søndag India i håp om å få ferdig en frihandelsavtale etter nesten 20 år med forhandlinger....</p>
                     </div>
                 </div>
             
@@ -516,7 +369,43 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 12:00:01 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/9pO8n5/dnb-topper-hyller-eoes-avtalen-den-er-essensiell" target="_blank">DNB-topp på første Brussel-tur: – Den avgjørende måten vi får tilgang på</a></h2>
-                        <p>DNBs finansdirektør Rasmus Figenschou mener myriaden av reguleringer i Norges viktigste marked må forenkles. Nå åpner banken nytt EU-kontor.</p>
+                        <p>DNBs finansdirektør Rasmus Figenschou mener myriaden av reguleringer i Norges viktigste marked må forenkles. Nå åpner banken nytt EU-kontor....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/rq__-0lNJGd4cIUWg14EYAbB7yatpIzhkhYLAKaM_Yfg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 11:30:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/en-fjellrev-forvilla-seg-inn-pa-et-havneomradet-i-trondheim-1.17740935" target="_blank">Fjellrev forvilla seg inn på havneområdet i Trondheim</a></h2>
+                        <p>Driftsarbeideren har gått i fjellet i 50 år uten å se en eneste fjellrev. Denne uka møtte han en flere dager – på jobb i byen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 11:55:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/har-fatt-mayday-signal-_-hrs-har-sendt-flere-ressurser--1.17742089" target="_blank">Har fått mayday signal – HRS har sendt flere ressurser</a></h2>
+                        <p>Redningsskøyte, brannbåt og redningshelikopter er sendt ut etter at kystradioen fanget opp mayday-signal. Det bekrefter redningsleder i Hovedredningssentralen, Jonas Andersen til N...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/L5q__hjGQk7Ls0w3X9eZ5g4ZvLnip4rxsPq6klgNNweA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 12:15:52 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/ludvig-_5_-tok-sine-forste-skritt-_-pa-sin-egen-mate-1.17719004" target="_blank">Ludvig (5) tok sine første skritt – på sin egen måte</a></h2>
+                        <p>Med en alvorlig diagnose betyr hvert framskritt ekstra mye. – Det rant noen tårer, sier mammaen....</p>
                     </div>
                 </div>
             
@@ -528,7 +417,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 10:17:09 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8323228/vant-med-en-femtedel-i-cash" target="_blank">Vant med en femtedel i «cash»</a></h2>
-                        <p>Børsklubben NHH tok det ukentlige gullet i Nordnets porteføljekonkurranse, til tross for lagets lave børseksponering. En aksje steg 15 prosent.</p>
+                        <p>Børsklubben NHH tok det ukentlige gullet i Nordnets porteføljekonkurranse, til tross for lagets lave børseksponering. En aksje steg 15 prosent....</p>
                     </div>
                 </div>
             
@@ -540,7 +429,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 10:32:00 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/25/8323061/lang-saksbehandlingstid-hos-bronnoysundregistrene-skaper-store-problemer" target="_blank">Over én måned ventetid i Brønnøysund: – Skaper store problemer for næringslivet</a></h2>
-                        <p>Saksbehandlingstiden hos Brønnøysundregistrene overstiger nå én måned for meldinger som tidligere ble behandlet på få dager. Regnskap Norge mener situasjonen er alvorlig og skaper store problemer for næringslivet.</p>
+                        <p>Saksbehandlingstiden hos Brønnøysundregistrene overstiger nå én måned for meldinger som tidligere ble behandlet på få dager. Regnskap Norge mener situasjonen er alvorlig og skaper ...</p>
                     </div>
                 </div>
             
@@ -552,7 +441,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 10:56:45 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/01/25/8323249/ingen-kontroll-av-russisk-skyggeflate-langs-norskekysten" target="_blank">Ingen kontroll av russisk skyggeflåte langs norskekysten</a></h2>
-                        <p>I fjor ble det registrert 260 seilaser med sanksjonerte fartøy langs norskekysten. Ingen ble kontrollert.</p>
+                        <p>I fjor ble det registrert 260 seilaser med sanksjonerte fartøy langs norskekysten. Ingen ble kontrollert....</p>
                     </div>
                 </div>
             
@@ -564,7 +453,31 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 11:07:27 GMT
                         </div>
                         <h2><a href="https://e24.no/karriere-og-ledelse/i/Rj93QW/hvordan-finne-en-jobb-jeg-vil-like" target="_blank">Hvordan finne en jobb jeg vil like?</a></h2>
-                        <p>Hva kan man gjøre for å finne en stilling man vil trives med når man er i starten av karrieren og har lite erfaringer å bygge på?</p>
+                        <p>Hva kan man gjøre for å finne en stilling man vil trives med når man er i starten av karrieren og har lite erfaringer å bygge på?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Xw_KEtnO_5aKsrXKzVJYMwuQvUW349lEDMXn8tz9zUaA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 10:46:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/ki-gjer-at-ingvild-stoler-mindre-pa-utanlandsk-innhald_-sjolv-fra-redaktorstyrte-medium-1.17727702" target="_blank">Fleire synest KI gjer det vanskeleg å vite kva som er ekte</a></h2>
+                        <p>Ingvild Féline Winther er skeptisk til nyheiter, og lurer på om innhald kan vere KI-generert, sjølv frå redaktørstyrte medium....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/PqhqbdRmEUdxWT1QO6bGHgK7NkGL_Ot6zeh1Vr3eLyLg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 11:06:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/rogina-demonstrerer-i-iran_-_-vi-trenger-hjelp-fra-trump-1.17741384" target="_blank">Rogina demonstrerer i Iran: – Vi trenger hjelp fra Trump</a></h2>
+                        <p>Internett har vært stengt i over to uker. Natt til lørdag sendte hun den første meldingen: «Jeg lever»....</p>
                     </div>
                 </div>
             
@@ -576,7 +489,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 09:44:43 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8322594/derfor-blir-lanene-dyrere-enn-mange-tror" target="_blank">Derfor blir lånene dyrere enn mange tror</a></h2>
-                        <p>Risikoprisingen er i ferd med å endre seg strukturelt, skriver finansanalytiker Svein Ivar Haugom i Profera.</p>
+                        <p>Risikoprisingen er i ferd med å endre seg strukturelt, skriver finansanalytiker Svein Ivar Haugom i Profera....</p>
                     </div>
                 </div>
             
@@ -588,7 +501,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 09:56:31 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/25/8323243/financial-times-to-farer-trer-tydelig-frem-etter-donald-trumps-trusler-mot-gronland" target="_blank">Financial Times: – To farer trer tydelig frem</a></h2>
-                        <p>Financial Times: – To farer trer tydelig frem etter Donald Trumps trusler mot Grønland</p>
+                        <p>Financial Times: – To farer trer tydelig frem etter Donald Trumps trusler mot Grønland...</p>
                     </div>
                 </div>
             
@@ -600,7 +513,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 10:04:53 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/25/8323247/utga-seg-for-a-vaere-politi-tiltalt-for-svindel-av-eldre-for-28-millioner-kroner" target="_blank">Utga seg for å være politi – tiltalt for svindel av eldre for 28 millioner kroner</a></h2>
-                        <p>Rundt 150 nordmenn skal blitt svindlet for 28 millioner kroner av et dansk svindelnettverk. Mandag må elleve personer møte i Oslo tingrett.</p>
+                        <p>Rundt 150 nordmenn skal blitt svindlet for 28 millioner kroner av et dansk svindelnettverk. Mandag må elleve personer møte i Oslo tingrett....</p>
                     </div>
                 </div>
             
@@ -612,7 +525,19 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 10:17:09 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8323228/vant-med-en-femdel-i-cash" target="_blank">Vant med en femdel i «cash»</a></h2>
-                        <p>Børsklubben NHH tok det ukentlige gullet i Nordnets porteføljekonkurranse, til tross for lagets lave børseksponering. En aksje steg 15 prosent.</p>
+                        <p>Børsklubben NHH tok det ukentlige gullet i Nordnets porteføljekonkurranse, til tross for lagets lave børseksponering. En aksje steg 15 prosent....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/VY-CBvOq0NNefGSyT7ewxghhabgVpF7JQwUnyqHFROOw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 10:02:39 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/xl/linn-er-alvorleg-sjuk-med-anoreksi_-men-mister-behandlingsplassen-pa-senter-for-spiseforstyrrelser-1.17721030" target="_blank">Når maten er fienden</a></h2>
+                        <p>Linn vil så gjerne leve. Men ho fryktar ho er i ferd med å tape kampen mot anoreksien. No må ho ut frå den staden der ho klarer å få i seg mat....</p>
                     </div>
                 </div>
             
@@ -624,7 +549,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 09:26:39 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8323227/ankit-22-fra-barnevern-til-borssuksess" target="_blank">Ankit (22) har gått fra barnevern til børssuksess. Tjente 11 mill. – Aksjen er penger på gata.</a></h2>
-                        <p>Ankit Winther flyttet mellom fosterhjem og barnevern siden han ble født, men bygget startkapital i tre jobber ved siden av skolen. Nå sitter han på aksjekontor på Aker Brygge, og tjente 11 millioner på børsen i fjor. – Jeg har gått på noen smeller, og kommer til å gå på flere, sier han.</p>
+                        <p>Ankit Winther flyttet mellom fosterhjem og barnevern siden han ble født, men bygget startkapital i tre jobber ved siden av skolen. Nå sitter han på aksjekontor på Aker Brygge, og t...</p>
                     </div>
                 </div>
             
@@ -636,7 +561,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 09:29:24 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8323241/torstein-tvenge-deler-ut-millioner-til-barnebarna" target="_blank">Deler ut millioner til barnebarna</a></h2>
-                        <p>Eiendomsmilliardær Torstein Tvenge har gitt en større gave til sine 6 barnebarn.</p>
+                        <p>Eiendomsmilliardær Torstein Tvenge har gitt en større gave til sine 6 barnebarn....</p>
                     </div>
                 </div>
             
@@ -648,7 +573,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 08:46:59 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/karriere/2026/01/25/8315865/innovasjon-norge-sjefen-norge-taper-i-innovasjonskapplopet-og-mangler-risikovilje" target="_blank">Innovasjon Norge-sjefen slår alarm om tidligfaseinvesteringer: – På sitt laveste nivå på fem år</a></h2>
-                        <p>Norge faller på internasjonale innovasjonsrangeringer. Innovasjon Norge-sjef Håkon Haugli peker på lav risikokapital og feil debattpremisser – og etterlyser flere gründere, tydeligere ambisjoner og ledere med empati og AI-kompetanse.</p>
+                        <p>Norge faller på internasjonale innovasjonsrangeringer. Innovasjon Norge-sjef Håkon Haugli peker på lav risikokapital og feil debattpremisser – og etterlyser flere gründere, tydelig...</p>
                     </div>
                 </div>
             
@@ -660,7 +585,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 08:47:34 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/25/8322941/hva-er-sant-om-co2-utslipp" target="_blank">Hva er sant om CO2-utslipp?</a></h2>
-                        <p>Norge og Europa lar andre land produsere for oss, mens vi er opptatt av å jage våre egne utslipp fra små til enda mindre. Kanskje slikt får oss til å føle et slags behag, spør geolog Stig-Morten Knutsen.</p>
+                        <p>Norge og Europa lar andre land produsere for oss, mens vi er opptatt av å jage våre egne utslipp fra små til enda mindre. Kanskje slikt får oss til å føle et slags behag, spør geol...</p>
                     </div>
                 </div>
             
@@ -672,7 +597,19 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 09:18:55 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/Gxa526/jakter-oljeeventyr-i-nye-venezuela-snakk-om-milliardverdier" target="_blank">Jakter oljeeventyr i «nye» Venezuela: – Snakk om milliardverdier</a></h2>
-                        <p>RIO DE JANEIRO (E24) Kjetil Solbrække møtte Venezuelas president i Caracas i fjor og skal tilbake neste uke for å prøve å lande et milliardprosjekt. Men han regner med en tur til Washington for velsignelse.</p>
+                        <p>RIO DE JANEIRO (E24) Kjetil Solbrække møtte Venezuelas president i Caracas i fjor og skal tilbake neste uke for å prøve å lande et milliardprosjekt. Men han regner med en tur til W...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/7goqIKIGfYxWt_M7KvqlwQ0n2vFx_vRvKdIGexz0OTBA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 09:06:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/sterke-reaksjoner-ved-skuddstedet-i-minneapolis-1.17741975" target="_blank">– Ingen annen forklaring enn at han forsøkte å gjøre en god handling</a></h2>
+                        <p>Folk strømmet i natt til stedet i Minneapolis der Alex Pretti skutt og drept lørdag. – Det er «fucking terrible» – «jævlig grusomt» – sier Karl Meier til NRK....</p>
                     </div>
                 </div>
             
@@ -684,7 +621,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 08:29:10 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/25/8323237/polen-vil-ikke-innfore-euro" target="_blank">Vil ikke innføre euro</a></h2>
-                        <p>Landet har tidligere hatt mål om å innføre euro, men utviklingen har gjort det mindre aktuelt. – Vår økonomi gjør det nå klart bedre enn de fleste av landene som har euro, sier finansministeren.</p>
+                        <p>Landet har tidligere hatt mål om å innføre euro, men utviklingen har gjort det mindre aktuelt. – Vår økonomi gjør det nå klart bedre enn de fleste av landene som har euro, sier fin...</p>
                     </div>
                 </div>
             
@@ -696,7 +633,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 07:35:02 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8322973/er-tokyoborsen-en-trygg-havn" target="_blank">Geopolitisk uro i Vesten sender blikket mot Japan. Men er Tokyobørsen en trygg havn?</a></h2>
-                        <p>Med den tilspissede politiske situasjonen mellom USA og Europa, kan det være interessant å se nærmere på Tokyobørsen og den japanske økonomien, skriver Henrik Sommerfelt i CMC Markets.</p>
+                        <p>Med den tilspissede politiske situasjonen mellom USA og Europa, kan det være interessant å se nærmere på Tokyobørsen og den japanske økonomien, skriver Henrik Sommerfelt i CMC Mark...</p>
                     </div>
                 </div>
             
@@ -708,7 +645,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 08:08:27 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8321979/einar-skjerven-starter-gungnir-capital-henter-240-millioner-til-krigsfond" target="_blank">Investor, jagerflypilot og tidligere konsernsjef går sammen om nytt krigsfond.</a></h2>
-                        <p>Einar Skjerven starter Gungnir Capital – henter 240 millioner til krigsfond</p>
+                        <p>Einar Skjerven starter Gungnir Capital – henter 240 millioner til krigsfond...</p>
                     </div>
                 </div>
             
@@ -720,7 +657,19 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 07:43:44 GMT
                         </div>
                         <h2><a href="https://e24.no/energi-og-klima/i/e7PW7O/bjoern-lomborg-derfor-bommer-bistand" target="_blank">Bjørn Lomborg: Derfor bommer bistand</a></h2>
-                        <p>I tyve år har han kritisert ineffektive og dyre klimatiltak. Nå går han løs på bistanden.</p>
+                        <p>I tyve år har han kritisert ineffektive og dyre klimatiltak. Nå går han løs på bistanden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/p9rlWk0gE5Pm1rhk_5ANNweMg8z1YWprOJRCcJ6NRLhQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 07:32:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/ruter-oker-billettprisene-pa-kollektivtrafikken-i-oslo-og-akershus-1.17740256" target="_blank">Ruter skrur opp prisen: Nå er det dyrere å reise kollektivt</a></h2>
+                        <p>Fagre løfter om billigere billetter til tross: Søndag morgen øker Ruter prisen for alle kollektivreisende i Oslo og Akershus....</p>
                     </div>
                 </div>
             
@@ -732,7 +681,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 07:00:24 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/25/8323033/sondagens-aksjetips-salmar-og-gjensidige-utloste-salgssignaler" target="_blank">Søndagens aksjetips: Oljeprisen stanget opp, mens Salmar og Gjensidige utløste salgssignaler. Hva nå.</a></h2>
-                        <p>Søndagens aksjetips er en teknisk analyse av hovedindeksen på Oslo Børs, Brent, oljeprisen og den amerikanske 10-årsrenten, aksjer, valuta, råvarer som olje og gull, og kryptovaluta med trender, kjøpssignal og viktige støtte- og motstandsnivåer. Her er den tekniske analysen av oljeprisen, hovedindeksen, 10-årsrenten, salmar, gjensidige</p>
+                        <p>Søndagens aksjetips er en teknisk analyse av hovedindeksen på Oslo Børs, Brent, oljeprisen og den amerikanske 10-årsrenten, aksjer, valuta, råvarer som olje og gull, og kryptovalut...</p>
                     </div>
                 </div>
             
@@ -744,7 +693,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 07:06:36 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/25/8323225/finsk-advarsel-russisk-trussel-mot-vesten-etter-ukraina-krigen" target="_blank">Finsk advarsel: Russisk trussel mot Vesten etter Ukraina-krigen</a></h2>
-                        <p>Russland kan utgjøre en trussel mot Vesten bare noen år etter at krigen i Ukraina tar slutt, ifølge Finlands etterretningssjef Pekka Turunen.</p>
+                        <p>Russland kan utgjøre en trussel mot Vesten bare noen år etter at krigen i Ukraina tar slutt, ifølge Finlands etterretningssjef Pekka Turunen....</p>
                     </div>
                 </div>
             
@@ -756,7 +705,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 07:15:06 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/motor/2026/01/25/8319050/duell-audi-a6-avant-e-tron-og-bmw-i5-xdrive40" target="_blank">Audi og BMW i ny kamp: Én vinner</a></h2>
-                        <p>Audi og BMW har i mange år slåss om SUV-kundenes gunst, men nå er stasjonsvognduellen tilbake. En viktig faktor avgjør utfallet.</p>
+                        <p>Audi og BMW har i mange år slåss om SUV-kundenes gunst, men nå er stasjonsvognduellen tilbake. En viktig faktor avgjør utfallet....</p>
                     </div>
                 </div>
             
@@ -768,7 +717,43 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 07:18:20 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/25/8323229/rodt-og-mdg-far-penger-av-fagforbundet-for-forste-gang" target="_blank">Rødt og MDG får penger av Fagforbundet for første gang</a></h2>
-                        <p>For første gang gir Fagforbundet økonomisk støtte til alle de fem rødgrønne partiene.</p>
+                        <p>For første gang gir Fagforbundet økonomisk støtte til alle de fem rødgrønne partiene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/R2iJnHkYqOkxKWzk9UHx_AkKu1CCS7OH0NPXRH2MfxSA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 06:38:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/to-homofile-ishockeyspillere-far-kvinner-til-a-dane.-noe-har-skjedd.-1.17740808" target="_blank">To homofile ishockey­spillere får kvinner til å dåne. Noe har skjedd.</a></h2>
+                        <p>«Heated Rivalry» har kommet fra ingenting og blitt et fenomen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Z2p709pqEKfXOAdJCANebgWi4oRjV1qtPKyKqMeQWWKQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 06:31:30 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/marcialonga-2026_-still-sporsmal-til-vare-eksperter-1.17740333" target="_blank">Gukild og Northug før Marcialonga: – Målet mitt er å peake som skiløper</a></h2>
+                        <p>Noen satser på å vinne Marcialonga. Petter Northug satser på å henge med feltet inn i den avgjørende bakken. Se løpet nå!...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/D0NtlMU7h2II2nteHi933QxqVeG4oJg-Ytnhe4C7ROGw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 25 Jan 2026 07:18:22 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/store-protester-over-hele-usa-etter-ny-skyting-i-minneapolis-1.17741906" target="_blank">Store protester over hele USA etter ny skyting i Minneapolis</a></h2>
+                        <p>Protester har blusset opp over hele USA etter at Alex Pretti ble skutt og drept under en demonstrasjon i Minneapolis lørdag...</p>
                     </div>
                 </div>
             
@@ -780,7 +765,7 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 05:49:19 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/K8y8G4/reagerer-paa-kuttforslag-frykter-for-rettsikkerheten-til-studentene" target="_blank">Reagerer på kuttforslag – frykter for rettssikkerheten til studentene</a></h2>
-                        <p>«Studentadvokat» steiler over regjeringens nye kuttforslag. Statsråden mener derimot ordningen er nyttigere for advokater enn for studentene.</p>
+                        <p>«Studentadvokat» steiler over regjeringens nye kuttforslag. Statsråden mener derimot ordningen er nyttigere for advokater enn for studentene....</p>
                     </div>
                 </div>
             
@@ -792,11 +777,11 @@ Brannvesenet har blitt varslet av HRS om nødsignalet.
                             Sun, 25 Jan 2026 05:50:15 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/9pO9Xr/renteopproererne-lukter-blod" target="_blank">Renteopprørerne lukter blod</a></h2>
-                        <p>En sinnssyk statsgjeld og stigende renter kan knekke Japan. Dragsuget kan herje global finans.</p>
+                        <p>En sinnssyk statsgjeld og stigende renter kan knekke Japan. Dragsuget kan herje global finans....</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 25.01.2026 14:30</div>
+                <div class="footer">Sist oppdatert: 25.01.2026 15:21</div>
             </div>
         </body>
         </html>
