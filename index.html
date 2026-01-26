@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,7 +135,232 @@
                         <p>EU-kommisjonen åpner sak mot AI-chatboten....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 12:22:56 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/sverige_-vil-senke-kriminell-lavalder-til-13-ar-ved-alvorlige-lovbrudd-1.17742664" target="_blank">Sverige: Vil senke kriminell lavalder til 13 år ved alvorlige lovbrudd</a></h2>
+                        <p>Den svenske regjeringen ønsker å midlertidig senke den kriminelle lavalderen til 13 år for de alvorligste forbrytelsene, som for eksempel drap.
+Det kommer frem i en pressekonferans...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/eaqI7a6YY50Fa5m3Twv8-ANJAjR7QE8eZKnxPGtVbb_Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 12:01:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/xl/narkotika-i-idretten-og-basketball_-det-foltes-ufarlig-_-klarte-ikke-a-frigjore-seg-1.17666602" target="_blank">Hemmeligheten ble aldri avslørt</a></h2>
+                        <p>Hva skjer med utøverne etter dopingsaken?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/CZX_-n9YjU6XJVvDw8paoQM6P1HgZFNNjP-i2z1C4G2w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 12:01:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/_trump-hvisker_-mark-rutte_-_-usa-er-avgjorende-for-var-beskyttelse-1.17740385" target="_blank">«Trump-hvisker» Mark Rutte: – USA er avgjørende for vår beskyttelse</a></h2>
+                        <p>Nato-sjefens «smisking» med Trump hylles og kritiseres. Men Nato-sjefen er klar på én ting: Europa klarer seg ikke uten USA....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/SfEQvVLP2J06BqWz5okffg8rp_ZHSmkinT9Woj3GrgxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 09:04:34 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/kraftig-brann-pa-algard--1.17742828" target="_blank">Kraftig brann på Ålgård</a></h2>
+                        <p>Klokken 09.57 fikk politiet melding om brann i en garasje i Ålgårdsveien på Ålgård.
+Kort tid senere meldte politiet at brannen hadde spredd seg videre til bolighuset.
+Tre nabohus b...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/saV3MeTh2r0428a-2KOtFQXPUkCo2x9VGmLubMPgFHbg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 10:32:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/baderomsvektene-rives-ut-av-hyllene-_-ernaeringsfysiolog-advarer-mot-feil-bruk-1.17730110" target="_blank">Nå rives baderoms­vektene ut av hyllene</a></h2>
+                        <p>I januar skyter salget av baderomsvekter i været. – Bruk pengene på noe annet, sier ernæringsfysiolog....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/31mWHg72k1TdgYTa2TL2ZgJDNtMEk2rroQD_wJOk85TA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 10:46:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/oppretter-tilsynssak-mot-lyngen-kommune-etter-sykehjemsdrapet-1.17742945" target="_blank">Oppretter tilsynssak mot Lyngen kommune etter at Asbjørn (80) ble drept på sykehjemmet</a></h2>
+                        <p>Statsforvalteren i Troms og Finnmark åpner formell tilsynssak mot Lyngen kommune etter at den 80 år gamle beboeren på Lyngstunet helse- og omsorgssenter ble drept på rommet sitt i ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/SfEQvVLP2J06BqWz5okffg8rp_ZHSmkinT9Woj3GrgxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 10:40:53 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/enebolig-brenner-pa-algard-1.17743093" target="_blank">Kraftig brann på Ålgård – flere hus evakuert</a></h2>
+                        <p>E39 var stengt som følge av den kraftige brannen i en bolig på Ålgård. Flere hus er evakuert, og naboer blir bedt om å lukke dører og vinduer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 09:22:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/eu-forbyr-import-av-russisk-gass-fra-2027-1.17742919" target="_blank">EU forbyr import av russisk gass fra 2027</a></h2>
+                        <p>EU har vedtatt å forby import av russisk gass fra 2027.
+Det melder nyhetsbyrået Reuters.
+Det kommende forbudet ble kjent i starten av desember, men ble formelt godkjent på et EU-mø...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/G56lnRVk7c_KkFZVg3BJSQUAr9aXyp-4qmie_oJPoaHw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 09:42:33 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/turister-reagerer-pa-hvalsafari-i-troms_-naeringen-vil-ha-reguleringer-1.17709197" target="_blank">Anne så 26 båter rundt én hvalflokk: – Det var galskap!</a></h2>
+                        <p>Reiselivsaktører slår alarm om livsfarlige situasjoner på havet: – Noen kjører til og med over hvalene. Turisten Anne beskriver tilstandene som kaos, og har sendt klage til myndigh...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/odDJzYV8ExJomLi5djaMVApxKbGyIVP61w6fKcisrL2Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 09:04:34 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/kraftig-brann-pa-algard-_-tre-nabohus-evakuert-og-e39-er-stengt-1.17742828" target="_blank">Kraftig brann på Ålgård – tre nabohus evakuert og E39 er stengt</a></h2>
+                        <p>Klokken 09.57 fikk politiet melding om brann i en garasje i Ålgårdsveien på Ålgård.
+Kort tid senere melder politiet at brannen har spredd seg videre til bolighuset. Brannvesenet er...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/6Hh-iCoqp57SHottgknQBAzKxpHSdE6syzuzG9FZbjwA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 09:10:52 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/moelven-byggmodul-as-henter-tilbake-alle-permitterte-pa-grunn-av-et-bedre-marked-1.17742815" target="_blank">Henter tilbake over flere hundre permitterte</a></h2>
+                        <p>I fjor høst ble flere hundre ansatte i Moelven ByggModul permittert. Denne uka er de første tilbake på jobb igjen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/rr6ZXbIxvkYnhMtejaaG-w6gOCo9kjWqg8REyyc5BpKQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 08:41:16 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/eu-vil-ha-elon-musks-ki-chatbot-_grok_-ut-av-europa-1.17742810" target="_blank">EU vil ha Elon Musks KI-chatbot «Grok» ut av Europa</a></h2>
+                        <p>EU-kommisjonen planlegger å åpne en formell sak mot Elon Musks KI-chatbot Grok allerede mandag.
+Det skjer etter klager om at KI-verktøyet blant annet blir brukt til å lage og spre ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MRb4jLthD_86a4hLHfF66QjkYMirFkKDLa1KhkCjHSHg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 06:42:05 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/25-ar-siden-benjamin-hermansen-ble-drept-av-nynazister-i-oslo-1.17742016" target="_blank">25 år siden Benjamin-drapet: – Vi må ikke glemme</a></h2>
+                        <p>Ordfører Anne Lindboe sier kampen mot rasisme fremdeles ikke er over....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/JBF-WklLAAEkOoozmWNXTAcTii62eQK6hshUAQ_RfC8A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 09:18:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/langrenn_-jan-thomas-jenssen-knakk-sammen-pa-direkten-_-reaksjonene-ble-en-oyeapner-1.17678217" target="_blank">Knakk sammen på direkten – reaksjonene ble en øyeåpner</a></h2>
+                        <p>Hele verden raknet på direktesendt TV. Etterpå forsto Jan Thomas Jenssen hvor mange unge idrettsgutter som ikke har det bra med seg selv....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/OlXriZkAEqOEOyjdXP2LSgwMwS-1Nn5GZL_aMSjdfQcQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 07:38:11 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/okokrim_-to-nordmenn-og-et-norsk-foretak-tiltalt-for-grov-korrupsjon-i-republikken-kongo-1.17742746" target="_blank">Økokrim: To nordmenn og et norsk foretak tiltalt for grov korrupsjon i Republikken Kongo</a></h2>
+                        <p>Økokrim har tatt ut tiltale i en korrupsjonssak som gjelder «svært høye» bestikkelser i Republikken Kongo, opplyser de i en pressemelding.
+Bestikkelsene er knyttet til den kongoles...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9cqxlbb_dDujDAVH-Mb83whUwU21ELTeWCcU1T4o6_fw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 08:07:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/fleire-republikanarar-krev-gransking-av-drapet-i-minneapolis-1.17742616" target="_blank">Fleire republikanarar krev gransking av drapet i Minneapolis</a></h2>
+                        <p>Republikanske politikarar krev gransking etter at ein sjukepleiar blei drepen av ei grensevakt i helga....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vVDC0Zv2d26nONF9d6gDZQcxRzIECYEQYrBcWkgOzfIQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 07:19:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/darleg-luft-i-oslo_-trondheim_-bergen-og-stavanger-_-raudt-varsel-for-luftforureining-1.17742759" target="_blank">Varslar svært dårleg luft i dei store byane</a></h2>
+                        <p>Dette må ein ta på alvor, melder Norges Astma- og Allergiforbund....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/-PTLQwTJmTtqo2Ppnx8LtwPQbleSh3IgeRH2KdnAfxpA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 06:35:14 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/rodt-varsel-for-luftforurensning-i-flere-byer-1.17742676" target="_blank">Rødt varsel for luftforurensning i flere byer</a></h2>
+                        <p>Mandag morgen har Norsk institutt for luftforskning (NILU) sendt ut rødt varsel for luftforurensning i Norges største byer: Oslo, Trondheim, Bergen og Stavanger.
+– Rødt varsel bety...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F130445049.jpg%3F%26accessToken%3D9a49cd7ab8447bb2e8198ae3708145472ccbb3eac28a1168cbd8072a0970e175" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -194,30 +422,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/eaqI7a6YY50Fa5m3Twv8-ANJAjR7QE8eZKnxPGtVbb_Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 12:01:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/xl/narkotika-i-idretten-og-basketball_-det-foltes-ufarlig-_-klarte-ikke-a-frigjore-seg-1.17666602" target="_blank">Hemmeligheten ble aldri avslørt</a></h2>
-                        <p>Hva skjer med utøverne etter dopingsaken?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/CZX_-n9YjU6XJVvDw8paoQM6P1HgZFNNjP-i2z1C4G2w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 12:01:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/_trump-hvisker_-mark-rutte_-_-usa-er-avgjorende-for-var-beskyttelse-1.17740385" target="_blank">«Trump-hvisker» Mark Rutte: – USA er avgjørende for vår beskyttelse</a></h2>
-                        <p>Nato-sjefens «smisking» med Trump hylles og kritiseres. Men Nato-sjefen er klar på én ting: Europa klarer seg ikke uten USA....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -262,56 +466,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/01/26/8323373/arctic-analytiker-superbull-pa-frontline" target="_blank">Superbull på Frontline</a></h2>
                         <p>Frontline har steget med 20 prosent på børsen så langt i år. Arctic-analytiker Kristoffer Barth Skeie mener tankkjempen har langt mer å gå på....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/SfEQvVLP2J06BqWz5okffg8rp_ZHSmkinT9Woj3GrgxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 09:04:34 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/kraftig-brann-pa-algard--1.17742828" target="_blank">Kraftig brann på Ålgård</a></h2>
-                        <p>Klokken 09.57 fikk politiet melding om brann i en garasje i Ålgårdsveien på Ålgård.
-Kort tid senere meldte politiet at brannen hadde spredd seg videre til bolighuset.
-Tre nabohus b...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/saV3MeTh2r0428a-2KOtFQXPUkCo2x9VGmLubMPgFHbg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 10:32:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/baderomsvektene-rives-ut-av-hyllene-_-ernaeringsfysiolog-advarer-mot-feil-bruk-1.17730110" target="_blank">Nå rives baderoms­vektene ut av hyllene</a></h2>
-                        <p>I januar skyter salget av baderomsvekter i været. – Bruk pengene på noe annet, sier ernæringsfysiolog....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/31mWHg72k1TdgYTa2TL2ZgJDNtMEk2rroQD_wJOk85TA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 10:46:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/oppretter-tilsynssak-mot-lyngen-kommune-etter-sykehjemsdrapet-1.17742945" target="_blank">Oppretter tilsynssak mot Lyngen kommune etter at Asbjørn (80) ble drept på sykehjemmet</a></h2>
-                        <p>Statsforvalteren i Troms og Finnmark åpner formell tilsynssak mot Lyngen kommune etter at den 80 år gamle beboeren på Lyngstunet helse- og omsorgssenter ble drept på rommet sitt i ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/SfEQvVLP2J06BqWz5okffg8rp_ZHSmkinT9Woj3GrgxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 10:40:53 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/enebolig-brenner-pa-algard-1.17743093" target="_blank">Kraftig brann på Ålgård – flere hus evakuert</a></h2>
-                        <p>E39 var stengt som følge av den kraftige brannen i en bolig på Ålgård. Flere hus er evakuert, og naboer blir bedt om å lukke dører og vinduer....</p>
                     </div>
                 </div>
             
@@ -388,57 +542,6 @@ Tre nabohus b...</p>
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 09:22:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/eu-forbyr-import-av-russisk-gass-fra-2027-1.17742919" target="_blank">EU forbyr import av russisk gass fra 2027</a></h2>
-                        <p>EU har vedtatt å forby import av russisk gass fra 2027.
-Det melder nyhetsbyrået Reuters.
-Det kommende forbudet ble kjent i starten av desember, men ble formelt godkjent på et EU-mø...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/G56lnRVk7c_KkFZVg3BJSQUAr9aXyp-4qmie_oJPoaHw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 09:42:33 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/turister-reagerer-pa-hvalsafari-i-troms_-naeringen-vil-ha-reguleringer-1.17709197" target="_blank">Anne så 26 båter rundt én hvalflokk: – Det var galskap!</a></h2>
-                        <p>Reiselivsaktører slår alarm om livsfarlige situasjoner på havet: – Noen kjører til og med over hvalene. Turisten Anne beskriver tilstandene som kaos, og har sendt klage til myndigh...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/odDJzYV8ExJomLi5djaMVApxKbGyIVP61w6fKcisrL2Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 09:04:34 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/kraftig-brann-pa-algard-_-tre-nabohus-evakuert-og-e39-er-stengt-1.17742828" target="_blank">Kraftig brann på Ålgård – tre nabohus evakuert og E39 er stengt</a></h2>
-                        <p>Klokken 09.57 fikk politiet melding om brann i en garasje i Ålgårdsveien på Ålgård.
-Kort tid senere melder politiet at brannen har spredd seg videre til bolighuset. Brannvesenet er...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6Hh-iCoqp57SHottgknQBAzKxpHSdE6syzuzG9FZbjwA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 09:10:52 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/moelven-byggmodul-as-henter-tilbake-alle-permitterte-pa-grunn-av-et-bedre-marked-1.17742815" target="_blank">Henter tilbake over flere hundre permitterte</a></h2>
-                        <p>I fjor høst ble flere hundre ansatte i Moelven ByggModul permittert. Denne uka er de første tilbake på jobb igjen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F94045699.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dacc10a504d4dec5ffcbd8595835c91fc3819659515de824d040a26b0f379a43d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -495,43 +598,6 @@ Kort tid senere melder politiet at brannen har spredd seg videre til bolighuset.
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/26/8323347/norfund-med-rekordinvesteringer-investerte-8-5-milliarder-i-fjor" target="_blank">Investerte 8,5 milliarder i fjor</a></h2>
                         <p>I 2025 investerte Norfund 8,5 milliarder kroner i fattige land. Det er en økning på 800 millioner kroner fra året før....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rr6ZXbIxvkYnhMtejaaG-w6gOCo9kjWqg8REyyc5BpKQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 08:41:16 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/eu-vil-ha-elon-musks-ki-chatbot-_grok_-ut-av-europa-1.17742810" target="_blank">EU vil ha Elon Musks KI-chatbot «Grok» ut av Europa</a></h2>
-                        <p>EU-kommisjonen planlegger å åpne en formell sak mot Elon Musks KI-chatbot Grok allerede mandag.
-Det skjer etter klager om at KI-verktøyet blant annet blir brukt til å lage og spre ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MRb4jLthD_86a4hLHfF66QjkYMirFkKDLa1KhkCjHSHg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 06:42:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/25-ar-siden-benjamin-hermansen-ble-drept-av-nynazister-i-oslo-1.17742016" target="_blank">25 år siden Benjamin-drapet: – Vi må ikke glemme</a></h2>
-                        <p>Ordfører Anne Lindboe sier kampen mot rasisme fremdeles ikke er over....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/JBF-WklLAAEkOoozmWNXTAcTii62eQK6hshUAQ_RfC8A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 09:18:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/langrenn_-jan-thomas-jenssen-knakk-sammen-pa-direkten-_-reaksjonene-ble-en-oyeapner-1.17678217" target="_blank">Knakk sammen på direkten – reaksjonene ble en øyeåpner</a></h2>
-                        <p>Hele verden raknet på direktesendt TV. Etterpå forsto Jan Thomas Jenssen hvor mange unge idrettsgutter som ikke har det bra med seg selv....</p>
                     </div>
                 </div>
             
@@ -644,31 +710,6 @@ Det skjer etter klager om at KI-verktøyet blant annet blir brukt til å lage og
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/OlXriZkAEqOEOyjdXP2LSgwMwS-1Nn5GZL_aMSjdfQcQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 07:38:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/okokrim_-to-nordmenn-og-et-norsk-foretak-tiltalt-for-grov-korrupsjon-i-republikken-kongo-1.17742746" target="_blank">Økokrim: To nordmenn og et norsk foretak tiltalt for grov korrupsjon i Republikken Kongo</a></h2>
-                        <p>Økokrim har tatt ut tiltale i en korrupsjonssak som gjelder «svært høye» bestikkelser i Republikken Kongo, opplyser de i en pressemelding.
-Bestikkelsene er knyttet til den kongoles...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/9cqxlbb_dDujDAVH-Mb83whUwU21ELTeWCcU1T4o6_fw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 08:07:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/fleire-republikanarar-krev-gransking-av-drapet-i-minneapolis-1.17742616" target="_blank">Fleire republikanarar krev gransking av drapet i Minneapolis</a></h2>
-                        <p>Republikanske politikarar krev gransking etter at ein sjukepleiar blei drepen av ei grensevakt i helga....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F92603095.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D2e7f3ff7436895f55c946d720ff943bfc8a916cb0d8749b0f475f33d84faf44f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -689,18 +730,6 @@ Bestikkelsene er knyttet til den kongoles...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/26/7806953/10-ting-du-ma-vite-for-borsapning" target="_blank">10 ting du må vite før børsåpning: Gull-rally, Frontline-slutninger og Hydro-nedgradering</a></h2>
                         <p>10 ting du må vite før børsåpning...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vVDC0Zv2d26nONF9d6gDZQcxRzIECYEQYrBcWkgOzfIQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 07:19:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/darleg-luft-i-oslo_-trondheim_-bergen-og-stavanger-_-raudt-varsel-for-luftforureining-1.17742759" target="_blank">Varslar svært dårleg luft i dei store byane</a></h2>
-                        <p>Dette må ein ta på alvor, melder Norges Astma- og Allergiforbund....</p>
                     </div>
                 </div>
             
@@ -764,32 +793,7 @@ Bestikkelsene er knyttet til den kongoles...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/-PTLQwTJmTtqo2Ppnx8LtwPQbleSh3IgeRH2KdnAfxpA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 06:35:14 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/rodt-varsel-for-luftforurensning-i-flere-byer-1.17742676" target="_blank">Rødt varsel for luftforurensning i flere byer</a></h2>
-                        <p>Mandag morgen har Norsk institutt for luftforskning (NILU) sendt ut rødt varsel for luftforurensning i Norges største byer: Oslo, Trondheim, Bergen og Stavanger.
-– Rødt varsel bety...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143091648.jpg%3F%26accessToken%3D5283f73dc9d3a0d69fd246cc2516cc6c7726b7015d738e2b1da418488e26e8a8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 26 Jan 2026 05:40:07 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/26/8323293/markant-nedgang-i-asia-gruveaksjer-skyter-opp-etter-gullmilepael" target="_blank">Markant nedgang i Asia: Gruveaksjer skyter opp etter gullmilepæl</a></h2>
-                        <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 26.01.2026 12:21</div>
+                <div class="footer">Sist oppdatert: 26.01.2026 12:25</div>
             </div>
         </body>
         </html>
