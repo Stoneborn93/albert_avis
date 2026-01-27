@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,7 +135,303 @@
                         <p>Investerer 464 millioner kroner i fibernettet sitt....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ydeolBN9vQQighQ_cC610wVJVFYYMMouUHehYBECy-Lg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 06:44:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/dhs-avviser-at-grensepolitisjef-fjernes-fra-sin-stilling-1.17744151" target="_blank">DHS avviser at grensepolitisjef fjernes fra sin stilling</a></h2>
+                        <p>– Politisjef Gregory Bovino har ikke blitt fratatt sine plikter, skriver Tricia McLaughlin, assisterende sekretær i det amerikanske sikkerhetsdepartementet (DHS) på X tirsdag.
+Besk...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 07:05:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/india-og-eu-har-inngatt-_historisk_-handelsavtale-1.17744227" target="_blank">India og EU har inngått «historisk» handelsavtale</a></h2>
+                        <p>India og EU har inngått en handelsavtale som omfatter en firedel av verdensøkonomien, ifølge statsminister Narendra Modi.
+Handelsavtalen innebærer at Indias enorme og beskyttede ma...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vprQTqzkH0K4PjxmVyjKTAYQbfLA-Ci4mwPiF0g_zUlw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 04:56:36 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/optimisme-vs.-pessimisme_-slik-ser-norsk-ungdom-pa-framtida-1.17214263" target="_blank">Er du naiv optimist eller tafatt pessimist?</a></h2>
+                        <p>­Slik unngår du å bli handlingslamma...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/79iPJz0sG20FqKsWu9b9kw2KGYPVTptIoFca_2BuX3qQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 05:00:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/her-gar-alarmen-midt-i-intervjuet-_-utovere-reagerer-pa-nrk-funn-1.17735215" target="_blank">Her går alarmen midt i intervjuet – utøvere reagerer på NRK-funn</a></h2>
+                        <p>Etter en bred NRK-kartlegging åpner flere toppidrettsutøvere opp om hvordan det er å konstant melde fra til dopingjegere hvor de befinner seg....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pFpBdPWqcXJAeATYy5EvswE8mbshfsYxmucWi4tNHh3g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 04:23:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/en-av-fem-nordmenn-har-blitt-svindlet.-klarer-du-testen_-1.17739914" target="_blank">Én av fem nordmenn har blitt lurt. Klarer du svindel-testen?</a></h2>
+                        <p>Er du en av dem som tror du er for smart til å bli lurt? Tro om igjen. En fersk undersøkelse avslører at nesten en av ti ble svindlet på nett bare det siste året....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3PZ-H36giPDJk99E3OegnQQQjeE17RKrr-chqgXWa7yQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 04:19:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/dansk-politiker-hyller-pengebruken-pa-norsk-kulturliv-_-mener-man-bor-slutte-a-klage-1.17736617" target="_blank">Dansk politiker hyller pengebruken på norsk kulturliv – mener man bør slutte å klage</a></h2>
+                        <p>... og BT-kommentator mener kulturlivet mister sympati ved å rope «krise». – Vi lever ikke på vår egen planet, svarer kulturfeltet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/xHlWy2ZnVsFLzRzcZC2u_AKvBDb7mA8goTtAA5yL5oew.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 04:26:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/mange-bruker-mobilen-bak-rattet-_-na-kan-det-bli-strengere-1.17727200" target="_blank">Mange bruker mobilen bak rattet – nå kan det bli strengere</a></h2>
+                        <p>Siden rekordbøtene ikke biter på nordmenn vurderer regjeringen nå et totalforbud mot å røre mobilen. NAF mener det er urimelig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wfarVpC7h8vYTB6D1Hs_pQ0jEkmKdcOkUaM11DicukIQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 02:31:34 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/over-6000-drept-i-protester-i-iran_-ifolge-aktivistgruppe-1.17744092" target="_blank">Over 6000 drept i protester i Iran, ifølge aktivistgruppe</a></h2>
+                        <p>Så langt er minst 6126 mennesker drept i iranske myndigheters hardhendte aksjoner mot protestene i landet, ifølge en USA-basert menneskerettsgruppe.
+Det oppdaterte tallet fra Human...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3aLTdf1D-AbkgJz1KlfRzQUICWbKUYIqyA1DTExVCVeg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 00:07:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/medier_-bovino-blir-fjernet-1.17744082" target="_blank">Medier: Bovino blir fjernet</a></h2>
+                        <p>Gregory Bovino skal være i ferd med å bli fjernet fra sin sjefsstilling i grensepolitiet. Det melder The Atlantic og siterer lukkede kilder.
+Ifølge CNN har sikkerhetsdepartementet ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3aLTdf1D-AbkgJz1KlfRzQUICWbKUYIqyA1DTExVCVeg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 27 Jan 2026 00:07:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/medier_-bovino-skal-ha-blitt-fjernet-1.17744082" target="_blank">Medier: Bovino skal ha blitt fjernet</a></h2>
+                        <p>Gregory Bovino skal ha blitt fjernet fra sin jobb som sjef i grensepolitiet. Det melder både The Atlantic og The New York Times som siterer lukkede kilder.
+Ifølge CNN har sikkerhet...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 21:30:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/vg_-vil-kaste-ut-kriminelle-for-de-har-gjort-noe-galt-1.17744036" target="_blank">VG: Vil kaste ut kriminelle før de har gjort noe galt</a></h2>
+                        <p>Regjeringen innfører en ny instruks som tillater å utvise personer knyttet til kriminelle nettverk, før de har gjort noe ulovlig. Det skriver VG mandag kveld.
+Hvis det er konkrete ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 21:58:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/vg_-energiministeren-apner-for-gassror-til-barentshavet-1.17744039" target="_blank">VG: Energiministeren åpner for gassrør til Barentshavet</a></h2>
+                        <p>Europa skal slutte å kjøpe russisk gass, da kan det åpne for gassrør fra Barentshavet til store europeiske land, sier energiminister Terje Aasland (Ap) til VG.
+Mandag har han og st...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/AVlQ1_o6NN7sffwXzdOyUwm8EnyYgWsk-7OtDgzxthJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 21:06:37 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/walz-sier-trump-vil-vurdere-a-redusere-styrken-i-minnesota-1.17743918" target="_blank">Walz sier Trump vil vurdere å redusere styrken i Minnesota</a></h2>
+                        <p>Minnesota-guvernør Tim Walz sier Trump er på glid for å redusere antall agenter. Samtidig sender presidenten mannen som kalles «grense-tsaren»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/CiWNjG0kUZEpFLLbDjL3BgcopgbO42E6mXfJfBa1dqHw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 15:46:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/flere-stengte-veier-i-finnmark-pa-grunn-av-uvaer-1.17743777" target="_blank">Kraftig uvær: Biler innesperret i syv timer</a></h2>
+                        <p>Over ti biler har stått værfast i over syv timer, langt utenfor allfarvei i Nordkapp. Vindkast opp i storm styrke gjør at de trolig må overnatte i bilene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/taLhmNcwdnyGQDQTFWSDTAuo0S5GbF5BDixGZgt_cb0w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 19:43:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/linns-historie-om-anoreksi-vekker-oppsikt_-helseministeren-lover-a-ta-grep-1.17738315" target="_blank">Reagerer på NRK-sak om anoreksi-syke Linn (21): – Nå haster det</a></h2>
+                        <p>Linn Ulvatns historie om anoreksi vekker oppsikt. Helseministeren lover å bedre behandlingen nasjonalt. Senterpartiet tar saken til Stortinget....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/KH2CfqipE201gHuDdha7CQvLyWy8o9zWxMD_swypa2bA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 19:58:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/hanne-vant-fram-mot-ice-_-kan-kaste-fotlenken-1.17743979" target="_blank">Norske Hanne vant over ICE: – Det er en stor lettelse</a></h2>
+                        <p>Nordlendingen som ble arrestert og fengslet av ICE i USA har blitt løslatt, og får bli i landet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/beICcMdx1yIWeDXiEw6W5ghId0hmG3mneHyjizzfhNSw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 20:07:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/albert-nektet-adgang-pa-bussen-1.17725858" target="_blank">Albert nektet adgang på bussen</a></h2>
+                        <p>Newfoundlandshunden Albert (3) har fått forbud mot å være med bussen. Medpassasjerer mener han stinker....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/gv4-GfwwRtEZol1CAmI69gek_KWoD7NCWjLRmqx3qkfg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 20:00:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/ansgar-evensen-fyrer-laus-etter-ol-vraking_-lag-urorleg-pa-golvet-rett-for-avgjerande-konkurranse-1.17742015" target="_blank">Fyrar laus etter OL-vraking: Låg urørleg på golvet rett før avgjerande konkurranse</a></h2>
+                        <p>Ansgar Evensen meiner at han blir straffa for å stille opp på skirenn. Landslagssjefen erkjenner eit brutalt val....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 18:41:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/tv-2_-norsk-kvinne-har-vunne-fram-mot-ice-1.17743916" target="_blank">TV 2: Norsk kvinne har vunne fram mot ICE</a></h2>
+                        <p>Hanne Bredal Engan som blei fengsla av immigrasjonspolitiet (ICE) i California, i slutten av 2025 har no har ho vunne fram, melder TV 2.
+Arrestasjonen skjedde då ho hadde møtt opp ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/x0rzwNnAIVC_b6ZIHYuPuQ4LjMRsow9ozf5rb32JAdzQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 19:00:21 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/mor-og-datter-sin-ekspedisjon-til-sydpolen-gikk-galt-pa-malstreken-1.17743684" target="_blank">Rett før målstreken på Sydpolen gikk det galt: – Trodde hun var lam</a></h2>
+                        <p>Reisen til Antarktis gikk på skinner for Emma og moren Kathinka. Men på deres siste dag får redningsmannskapene et SOS....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/qOhkS50juX8Gf6UnBaz3NwYOP3avK0T_fybdGmtQjHVA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 17:22:09 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/ankesak-etter-drapet-pa-samuel-paty-for-muhammed-karikaturer-1.17742527" target="_blank">Ankesak etter lærardrap startar i Frankrike</a></h2>
+                        <p>Ei drapssak som rysta Frankrike, skal no opp igjen i retten....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/TJss-7f1K6ei8nzaHqFAtQuVtYYEIg1RlCOb1Mx3iz9g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 17:46:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/eu-starter-gransking-av-grok_-elon-musks-ki-chatbot-1.17743049" target="_blank">EU starter gransking av Grok, Elon Musks KI-Chatbot</a></h2>
+                        <p>EU-kommisjonen bekrefter i dag at de har åpnet en ny formell sak mot Elon Musks KI-tjeneste «Grok». Bakgrunnen er at bildetjenesten lar brukere generere og spre ulovlig innhold....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/usJTTF2oPe4Zyp6R7GANmA71DSYoHwgFrsEpkbAm6iwA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 26 Jan 2026 17:57:33 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/pst-mener-det-hoyreekstreme-miljoet-er-farligere-i-dag-enn-for-25-ar-siden-1.17743406" target="_blank">PST: Høyreekstreme miljøer farligere enn for 25 år siden</a></h2>
+                        <p>Voldspotensialet er også større i dag enn da Benjamin Hermansen ble drept i 2001....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143193347.jpg%3F%26accessToken%3Da2a4a083f9495c514e126999846d626023f69ba844fe320dca5142ada92d8cd1" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 27 Jan 2026 07:23:34 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/27/8323578/dagens-industri-vaer-pa-vakt-mot-ny-milliardaerskatt" target="_blank">Dagens Industri: – Vær på vakt mot ny milliardærskatt</a></h2>
+                        <p>Dagens Industri: – Vær på vakt mot ny milliardærskatt...</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F109418732.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D5c4287df5ae4d8868819f5bbbda006cefd64381e64e99f3d70e332f4cb8dade3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -202,32 +501,6 @@
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/5pnp0E/eu-og-india-inngaar-mother-of-all-deals-to-milliarder-mennesker-omfattes-av-ny-frihandelsavtale" target="_blank">EU og India inngår «Mother of all deals» – to milliarder mennesker omfattes av ny frihandelsavtale</a></h2>
                         <p>Handelsavtalen er ventet å doble eksport fra EU til India....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ydeolBN9vQQighQ_cC610wVJVFYYMMouUHehYBECy-Lg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 06:44:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/dhs-avviser-at-grensepolitisjef-fjernes-fra-sin-stilling-1.17744151" target="_blank">DHS avviser at grensepolitisjef fjernes fra sin stilling</a></h2>
-                        <p>– Politisjef Gregory Bovino har ikke blitt fratatt sine plikter, skriver Tricia McLaughlin, assisterende sekretær i det amerikanske sikkerhetsdepartementet (DHS) på X tirsdag.
-Besk...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 07:05:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/india-og-eu-har-inngatt-_historisk_-handelsavtale-1.17744227" target="_blank">India og EU har inngått «historisk» handelsavtale</a></h2>
-                        <p>India og EU har inngått en handelsavtale som omfatter en firedel av verdensøkonomien, ifølge statsminister Narendra Modi.
-Handelsavtalen innebærer at Indias enorme og beskyttede ma...</p>
                     </div>
                 </div>
             
@@ -340,105 +613,6 @@ Handelsavtalen innebærer at Indias enorme og beskyttede ma...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vprQTqzkH0K4PjxmVyjKTAYQbfLA-Ci4mwPiF0g_zUlw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 04:56:36 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/optimisme-vs.-pessimisme_-slik-ser-norsk-ungdom-pa-framtida-1.17214263" target="_blank">Er du naiv optimist eller tafatt pessimist?</a></h2>
-                        <p>­Slik unngår du å bli handlingslamma...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/79iPJz0sG20FqKsWu9b9kw2KGYPVTptIoFca_2BuX3qQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 05:00:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/her-gar-alarmen-midt-i-intervjuet-_-utovere-reagerer-pa-nrk-funn-1.17735215" target="_blank">Her går alarmen midt i intervjuet – utøvere reagerer på NRK-funn</a></h2>
-                        <p>Etter en bred NRK-kartlegging åpner flere toppidrettsutøvere opp om hvordan det er å konstant melde fra til dopingjegere hvor de befinner seg....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pFpBdPWqcXJAeATYy5EvswE8mbshfsYxmucWi4tNHh3g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 04:23:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/en-av-fem-nordmenn-har-blitt-svindlet.-klarer-du-testen_-1.17739914" target="_blank">Én av fem nordmenn har blitt lurt. Klarer du svindel-testen?</a></h2>
-                        <p>Er du en av dem som tror du er for smart til å bli lurt? Tro om igjen. En fersk undersøkelse avslører at nesten en av ti ble svindlet på nett bare det siste året....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3PZ-H36giPDJk99E3OegnQQQjeE17RKrr-chqgXWa7yQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 04:19:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/dansk-politiker-hyller-pengebruken-pa-norsk-kulturliv-_-mener-man-bor-slutte-a-klage-1.17736617" target="_blank">Dansk politiker hyller pengebruken på norsk kulturliv – mener man bør slutte å klage</a></h2>
-                        <p>... og BT-kommentator mener kulturlivet mister sympati ved å rope «krise». – Vi lever ikke på vår egen planet, svarer kulturfeltet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/xHlWy2ZnVsFLzRzcZC2u_AKvBDb7mA8goTtAA5yL5oew.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 04:26:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/mange-bruker-mobilen-bak-rattet-_-na-kan-det-bli-strengere-1.17727200" target="_blank">Mange bruker mobilen bak rattet – nå kan det bli strengere</a></h2>
-                        <p>Siden rekordbøtene ikke biter på nordmenn vurderer regjeringen nå et totalforbud mot å røre mobilen. NAF mener det er urimelig....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wfarVpC7h8vYTB6D1Hs_pQ0jEkmKdcOkUaM11DicukIQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 02:31:34 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/over-6000-drept-i-protester-i-iran_-ifolge-aktivistgruppe-1.17744092" target="_blank">Over 6000 drept i protester i Iran, ifølge aktivistgruppe</a></h2>
-                        <p>Så langt er minst 6126 mennesker drept i iranske myndigheters hardhendte aksjoner mot protestene i landet, ifølge en USA-basert menneskerettsgruppe.
-Det oppdaterte tallet fra Human...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3aLTdf1D-AbkgJz1KlfRzQUICWbKUYIqyA1DTExVCVeg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 00:07:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/medier_-bovino-blir-fjernet-1.17744082" target="_blank">Medier: Bovino blir fjernet</a></h2>
-                        <p>Gregory Bovino skal være i ferd med å bli fjernet fra sin sjefsstilling i grensepolitiet. Det melder The Atlantic og siterer lukkede kilder.
-Ifølge CNN har sikkerhetsdepartementet ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3aLTdf1D-AbkgJz1KlfRzQUICWbKUYIqyA1DTExVCVeg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 27 Jan 2026 00:07:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/medier_-bovino-skal-ha-blitt-fjernet-1.17744082" target="_blank">Medier: Bovino skal ha blitt fjernet</a></h2>
-                        <p>Gregory Bovino skal ha blitt fjernet fra sin jobb som sjef i grensepolitiet. Det melder både The Atlantic og The New York Times som siterer lukkede kilder.
-Ifølge CNN har sikkerhet...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -447,32 +621,6 @@ Ifølge CNN har sikkerhet...</p>
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/XM6jdb/donald-trump-varsler-oekt-toll-mot-soer-korea" target="_blank">Donald Trump varsler økt toll mot Sør-Korea</a></h2>
                         <p>USAs president skrur den opp til 25 prosent....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 21:30:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/vg_-vil-kaste-ut-kriminelle-for-de-har-gjort-noe-galt-1.17744036" target="_blank">VG: Vil kaste ut kriminelle før de har gjort noe galt</a></h2>
-                        <p>Regjeringen innfører en ny instruks som tillater å utvise personer knyttet til kriminelle nettverk, før de har gjort noe ulovlig. Det skriver VG mandag kveld.
-Hvis det er konkrete ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 21:58:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/vg_-energiministeren-apner-for-gassror-til-barentshavet-1.17744039" target="_blank">VG: Energiministeren åpner for gassrør til Barentshavet</a></h2>
-                        <p>Europa skal slutte å kjøpe russisk gass, da kan det åpne for gassrør fra Barentshavet til store europeiske land, sier energiminister Terje Aasland (Ap) til VG.
-Mandag har han og st...</p>
                     </div>
                 </div>
             
@@ -513,18 +661,6 @@ Mandag har han og st...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/AVlQ1_o6NN7sffwXzdOyUwm8EnyYgWsk-7OtDgzxthJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 21:06:37 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/walz-sier-trump-vil-vurdere-a-redusere-styrken-i-minnesota-1.17743918" target="_blank">Walz sier Trump vil vurdere å redusere styrken i Minnesota</a></h2>
-                        <p>Minnesota-guvernør Tim Walz sier Trump er på glid for å redusere antall agenter. Samtidig sender presidenten mannen som kalles «grense-tsaren»....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143187796.jpg%3F%26accessToken%3Dc88db7aa2ef56e09beb855dec153f5e38e40831dcdc1b4f6cc8e9020ea00bec0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -545,66 +681,6 @@ Mandag har han og st...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/industri/2026/01/26/8323350/kina-vil-bygge-bilgigant-i-norge" target="_blank">Kina vil bygge bilgigant i Norge. Vil satse 7,5 mrd, og bygge 110.000 biler i året.</a></h2>
                         <p>Kinesiske Dongfeng vil etablere en monteringsfabrikk for elbiler i Fredrikstad for å få innpass i EU-markedet. Planen er å investere 7,5 milliarder med mål om å skru sammen 110.000...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/CiWNjG0kUZEpFLLbDjL3BgcopgbO42E6mXfJfBa1dqHw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 15:46:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/flere-stengte-veier-i-finnmark-pa-grunn-av-uvaer-1.17743777" target="_blank">Kraftig uvær: Biler innesperret i syv timer</a></h2>
-                        <p>Over ti biler har stått værfast i over syv timer, langt utenfor allfarvei i Nordkapp. Vindkast opp i storm styrke gjør at de trolig må overnatte i bilene....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/taLhmNcwdnyGQDQTFWSDTAuo0S5GbF5BDixGZgt_cb0w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 19:43:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/linns-historie-om-anoreksi-vekker-oppsikt_-helseministeren-lover-a-ta-grep-1.17738315" target="_blank">Reagerer på NRK-sak om anoreksi-syke Linn (21): – Nå haster det</a></h2>
-                        <p>Linn Ulvatns historie om anoreksi vekker oppsikt. Helseministeren lover å bedre behandlingen nasjonalt. Senterpartiet tar saken til Stortinget....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/KH2CfqipE201gHuDdha7CQvLyWy8o9zWxMD_swypa2bA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 19:58:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/hanne-vant-fram-mot-ice-_-kan-kaste-fotlenken-1.17743979" target="_blank">Norske Hanne vant over ICE: – Det er en stor lettelse</a></h2>
-                        <p>Nordlendingen som ble arrestert og fengslet av ICE i USA har blitt løslatt, og får bli i landet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/beICcMdx1yIWeDXiEw6W5ghId0hmG3mneHyjizzfhNSw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 20:07:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/albert-nektet-adgang-pa-bussen-1.17725858" target="_blank">Albert nektet adgang på bussen</a></h2>
-                        <p>Newfoundlandshunden Albert (3) har fått forbud mot å være med bussen. Medpassasjerer mener han stinker....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/gv4-GfwwRtEZol1CAmI69gek_KWoD7NCWjLRmqx3qkfg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 20:00:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/ansgar-evensen-fyrer-laus-etter-ol-vraking_-lag-urorleg-pa-golvet-rett-for-avgjerande-konkurranse-1.17742015" target="_blank">Fyrar laus etter OL-vraking: Låg urørleg på golvet rett før avgjerande konkurranse</a></h2>
-                        <p>Ansgar Evensen meiner at han blir straffa for å stille opp på skirenn. Landslagssjefen erkjenner eit brutalt val....</p>
                     </div>
                 </div>
             
@@ -641,31 +717,6 @@ Mandag har han og st...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/8pBJeG/stoerste-hopp-siden-finanskrisen" target="_blank">Største hopp siden finanskrisen</a></h2>
                         <p>Edle metaller hadde et fantastisk år i 2025. I dag gjorde sølv sitt største hopp siden 2008....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 18:41:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/tv-2_-norsk-kvinne-har-vunne-fram-mot-ice-1.17743916" target="_blank">TV 2: Norsk kvinne har vunne fram mot ICE</a></h2>
-                        <p>Hanne Bredal Engan som blei fengsla av immigrasjonspolitiet (ICE) i California, i slutten av 2025 har no har ho vunne fram, melder TV 2.
-Arrestasjonen skjedde då ho hadde møtt opp ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/x0rzwNnAIVC_b6ZIHYuPuQ4LjMRsow9ozf5rb32JAdzQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 19:00:21 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/mor-og-datter-sin-ekspedisjon-til-sydpolen-gikk-galt-pa-malstreken-1.17743684" target="_blank">Rett før målstreken på Sydpolen gikk det galt: – Trodde hun var lam</a></h2>
-                        <p>Reisen til Antarktis gikk på skinner for Emma og moren Kathinka. Men på deres siste dag får redningsmannskapene et SOS....</p>
                     </div>
                 </div>
             
@@ -730,42 +781,6 @@ Arrestasjonen skjedde då ho hadde møtt opp ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/qOhkS50juX8Gf6UnBaz3NwYOP3avK0T_fybdGmtQjHVA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 17:22:09 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/ankesak-etter-drapet-pa-samuel-paty-for-muhammed-karikaturer-1.17742527" target="_blank">Ankesak etter lærardrap startar i Frankrike</a></h2>
-                        <p>Ei drapssak som rysta Frankrike, skal no opp igjen i retten....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/TJss-7f1K6ei8nzaHqFAtQuVtYYEIg1RlCOb1Mx3iz9g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 17:46:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/eu-starter-gransking-av-grok_-elon-musks-ki-chatbot-1.17743049" target="_blank">EU starter gransking av Grok, Elon Musks KI-Chatbot</a></h2>
-                        <p>EU-kommisjonen bekrefter i dag at de har åpnet en ny formell sak mot Elon Musks KI-tjeneste «Grok». Bakgrunnen er at bildetjenesten lar brukere generere og spre ulovlig innhold....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/usJTTF2oPe4Zyp6R7GANmA71DSYoHwgFrsEpkbAm6iwA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 17:57:33 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/pst-mener-det-hoyreekstreme-miljoet-er-farligere-i-dag-enn-for-25-ar-siden-1.17743406" target="_blank">PST: Høyreekstreme miljøer farligere enn for 25 år siden</a></h2>
-                        <p>Voldspotensialet er også større i dag enn da Benjamin Hermansen ble drept i 2001....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -777,19 +792,7 @@ Arrestasjonen skjedde då ho hadde møtt opp ...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_paAxyD69I0g3eqtf9Q9uQLizp7oFHBb_W_ITJ-VVXGg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 26 Jan 2026 17:21:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/minnesota_-norske-emma-gar-ingen-steder-uten-pass-eller-floyte-1.17742740" target="_blank">Minnesota: Norske Emma går ingen steder uten pass eller fløyte</a></h2>
-                        <p>– Alle jeg kjenner her er skikkelig redde for at ting skal koke helt over, sier 24-åringen....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 27.01.2026 07:21</div>
+                <div class="footer">Sist oppdatert: 27.01.2026 07:25</div>
             </div>
         </body>
         </html>
