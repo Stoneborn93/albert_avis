@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -108,7 +111,225 @@
                         <p>Men hvor mye bedre er den, uten press fra rivalen?...</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:15:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/bystyret-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
+                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/M_ltgoFCW9uy712NRS_04QVUViJ-3a_u0vipnFCWUC9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 15:44:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/her-skal-glimt-overvinne-bortespokelset-_-mot-atletico-madrid-som-_aldri_-taper-hjemme-1.17744425" target="_blank">Her må Glimt knuse bortespøkelset – mot et lag som «aldri» taper hjemme</a></h2>
+                        <p>Glimt må vinne den avgjørende kampen i Madrid for å holde liv i Mesterliga-eventyret. Da må både Glimt og Atlético klare noe de ikke har gjort på 462 dager....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wlTqog7yvMD8Y0DfmyDEsA5I6jQ4NEMkQ6qoUNOUpWYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 16:16:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/derfor-er-amerikanske-krigsskip-pa-vei-mot-iran-1.17745962" target="_blank">Derfor er amerikanske krigsskip på vei mot Iran</a></h2>
+                        <p>Planlegger USA et angrep mot Iran eller vil Trump presse landet til en ny atomavtale?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/6ZtM_vsQ-3_Yyh6UYtHJhQrTwPonJnkZdKIaHNlU2Klw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 15:26:18 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/med-hol-i-cv-en-fann-kari-fast-jobb-pa-rema-ved-hjelp-av-nav-_-stenseng-ber-fleire-om-a-ta-sjansen-1.17736788" target="_blank">Ber om at fleire som Kari får ein sjanse</a></h2>
+                        <p>Karin Tyvoll (50) fekk ein sjanse, men altfor mange blir ståande på utsida av arbeidslivet. Arbeidsministeren ber arbeidsgjevarar tørre å tilsetje folk med hol i CV-en....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:15:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/byradet-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
+                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/7JgRJHu_TDqf6pr5r6R79gr0oBRo4Nwg6xSr3xT1DH-g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:05:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/manen-gikk-ned-og-deretter-opp-pa-smola-i-more-og-romsdal-_-resultatet-blei-spektakulaert-1.17746284" target="_blank">Fikk et sjeldent møte med månen: – Hva søren er dette, tenkte jeg</a></h2>
+                        <p>Fotografen Kurt Sivertsen skulle ta noen vinterbilder i morgentimene i dag. Han fikk et spektakulært møte med månen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:20:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/ulykke-pa-e18-1.17746710" target="_blank">E18 stengt etter ulykke: Bil har kjørt i veggen</a></h2>
+                        <p>En bil har kjørt i veggen ved Brattåstunnelen på E18 i Porsgrunn. Veien er stengt i nordgående retning....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/QYj4M1C1qZIQwCyGXwiNOgiigWgRWlT6HlCXsBTzpPvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 12:03:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/klinikksjef-i-helse-more-og-romsdal-gar-av-etter-budsjett-uenighet-1.17746045" target="_blank">Helsesjef går av: – Det er en grense for hva som er mulig</a></h2>
+                        <p>Tidligere klinikksjef ved Ålesund sjukehus, Elisabeth Siebke, mener sparekuttene hun ble satt til ikke er mulig å gjennomføre....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/WT2pkf5QOlv0oB5D0AngVQQ0RWX3S8AWFWdfKDCz-gJg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:06:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/ble-utsatt-for-vold-pa-t-banen-_-har-ikke-krav-pa-voldserstatning-1.17717439" target="_blank">Ba T-banepassasjerer dempe musikken – endte i mareritt</a></h2>
+                        <p>På vei hjem fra byen ble Chris Midtun slått, sparket og tatt kvelertak på. Likevel er det ikke alvorlig nok for få voldsoffererstatning....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pA3_AqwbpSIdmqWYAPIyFgKUa2zapUvOMjXnZMKCNWqQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 12:25:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/handballandslaget-strammar-inn-bruken-av-toy_-_-lukta-litt-sur-norsk-tenaring-1.17728134" target="_blank">Tar uvanleg klesgrep: – Lukta litt sur norsk tenåring</a></h2>
+                        <p>Gamalt treningstøy hopar seg opp i klesskap til norske landslagsspelarar. No får forbundet ros for å ta grep....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/exhf9yyjMRrCAWE02a8yOgInHJa9JHLmzvmuuEnTN-Tw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 12:10:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/gustav-magnar-witzoe-blir-daglig-leder-i-familiens-eierselskap_-kvarv.-1.17746315" target="_blank">Gustav Witzøe blir sjef i familieselskapet</a></h2>
+                        <p>Arvingen går inn som sjef i moderselskapet, men sier det ikke er noe veiskille....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/zQmbYwAlEPflPPGKVSepqgtGQoRIdTaGo2KEqAFb5UAg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 13:10:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/flertallet-i-bystyret-stemte-mot-mistillit-mot-byradsleder-christine-meyer-1.17745866" target="_blank">Byrådsleder Christine Meyer slapp med skrekken. Ikke flertall for å velte byrådet</a></h2>
+                        <p>Byrådet i Bergen overlevde det tredje mistillitsforlaget på kort tid....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3IgJk_vWXxfmHzchbTQ4NQu2GMiFkcAoFAIiMlK5PMnw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 11:52:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-mot-barn--1.17746239" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep mot barn</a></h2>
+                        <p>En mann i 30-årene er siktet for flere tilfeller av seksuelle overgrep mot barn under 14 år, melder politiet i en pressemelding.
+Torsdag den 22. januar ble en mann med sentral roll...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3IgJk_vWXxfmHzchbTQ4NQu2GMiFkcAoFAIiMlK5PMnw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 11:59:05 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-mot-barn-1.17746330" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep mot barn</a></h2>
+                        <p>Fredag ble en mann fra Østfold pågrepet, siktet for flere seksuelle overgrep mot barn under 14 år....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/bXTZNiH6-IcPyTdrnSokCAssnhInHzNhENzJ2at5OB3g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 11:29:09 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/ma-rive-vegger-i-splitter-nytt-sykehus_-sparer-millioner-pa-a-fjerne-enerom-1.17742806" target="_blank">Nytt sykehus må rive enerom: – Ble for dyre i drift</a></h2>
+                        <p>Bare uker etter den høytidelige åpningen må Stavanger universitetssjukehus (SUS) bygge om. Nå skal flere enerom byttes ut med dobbeltrom fordi de er for kostbare i drift....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/WJUb5U_74J6lnybAXAmnWgJhVhMZkiZ0y9pR879fDpzg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 10:49:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/russetreff-pa-geilo-gjer-endringar-etter-kritikk-1.17744668" target="_blank">Russetreff gjer endringar etter kritikk</a></h2>
+                        <p>1000 russ i 20 minus fekk kommuneoverlegen til å reagere. Nå gjer festivalen endringar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3IgJk_vWXxfmHzchbTQ4NQu2GMiFkcAoFAIiMlK5PMnw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 11:52:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-av-barn--1.17746239" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep av barn</a></h2>
+                        <p>En mann i 30-årene er siktet for flere tilfeller av seksuelle overgrep av barn under 14 år, melder politiet i en pressemelding.
+Torsdag den 22. januar ble en mann med sentral rolle...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/4OZjJOljSbHEWQgSFRLpIA8OTS-f7gbXK31iN4A8MNDA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 12:00:56 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/rekordar-for-skogeigarane-_-krise-for-treindustrien-1.17744586" target="_blank">Tømmer-rekord i Noreg: Skog­eigarane jublar – industrien blør</a></h2>
+                        <p>Skogeigarane feirar historiske prisar. Men rekordmykje tømmer blir sendt rett ut av landet utan at ei einaste norsk sag har rørt det....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143356948.png%3F%26accessToken%3D7a3a58a0274b37e64f6e9c9b7b580e1909c7ddaae63e2aaa69eafe664e75fe24" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -170,42 +391,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:15:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/bystyret-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
-                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/M_ltgoFCW9uy712NRS_04QVUViJ-3a_u0vipnFCWUC9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 15:44:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/her-skal-glimt-overvinne-bortespokelset-_-mot-atletico-madrid-som-_aldri_-taper-hjemme-1.17744425" target="_blank">Her må Glimt knuse bortespøkelset – mot et lag som «aldri» taper hjemme</a></h2>
-                        <p>Glimt må vinne den avgjørende kampen i Madrid for å holde liv i Mesterliga-eventyret. Da må både Glimt og Atlético klare noe de ikke har gjort på 462 dager....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wlTqog7yvMD8Y0DfmyDEsA5I6jQ4NEMkQ6qoUNOUpWYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 16:16:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/derfor-er-amerikanske-krigsskip-pa-vei-mot-iran-1.17745962" target="_blank">Derfor er amerikanske krigsskip på vei mot Iran</a></h2>
-                        <p>Planlegger USA et angrep mot Iran eller vil Trump presse landet til en ny atomavtale?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F50963462.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Df9f523ed006b6506c25375ce1f0e4ffa4102ae53463557bfe85efc3e2f2868e5" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -214,18 +399,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324081/fjerde-dag-med-oppgang-pa-oslo-bors-shippingaksje-stupte-pa-tall-flyaksje-loftet-seg-pa-dollarfall" target="_blank">Fjerde dag med oppgang på Oslo Børs: Shippingaksje stupte på tall – flyaksje løftet seg på dollarfall</a></h2>
                         <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6ZtM_vsQ-3_Yyh6UYtHJhQrTwPonJnkZdKIaHNlU2Klw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 15:26:18 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/med-hol-i-cv-en-fann-kari-fast-jobb-pa-rema-ved-hjelp-av-nav-_-stenseng-ber-fleire-om-a-ta-sjansen-1.17736788" target="_blank">Ber om at fleire som Kari får ein sjanse</a></h2>
-                        <p>Karin Tyvoll (50) fekk ein sjanse, men altfor mange blir ståande på utsida av arbeidslivet. Arbeidsministeren ber arbeidsgjevarar tørre å tilsetje folk med hol i CV-en....</p>
                     </div>
                 </div>
             
@@ -326,30 +499,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:15:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/byradet-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
-                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/7JgRJHu_TDqf6pr5r6R79gr0oBRo4Nwg6xSr3xT1DH-g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:05:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/manen-gikk-ned-og-deretter-opp-pa-smola-i-more-og-romsdal-_-resultatet-blei-spektakulaert-1.17746284" target="_blank">Fikk et sjeldent møte med månen: – Hva søren er dette, tenkte jeg</a></h2>
-                        <p>Fotografen Kurt Sivertsen skulle ta noen vinterbilder i morgentimene i dag. Han fikk et spektakulært møte med månen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143345563.jpg%3F%26accessToken%3Dae3914a4d696ad19ca031f0db3731e1132098906985f03ca5a21ada1f1a8ec3f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -358,18 +507,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324072/trump-hardt-ut-mot-ordforer-han-leker-med-ilden" target="_blank">Hardt ut mot ordfører: – Han leker med ilden</a></h2>
                         <p>USAs president Donald Trump går hardt ut mot ordføreren i byen Minneapolis, der føderale agenter har drept to personer den siste tiden....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:20:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/ulykke-pa-e18-1.17746710" target="_blank">E18 stengt etter ulykke: Bil har kjørt i veggen</a></h2>
-                        <p>En bil har kjørt i veggen ved Brattåstunnelen på E18 i Porsgrunn. Veien er stengt i nordgående retning....</p>
                     </div>
                 </div>
             
@@ -406,30 +543,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/industri/2026/01/28/8324054/analytiker-skeptisk-til-oppsplitting-vi-blir-sittende-pa-sidelinjen" target="_blank">Analytiker skeptisk til oppsplitting: – Vi blir sittende på sidelinjen</a></h2>
                         <p>Morgan Stanley jekker opp kursmålet på Kongsberg Gruppen, men er skeptisk til oppsplittingen av selskapet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/QYj4M1C1qZIQwCyGXwiNOgiigWgRWlT6HlCXsBTzpPvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 12:03:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/klinikksjef-i-helse-more-og-romsdal-gar-av-etter-budsjett-uenighet-1.17746045" target="_blank">Helsesjef går av: – Det er en grense for hva som er mulig</a></h2>
-                        <p>Tidligere klinikksjef ved Ålesund sjukehus, Elisabeth Siebke, mener sparekuttene hun ble satt til ikke er mulig å gjennomføre....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/WT2pkf5QOlv0oB5D0AngVQQ0RWX3S8AWFWdfKDCz-gJg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:06:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/ble-utsatt-for-vold-pa-t-banen-_-har-ikke-krav-pa-voldserstatning-1.17717439" target="_blank">Ba T-banepassasjerer dempe musikken – endte i mareritt</a></h2>
-                        <p>På vei hjem fra byen ble Chris Midtun slått, sparket og tatt kvelertak på. Likevel er det ikke alvorlig nok for få voldsoffererstatning....</p>
                     </div>
                 </div>
             
@@ -530,42 +643,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pA3_AqwbpSIdmqWYAPIyFgKUa2zapUvOMjXnZMKCNWqQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 12:25:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/handballandslaget-strammar-inn-bruken-av-toy_-_-lukta-litt-sur-norsk-tenaring-1.17728134" target="_blank">Tar uvanleg klesgrep: – Lukta litt sur norsk tenåring</a></h2>
-                        <p>Gamalt treningstøy hopar seg opp i klesskap til norske landslagsspelarar. No får forbundet ros for å ta grep....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/exhf9yyjMRrCAWE02a8yOgInHJa9JHLmzvmuuEnTN-Tw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 12:10:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/gustav-magnar-witzoe-blir-daglig-leder-i-familiens-eierselskap_-kvarv.-1.17746315" target="_blank">Gustav Witzøe blir sjef i familieselskapet</a></h2>
-                        <p>Arvingen går inn som sjef i moderselskapet, men sier det ikke er noe veiskille....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/zQmbYwAlEPflPPGKVSepqgtGQoRIdTaGo2KEqAFb5UAg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 13:10:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/flertallet-i-bystyret-stemte-mot-mistillit-mot-byradsleder-christine-meyer-1.17745866" target="_blank">Byrådsleder Christine Meyer slapp med skrekken. Ikke flertall for å velte byrådet</a></h2>
-                        <p>Byrådet i Bergen overlevde det tredje mistillitsforlaget på kort tid....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F140229692.jpg%3F%26accessToken%3D9d0d880ab85e4b4b7f2f295951a4d4916c767bc98d18f8bf1eae1c19a6786c8e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -574,31 +651,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324001/trump-advarer-iran-tiden-er-i-ferd-med-a-renne-ut" target="_blank">Trump advarer Iran: – Tiden er i ferd med å renne ut</a></h2>
                         <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3IgJk_vWXxfmHzchbTQ4NQu2GMiFkcAoFAIiMlK5PMnw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 11:52:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-mot-barn--1.17746239" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep mot barn</a></h2>
-                        <p>En mann i 30-årene er siktet for flere tilfeller av seksuelle overgrep mot barn under 14 år, melder politiet i en pressemelding.
-Torsdag den 22. januar ble en mann med sentral roll...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3IgJk_vWXxfmHzchbTQ4NQu2GMiFkcAoFAIiMlK5PMnw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 11:59:05 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-mot-barn-1.17746330" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep mot barn</a></h2>
-                        <p>Fredag ble en mann fra Østfold pågrepet, siktet for flere seksuelle overgrep mot barn under 14 år....</p>
                     </div>
                 </div>
             
@@ -675,55 +727,6 @@ Torsdag den 22. januar ble en mann med sentral roll...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/bXTZNiH6-IcPyTdrnSokCAssnhInHzNhENzJ2at5OB3g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 11:29:09 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/ma-rive-vegger-i-splitter-nytt-sykehus_-sparer-millioner-pa-a-fjerne-enerom-1.17742806" target="_blank">Nytt sykehus må rive enerom: – Ble for dyre i drift</a></h2>
-                        <p>Bare uker etter den høytidelige åpningen må Stavanger universitetssjukehus (SUS) bygge om. Nå skal flere enerom byttes ut med dobbeltrom fordi de er for kostbare i drift....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/WJUb5U_74J6lnybAXAmnWgJhVhMZkiZ0y9pR879fDpzg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 10:49:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/russetreff-pa-geilo-gjer-endringar-etter-kritikk-1.17744668" target="_blank">Russetreff gjer endringar etter kritikk</a></h2>
-                        <p>1000 russ i 20 minus fekk kommuneoverlegen til å reagere. Nå gjer festivalen endringar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3IgJk_vWXxfmHzchbTQ4NQu2GMiFkcAoFAIiMlK5PMnw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 11:52:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-av-barn--1.17746239" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep av barn</a></h2>
-                        <p>En mann i 30-årene er siktet for flere tilfeller av seksuelle overgrep av barn under 14 år, melder politiet i en pressemelding.
-Torsdag den 22. januar ble en mann med sentral rolle...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/4OZjJOljSbHEWQgSFRLpIA8OTS-f7gbXK31iN4A8MNDA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 12:00:56 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/rekordar-for-skogeigarane-_-krise-for-treindustrien-1.17744586" target="_blank">Tømmer-rekord i Noreg: Skog­eigarane jublar – industrien blør</a></h2>
-                        <p>Skogeigarane feirar historiske prisar. Men rekordmykje tømmer blir sendt rett ut av landet utan at ei einaste norsk sag har rørt det....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F58681931.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D704ec090aa3dd44ee2ef124c573a9a8b06142d5c44e30d10d98e48525b94e58c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -783,7 +786,7 @@ Torsdag den 22. januar ble en mann med sentral rolle...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 28.01.2026 16:21</div>
+                <div class="footer">Sist oppdatert: 28.01.2026 16:25</div>
             </div>
         </body>
         </html>
