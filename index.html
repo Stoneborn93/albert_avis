@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -72,22 +69,22 @@
                             Wed, 28 Jan 2026 11:37:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/grounded-2-jekker-opp-skremmefaktoren-flere-hakk/519907" target="_blank">Grounded 2 jekker opp skremmefaktoren flere hakk</a></h2>
-                        <p>Slanger inntar hagen i overlevelsesspillets nyeste oppdatering.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://i.bo3.no/image/390439/Valve_Lobby_2016.jpg?c=0&h=338&w=600" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Spill">Spill</span> 
-                            Wed, 28 Jan 2026 09:03:00 +0100
-                        </div>
-                        <h2><a href="https://www.gamer.no/artikler/gront-lys-for-gruppesoksmal-mot-steam/519906" target="_blank">Grønt lys for gruppesøksmål mot Steam</a></h2>
-                        <p>Valve kan bli nødt til å betale erstatning til 14 millioner briter.</p>
+                        <p>Slanger inntar hagen i overlevelsesspillets nyeste oppdatering....</p>
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/db890e03-5242-4a0a-bd6d-5272f9d4688b?fit=crop&format=auto&h=900&w=1600&s=7fedb45d5eac5e3f4742057cd0b692762dd037df" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Teknologi">Teknologi</span> 
+                            Wed, 28 Jan 2026 14:00:03 GMT
+                        </div>
+                        <h2><a href="https://www.tek.no/i/LMmRvR" target="_blank">AMD Ryzen 7 9850X3D: den nye gamingkongen</a></h2>
+                        <p>Men hvor mye bedre er den, uten press fra rivalen?...</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://images.gfx.no/1000/2908/2908803/NTB_aD_k_OMrYUY.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -96,7 +93,7 @@
                             Wed, 28 Jan 2026 12:07:51 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/tidligere-trump-radgiver-vil-bygge-gigantisk-datasenter-pa-gronland/567477" target="_blank">Tidligere Trump-rådgiver: : Vil bygge gigantisk datasenter på Grønland</a></h2>
-                        <p>Datasenteret skal etter planen være i drift allerede om halvannet år, og skal drives med flytende naturgass som fraktes til øya.</p>
+                        <p>Datasenteret skal etter planen være i drift allerede om halvannet år, og skal drives med flytende naturgass som fraktes til øya....</p>
                     </div>
                 </div>
             
@@ -108,7 +105,7 @@
                             Wed, 28 Jan 2026 10:07:14 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/chat-gpt-er-anklaget-for-drap/567408" target="_blank">[Ekstra] Chat GPT er anklaget for drap</a></h2>
-                        <p>Forskere advarer mot å snakke om følelser med Chat GPT og andre populære chatroboter.</p>
+                        <p>Forskere advarer mot å snakke om følelser med Chat GPT og andre populære chatroboter....</p>
                     </div>
                 </div>
             
@@ -120,10 +117,166 @@
                             Wed, 28 Jan 2026 08:27:24 GMT
                         </div>
                         <h2><a href="https://www.tek.no/i/m010W1" target="_blank">Disse amerikanske tek-vanene endrer du raskest</a></h2>
-                        <p>Tre kjappe ting du kan bytte.</p>
+                        <p>Tre kjappe ting du kan bytte....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57305559.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D0cc84c18c9ec6716e5aa90874655e30441274d9fe242c90fec454686f9e70b8c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 13:31:31 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/shipping/2026/01/28/8324028/fearnley-spar-torrlast-til-himmels-anbefaler-atte-aksjer" target="_blank">Spår tørrlast til himmels</a></h2>
+                        <p>Fearnley hever kursmålene på en rekke tørrlastaksjer og meglerhuset forventer at 2026 vil bli det beste året på lang tid i tørrlast...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F124097263.jpg%3F%26accessToken%3D62c2d89347ba9e434f021ef8806d6698edb9db314e051e22dea5243a5bc47a5f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 13:48:31 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/valuta/2026/01/28/8323880/dollarsvekkelsen-dette-er-vinnerne-og-taperne-pa-oslo-bors-ifolge-ekspertene" target="_blank">Dollarsvekkelsen – dette er vinnerne og taperne på Oslo Børs, ifølge ekspertene</a></h2>
+                        <p>– Rundt 60 prosent av hovedindeksen rapporterer inntjening i dollar, sier DNBs aksjestrateg Paul Harper. Her er vinnerne og taperne av dollarfallet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142529494.jpg%3F%26accessToken%3D42b1ca914d5aacb77075e9bfea15e2fa9564a87911e2ecb00fef677a703d708d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 14:18:55 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/industri/2026/01/28/8324054/analytiker-skeptisk-til-oppsplitting-vi-blir-sittende-pa-sidelinjen" target="_blank">Analytiker skeptisk til oppsplitting: – Vi blir sittende på sidelinjen</a></h2>
+                        <p>Morgan Stanley jekker opp kursmålet på Kongsberg Gruppen, men er skeptisk til oppsplittingen av selskapet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/QYj4M1C1qZIQwCyGXwiNOgiigWgRWlT6HlCXsBTzpPvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 12:03:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/klinikksjef-i-helse-more-og-romsdal-gar-av-etter-budsjett-uenighet-1.17746045" target="_blank">Helsesjef går av: – Det er en grense for hva som er mulig</a></h2>
+                        <p>Tidligere klinikksjef ved Ålesund sjukehus, Elisabeth Siebke, mener sparekuttene hun ble satt til ikke er mulig å gjennomføre....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/WT2pkf5QOlv0oB5D0AngVQQ0RWX3S8AWFWdfKDCz-gJg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:06:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/ble-utsatt-for-vold-pa-t-banen-_-har-ikke-krav-pa-voldserstatning-1.17717439" target="_blank">Ba T-banepassasjerer dempe musikken – endte i mareritt</a></h2>
+                        <p>På vei hjem fra byen ble Chris Midtun slått, sparket og tatt kvelertak på. Likevel er det ikke alvorlig nok for få voldsoffererstatning....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143335107.jpg%3F%26accessToken%3Def2d320bd1a0ada15611baed84493fdfaaed80a1b834202ff9cd5cadd08272fc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 13:22:35 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/ravarer/2026/01/28/8324026/hedgefond-veteran-derfor-anbefaler-han-bade-gull-og-dollar" target="_blank">Hedgefond-veteran: Derfor anbefaler han både gull og dollar</a></h2>
+                        <p>Hedgefond-veteran Alexander Campbell mener investorer bør eie både gull og dollar for å balansere risiko i et marked preget av overdrevet dollarfrykt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F76053693.jpg%3F%26accessToken%3D26dac0fc36778961885e2e3303e066c477323c831efddd476688446fea05b0cb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:39:14 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324007/sa-hoye-blir-stromprisene-torsdag" target="_blank">Så høye blir strømprisene torsdag</a></h2>
+                        <p>Strømprisene ligger langt over samme dag i fjor og i Nord-Norge er det snakk om en mangedobling. Slik blir strømprisene tirsdag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143328976.jpg%3F%26accessToken%3Ddbee2da468c079eb7573c5c4749b2c660e6f504cfa46f090871007bf8cd54ba3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:41:05 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323996/avliver-myten-om-kvinnelige-innsidekjop-det-ga-ikke-okonomisk-mening" target="_blank">Avliver myte: – Det ga ikke økonomisk mening</a></h2>
+                        <p>Kritikerne av kvoteringsreformen mente kvinnelige styremedlemmer sendte svakere signaler til markedet. En ny studie fra NHH og Oslo Met gir et tydelig svar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143331307.jpg%3F%26accessToken%3D4ee71d93c08752f4b270290835ca2b466cf4419482410968567f3613c082d0c8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:52:46 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324027/razzia-hos-deutsche-bank" target="_blank">Razzia hos Deutsche Bank</a></h2>
+                        <p>Påtalemyndigheten i Frankfurt har gjennomført ransakinger ved Deutsche Banks lokasjoner i Frankfurt og Berlin i en sak som gjelder mistanke om hvitvasking....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143326880.jpg%3F%26accessToken%3D03c6c37c81a75c4316690b9e9eec43773b5e34666557a28027e417bc21e73bf1" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 13:04:25 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323908/bernt-berg-nielsen-og-hans-thrane-nielsen-er-optimister-pa-vegne-av-verdens-borser" target="_blank">Aksjeforvaltere om børsåret 2026 – tror markedet trumfer politikken</a></h2>
+                        <p>Donald Trump tramper stadig rundt som en elefant i en glassbutikk, men ekspertene tror markedet trumfer politiske selvskudd....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143331556.jpg%3F%26accessToken%3D2ebfdc07e4bd25c64fc32c793c98109ee79e99dde69da7aa584e24f29a34883b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 13:07:49 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324017/toppsjef-i-tyske-rwe-helt-klart-en-ny-aera" target="_blank">Trump-grep skaper uro: – Helt klart en ny æra</a></h2>
+                        <p>Toppsjefen i Tysklands største strømprodusent mener geopolitisk uro har sendt energisektoren inn i en ny æra....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:52:12 GMT
+                        </div>
+                        <h2><a href="https://e24.no/norsk-oekonomi/i/zOrlA9/130-000-boliger-luftslott-i-et-iskaldt-marked" target="_blank">130.000 boliger: Luftslott i et iskaldt marked</a></h2>
+                        <p>Regjeringen holder fast ved målet om 130.000 nye boliger, men i januar 2026 mangler vi både arbeidskraft og lønnsomhet til å bygge dem. Målet bør skrotes....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 13:07:10 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/j0z0En/haaver-inn-paa-datasentre-tok-utbytte-paa-80-millioner" target="_blank">Håver inn på datasentre – tok utbytte på 80 millioner</a></h2>
+                        <p>Datasenter-investeringer i Norge har gitt millionutbytte for gründerselskapet, som blant annet har solgt til Aker og britiske Nscale....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/pA3_AqwbpSIdmqWYAPIyFgKUa2zapUvOMjXnZMKCNWqQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -132,7 +285,7 @@
                             Wed, 28 Jan 2026 12:25:44 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sport/handballandslaget-strammar-inn-bruken-av-toy_-_-lukta-litt-sur-norsk-tenaring-1.17728134" target="_blank">Tar uvanleg klesgrep: – Lukta litt sur norsk tenåring</a></h2>
-                        <p>Gamalt treningstøy hopar seg opp i klesskap til norske landslagsspelarar. No får forbundet ros for å ta grep.</p>
+                        <p>Gamalt treningstøy hopar seg opp i klesskap til norske landslagsspelarar. No får forbundet ros for å ta grep....</p>
                     </div>
                 </div>
             
@@ -144,7 +297,7 @@
                             Wed, 28 Jan 2026 12:10:43 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/trondelag/gustav-magnar-witzoe-blir-daglig-leder-i-familiens-eierselskap_-kvarv.-1.17746315" target="_blank">Gustav Witzøe blir sjef i familieselskapet</a></h2>
-                        <p>Arvingen går inn som sjef i moderselskapet, men sier det ikke er noe veiskille.</p>
+                        <p>Arvingen går inn som sjef i moderselskapet, men sier det ikke er noe veiskille....</p>
                     </div>
                 </div>
             
@@ -156,7 +309,19 @@
                             Wed, 28 Jan 2026 13:10:49 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/vestland/flertallet-i-bystyret-stemte-mot-mistillit-mot-byradsleder-christine-meyer-1.17745866" target="_blank">Byrådsleder Christine Meyer slapp med skrekken. Ikke flertall for å velte byrådet</a></h2>
-                        <p>Byrådet i Bergen overlevde det tredje mistillitsforlaget på kort tid.</p>
+                        <p>Byrådet i Bergen overlevde det tredje mistillitsforlaget på kort tid....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F140229692.jpg%3F%26accessToken%3D9d0d880ab85e4b4b7f2f295951a4d4916c767bc98d18f8bf1eae1c19a6786c8e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:25:26 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324001/trump-advarer-iran-tiden-er-i-ferd-med-a-renne-ut" target="_blank">Trump advarer Iran: – Tiden er i ferd med å renne ut</a></h2>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -169,8 +334,7 @@
                         </div>
                         <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-mot-barn--1.17746239" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep mot barn</a></h2>
                         <p>En mann i 30-årene er siktet for flere tilfeller av seksuelle overgrep mot barn under 14 år, melder politiet i en pressemelding.
-Torsdag den 22. januar ble en mann med sentral rolle i en idrettsforening i Østfold anmeldt for seksuell krenkende adferd. Mannen ble pågrepet fredag morgen.
-Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.</p>
+Torsdag den 22. januar ble en mann med sentral roll...</p>
                     </div>
                 </div>
             
@@ -182,7 +346,79 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 11:59:05 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-mot-barn-1.17746330" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep mot barn</a></h2>
-                        <p>Fredag ble en mann fra Østfold pågrepet, siktet for flere seksuelle overgrep mot barn under 14 år.</p>
+                        <p>Fredag ble en mann fra Østfold pågrepet, siktet for flere seksuelle overgrep mot barn under 14 år....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143318381.jpg%3F%26accessToken%3Dddece41fb4ccfe9632f8891c3c7b2c9c1a6101f41e0f2d01d78a34df6a6109f9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 11:56:12 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/reise-og-fritid/2026/01/28/8323967/per-georg-braathen-har-hatt-seks-ar-med-helvete" target="_blank">Per Georg Braathen: – Har hatt seks år med helvete</a></h2>
+                        <p>Per Georg Braathen: – Har hatt seks år med helvete...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143323133.jpg%3F%26accessToken%3Dc64f33aa0204ece67747a9bf17190c8c9f2643c611659e209926d33c6ad02198" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:02:21 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323946/trump-tower-bank-66-mill.-i-lederlonn-markedsverdi-67-mill." target="_blank">Trump Tower-bank: 66 mill. i lederlønn – markedsverdi 67 mill.</a></h2>
+                        <p>Dominari-sjef Anthony Hayes og verdipapirtopp Kyle Wool fikk samlet kompensasjon på nær 66 millioner dollar for 2025, til tross for at bankens markedsverdi bare er 67 millioner dol...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135885269.jpg%3F%26accessToken%3Dfb3f7e29852d2385e2a6d9fc50409d026bc7611b53983cfa860366c09685508e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:04:48 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/bolig/2026/01/28/8323968/ny-skattebombe-kan-sla-dobbelt-hardt" target="_blank">Ny skattebombe på vei fra Jens Stoltenberg. Slår dobbelt hardt for hytteeiere.</a></h2>
+                        <p>Jens Stoltenberg skapte skattesjokk for mange nordmenn med SSBs modell for formuesskatt på boliger. Snart smeller den samme modellen også på hytter....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143323605.jpg%3F%26accessToken%3D9e43571df1bbfd3f6de565ae4a022a1a1b6ebe4d8f716c02dc94333d7e4eb91d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:05:02 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8323979/far-266-millioner-300-mister-jobben" target="_blank">Får 266 millioner – 300 mister jobben</a></h2>
+                        <p>Et bidrag fra den britiske regjeringen redder halvparten av de 600 arbeidsplassene for Vestas Wind på Isle of Wight....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143324064.jpg%3F%26accessToken%3D055bf767350d3790744ea7d7b653e03485d8fe696a801ec7f59667d8d8ad6876" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 12:16:52 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8323972/trudeau-i-norge-om-trump-er-noe-er-det-en-lur-forretningsman" target="_blank">– Om Trump er noe, er det en lur forretningsman, sier Canadas eks-statsminister fra DNB-konferansen.</a></h2>
+                        <p>Den tidligere canadiske statsministeren deltar på DNB konferansen onsdag. – Jeg besøkte Norge med min far i 1980. Det skapte for meg en tilknyttelse til de nordiske landene, og Nor...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 11:14:33 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/oEABJ7/gustav-magnar-witzoee-tar-over-som-daglig-leder-i-familieselskapet-kvarv" target="_blank">Gustav Magnar Witzøe tar over som daglig leder i familieselskapet</a></h2>
+                        <p>Norges rikeste får ny rolle....</p>
                     </div>
                 </div>
             
@@ -194,7 +430,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 11:29:09 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/rogaland/ma-rive-vegger-i-splitter-nytt-sykehus_-sparer-millioner-pa-a-fjerne-enerom-1.17742806" target="_blank">Nytt sykehus må rive enerom: – Ble for dyre i drift</a></h2>
-                        <p>Bare uker etter den høytidelige åpningen må Stavanger universitetssjukehus (SUS) bygge om. Nå skal flere enerom byttes ut med dobbeltrom fordi de er for kostbare i drift.</p>
+                        <p>Bare uker etter den høytidelige åpningen må Stavanger universitetssjukehus (SUS) bygge om. Nå skal flere enerom byttes ut med dobbeltrom fordi de er for kostbare i drift....</p>
                     </div>
                 </div>
             
@@ -206,7 +442,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:49:26 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/buskerud/russetreff-pa-geilo-gjer-endringar-etter-kritikk-1.17744668" target="_blank">Russetreff gjer endringar etter kritikk</a></h2>
-                        <p>1000 russ i 20 minus fekk kommuneoverlegen til å reagere. Nå gjer festivalen endringar.</p>
+                        <p>1000 russ i 20 minus fekk kommuneoverlegen til å reagere. Nå gjer festivalen endringar....</p>
                     </div>
                 </div>
             
@@ -219,8 +455,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                         </div>
                         <h2><a href="https://www.nrk.no/ostfold/mann-i-idrettsforening-siktet-for-seksuelle-overgrep-av-barn--1.17746239" target="_blank">Mann i idrettsforening siktet for seksuelle overgrep av barn</a></h2>
                         <p>En mann i 30-årene er siktet for flere tilfeller av seksuelle overgrep av barn under 14 år, melder politiet i en pressemelding.
-Torsdag den 22. januar ble en mann med sentral rolle i en idrettsforening i Østfold anmeldt for seksuell krenkende adferd. Mannen ble pågrepet fredag morgen.
-Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.</p>
+Torsdag den 22. januar ble en mann med sentral rolle...</p>
                     </div>
                 </div>
             
@@ -232,295 +467,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 12:00:56 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/vestland/rekordar-for-skogeigarane-_-krise-for-treindustrien-1.17744586" target="_blank">Tømmer-rekord i Noreg: Skog­eigarane jublar – industrien blør</a></h2>
-                        <p>Skogeigarane feirar historiske prisar. Men rekordmykje tømmer blir sendt rett ut av landet utan at ei einaste norsk sag har rørt det.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Og-7wY-iuyrcisvIgYo5swebdXqUwJ2LRbFR9dTgA7dw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 10:47:46 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/ny-rapport_-noen-far-rimeligere-matvarer-enn-andre-1.17741593" target="_blank">Ny rapport: Noen får rimeligere matvarer enn andre</a></h2>
-                        <p>Folk med høy digital kompetanse kan få flere rabatter og tilbud i matbutikkene, viser ny undersøkelse. – Du må nesten ha doktorgrad i dagligvare, sier Forbrukerrådet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/96Ct6AM9lp-AL1IJJM3XcAGqFR8i1HDw66_fqIzyJSJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 11:05:46 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/stein-lier-hansen-innrommer-uriktig-forklaring-i-retten-1.17746128" target="_blank">Stein Lier–Hansen innrømmer uriktig forklaring</a></h2>
-                        <p>Stein Lier-Hansen står i vitneboksen på andre dag for rad, tiltalt for grov korrupsjon. I dag starter aktor sin utspørring.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/4h2GzIye228HVdX17T3sGQ0I33XIumY79BD0kp__1jLw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 06:44:51 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/utanriksministeren-i-ukraina_-_-zelenskyj-er-klar-til-a-mote-putin-1.17745700" target="_blank">Utanriksministeren i Ukraina: – Zelenskyj er klar til å møte Putin</a></h2>
-                        <p>Volodymyr Zelenskyj har aldri diskutert krigen i Ukraina med Vladimir Putin.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 09:31:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/kronprins-haakon_-vi-kommer-ikke-til-a-vaere-til-stede-i-rettssalen-1.17745182" target="_blank">Preget kronprins møtte pressen: Vi kommer ikke til å være til stede i rettssalen</a></h2>
-                        <p>En preget kronprins Haakon snakket direkte til de berørte i rettssaken mot Marius Borg Høiby da han møtte pressen i formiddag. Han klargjorde også at kronprinsparet ikke kommer til å være til stede i retten.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/BXLnuPUzsWFLAdVCuBYh6grfK-iYpOBeX3fZjucIVEig.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 09:19:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/utenlandsk-sjafor-siktet-etter-dodsulykken-pa-e10-i-tjeldsund-1.17745733" target="_blank">Utenlandsk mann siktet etter dødsulykken i Tjeldsund: – Svært tragisk</a></h2>
-                        <p>To kvinner omkom i frontkollisjonen i Tjeldsund tirsdag ettermiddag. En person fra et utenlandsk turfølge er siktet etter ulykken.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/05zbUAOEDQZKKx6RNj-xaQ53PHe0tXJ38vcvobwzAhrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 06:53:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/gult-farevarsel-for-lokal-gras--og-lyngbrannfare-_-brannvesenet-atvarar-mot-a-tenne-bal-1.17745704" target="_blank">– Det kan vere like tørt som om sommaren</a></h2>
-                        <p>Lite nedbør og ein snøfattig vinter aukar skogbrannfaren fleire stadar i landet. Brannvesenet åtvarar mot at det kan vere like tørt no som om sommaren.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/-BXC2_CCFgsVCiAsaBXwmwfYgyabMNyDz3hudzh7tdNg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 08:23:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/klima/forsker-mener-det-vil-ta-lang-tid-a-fa-til-gruvevirksomhet-pa-gronland-1.17735394" target="_blank">Forsker mener det vil ta lang tid å få til gruvevirksomhet på Grønland</a></h2>
-                        <p>Klimaendringene på Grønland skaper interesse for mineralene på øya. Men det er en rekke praktiske problemer som må løses.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/y5qMesj41LsAls5WMW7g_gF0sLlazzjBXbQXLGNmGNjQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 04:40:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/magne-ble-slatt-etter-under-broyteoppdrag_-_-rimelig-bananas-1.17743208" target="_blank">Magne ble slått etter under brøyteoppdrag: – Rimelig bananas</a></h2>
-                        <p>Magne Thorvald Bakken ble slått etter under et privat brøyteoppdrag i Kristiansand. Ingeniørvesenet sier flere av de som brøyter opplever hets.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/GLsENTHNASXOF09pnX0CQQVK_A3-2k-yqq7DmQsoDOLg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 06:41:07 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/vedum-vil-gi-deler-av-nord-norge-_svalbard-skatt_-1.17745762" target="_blank">Vedum vil gi deler av Nord-Norge «Svalbard-skatt»</a></h2>
-                        <p>Trygve Slagsvold Vedum vil møte den økte stormaktskampen i nord med et kraftig økonomisk motsvar. Nå foreslår han nye skattekutt på både lønn og næringsliv for å sikre at folk blir boende i Nord-Troms og Finnmark.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143335107.jpg%3F%26accessToken%3Def2d320bd1a0ada15611baed84493fdfaaed80a1b834202ff9cd5cadd08272fc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 13:22:35 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/ravarer/2026/01/28/8324026/hedgefond-veteran-derfor-anbefaler-han-bade-gull-og-dollar" target="_blank">Hedgefond-veteran: Derfor anbefaler han både gull og dollar</a></h2>
-                        <p>Hedgefond-veteran Alexander Campbell mener investorer bør eie både gull og dollar for å balansere risiko i et marked preget av overdrevet dollarfrykt.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F76053693.jpg%3F%26accessToken%3D26dac0fc36778961885e2e3303e066c477323c831efddd476688446fea05b0cb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:39:14 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324007/sa-hoye-blir-stromprisene-torsdag" target="_blank">Så høye blir strømprisene torsdag</a></h2>
-                        <p>Strømprisene ligger langt over samme dag i fjor og i Nord-Norge er det snakk om en mangedobling. Slik blir strømprisene tirsdag.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143328976.jpg%3F%26accessToken%3Ddbee2da468c079eb7573c5c4749b2c660e6f504cfa46f090871007bf8cd54ba3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:41:05 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323996/avliver-myten-om-kvinnelige-innsidekjop-det-ga-ikke-okonomisk-mening" target="_blank">Avliver myte: – Det ga ikke økonomisk mening</a></h2>
-                        <p>Kritikerne av kvoteringsreformen mente kvinnelige styremedlemmer sendte svakere signaler til markedet. En ny studie fra NHH og Oslo Met gir et tydelig svar.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143331307.jpg%3F%26accessToken%3D4ee71d93c08752f4b270290835ca2b466cf4419482410968567f3613c082d0c8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:52:46 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324027/razzia-hos-deutsche-bank" target="_blank">Razzia hos Deutsche Bank</a></h2>
-                        <p>Påtalemyndigheten i Frankfurt har gjennomført ransakinger ved Deutsche Banks lokasjoner i Frankfurt og Berlin i en sak som gjelder mistanke om hvitvasking.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143326880.jpg%3F%26accessToken%3D03c6c37c81a75c4316690b9e9eec43773b5e34666557a28027e417bc21e73bf1" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 13:04:25 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323908/bernt-berg-nielsen-og-hans-thrane-nielsen-er-optimister-pa-vegne-av-verdens-borser" target="_blank">Aksjeforvaltere om børsåret 2026 – tror markedet trumfer politikken</a></h2>
-                        <p>Donald Trump tramper stadig rundt som en elefant i en glassbutikk, men ekspertene tror markedet trumfer politiske selvskudd.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143331556.jpg%3F%26accessToken%3D2ebfdc07e4bd25c64fc32c793c98109ee79e99dde69da7aa584e24f29a34883b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 13:07:49 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324017/toppsjef-i-tyske-rwe-helt-klart-en-ny-aera" target="_blank">Trump-grep skaper uro: – Helt klart en ny æra</a></h2>
-                        <p>Toppsjefen i Tysklands største strømprodusent mener geopolitisk uro har sendt energisektoren inn i en ny æra.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:52:12 GMT
-                        </div>
-                        <h2><a href="https://e24.no/norsk-oekonomi/i/zOrlA9/130-000-boliger-luftslott-i-et-iskaldt-marked" target="_blank">130.000 boliger: Luftslott i et iskaldt marked</a></h2>
-                        <p>Regjeringen holder fast ved målet om 130.000 nye boliger, men i januar 2026 mangler vi både arbeidskraft og lønnsomhet til å bygge dem. Målet bør skrotes.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 13:07:10 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/j0z0En/haaver-inn-paa-datasentre-tok-utbytte-paa-80-millioner" target="_blank">Håver inn på datasentre – tok utbytte på 80 millioner</a></h2>
-                        <p>Datasenter-investeringer i Norge har gitt millionutbytte for gründerselskapet, som blant annet har solgt til Aker og britiske Nscale.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F140229692.jpg%3F%26accessToken%3D9d0d880ab85e4b4b7f2f295951a4d4916c767bc98d18f8bf1eae1c19a6786c8e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:25:26 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324001/trump-advarer-iran-tiden-er-i-ferd-med-a-renne-ut" target="_blank">Trump advarer Iran: – Tiden er i ferd med å renne ut</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143318381.jpg%3F%26accessToken%3Dddece41fb4ccfe9632f8891c3c7b2c9c1a6101f41e0f2d01d78a34df6a6109f9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 11:56:12 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/reise-og-fritid/2026/01/28/8323967/per-georg-braathen-har-hatt-seks-ar-med-helvete" target="_blank">Per Georg Braathen: – Har hatt seks år med helvete</a></h2>
-                        <p>Per Georg Braathen: – Har hatt seks år med helvete</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143323133.jpg%3F%26accessToken%3Dc64f33aa0204ece67747a9bf17190c8c9f2643c611659e209926d33c6ad02198" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:02:21 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323946/trump-tower-bank-66-mill.-i-lederlonn-markedsverdi-67-mill." target="_blank">Trump Tower-bank: 66 mill. i lederlønn – markedsverdi 67 mill.</a></h2>
-                        <p>Dominari-sjef Anthony Hayes og verdipapirtopp Kyle Wool fikk samlet kompensasjon på nær 66 millioner dollar for 2025, til tross for at bankens markedsverdi bare er 67 millioner dollar.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135885269.jpg%3F%26accessToken%3Dfb3f7e29852d2385e2a6d9fc50409d026bc7611b53983cfa860366c09685508e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:04:48 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/bolig/2026/01/28/8323968/ny-skattebombe-kan-sla-dobbelt-hardt" target="_blank">Ny skattebombe på vei fra Jens Stoltenberg. Slår dobbelt hardt for hytteeiere.</a></h2>
-                        <p>Jens Stoltenberg skapte skattesjokk for mange nordmenn med SSBs modell for formuesskatt på boliger. Snart smeller den samme modellen også på hytter.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143323605.jpg%3F%26accessToken%3D9e43571df1bbfd3f6de565ae4a022a1a1b6ebe4d8f716c02dc94333d7e4eb91d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:05:02 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8323979/far-266-millioner-300-mister-jobben" target="_blank">Får 266 millioner – 300 mister jobben</a></h2>
-                        <p>Et bidrag fra den britiske regjeringen redder halvparten av de 600 arbeidsplassene for Vestas Wind på Isle of Wight.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143324064.jpg%3F%26accessToken%3D055bf767350d3790744ea7d7b653e03485d8fe696a801ec7f59667d8d8ad6876" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:16:52 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8323972/trudeau-i-norge-om-trump-er-noe-er-det-en-lur-forretningsman" target="_blank">– Om Trump er noe, er det en lur forretningsman, sier Canadas eks-statsminister fra DNB-konferansen.</a></h2>
-                        <p>Den tidligere canadiske statsministeren deltar på DNB konferansen onsdag. – Jeg besøkte Norge med min far i 1980. Det skapte for meg en tilknyttelse til de nordiske landene, og Norge spesielt, som har fulgt meg hele livet, sier Justin Trudeau.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 11:14:33 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/oEABJ7/gustav-magnar-witzoee-tar-over-som-daglig-leder-i-familieselskapet-kvarv" target="_blank">Gustav Magnar Witzøe tar over som daglig leder i familieselskapet</a></h2>
-                        <p>Norges rikeste får ny rolle.</p>
+                        <p>Skogeigarane feirar historiske prisar. Men rekordmykje tømmer blir sendt rett ut av landet utan at ei einaste norsk sag har rørt det....</p>
                     </div>
                 </div>
             
@@ -532,7 +479,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 11:25:39 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323970/tar-over-som-sjef-i-familiens-eierselskap-et-nytt-ansvar-sier-gustav-magnar-witzoe" target="_blank">Gustav Magnar Witzøe tar over som sjef i familieselskapet. – Et nytt ansvar</a></h2>
-                        <p>Gustav Magnar Witzøe tar over som daglig leder i familiens eierselskap Kvarv. – Et nytt ansvar, skriver han.</p>
+                        <p>Gustav Magnar Witzøe tar over som daglig leder i familiens eierselskap Kvarv. – Et nytt ansvar, skriver han....</p>
                     </div>
                 </div>
             
@@ -544,7 +491,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:30:46 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/motor/2026/01/28/8323919/kia-taper-mange-milliarder-pa-trump" target="_blank">Taper mange milliarder på Trump</a></h2>
-                        <p>Trump-tollen kostet sørkoreanske Kia mer enn 22 milliarder kroner i fjor.</p>
+                        <p>Trump-tollen kostet sørkoreanske Kia mer enn 22 milliarder kroner i fjor....</p>
                     </div>
                 </div>
             
@@ -556,7 +503,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 11:18:14 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/ravarer/2026/01/28/8323931/trump-sendte-gullprisen-over-5.300-dollar" target="_blank">Trump sendte gullprisen over 5.300 dollar</a></h2>
-                        <p>Gullprisen stiger for syvende dag på rad og stanget opp til 5.311,67 dollar på det høyeste onsdag formiddag. Det er ny all-time high og betyr at prisen er opp knappe 23 prosent siden nyttår og 94 prosent det siste året.</p>
+                        <p>Gullprisen stiger for syvende dag på rad og stanget opp til 5.311,67 dollar på det høyeste onsdag formiddag. Det er ny all-time high og betyr at prisen er opp knappe 23 prosent sid...</p>
                     </div>
                 </div>
             
@@ -568,7 +515,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:49:00 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/Exwlz5/nordmenn-stroemmer-til-soelvfond-hiver-seg-paa" target="_blank">Nordmenn strømmer til sølvfond: – Hiver seg på</a></h2>
-                        <p>Mens sølvprisen har skutt i været, har fondet AuAg Silver Bullet blitt DNBs nest mest populære fond.</p>
+                        <p>Mens sølvprisen har skutt i været, har fondet AuAg Silver Bullet blitt DNBs nest mest populære fond....</p>
                     </div>
                 </div>
             
@@ -580,7 +527,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:58:32 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/Wvqg5k/gigantene-slipper-tall-kritisk-for-markedet" target="_blank">Gigantene slipper tall: – Kritisk for markedet</a></h2>
-                        <p>Dette blir et av de store temaene når gigantene åpner regnskapsbøkene, mener analytikere.</p>
+                        <p>Dette blir et av de store temaene når gigantene åpner regnskapsbøkene, mener analytikere....</p>
                     </div>
                 </div>
             
@@ -592,7 +539,31 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 11:14:33 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/oEABJ7/gustav-magnar-witzoee-tar-over-som-daglig-leder-i-familieselskapet-kvarv" target="_blank">Gustav Magnar Witzøe tar over som daglig leder i familieselskapet</a></h2>
-                        <p>– En naturlig videreføring, skriver Norges rikeste.</p>
+                        <p>– En naturlig videreføring, skriver Norges rikeste....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Og-7wY-iuyrcisvIgYo5swebdXqUwJ2LRbFR9dTgA7dw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 10:47:46 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/ny-rapport_-noen-far-rimeligere-matvarer-enn-andre-1.17741593" target="_blank">Ny rapport: Noen får rimeligere matvarer enn andre</a></h2>
+                        <p>Folk med høy digital kompetanse kan få flere rabatter og tilbud i matbutikkene, viser ny undersøkelse. – Du må nesten ha doktorgrad i dagligvare, sier Forbrukerrådet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/96Ct6AM9lp-AL1IJJM3XcAGqFR8i1HDw66_fqIzyJSJA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 11:05:46 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/stein-lier-hansen-innrommer-uriktig-forklaring-i-retten-1.17746128" target="_blank">Stein Lier–Hansen innrømmer uriktig forklaring</a></h2>
+                        <p>Stein Lier-Hansen står i vitneboksen på andre dag for rad, tiltalt for grov korrupsjon. I dag starter aktor sin utspørring....</p>
                     </div>
                 </div>
             
@@ -604,7 +575,19 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:29:08 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/28/8323932/maling-russere-foler-seg-omringet-av-fiender" target="_blank">– Føler seg omringet av fiender</a></h2>
-                        <p>Mange i Russland mener landet er omringet av fiender og selv er et offer, går det fram i en fersk måling fra det uavhengige Levada-senteret i Moskva.</p>
+                        <p>Mange i Russland mener landet er omringet av fiender og selv er et offer, går det fram i en fersk måling fra det uavhengige Levada-senteret i Moskva....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/4h2GzIye228HVdX17T3sGQ0I33XIumY79BD0kp__1jLw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 06:44:51 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/utanriksministeren-i-ukraina_-_-zelenskyj-er-klar-til-a-mote-putin-1.17745700" target="_blank">Utanriksministeren i Ukraina: – Zelenskyj er klar til å møte Putin</a></h2>
+                        <p>Volodymyr Zelenskyj har aldri diskutert krigen i Ukraina med Vladimir Putin....</p>
                     </div>
                 </div>
             
@@ -616,7 +599,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 09:55:35 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/naeringseiendom/2026/01/28/8323916/norwegian-property-eide-nordr-selger-seg-ut-av-sverige" target="_blank">Selger seg ut av Sverige</a></h2>
-                        <p>Nordr selger hele den svenske virksomheten, inkludert Folkhem, til ledelsen og enheter kontrollert av Starwood Capital Group.</p>
+                        <p>Nordr selger hele den svenske virksomheten, inkludert Folkhem, til ledelsen og enheter kontrollert av Starwood Capital Group....</p>
                     </div>
                 </div>
             
@@ -628,7 +611,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 09:56:07 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/28/8323921/kronprinsparet-skal-ikke-vaere-til-stede-i-hoiby-rettssaken-kronprinsessen-skal-pa-privat-reise" target="_blank">Høiby-saken: Møter ikke i retten</a></h2>
-                        <p>Kronprinsparet kommer ikke til å være i retten under straffesaken mot Marius Borg Høiby, sier kronprins Haakon.</p>
+                        <p>Kronprinsparet kommer ikke til å være i retten under straffesaken mot Marius Borg Høiby, sier kronprins Haakon....</p>
                     </div>
                 </div>
             
@@ -640,7 +623,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:05:40 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8323925/listhaug-i-strupen-pa-store-om-boligskatt" target="_blank">– Ny boligskatt må settes på pause</a></h2>
-                        <p>Frp raser mot den nye modellen for boligskatt, og Venstre ber om at den må pauses. Statsminister Jonas Gahr Støre måtte svare for seg i Stortinget.</p>
+                        <p>Frp raser mot den nye modellen for boligskatt, og Venstre ber om at den må pauses. Statsminister Jonas Gahr Støre måtte svare for seg i Stortinget....</p>
                     </div>
                 </div>
             
@@ -652,7 +635,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:20:52 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323869/dagens-aksjetips-helomvending-fra-dnb-carnegie-gjor-dobbeltoppgradering" target="_blank">Helomvending fra DNB Carnegie – gjør dobbeltoppgradering med 20 prosent oppside.</a></h2>
-                        <p>DNB Carnegie gjør helomvending fra salgsanbefaling til kjøp, mens ABG nedgraderer entreprenør. For å nevne noe.</p>
+                        <p>DNB Carnegie gjør helomvending fra salgsanbefaling til kjøp, mens ABG nedgraderer entreprenør. For å nevne noe....</p>
                     </div>
                 </div>
             
@@ -664,7 +647,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 09:45:27 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/2p3BjG/nok-et-solcelleselskap-konkurs" target="_blank">Nok et solcelleselskap konkurs</a></h2>
-                        <p>28 ansatte rammes av en konkurs i solcelleselskapet Sesol.</p>
+                        <p>28 ansatte rammes av en konkurs i solcelleselskapet Sesol....</p>
                     </div>
                 </div>
             
@@ -676,7 +659,19 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 10:00:09 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/6qkBk8/investtech-analyse-tre-kjoepskandidater" target="_blank">Investtech-analyse: Tre kjøpskandidater</a></h2>
-                        <p>Pioneer Property Group og Instabank beveger seg for tiden snorrett oppover. Også BW Offshore Limited følger en stigende trend. Med statistikk som grunnlag ser vi nærmere på de tre kjøpskandidatene.</p>
+                        <p>Pioneer Property Group og Instabank beveger seg for tiden snorrett oppover. Også BW Offshore Limited følger en stigende trend. Med statistikk som grunnlag ser vi nærmere på de tre ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 09:31:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/kronprins-haakon_-vi-kommer-ikke-til-a-vaere-til-stede-i-rettssalen-1.17745182" target="_blank">Preget kronprins møtte pressen: Vi kommer ikke til å være til stede i rettssalen</a></h2>
+                        <p>En preget kronprins Haakon snakket direkte til de berørte i rettssaken mot Marius Borg Høiby da han møtte pressen i formiddag. Han klargjorde også at kronprinsparet ikke kommer til...</p>
                     </div>
                 </div>
             
@@ -688,7 +683,19 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 09:27:04 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8323890/det-russiske-raffineriet-berlin-ikke-kan-miste" target="_blank">Det russiske raffineriet Berlin ikke kan miste</a></h2>
-                        <p>Et amerikansk sanksjonsunntak utløper 29. april og kan ramme PCK-raffineriet i Schwedt, som forsyner Berlin-området med drivstoff. Regjeringen vurderer nå både forlengelse og nasjonalisering.</p>
+                        <p>Et amerikansk sanksjonsunntak utløper 29. april og kan ramme PCK-raffineriet i Schwedt, som forsyner Berlin-området med drivstoff. Regjeringen vurderer nå både forlengelse og nasjo...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/BXLnuPUzsWFLAdVCuBYh6grfK-iYpOBeX3fZjucIVEig.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 09:19:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/utenlandsk-sjafor-siktet-etter-dodsulykken-pa-e10-i-tjeldsund-1.17745733" target="_blank">Utenlandsk mann siktet etter dødsulykken i Tjeldsund: – Svært tragisk</a></h2>
+                        <p>To kvinner omkom i frontkollisjonen i Tjeldsund tirsdag ettermiddag. En person fra et utenlandsk turfølge er siktet etter ulykken....</p>
                     </div>
                 </div>
             
@@ -700,7 +707,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 08:43:58 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/28/8323877/die-welt-farlig-strategi-fra-mark-carney" target="_blank">Die Welt: – Farlig strategi fra Mark Carney</a></h2>
-                        <p>Die Welt: – Farlig strategi fra Mark Carney</p>
+                        <p>Die Welt: – Farlig strategi fra Mark Carney...</p>
                     </div>
                 </div>
             
@@ -712,7 +719,31 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 08:46:40 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/medier/2026/01/28/8323464/oskar-westerlin-med-milliarddrom" target="_blank">Influenser Oskar Westerlin med milliarddrøm: – Det kan bli veldig stort.</a></h2>
-                        <p>Oskar Westerlins nye AI-startup prises til 35 millioner etter en måned. – Det kan bli veldig stort, sier influenseren, som også har begynt å investere i aksjer.</p>
+                        <p>Oskar Westerlins nye AI-startup prises til 35 millioner etter en måned. – Det kan bli veldig stort, sier influenseren, som også har begynt å investere i aksjer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/05zbUAOEDQZKKx6RNj-xaQ53PHe0tXJ38vcvobwzAhrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 06:53:11 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/gult-farevarsel-for-lokal-gras--og-lyngbrannfare-_-brannvesenet-atvarar-mot-a-tenne-bal-1.17745704" target="_blank">– Det kan vere like tørt som om sommaren</a></h2>
+                        <p>Lite nedbør og ein snøfattig vinter aukar skogbrannfaren fleire stadar i landet. Brannvesenet åtvarar mot at det kan vere like tørt no som om sommaren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/-BXC2_CCFgsVCiAsaBXwmwfYgyabMNyDz3hudzh7tdNg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 08:23:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/klima/forsker-mener-det-vil-ta-lang-tid-a-fa-til-gruvevirksomhet-pa-gronland-1.17735394" target="_blank">Forsker mener det vil ta lang tid å få til gruvevirksomhet på Grønland</a></h2>
+                        <p>Klimaendringene på Grønland skaper interesse for mineralene på øya. Men det er en rekke praktiske problemer som må løses....</p>
                     </div>
                 </div>
             
@@ -724,7 +755,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 08:02:43 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323874/oslo-bors-apner-opp" target="_blank">Oslo Børs stiger 0,5 prosent fra start. Nordic Semi stiger 3 prosent etter knalltall fra ASML.</a></h2>
-                        <p></p>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -736,7 +767,7 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 08:15:48 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/ravarer/2026/01/28/8323868/solvprisen-videre-opp-til-165-dollar" target="_blank">Sølvprisen: Videre opp til 165 dollar?</a></h2>
-                        <p>Skattegrep i Kina og nye låneordninger i India løfter sølv som investeringsobjekt og kan være med på å forklare den kraftige oppgangen.</p>
+                        <p>Skattegrep i Kina og nye låneordninger i India løfter sølv som investeringsobjekt og kan være med på å forklare den kraftige oppgangen....</p>
                     </div>
                 </div>
             
@@ -748,47 +779,11 @@ Samme dag ble han siktet for flere tilfeller av overgrep mot barn i foreningen.<
                             Wed, 28 Jan 2026 08:16:26 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8323875/okea-med-nytt-brage-funn" target="_blank">Okea med nytt Brage-funn</a></h2>
-                        <p>Okea og partnerne har gjort et nytt funn ved Brage-feltet. Tilleggsressursene i «Knockando Fensfjord» er anslått til 0,5–1,5 millioner standard kubikkmeter utvinnbare oljeekvivalenter dersom funnet er olje.</p>
+                        <p>Okea og partnerne har gjort et nytt funn ved Brage-feltet. Tilleggsressursene i «Knockando Fensfjord» er anslått til 0,5–1,5 millioner standard kubikkmeter utvinnbare oljeekvivalen...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 08:02:38 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/Wvq6Xj/oslo-boers-stiger-fra-start" target="_blank">Oslo Børs stiger fra start</a></h2>
-                        <p>Oslo Børs stiger for fjerde dag på rad. Stolt-Nielsen faller etter ferske tall.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143284897.jpg%3F%26accessToken%3D62f8fb5b67cc1c774b324585f0d857554b89ecbb2181900088af978631318617" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 07:22:06 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/01/28/8323864/ordreinngangen-i-asml-knuser-forventning" target="_blank">AI-bjellesau: Nøkkeltall knuser konsensus</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F58842980.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dbd2c8478c0938c57241f932d8cd4a7a310d5cffdbff5fbc9e282535a5f815741" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 07:24:55 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/7806953/10-ting-du-ma-vite-for-borsapning" target="_blank">10 ting du må vite før børsåpning: Oljeprisløft, FED-beslutning og Telenor-oppgradering</a></h2>
-                        <p>10 ting du må vite før børsåpning</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 28.01.2026 13:30</div>
+                <div class="footer">Sist oppdatert: 28.01.2026 14:21</div>
             </div>
         </body>
         </html>
