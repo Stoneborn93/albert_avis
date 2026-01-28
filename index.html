@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -72,7 +69,7 @@
                             Wed, 28 Jan 2026 15:25:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/league-of-legends-slar-kraftig-fra-seg-i-nytt-slassespill/519896" target="_blank">League of Legends slår kraftig fra seg i nytt slåssespill</a></h2>
-                        <p>Nå også på konsoll.</p>
+                        <p>Nå også på konsoll....</p>
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
@@ -84,7 +81,7 @@
                             Wed, 28 Jan 2026 16:04:25 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/brukte-ki-til-a-lage-utpressingsvirus-kan-ikke-dekryptere-filene/567520" target="_blank">[Ekstra] Nytt utpressings­virus laget med KI har en fatal feil</a></h2>
-                        <p>«Sicarii» inneholder en fatal feil, ifølge sikkerhetsforskere.</p>
+                        <p>«Sicarii» inneholder en fatal feil, ifølge sikkerhetsforskere....</p>
                     </div>
                 </div>
             
@@ -96,231 +93,58 @@
                             Wed, 28 Jan 2026 15:00:00 GMT
                         </div>
                         <h2><a href="https://www.tek.no/i/K8pP65" target="_blank">Google lekket Android for PC ved en feil</a></h2>
-                        <p>Dette er «Aluminium OS»</p>
+                        <p>Dette er «Aluminium OS»...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F86715547.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D9117ff077c75df9db2f9fc10e9ce2bce51cdba6b27e889f4da4a93fbe2f522cb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 20:00:15 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/shipping/2026/01/28/8323430/john-fredriksen-har-gjort-100-gangeren-rikere-enn-noensinne" target="_blank">John Fredriksen har gjort 100-gangeren – rikere enn noensinne</a></h2>
+                        <p>John Fredriksens formue eser ut og er nå på rundt 285 milliarder. Det betyr hundregangeren siden han tok tankflåten på børs første gang....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/db890e03-5242-4a0a-bd6d-5272f9d4688b?fit=crop&format=auto&h=900&w=1600&s=7fedb45d5eac5e3f4742057cd0b692762dd037df" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143367786.jpg%3F%26accessToken%3D5e3b86848e0e9f71c51fa8f0360cff207b18a304da2c975a6e09fa28bab8e365" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Teknologi">Teknologi</span> 
-                            Wed, 28 Jan 2026 14:00:03 GMT
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 28 Jan 2026 20:18:51 GMT
                         </div>
-                        <h2><a href="https://www.tek.no/i/LMmRvR" target="_blank">AMD Ryzen 7 9850X3D: den nye gamingkongen</a></h2>
-                        <p>Men hvor mye bedre er den, uten press fra rivalen?</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/n-DxSGsyfwmifz3ihEOq_QaPlo4g2SYctK3Eh5RyoDJQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 18:48:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/alexander-sorloth-fra-start-mot-glimt-1.17747047" target="_blank">Alexander Sørloth fra start mot Glimt</a></h2>
-                        <p>Alexander Sørloth spiller fra start for sitt Atlético Madrid mot Bodø/Glimt onsdag kveld.
-Mens Glimt håper på plass i omspillet, kjemper Atlético Madrid for å gå direkte til utslagsspillet i Mesterligaen.
-Trener Kjetil Knutsen starter med det samme laget som vant over Manchester City:
-Nikita Haikin – Fredrik Sjøvold, Odin Bjørtuft, Jostein Gundersen, Fredrik Andre Bjørkan – Håkon Evjen, Patrick Berg, Sondre Brunstad Fet – Ole Didrik Blomberg, Kasper Høgh, Jens Petter Hauge.
-Ulrik Saltnes har blitt pappa til sitt andre barn og er ikke med til Atlético-kampen. Daniel Bassi kommer derfor inn på reservebenken. Der sitter også Julian Faye Lund, Isak Sjong, Magnus Bech Riisnæs, Villads Nielsen, Haitam Aleesami, Isak Dybvik Määttä, Sondre Auklend, Anders Klynge, Andreas Helmersen og Hindrin Chooly.
-Det er seks plussgrader på Estadio Metropolitano.</p>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/01/28/8324162/fed-sjef-om-cook-avgjorelse-i-hoyesterett-kanskje-den-viktigste-rettssaken-noensinne" target="_blank">Fed-sjef om Cook-avgjørelse i høyesterett: – Kanskje den viktigste rettssaken noensinne</a></h2>
+                        <p>President Donald Trumps forsøk på å sparke Lisa Cook kan være «den viktigste rettssaken» i Feds historie. Det sa sentralbanksjef Jerome Powell onsdag....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/8iK5JIjDWYf9UAOQL9MN0A4xjag0IvAqNltFLwEQAxrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://gfx.nrk.no/o99yKJEpcP6fyHfeLWfvrQP98VXsfKJh07-wKteKjaag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
                             <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 19:00:27 GMT
+                            Wed, 28 Jan 2026 20:01:23 GMT
                         </div>
-                        <h2><a href="https://www.nrk.no/urix/en-viktig-fiende-for-trump-1.17746546" target="_blank">Trump kaller demonstrantene betalte opprørere</a></h2>
-                        <p>Trump trapper ikke ned angrepene selv etter at to av dem er blitt drept i Minneapolis.</p>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/roboter-og-forerlos-bat_-dette-er-statnetts-nye-_vapen_-pa-havets-bunn-1.17743194" target="_blank">Inspiserer strømkablene på sjøbunnen med ny metode</a></h2>
+                        <p>Statnett tar i bruk førerløs båt for å inspisere sjøkablene mer effektivt....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Es12hCZj11KjaR4GabvZugZggECsC32mYkIL3FonMuaQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://gfx.nrk.no/TCKfnr4pSlVYCRrnm7uNzQ7XZofogzkywtSorwl9MV1Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
                             <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 18:24:06 GMT
+                            Wed, 28 Jan 2026 20:15:21 GMT
                         </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/e-poster-avslorer_-tine-sundtoft-brukte-inhabil-veidirektor-1.17733663" target="_blank">E-poster avslører: Sjefen brukte inhabil veidirektør</a></h2>
-                        <p>NRK kan avsløre at fylkeskommunedirektøren i Agder flere ganger involverte sin veisjef i arbeidet med den omstridte batteriveien – lenge etter at hun erklærte ham inhabil.</p>
+                        <h2><a href="https://www.nrk.no/vestland/tar-nytt-grep-for-a-hindre-juks-pa-eksamen-1.17734104" target="_blank">Denne dingsen skal avsløre eksamensjuks</a></h2>
+                        <p>Skoler tar nytt verktøy i bruk mot KI-juks via mobile nettverk. – Jeg trodde først det var en dårlig spøk....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/iNmLOlBkSg70auvXqZP6KQ25js9ZtKHafwem4QWs2jFA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 17:19:39 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/fox-news_-agentar-suspenderte-etter-minneapolis-skytinga-1.17746896" target="_blank">Fox News: Agentar suspenderte etter Minneapolis-skytinga</a></h2>
-                        <p>Dei to føderale immigrasjonsagentane ssm avfyrte våpnene sine under den dødelege konfrontasjonen med Alex Pretti er no suspenderte, opplyser ein anonym amerikansk justismyndigheit til Fox News.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/iNmLOlBkSg70auvXqZP6KQ25js9ZtKHafwem4QWs2jFA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 18:01:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/medier_-agentene-som-skjot-pretti-er-suspendert-1.17746964" target="_blank">Medier: Agentene som skjøt Pretti er suspendert</a></h2>
-                        <p>De to agentene som skjøt og drepte Alex Pretti er suspendert, skriver Fox News og MS NOW.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Ao5qvYjj8pDuoiYIifrqAQpM8XGVRyOoohh4ZFKnUS4Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 16:39:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/byggesoknader-kan-bli-enklare-med-digital-loysing-1.17730566" target="_blank">Digital teneste skal få ned ventetida</a></h2>
-                        <p>Skal du gjere noko på eigedommen din, risikerer du å måtte vente tre månader før du får svar på byggesøknaden.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/tOmM4cLvbOihekrK9_aTUgjvpJ0dsv6YFlh5EoOh_GQg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 16:43:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/ki-musikk-inn-i-varmen-1.17740176" target="_blank">KI-musikk inn i varmen</a></h2>
-                        <p>Dette sier jeg ikke med et lett hjerte: Det er på tide å ta KI-musikken inn i varmen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/lcjI4uvAK9IR3p5LEY9CXwvmQqLzvvbe6hbU7n2knVWg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 17:09:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sapmi/sonnen-har-lovfestet-rett-til-samisk-_-far-matte-sende-100-purringer-for-a-bli-hort-1.17623806" target="_blank">Sønnen har lovfestet rett til samisk – far måtte sende 100 purringer for å bli hørt</a></h2>
-                        <p>100 e-poster, ubesvarte anrop og tre års ventetid. Dette ble virkeligheten for Eirik Larsen da han ba om samiskundervisning til sønnen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:15:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/bystyret-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
-                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/M_ltgoFCW9uy712NRS_04QVUViJ-3a_u0vipnFCWUC9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 15:44:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/her-skal-glimt-overvinne-bortespokelset-_-mot-atletico-madrid-som-_aldri_-taper-hjemme-1.17744425" target="_blank">Her må Glimt knuse bortespøkelset – mot et lag som «aldri» taper hjemme</a></h2>
-                        <p>Glimt må vinne den avgjørende kampen i Madrid for å holde liv i Mesterliga-eventyret. Da må både Glimt og Atlético klare noe de ikke har gjort på 462 dager.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wlTqog7yvMD8Y0DfmyDEsA5I6jQ4NEMkQ6qoUNOUpWYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 16:16:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/derfor-er-amerikanske-krigsskip-pa-vei-mot-iran-1.17745962" target="_blank">Derfor er amerikanske krigsskip på vei mot Iran</a></h2>
-                        <p>Planlegger USA et angrep mot Iran eller vil Trump presse landet til en ny atomavtale?</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6ZtM_vsQ-3_Yyh6UYtHJhQrTwPonJnkZdKIaHNlU2Klw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 15:26:18 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/med-hol-i-cv-en-fann-kari-fast-jobb-pa-rema-ved-hjelp-av-nav-_-stenseng-ber-fleire-om-a-ta-sjansen-1.17736788" target="_blank">Ber om at fleire som Kari får ein sjanse</a></h2>
-                        <p>Karin Tyvoll (50) fekk ein sjanse, men altfor mange blir ståande på utsida av arbeidslivet. Arbeidsministeren ber arbeidsgjevarar tørre å tilsetje folk med hol i CV-en.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:15:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/byradet-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
-                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/7JgRJHu_TDqf6pr5r6R79gr0oBRo4Nwg6xSr3xT1DH-g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:05:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/manen-gikk-ned-og-deretter-opp-pa-smola-i-more-og-romsdal-_-resultatet-blei-spektakulaert-1.17746284" target="_blank">Fikk et sjeldent møte med månen: – Hva søren er dette, tenkte jeg</a></h2>
-                        <p>Fotografen Kurt Sivertsen skulle ta noen vinterbilder i morgentimene i dag. Han fikk et spektakulært møte med månen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:20:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/ulykke-pa-e18-1.17746710" target="_blank">E18 stengt etter ulykke: Bil har kjørt i veggen</a></h2>
-                        <p>En bil har kjørt i veggen ved Brattåstunnelen på E18 i Porsgrunn. Veien er stengt i nordgående retning.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/QYj4M1C1qZIQwCyGXwiNOgiigWgRWlT6HlCXsBTzpPvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 12:03:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/klinikksjef-i-helse-more-og-romsdal-gar-av-etter-budsjett-uenighet-1.17746045" target="_blank">Helsesjef går av: – Det er en grense for hva som er mulig</a></h2>
-                        <p>Tidligere klinikksjef ved Ålesund sjukehus, Elisabeth Siebke, mener sparekuttene hun ble satt til ikke er mulig å gjennomføre.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/WT2pkf5QOlv0oB5D0AngVQQ0RWX3S8AWFWdfKDCz-gJg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 28 Jan 2026 14:06:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/ble-utsatt-for-vold-pa-t-banen-_-har-ikke-krav-pa-voldserstatning-1.17717439" target="_blank">Ba T-banepassasjerer dempe musikken – endte i mareritt</a></h2>
-                        <p>På vei hjem fra byen ble Chris Midtun slått, sparket og tatt kvelertak på. Likevel er det ikke alvorlig nok for få voldsoffererstatning.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F93891493.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D3c113aa25b8cefc44b73808cc0b17f76d21d86826a89745b1401d3d1b046addd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -329,7 +153,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 18:44:51 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323836/protector-leverer-resultatloft-deler-ut-kjempeutbytte" target="_blank">Utbyttefest etter sterkt kvartal</a></h2>
-                        <p>Etter et sterkt fjerde kvartal, deler Protector ut 6 kroner pr. aksje til aksjonærene.</p>
+                        <p>Etter et sterkt fjerde kvartal, deler Protector ut 6 kroner pr. aksje til aksjonærene....</p>
                     </div>
                 </div>
             
@@ -341,7 +165,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 19:00:43 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/01/28/8324143/fed-holder-renten-uendret" target="_blank">Fed holder renten uendret</a></h2>
-                        <p>Fed holder renten uendret som ventet.</p>
+                        <p>Fed holder renten uendret som ventet....</p>
                     </div>
                 </div>
             
@@ -353,7 +177,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 19:00:58 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/skatt/2026/01/28/8323949/stoltenbergs-formuestriks" target="_blank">Stoltenbergs formuestriks. Er dette en ny selskapslek?</a></h2>
-                        <p>At Jens Stoltenberg klarer å skaffe seg oversikt over strender, brygger, utsikt, lekeplasser og støy, tror vi ikke på. Vi ville tatt boliger ut fra formuesskatten.</p>
+                        <p>At Jens Stoltenberg klarer å skaffe seg oversikt over strender, brygger, utsikt, lekeplasser og støy, tror vi ikke på. Vi ville tatt boliger ut fra formuesskatten....</p>
                     </div>
                 </div>
             
@@ -365,7 +189,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 18:50:19 GMT
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/Ok3j7w/en-mer-rettferdig-formuesskatt" target="_blank">En mer rettferdig formuesskatt</a></h2>
-                        <p>Regjeringen følger nå opp Stortingets vedtak om å gjøre verdsettingen riktigere og skattesystemet mer rettferdig. Dette gjør at nær dobbelt så mange får lavere skatt enn høyere skatt.</p>
+                        <p>Regjeringen følger nå opp Stortingets vedtak om å gjøre verdsettingen riktigere og skattesystemet mer rettferdig. Dette gjør at nær dobbelt så mange får lavere skatt enn høyere ska...</p>
                     </div>
                 </div>
             
@@ -377,7 +201,44 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 19:17:03 GMT
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/j0zKXo/usas-sentralbank-holder-renten-uendret" target="_blank">USAs sentralbank holder renten uendret</a></h2>
-                        <p>Sentralbanken indikerer at det ikke kommer noe nytt rentekutt med det første, mener økonom.</p>
+                        <p>Sentralbanken indikerer at det ikke kommer noe nytt rentekutt med det første, mener økonom....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/n-DxSGsyfwmifz3ihEOq_QaPlo4g2SYctK3Eh5RyoDJQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 18:48:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/alexander-sorloth-fra-start-mot-glimt-1.17747047" target="_blank">Alexander Sørloth fra start mot Glimt</a></h2>
+                        <p>Alexander Sørloth spiller fra start for sitt Atlético Madrid mot Bodø/Glimt onsdag kveld.
+Mens Glimt håper på plass i omspillet, kjemper Atlético Madrid for å gå direkte til utslag...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/8iK5JIjDWYf9UAOQL9MN0A4xjag0IvAqNltFLwEQAxrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 19:00:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/en-viktig-fiende-for-trump-1.17746546" target="_blank">Trump kaller demonstrantene betalte opprørere</a></h2>
+                        <p>Trump trapper ikke ned angrepene selv etter at to av dem er blitt drept i Minneapolis....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Es12hCZj11KjaR4GabvZugZggECsC32mYkIL3FonMuaQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 18:24:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/e-poster-avslorer_-tine-sundtoft-brukte-inhabil-veidirektor-1.17733663" target="_blank">E-poster avslører: Sjefen brukte inhabil veidirektør</a></h2>
+                        <p>NRK kan avsløre at fylkeskommunedirektøren i Agder flere ganger involverte sin veisjef i arbeidet med den omstridte batteriveien – lenge etter at hun erklærte ham inhabil....</p>
                     </div>
                 </div>
             
@@ -389,7 +250,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 18:00:35 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/01/28/8324090/tore-ulstein-i-ulstein-group-uro-er-ugunstig-for-oss" target="_blank">Tore Ulstein: – Uro er ugunstig for oss</a></h2>
-                        <p>Tore Ulstein i Ulstein Group: – Uro er ugunstig for oss</p>
+                        <p>Tore Ulstein i Ulstein Group: – Uro er ugunstig for oss...</p>
                     </div>
                 </div>
             
@@ -401,7 +262,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 18:02:05 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324137/wall-street-blandet-store-svingninger-for-rentebeslutning" target="_blank">Wall Street blandet: Store svingninger før rentebeslutning</a></h2>
-                        <p>De toneangivende indeksene venter i spenning på Feds rentebeslutning klokken 20 norsk tid.</p>
+                        <p>De toneangivende indeksene venter i spenning på Feds rentebeslutning klokken 20 norsk tid....</p>
                     </div>
                 </div>
             
@@ -413,7 +274,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 18:05:58 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/01/28/8324139/evercore-isi-advarer-om-tanknedtur-vraker-favorittstempel-pa-frontline" target="_blank">Storbank advarer om tanknedtur: Vraker favorittstempel på Frontline</a></h2>
-                        <p>Evercore ISI advarer mot svake fundamentale forhold i tankmarkedet. Investeringsbanken vraker Frontline og DHT som sine toppvalg i sektoren.</p>
+                        <p>Evercore ISI advarer mot svake fundamentale forhold i tankmarkedet. Investeringsbanken vraker Frontline og DHT som sine toppvalg i sektoren....</p>
                     </div>
                 </div>
             
@@ -425,7 +286,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 17:53:21 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/ExwRGo/innroemmet-oekonomisk-kriminalitet-jeg-var-ikke-bevisstloes" target="_blank">Innrømmet økonomisk kriminalitet: – Jeg var ikke bevisstløs</a></h2>
-                        <p>Stein Lier-Hansen ble grillet i retten, og innrømmet at han bevisst lot Norsk Industri betale for hyttenaboens sjøflyturer, samtidig som han tok betalt selv.</p>
+                        <p>Stein Lier-Hansen ble grillet i retten, og innrømmet at han bevisst lot Norsk Industri betale for hyttenaboens sjøflyturer, samtidig som han tok betalt selv....</p>
                     </div>
                 </div>
             
@@ -437,7 +298,31 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 18:07:49 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/aJWjzO/oppkjoepstopp-om-trump-finnes-en-positiv-mulighet" target="_blank">Oppkjøpstopp om Trump: – Finnes en positiv mulighet</a></h2>
-                        <p>Svenske EQT forvalter flere hundre milliarder euro. Styreleder Conni Jonsson kaller Trump-uroen grus i maskineriet, men sier de «må kunne gjøre forretninger overalt».</p>
+                        <p>Svenske EQT forvalter flere hundre milliarder euro. Styreleder Conni Jonsson kaller Trump-uroen grus i maskineriet, men sier de «må kunne gjøre forretninger overalt»....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/iNmLOlBkSg70auvXqZP6KQ25js9ZtKHafwem4QWs2jFA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 17:19:39 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/fox-news_-agentar-suspenderte-etter-minneapolis-skytinga-1.17746896" target="_blank">Fox News: Agentar suspenderte etter Minneapolis-skytinga</a></h2>
+                        <p>Dei to føderale immigrasjonsagentane ssm avfyrte våpnene sine under den dødelege konfrontasjonen med Alex Pretti er no suspenderte, opplyser ein anonym amerikansk justismyndigheit ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/iNmLOlBkSg70auvXqZP6KQ25js9ZtKHafwem4QWs2jFA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 18:01:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/medier_-agentene-som-skjot-pretti-er-suspendert-1.17746964" target="_blank">Medier: Agentene som skjøt Pretti er suspendert</a></h2>
+                        <p>De to agentene som skjøt og drepte Alex Pretti er suspendert, skriver Fox News og MS NOW....</p>
                     </div>
                 </div>
             
@@ -449,7 +334,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:43:37 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324129/politico-flere-eu-politikere-kritiske-til-mark-ruttes-trump-strategi" target="_blank">Politico: Flere EU-politikere kritiske til Ruttes Trump-strategi</a></h2>
-                        <p>Natos generalsekretær Mark Rutte møter økende kritikk fra europeiske politikere for sin håndtering av forholdet til president Donald Trump.</p>
+                        <p>Natos generalsekretær Mark Rutte møter økende kritikk fra europeiske politikere for sin håndtering av forholdet til president Donald Trump....</p>
                     </div>
                 </div>
             
@@ -461,7 +346,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:51:29 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324124/oskar-bakkevig-laster-opp-i-abl-bikker-10-prosent" target="_blank">Stjerneforvalter laster opp: Bikker 10 prosent</a></h2>
-                        <p>Holmen Spesialfond har plukket opp 400.000 aksjer i ABL Group. Nå sitter Oskar Bakkevig på over ti prosent av selskapet.</p>
+                        <p>Holmen Spesialfond har plukket opp 400.000 aksjer i ABL Group. Nå sitter Oskar Bakkevig på over ti prosent av selskapet....</p>
                     </div>
                 </div>
             
@@ -473,7 +358,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:57:47 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/industri/2026/01/28/8323929/forsvarsaksjer-til-himmels.-men-norbit-skuffer" target="_blank">Forsvarsaksjer til himmels – én favoritt skuffer</a></h2>
-                        <p>Europeiske forsvarsaksjer er rett opp i år, bortsett fra Norbit. Det er samtidig den aksjen analytikerne har størst forventning til.</p>
+                        <p>Europeiske forsvarsaksjer er rett opp i år, bortsett fra Norbit. Det er samtidig den aksjen analytikerne har størst forventning til....</p>
                     </div>
                 </div>
             
@@ -485,7 +370,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 17:21:04 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324133/irans-revolusjonsgarde-svarer-trump-vi-har-full-kontroll-over-hormuzstredet" target="_blank">Militærtopp svarer Trump: – Vi har full kontroll over Hormuzstredet</a></h2>
-                        <p>Trump advarer Iran om at tiden er i ferd med å renne ut. En iransk tjenestemann understreker at landet kontrollerer verdens viktigste oljerute, og at det ikke ønsker at verdensøkonomien skal lide.</p>
+                        <p>Trump advarer Iran om at tiden er i ferd med å renne ut. En iransk tjenestemann understreker at landet kontrollerer verdens viktigste oljerute, og at det ikke ønsker at verdensøkon...</p>
                     </div>
                 </div>
             
@@ -497,7 +382,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:51:48 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/wr8KKd/stoltenberg-om-usa-skatter-og-kloakkavgifter" target="_blank">Stoltenberg om USA, skatter og kloakkavgifter</a></h2>
-                        <p>Penger, pølser og politikk serverer en ekstraepisode med selveste finansminister Jens Stoltenberg som gjest.</p>
+                        <p>Penger, pølser og politikk serverer en ekstraepisode med selveste finansminister Jens Stoltenberg som gjest....</p>
                     </div>
                 </div>
             
@@ -509,7 +394,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:52:47 GMT
                         </div>
                         <h2><a href="https://e24.no/privatoekonomi/i/9pEpPr/stoltenberg-mente-ikke-aa-oeke-samlet-formuesskatt-paa-bolig" target="_blank">Stoltenberg: Mente ikke å øke samlet formuesskatt på bolig</a></h2>
-                        <p>Finansministeren forteller om hva som ligger bak den mye omtalte «skattebomben».</p>
+                        <p>Finansministeren forteller om hva som ligger bak den mye omtalte «skattebomben»....</p>
                     </div>
                 </div>
             
@@ -521,7 +406,43 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 17:01:04 GMT
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/y578jg/dollarfall-hovedofferet-for-trumps-politikk" target="_blank">Dollarfall: – Hovedofferet for Trumps politikk</a></h2>
-                        <p>Strateg mener Trumps kommentarer skremte investorer og bidro til ytterligere svekkelse av den amerikanske valutaen.</p>
+                        <p>Strateg mener Trumps kommentarer skremte investorer og bidro til ytterligere svekkelse av den amerikanske valutaen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Ao5qvYjj8pDuoiYIifrqAQpM8XGVRyOoohh4ZFKnUS4Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 16:39:01 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/byggesoknader-kan-bli-enklare-med-digital-loysing-1.17730566" target="_blank">Digital teneste skal få ned ventetida</a></h2>
+                        <p>Skal du gjere noko på eigedommen din, risikerer du å måtte vente tre månader før du får svar på byggesøknaden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/tOmM4cLvbOihekrK9_aTUgjvpJ0dsv6YFlh5EoOh_GQg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 16:43:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/ki-musikk-inn-i-varmen-1.17740176" target="_blank">KI-musikk inn i varmen</a></h2>
+                        <p>Dette sier jeg ikke med et lett hjerte: Det er på tide å ta KI-musikken inn i varmen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/lcjI4uvAK9IR3p5LEY9CXwvmQqLzvvbe6hbU7n2knVWg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 17:09:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sapmi/sonnen-har-lovfestet-rett-til-samisk-_-far-matte-sende-100-purringer-for-a-bli-hort-1.17623806" target="_blank">Sønnen har lovfestet rett til samisk – far måtte sende 100 purringer for å bli hørt</a></h2>
+                        <p>100 e-poster, ubesvarte anrop og tre års ventetid. Dette ble virkeligheten for Eirik Larsen da han ba om samiskundervisning til sønnen....</p>
                     </div>
                 </div>
             
@@ -533,7 +454,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:29:36 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324125/rubio-vi-er-pa-et-godt-sted-med-gronland" target="_blank">Rubio: Vi er på et godt sted med Grønland</a></h2>
-                        <p>USA er på et «godt sted» med Grønland for øyeblikket, sier utenriksminister Marco Rubio under en høring i Senatet i Washington.</p>
+                        <p>USA er på et «godt sted» med Grønland for øyeblikket, sier utenriksminister Marco Rubio under en høring i Senatet i Washington....</p>
                     </div>
                 </div>
             
@@ -545,7 +466,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 15:53:24 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/reise-og-fritid/2026/01/28/8324089/elbatprodusent-begjaert-konkurs" target="_blank">Elbåtprodusent begjært konkurs</a></h2>
-                        <p>– Utrolig smertefull, sier gründeren om beslutningen. Selv skal han ha investert opp mot 80 millioner kroner i satsingen.</p>
+                        <p>– Utrolig smertefull, sier gründeren om beslutningen. Selv skal han ha investert opp mot 80 millioner kroner i satsingen....</p>
                     </div>
                 </div>
             
@@ -557,7 +478,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:00:16 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/valuta/2026/01/28/8324115/avviser-spekulasjoner-dollaren-styrker-seg-markant" target="_blank">Avviser spekulasjoner: Dollaren styrker seg markant</a></h2>
-                        <p>Finansminister Bessent avviser at USA intervenerer i valutamarkedet, og sier landet fører en «sterk dollar»-politikk.</p>
+                        <p>Finansminister Bessent avviser at USA intervenerer i valutamarkedet, og sier landet fører en «sterk dollar»-politikk....</p>
                     </div>
                 </div>
             
@@ -569,7 +490,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:01:04 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324049/magnus-reitan-noen-scenarier-ender-med-et-brak" target="_blank">Magnus Reitan: – Noen scenarier ender med et brak</a></h2>
-                        <p>Magnus Reitan: – Noen scenarier ender med et brak</p>
+                        <p>Magnus Reitan: – Noen scenarier ender med et brak...</p>
                     </div>
                 </div>
             
@@ -581,7 +502,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 16:10:36 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324121/kreml-putin-apen-for-a-mote-zelenskyj-i-moskva" target="_blank">Kreml: Putin åpen for å møte Zelenskyj i Moskva</a></h2>
-                        <p>Russlands president Vladimir Putin er åpen for å ta imot Ukrainas president Volodymyr Zelenskyj til et møte i Moskva, sier Kreml.</p>
+                        <p>Russlands president Vladimir Putin er åpen for å ta imot Ukrainas president Volodymyr Zelenskyj til et møte i Moskva, sier Kreml....</p>
                     </div>
                 </div>
             
@@ -593,7 +514,43 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 15:34:39 GMT
                         </div>
                         <h2><a href="https://e24.no/privatoekonomi/i/0p4LnA/skattebomben-over-40-prosent-flere-dyre-boliger" target="_blank">«Skattebomben»: Over 40 prosent flere «dyre boliger»</a></h2>
-                        <p>Regjeringens reviderte boligverdimodell øker antall boliger over 10 millioner kroner betydelig. De aller fleste befinner seg i eller rundt Oslo.</p>
+                        <p>Regjeringens reviderte boligverdimodell øker antall boliger over 10 millioner kroner betydelig. De aller fleste befinner seg i eller rundt Oslo....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:15:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/bystyret-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
+                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/M_ltgoFCW9uy712NRS_04QVUViJ-3a_u0vipnFCWUC9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 15:44:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/her-skal-glimt-overvinne-bortespokelset-_-mot-atletico-madrid-som-_aldri_-taper-hjemme-1.17744425" target="_blank">Her må Glimt knuse bortespøkelset – mot et lag som «aldri» taper hjemme</a></h2>
+                        <p>Glimt må vinne den avgjørende kampen i Madrid for å holde liv i Mesterliga-eventyret. Da må både Glimt og Atlético klare noe de ikke har gjort på 462 dager....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wlTqog7yvMD8Y0DfmyDEsA5I6jQ4NEMkQ6qoUNOUpWYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 16:16:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/derfor-er-amerikanske-krigsskip-pa-vei-mot-iran-1.17745962" target="_blank">Derfor er amerikanske krigsskip på vei mot Iran</a></h2>
+                        <p>Planlegger USA et angrep mot Iran eller vil Trump presse landet til en ny atomavtale?...</p>
                     </div>
                 </div>
             
@@ -605,7 +562,19 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 15:29:26 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324081/fjerde-dag-med-oppgang-pa-oslo-bors-shippingaksje-stupte-pa-tall-flyaksje-loftet-seg-pa-dollarfall" target="_blank">Fjerde dag med oppgang på Oslo Børs: Shippingaksje stupte på tall – flyaksje løftet seg på dollarfall</a></h2>
-                        <p></p>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/6ZtM_vsQ-3_Yyh6UYtHJhQrTwPonJnkZdKIaHNlU2Klw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 15:26:18 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/med-hol-i-cv-en-fann-kari-fast-jobb-pa-rema-ved-hjelp-av-nav-_-stenseng-ber-fleire-om-a-ta-sjansen-1.17736788" target="_blank">Ber om at fleire som Kari får ein sjanse</a></h2>
+                        <p>Karin Tyvoll (50) fekk ein sjanse, men altfor mange blir ståande på utsida av arbeidslivet. Arbeidsministeren ber arbeidsgjevarar tørre å tilsetje folk med hol i CV-en....</p>
                     </div>
                 </div>
             
@@ -617,7 +586,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 15:21:44 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324059/stoltenberg-svarer-om-skattebombe-pa-hytter" target="_blank">Ny skattebombe kan slå hardt ut for hytteiere. Nå svarer Stoltenberg om innføring.</a></h2>
-                        <p>Jens Stoltenberg har ikke bestemt seg for om han vil ha ny verdsettelse på hytter. Men han tviholder på ny metode for boliger.</p>
+                        <p>Jens Stoltenberg har ikke bestemt seg for om han vil ha ny verdsettelse på hytter. Men han tviholder på ny metode for boliger....</p>
                     </div>
                 </div>
             
@@ -629,7 +598,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:33:53 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324070/wall-street-stiger-for-fed-beslutning" target="_blank">Wall Street før Feds rentebeslutning: S&amp;P 500 når 7.000 poeng for første gang noensinne</a></h2>
-                        <p>Wall Street stiger før kveldens rentebeslutning fra Fed.</p>
+                        <p>Wall Street stiger før kveldens rentebeslutning fra Fed....</p>
                     </div>
                 </div>
             
@@ -641,7 +610,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:42:35 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/01/28/8324051/aksjemarkedet-det-mest-negative-signalet-noensinne" target="_blank">Aksjemarkedet: Det mest negative signalet noensinne</a></h2>
-                        <p>Den viktigste enkeltindikatoren for fremtidig avkastning i aksjemarkedet gir nå sitt mest negative signal noensinne.</p>
+                        <p>Den viktigste enkeltindikatoren for fremtidig avkastning i aksjemarkedet gir nå sitt mest negative signal noensinne....</p>
                     </div>
                 </div>
             
@@ -653,7 +622,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:48:16 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/01/28/8324069/nye-problemer-for-russlands-skyggeflate-mistet-kontrollen-i-middelhavet" target="_blank">Nye problemer for «skyggeflåten»: Mistet kontrollen i Middelhavet</a></h2>
-                        <p>For andre gang på under én uke mistet et sanksjonert tankskip styringsevnen på vei inn i Middelhavet. Skipet frakter rundt 300.000 fat russisk diesel.</p>
+                        <p>For andre gang på under én uke mistet et sanksjonert tankskip styringsevnen på vei inn i Middelhavet. Skipet frakter rundt 300.000 fat russisk diesel....</p>
                     </div>
                 </div>
             
@@ -665,7 +634,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:59:22 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324036/fearnley-offshore-supply-det-tegner-seg-et-ganske-positivt-bilde" target="_blank">– Det tegner seg et ganske positivt bilde</a></h2>
-                        <p>Økt aktivitet og begrenset med skip gjør at markedet for store offshoreskip i Nordsjøen ser bedre ut.</p>
+                        <p>Økt aktivitet og begrenset med skip gjør at markedet for store offshoreskip i Nordsjøen ser bedre ut....</p>
                     </div>
                 </div>
             
@@ -677,7 +646,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 15:15:21 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8324098/olje-i-pluss-luksus-i-minus" target="_blank">Olje i pluss, luksus i minus</a></h2>
-                        <p>Onsdagens europeiske børsvinnere inkluderte olje- og gassgiganter som Shell og BP, mens Louis Vuittons kvartalstall bidro til fall i luksussektoren.</p>
+                        <p>Onsdagens europeiske børsvinnere inkluderte olje- og gassgiganter som Shell og BP, mens Louis Vuittons kvartalstall bidro til fall i luksussektoren....</p>
                     </div>
                 </div>
             
@@ -689,7 +658,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:31:13 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/9pEqj5/wall-street-stiger-fra-start" target="_blank">Wall Street stiger fra start</a></h2>
-                        <p>Markedet venter i spenning på kvartalsrapportene fra de store tek-selskapene. Etter stengetid kommer tallene fra Microsoft, Meta og Tesla.</p>
+                        <p>Markedet venter i spenning på kvartalsrapportene fra de store tek-selskapene. Etter stengetid kommer tallene fra Microsoft, Meta og Tesla....</p>
                     </div>
                 </div>
             
@@ -701,7 +670,31 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 15:02:17 GMT
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/Wvq7Ma/rentemoete-i-usa-har-ikke-noen-grunn-til-aa-kutte" target="_blank">Rentemøte i USA: – Har ikke noen grunn til å kutte</a></h2>
-                        <p>Amerikansk økonomi serverer flere grunner til å vente med videre kutt, mener økonomer.</p>
+                        <p>Amerikansk økonomi serverer flere grunner til å vente med videre kutt, mener økonomer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/hkgVxG-Ko4rkQVvV-96sjAVv_LFNRnooicEhLgyjTYaw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:15:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/byradet-stemte-ned-innstramminger-for-elsparkesykler-i-oslo-1.17746568" target="_blank">Stemte ned innstramminger for elsparkesykkel</a></h2>
+                        <p>Færre elsparkesykler, krav om vinterdekk, flere forbudssoner og nattestenging ble nedstemt i bystyret i Oslo onsdag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/7JgRJHu_TDqf6pr5r6R79gr0oBRo4Nwg6xSr3xT1DH-g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:05:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/manen-gikk-ned-og-deretter-opp-pa-smola-i-more-og-romsdal-_-resultatet-blei-spektakulaert-1.17746284" target="_blank">Fikk et sjeldent møte med månen: – Hva søren er dette, tenkte jeg</a></h2>
+                        <p>Fotografen Kurt Sivertsen skulle ta noen vinterbilder i morgentimene i dag. Han fikk et spektakulært møte med månen....</p>
                     </div>
                 </div>
             
@@ -713,7 +706,19 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:22:04 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/01/28/8324072/trump-hardt-ut-mot-ordforer-han-leker-med-ilden" target="_blank">Hardt ut mot ordfører: – Han leker med ilden</a></h2>
-                        <p>USAs president Donald Trump går hardt ut mot ordføreren i byen Minneapolis, der føderale agenter har drept to personer den siste tiden.</p>
+                        <p>USAs president Donald Trump går hardt ut mot ordføreren i byen Minneapolis, der føderale agenter har drept to personer den siste tiden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:20:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/ulykke-pa-e18-1.17746710" target="_blank">E18 stengt etter ulykke: Bil har kjørt i veggen</a></h2>
+                        <p>En bil har kjørt i veggen ved Brattåstunnelen på E18 i Porsgrunn. Veien er stengt i nordgående retning....</p>
                     </div>
                 </div>
             
@@ -725,7 +730,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 13:31:31 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/01/28/8324028/fearnley-spar-torrlast-til-himmels-anbefaler-atte-aksjer" target="_blank">Spår tørrlast til himmels</a></h2>
-                        <p>Fearnley hever kursmålene på en rekke tørrlastaksjer og meglerhuset forventer at 2026 vil bli det beste året på lang tid i tørrlast</p>
+                        <p>Fearnley hever kursmålene på en rekke tørrlastaksjer og meglerhuset forventer at 2026 vil bli det beste året på lang tid i tørrlast...</p>
                     </div>
                 </div>
             
@@ -737,7 +742,7 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 13:48:31 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/valuta/2026/01/28/8323880/dollarsvekkelsen-dette-er-vinnerne-og-taperne-pa-oslo-bors-ifolge-ekspertene" target="_blank">Dollarsvekkelsen – dette er vinnerne og taperne på Oslo Børs, ifølge ekspertene</a></h2>
-                        <p>– Rundt 60 prosent av hovedindeksen rapporterer inntjening i dollar, sier DNBs aksjestrateg Paul Harper. Her er vinnerne og taperne av dollarfallet.</p>
+                        <p>– Rundt 60 prosent av hovedindeksen rapporterer inntjening i dollar, sier DNBs aksjestrateg Paul Harper. Her er vinnerne og taperne av dollarfallet....</p>
                     </div>
                 </div>
             
@@ -749,47 +754,35 @@ Det er seks plussgrader på Estadio Metropolitano.</p>
                             Wed, 28 Jan 2026 14:18:55 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/industri/2026/01/28/8324054/analytiker-skeptisk-til-oppsplitting-vi-blir-sittende-pa-sidelinjen" target="_blank">Analytiker skeptisk til oppsplitting: – Vi blir sittende på sidelinjen</a></h2>
-                        <p>Morgan Stanley jekker opp kursmålet på Kongsberg Gruppen, men er skeptisk til oppsplittingen av selskapet.</p>
+                        <p>Morgan Stanley jekker opp kursmålet på Kongsberg Gruppen, men er skeptisk til oppsplittingen av selskapet....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143335107.jpg%3F%26accessToken%3Def2d320bd1a0ada15611baed84493fdfaaed80a1b834202ff9cd5cadd08272fc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://gfx.nrk.no/QYj4M1C1qZIQwCyGXwiNOgiigWgRWlT6HlCXsBTzpPvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 13:22:35 GMT
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 12:03:24 GMT
                         </div>
-                        <h2><a href="https://www.finansavisen.no/ravarer/2026/01/28/8324026/hedgefond-veteran-derfor-anbefaler-han-bade-gull-og-dollar" target="_blank">Hedgefond-veteran: Derfor anbefaler han både gull og dollar</a></h2>
-                        <p>Hedgefond-veteran Alexander Campbell mener investorer bør eie både gull og dollar for å balansere risiko i et marked preget av overdrevet dollarfrykt.</p>
+                        <h2><a href="https://www.nrk.no/mr/klinikksjef-i-helse-more-og-romsdal-gar-av-etter-budsjett-uenighet-1.17746045" target="_blank">Helsesjef går av: – Det er en grense for hva som er mulig</a></h2>
+                        <p>Tidligere klinikksjef ved Ålesund sjukehus, Elisabeth Siebke, mener sparekuttene hun ble satt til ikke er mulig å gjennomføre....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F76053693.jpg%3F%26accessToken%3D26dac0fc36778961885e2e3303e066c477323c831efddd476688446fea05b0cb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://gfx.nrk.no/WT2pkf5QOlv0oB5D0AngVQQ0RWX3S8AWFWdfKDCz-gJg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:39:14 GMT
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 28 Jan 2026 14:06:17 GMT
                         </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/01/28/8324007/sa-hoye-blir-stromprisene-torsdag" target="_blank">Så høye blir strømprisene torsdag</a></h2>
-                        <p>Strømprisene ligger langt over samme dag i fjor og i Nord-Norge er det snakk om en mangedobling. Slik blir strømprisene tirsdag.</p>
+                        <h2><a href="https://www.nrk.no/stor-oslo/ble-utsatt-for-vold-pa-t-banen-_-har-ikke-krav-pa-voldserstatning-1.17717439" target="_blank">Ba T-banepassasjerer dempe musikken – endte i mareritt</a></h2>
+                        <p>På vei hjem fra byen ble Chris Midtun slått, sparket og tatt kvelertak på. Likevel er det ikke alvorlig nok for få voldsoffererstatning....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143328976.jpg%3F%26accessToken%3Ddbee2da468c079eb7573c5c4749b2c660e6f504cfa46f090871007bf8cd54ba3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 28 Jan 2026 12:41:05 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/01/28/8323996/avliver-myten-om-kvinnelige-innsidekjop-det-ga-ikke-okonomisk-mening" target="_blank">Avliver myte: – Det ga ikke økonomisk mening</a></h2>
-                        <p>Kritikerne av kvoteringsreformen mente kvinnelige styremedlemmer sendte svakere signaler til markedet. En ny studie fra NHH og Oslo Met gir et tydelig svar.</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 28.01.2026 19:30</div>
+                <div class="footer">Sist oppdatert: 28.01.2026 20:21</div>
             </div>
         </body>
         </html>
