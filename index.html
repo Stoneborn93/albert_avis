@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -156,7 +159,153 @@
                         <p>Kirsti Bergstø er både fascinert og skremt etter USA-besøk. SV vedtar nå krav om utfasing av amerikansk programvare....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/GEXcDhbyWW_zrvO38uMP6QBpb6gnITCq9vdqGnID2DRg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 08:10:59 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/kommunebraket-i-bergen_-direktor-gar-av-pa-dagen-1.17747461" target="_blank">Kommunebråket i Bergen: Direktør går av på dagen</a></h2>
+                        <p>Belén Birkenes slutter som kommunaldirektør i Bergen med umiddelbar virkning. Det skjer dagen derpå mistillitsdramaet i bystyret i Bergen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/5vq2TMf59UUBrejbWqKIsw9VXd7UgMINybR-P35y2a9w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 09:00:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/xl/tatt-av-reven-1.17714051" target="_blank">Tatt av reven</a></h2>
+                        <p>I høst ble hennes verste mareritt virkelighet. Men «Mona» gir ikke opp kampen om å få sønnen ut av klørne til det kriminelle Foxtrot-nettverket....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/mjPiYwaYSA-ccD5fVVEhpQA4MD2mrYdezahBhsWYcbOw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 07:49:58 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/inghild-_78_-og-elin-marit-_70_-omkom-pa-e10-i-tjeldsund-1.17747386" target="_blank">Inghild (78) og Elin Marit (70) omkom på E10 i Tjeldsund</a></h2>
+                        <p>Det var Inghild Ursin Reed (78) og Elin Marit Ursin (70) som mistet livet i frontkollisjonen på E10 tirsdag ettermiddag.
+Sjåføren av bilen, en mann i 50-årene fra Indonesia, fremst...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/zRPRIlh9ojSZkS3pyoSAiwgecxC-EcchduVXaFvoyhhQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 06:40:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/kaldt_-klart-og-knusktorr-_-solrekord-for-januar-i-regnbyen-bergen-1.17747130" target="_blank">Her var det solrekord i januar – slik blir vintervêret framover</a></h2>
+                        <p>Regnbyen Bergen kan vise til ein heilt ny rekord. No ventar «ny runde» for store delar av landet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/glGXq4UDuZ4GOtLb2u3jRAWoJp_STJb7UHQZfl96yCPw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 07:01:59 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/oljefondet-okte-med-1526-milliarder-kroner-i-fjor-1.17747376" target="_blank">Oljefondet økte med 1526 milliarder kroner i fjor</a></h2>
+                        <p>Det ble klart da Statens pensjonsfond utland – populært kalt oljefondet – la fram sitt årsresultat for 2025 torsdag.
+Fondet hadde en verdi på 21 268 milliarder kroner per 31. desem...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pLHDx578q-o3pYNPBUGl7Q1QGXir9AlzbepJEn08A-aw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 06:21:57 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/sorlandsbanen_-go-ahead-lover-normal-drift-til-varen_-men-passasjerer-er-skeptiske-1.17745916" target="_blank">Go-Ahead lover bedring til våren – frustrerte togpendlere er skeptiske</a></h2>
+                        <p>Go-Ahead er i gang med omfattende vedlikehold av togsett på Sørlandsbanen. Selskapet lover normal drift til våren. – Vanskelig å tro på, sier passasjer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ojrvun4YZbcGsoKIknAfCAJgl-8FJXpatS6iphOnwD5A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 05:41:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/glimt-innrommer-kynisk-grep_-_-vi-prover-jo-a-droye-litt-tid-1.17747224" target="_blank">Glimt innrømmer kynisk grep: – Vi prøver jo å drøye litt tid</a></h2>
+                        <p>I bragden mot Atlético Madrid fant Glimt-spillerne fram noen «tjuvtriks». Kaptein Patrick Berg mener det er viktig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/dJ7C16578-kD5W6MR2zCbQOnrWzW3HfUyRUe0u4kZYcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 05:00:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/aldri-for-har-flere-klaget-pa-feilbehandling-i-helsevesenet-1.17746084" target="_blank">Aldri før har flere klaget på feilbehandling i helsevesenet</a></h2>
+                        <p>Over 8.300 personer søkte om pasientskadeerstatning i 2025, men kun 1 av 4 får faktisk innvilget kravet sitt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/HTLZZGYT-bAWOK2ZsT9cYAcdWJwbug8IIPs1PZJP1X7g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 05:00:10 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/bateieren-slapp-unna-med-bot_-_-flaks-at-han-ikke-drepte-oss-1.17729488" target="_blank">Båteieren slapp unna med bot: – Flaks at han ikke drepte oss</a></h2>
+                        <p>Føreren av motorbåten gikk på toalettet, så krasjet han i båten til Ann og Jørgen. Nå fortviler de over straffen båteieren fikk....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/t8b9tMe-OR3wghME-6_7xQt4nNdniCRxYfY0J5StGU5g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 03:45:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/kraftig-brann-ved-hardanger-fartoyvernsenter--_-bygning-og-flere-bater-i-flammene-1.17747256" target="_blank">Kraftig brann ved historisk senter – bygninger og båter i flammene</a></h2>
+                        <p>To båter ble totalskadd og en tredje båt ble påført store varmeskader i en brann ved Nordens største senter for historiske båter i Hardanger i natt. Brannen er slukket....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/SfEQvVLP2J06BqWz5okffg8rp_ZHSmkinT9Woj3GrgxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 04:14:56 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/ekspert-advarer-om-at-kulde-og-torr-luft-gir-okt-brannfare-i-trehus-1.17744327" target="_blank">Ekspert advarer om økt brannfare i trehus</a></h2>
+                        <p>Kulde, ingen nedbør og tørr luft kan doble faren for brann både ute og inne. Høgskolelektor etterlyser eget farevarsel som gjelder husbrann....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/iALvWLtP_2LSeZbXEvvOCAYO0DApIyQOUtiBw_iTrPew.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 29 Jan 2026 04:15:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/slik-brukte-ina-ki-i-soknaden-_-og-landet-jobben-1.17719501" target="_blank">Slik brukte Ina (24) KI i søknaden – og landet jobben</a></h2>
+                        <p>En av tre unge bruker KI til å skrive CV og søknad....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57349376.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D1e5a162cf0df734b810210101984273b7b6f337695f36f8da18c8477e42c028b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -242,30 +391,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/GEXcDhbyWW_zrvO38uMP6QBpb6gnITCq9vdqGnID2DRg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 08:10:59 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/kommunebraket-i-bergen_-direktor-gar-av-pa-dagen-1.17747461" target="_blank">Kommunebråket i Bergen: Direktør går av på dagen</a></h2>
-                        <p>Belén Birkenes slutter som kommunaldirektør i Bergen med umiddelbar virkning. Det skjer dagen derpå mistillitsdramaet i bystyret i Bergen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/5vq2TMf59UUBrejbWqKIsw9VXd7UgMINybR-P35y2a9w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 09:00:20 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/xl/tatt-av-reven-1.17714051" target="_blank">Tatt av reven</a></h2>
-                        <p>I høst ble hennes verste mareritt virkelighet. Men «Mona» gir ikke opp kampen om å få sønnen ut av klørne til det kriminelle Foxtrot-nettverket....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143372904.jpg%3F%26accessToken%3D0488c74ad8ec53a6e255cc05935d72e6e059b2243589160477e73d95154ce8ce" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -274,19 +399,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/01/29/8324225/die-welt-disiplin-avgjor-om-et-samfunn-forfaller" target="_blank">Die Welt: – Disiplin avgjør om et samfunn forfaller</a></h2>
                         <p>Die Welt: – Disiplin avgjør om et samfunn forfaller...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/mjPiYwaYSA-ccD5fVVEhpQA4MD2mrYdezahBhsWYcbOw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 07:49:58 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/inghild-_78_-og-elin-marit-_70_-omkom-pa-e10-i-tjeldsund-1.17747386" target="_blank">Inghild (78) og Elin Marit (70) omkom på E10 i Tjeldsund</a></h2>
-                        <p>Det var Inghild Ursin Reed (78) og Elin Marit Ursin (70) som mistet livet i frontkollisjonen på E10 tirsdag ettermiddag.
-Sjåføren av bilen, en mann i 50-årene fra Indonesia, fremst...</p>
                     </div>
                 </div>
             
@@ -371,18 +483,6 @@ Sjåføren av bilen, en mann i 50-årene fra Indonesia, fremst...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/vrOxOL/oppgang-paa-oslo-boers" target="_blank">Oppgang på Oslo Børs</a></h2>
                         <p>Gjensidige-aksjen faller etter kostnadssmell og milliardutbytte....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/zRPRIlh9ojSZkS3pyoSAiwgecxC-EcchduVXaFvoyhhQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 06:40:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/kaldt_-klart-og-knusktorr-_-solrekord-for-januar-i-regnbyen-bergen-1.17747130" target="_blank">Her var det solrekord i januar – slik blir vintervêret framover</a></h2>
-                        <p>Regnbyen Bergen kan vise til ein heilt ny rekord. No ventar «ny runde» for store delar av landet....</p>
                     </div>
                 </div>
             
@@ -519,31 +619,6 @@ Sjåføren av bilen, en mann i 50-årene fra Indonesia, fremst...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/glGXq4UDuZ4GOtLb2u3jRAWoJp_STJb7UHQZfl96yCPw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 07:01:59 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/oljefondet-okte-med-1526-milliarder-kroner-i-fjor-1.17747376" target="_blank">Oljefondet økte med 1526 milliarder kroner i fjor</a></h2>
-                        <p>Det ble klart da Statens pensjonsfond utland – populært kalt oljefondet – la fram sitt årsresultat for 2025 torsdag.
-Fondet hadde en verdi på 21 268 milliarder kroner per 31. desem...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pLHDx578q-o3pYNPBUGl7Q1QGXir9AlzbepJEn08A-aw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 06:21:57 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/sorlandsbanen_-go-ahead-lover-normal-drift-til-varen_-men-passasjerer-er-skeptiske-1.17745916" target="_blank">Go-Ahead lover bedring til våren – frustrerte togpendlere er skeptiske</a></h2>
-                        <p>Go-Ahead er i gang med omfattende vedlikehold av togsett på Sørlandsbanen. Selskapet lover normal drift til våren. – Vanskelig å tro på, sier passasjer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F58654628.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D577b585ff83b653c2c41430c2c1752e19070e3c5468cd5e457bda9d0bcc6b2d0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -640,18 +715,6 @@ Fondet hadde en verdi på 21 268 milliarder kroner per 31. desem...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ojrvun4YZbcGsoKIknAfCAJgl-8FJXpatS6iphOnwD5A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 05:41:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/glimt-innrommer-kynisk-grep_-_-vi-prover-jo-a-droye-litt-tid-1.17747224" target="_blank">Glimt innrømmer kynisk grep: – Vi prøver jo å drøye litt tid</a></h2>
-                        <p>I bragden mot Atlético Madrid fant Glimt-spillerne fram noen «tjuvtriks». Kaptein Patrick Berg mener det er viktig....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143369701.jpg%3F%26accessToken%3Daeddf229da7ea4e63468e6d73e7b387eb1f5dafa132aa0fce7565aefb9de4599" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -723,67 +786,7 @@ Fondet hadde en verdi på 21 268 milliarder kroner per 31. desem...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/dJ7C16578-kD5W6MR2zCbQOnrWzW3HfUyRUe0u4kZYcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 05:00:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/aldri-for-har-flere-klaget-pa-feilbehandling-i-helsevesenet-1.17746084" target="_blank">Aldri før har flere klaget på feilbehandling i helsevesenet</a></h2>
-                        <p>Over 8.300 personer søkte om pasientskadeerstatning i 2025, men kun 1 av 4 får faktisk innvilget kravet sitt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/HTLZZGYT-bAWOK2ZsT9cYAcdWJwbug8IIPs1PZJP1X7g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 05:00:10 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/bateieren-slapp-unna-med-bot_-_-flaks-at-han-ikke-drepte-oss-1.17729488" target="_blank">Båteieren slapp unna med bot: – Flaks at han ikke drepte oss</a></h2>
-                        <p>Føreren av motorbåten gikk på toalettet, så krasjet han i båten til Ann og Jørgen. Nå fortviler de over straffen båteieren fikk....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/t8b9tMe-OR3wghME-6_7xQt4nNdniCRxYfY0J5StGU5g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 03:45:20 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/kraftig-brann-ved-hardanger-fartoyvernsenter--_-bygning-og-flere-bater-i-flammene-1.17747256" target="_blank">Kraftig brann ved historisk senter – bygninger og båter i flammene</a></h2>
-                        <p>To båter ble totalskadd og en tredje båt ble påført store varmeskader i en brann ved Nordens største senter for historiske båter i Hardanger i natt. Brannen er slukket....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/SfEQvVLP2J06BqWz5okffg8rp_ZHSmkinT9Woj3GrgxQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 04:14:56 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/ekspert-advarer-om-at-kulde-og-torr-luft-gir-okt-brannfare-i-trehus-1.17744327" target="_blank">Ekspert advarer om økt brannfare i trehus</a></h2>
-                        <p>Kulde, ingen nedbør og tørr luft kan doble faren for brann både ute og inne. Høgskolelektor etterlyser eget farevarsel som gjelder husbrann....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/iALvWLtP_2LSeZbXEvvOCAYO0DApIyQOUtiBw_iTrPew.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 29 Jan 2026 04:15:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/slik-brukte-ina-ki-i-soknaden-_-og-landet-jobben-1.17719501" target="_blank">Slik brukte Ina (24) KI i søknaden – og landet jobben</a></h2>
-                        <p>En av tre unge bruker KI til å skrive CV og søknad....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 29.01.2026 09:21</div>
+                <div class="footer">Sist oppdatert: 29.01.2026 09:25</div>
             </div>
         </body>
         </html>
