@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -84,7 +87,7 @@
                         <p>«Humans&» mener vi må tenke nytt når det gjelder KI....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/8AhBRVKFq_CniuddCqcQWA1vQN6kbbYYWnTDWIiXuHlA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -149,18 +152,6 @@ Den pågrepne er gutt i midten av tenårene, som politiet har kjennsk...</p>
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sat, 31 Jan 2026 20:07:17 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/WvqJlr/aker-nscale-topp-norge-kan-vinne-ai-racet" target="_blank">Aker Nscale-topp: – Norge kan vinne AI-racet</a></h2>
-                        <p>Røkke-selskapet vil gjøre Norge til en «trygg havn» for suveren kunstig intelligens....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/4cz-NtFt5T3xS-U0MDDBUQiN6-YyIDP3PrdSHi7HCq2Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -205,6 +196,201 @@ Den pågrepne er gutt i midten av tenårene, som politiet har kjennsk...</p>
                         </div>
                         <h2><a href="https://www.nrk.no/norge/reagerer-pa-kronprinsessen-mette-marits-kontakt-med-jeffrey-epstein-1.17750712" target="_blank">Reagerer på kronprinsessens Epstein-kontakt: – Verst tenkelig tidspunkt</a></h2>
                         <p>Kronprinsessen søkte opp seksualforbryteren Epstein og fortsatte omfattende kontakt. – Dette er ikke bare dårlig dømmekraft, men mangel på dømmekraft, sier historiker Trond Norén I...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pCSM9fNvD36GnyssUeCVWwQ6AlRcv20BR81GCmmFmd6w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 15:27:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/mareritt-fra-bygde-norge-1.17745882" target="_blank">Mareritt fra Bygde-Norge</a></h2>
+                        <p>Et folkemøte i en liten bygd tok fra meg nattesøvnen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/o66RVbrclcTeeG79uOoIGwP9xVEJ6DgBYrweM4Tgi0vg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 15:34:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/martin-odegaard-pa-benken_-_-ikkje-det-arsenal-leitar-etter-no-1.17750664" target="_blank">Ødegaard på benken: – Ikkje det Arsenal leitar etter no</a></h2>
+                        <p>Ein sesong der Arsenal dreg seg mot ligatittelen, har det sett tyngre ut for kaptein Martin Ødegaard....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/DHNO3G_ZmHQVZJ_H4CCiSQWVrXChJKhXLq5PqIMJtJzw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 14:30:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/kronprinsesse-mette-marit-ga-jeffrey-epstein-tips-til-_konejakten_-1.17750406" target="_blank">Kronprinsesse Mette-Marit ga Epstein tips til «konejakten»</a></h2>
+                        <p>Jeffrey Epstein fortalte kronprinsesse Mette-Marit om treff med unge norske kvinner. I flere år hadde de omfattende kontakt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/yveB9R-l_rN1oLh7hxdC4wAe_f95xYBe9kwDHV6dphBQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 14:40:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/dode-etter-arbeidsulykke-i-kinn-_-kom-i-klem-under-hjullastar-1.17750456" target="_blank">Døde etter arbeidsulykke i Kinn – kom i klem under hjullastar</a></h2>
+                        <p>Ulykka har skjedd i samband med anleggsarbeid på eit steinbrot i Seljestokken. Krimteknikarar frå politiet har laurdag undersøkt ulykkesstaden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vt1FLvAkge-stK576o6MnA0XazJHcUj3-kjLGu4sXuAQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 13:40:52 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/iran-starter-militaerovelse-1.17750467" target="_blank">Spent mellom USA og Iran – søndag starter Iran militærøvelse</a></h2>
+                        <p>Iran advarer USA og Israel mot angrep....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/SyQKpnsNWBJShdzIccXTxAZ3CEKW0sBb1s5D_xq1kgpw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 12:33:07 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/xl/mette-blei-blind-av-reseptfrie-smertestillande-1.17725067" target="_blank">– Det var faktisk deilig å bli blind</a></h2>
+                        <p>Heilt vanlege smertestillande førte til at Mette Havnaas mista synet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 12:17:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/melding-om-eksplosjon-i-iransk-havneby-1.17750602" target="_blank">Melding om eksplosjon i iransk havneby</a></h2>
+                        <p>Ifølge statlige medier i Iran har det hørtes en eksplosjon i en bygning i havnebyen Bandar Abbas, som ligger ved Gulfkysten.
+Årsaken til eksplosjonen er foreløpig ukjent.
+Landets s...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 11:35:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/minst-23-personer-drept-i-angrep-i-gaza_-melder-helsepersonell-1.17750525" target="_blank">Minst 23 personer drept i angrep i Gaza, melder helsepersonell</a></h2>
+                        <p>Minst tolv personer ble drept i israelske angrep i Gaza tidlig lørdag, ifølge personell ved to av sykehusene i enklaven. Et separat angrep mot en politistasjon skal ha drept elleve...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/anoJdA5ovgmHLXQaNEL2LgV7GRavuslXZ96QQhp2HiGA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 12:03:56 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/nettavisen_-adrian-smiseth-sejersted-falt-pa-utfortrening-_-til-legesjekk-en-uke-for-ol-1.17750557" target="_blank">Nettavisen: Adrian Smiseth Sejersted falt på utfortrening – til legesjekk en uke før OL</a></h2>
+                        <p>Adrian Smiseth Sejersted (31) havnet i sikkerhetsnettet på lørdagens trening i utforbakken i Crans Montana. Uhellet gikk utover skulderen.
+Det opplyser de norske alpinistenes sport...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9ablrX1cgctYTtyQAqfTegNVfHJaCYWODi3Y9xOFr3ww.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 11:26:18 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/klima/trump-stilte-sporsmal-ved-klimaendringer-etter-storm-_-far-klart-svar-1.17744348" target="_blank">Trump stilte spørsmål ved klimaendringer etter storm - får klart svar</a></h2>
+                        <p>Hva har skjedd med global oppvarming? spør president Donald Trump etter flere dager med kulderekorder og store snøfall i USA. I en varmere verden må vi vente mer av dette, sier kli...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/v8HhZ0qij5o0N0G4ZRPY4glXKzMSXJvWt7O74_SrS9uw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 10:29:18 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyttig/slik-reparerer-du-odelagte-hvitevarer-1.17744424" target="_blank">Ser tørketrommelen slik ut? Ikke gi opp!</a></h2>
+                        <p>«Overlege» Thomas Grønli redder hvitevarer folk har gitt opp. Her er hans tips til førstehjelp som du kan utføre....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vAIwQWQVq2UWXRuNngbLlwqrv_eibfLMeXnDtBPyNOhQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 09:31:40 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/ordforar-i-leka-trekte-seg-fra-alle-verv-etter-_urettmessige-uttak-av-kommunale-midlar_-1.17745463" target="_blank">Ordførar trekte seg frå alle verv etter «urettmessige uttak av kommunale midlar»</a></h2>
+                        <p>Ordførar i Leka kommune Svein Pettersen mottok 178.000 kroner av kommunale midlar og trekte seg etter at det blei oppdaga....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/RiF0Jfinp7lRdV_OopgJAQU13DjDT-akAR82zWuo8xkg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 09:29:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/vil-hente-politietterforskere-utenfra_-nytt-studium-vedtatt-1.17743200" target="_blank">Politiet vil ha flere som ikke er politi: – Kriminalitetsbildet er stadig mer komplekst</a></h2>
+                        <p>Politiet trenger mer kunnskap, og oppretter nytt års-studium i etterforskning. En rekke ulike fagfolk står på ønskelisten....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/A0scYxIUjyVL85LnnW1rBwvhClGID2Z_OHnr6nJFGRvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 10:03:53 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/smartbriller-gir-blinde-anna-storre-frihet-og-trygghet-1.17727695" target="_blank">«Magisk» brille har endret hverdagen for blinde Anna</a></h2>
+                        <p>Anna Sun Tøndevold føler seg tryggere når hun bruker en smartbrille til å tolke omgivelsene når hun er ute. – Kommer til å bli mer vanlig, sier Blindeforbundet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ZMlFjOSv6ys-j2CKH3NFgQj_5o5Qyh0ERMpBkeulDQ9w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sat, 31 Jan 2026 07:41:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/vaepna-aksjon-i-grimstad_-politiet-har-pagripe-ein-mann-1.17750348" target="_blank">Væpna aksjon i Grimstad: Politiet har pågripe ein mann</a></h2>
+                        <p>Politiet kalla inn nasjonale styrkar då ein mann forskansa seg i ei hytte vest for Grimstad natt til laurdag. Etter fleire timar fekk politiet kontroll på mannen....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Sat, 31 Jan 2026 20:07:17 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/WvqJlr/aker-nscale-topp-norge-kan-vinne-ai-racet" target="_blank">Aker Nscale-topp: – Norge kan vinne AI-racet</a></h2>
+                        <p>Røkke-selskapet vil gjøre Norge til en «trygg havn» for suveren kunstig intelligens....</p>
                     </div>
                 </div>
             
@@ -281,30 +467,6 @@ Den pågrepne er gutt i midten av tenårene, som politiet har kjennsk...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pCSM9fNvD36GnyssUeCVWwQ6AlRcv20BR81GCmmFmd6w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 15:27:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/mareritt-fra-bygde-norge-1.17745882" target="_blank">Mareritt fra Bygde-Norge</a></h2>
-                        <p>Et folkemøte i en liten bygd tok fra meg nattesøvnen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/o66RVbrclcTeeG79uOoIGwP9xVEJ6DgBYrweM4Tgi0vg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 15:34:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/martin-odegaard-pa-benken_-_-ikkje-det-arsenal-leitar-etter-no-1.17750664" target="_blank">Ødegaard på benken: – Ikkje det Arsenal leitar etter no</a></h2>
-                        <p>Ein sesong der Arsenal dreg seg mot ligatittelen, har det sett tyngre ut for kaptein Martin Ødegaard....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57446798.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Ddd9baa74048b8026503c7c7a1557bb11f46e84e0ad88dbb98674179af4b17692" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -337,30 +499,6 @@ Den pågrepne er gutt i midten av tenårene, som politiet har kjennsk...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/revisjon-og-radgivning/2026/01/31/8322328/derfor-solgte-deloitte" target="_blank">Revolusjon i revisjon: Derfor solgte Deloitte</a></h2>
                         <p>Etter salget av 13 regionskontorer avviser Deloitte at revisjonsgiganten kun vil satse på de store selskapene samt børs, bank og forsikring....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/DHNO3G_ZmHQVZJ_H4CCiSQWVrXChJKhXLq5PqIMJtJzw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 14:30:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/kronprinsesse-mette-marit-ga-jeffrey-epstein-tips-til-_konejakten_-1.17750406" target="_blank">Kronprinsesse Mette-Marit ga Epstein tips til «konejakten»</a></h2>
-                        <p>Jeffrey Epstein fortalte kronprinsesse Mette-Marit om treff med unge norske kvinner. I flere år hadde de omfattende kontakt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/yveB9R-l_rN1oLh7hxdC4wAe_f95xYBe9kwDHV6dphBQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 14:40:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/dode-etter-arbeidsulykke-i-kinn-_-kom-i-klem-under-hjullastar-1.17750456" target="_blank">Døde etter arbeidsulykke i Kinn – kom i klem under hjullastar</a></h2>
-                        <p>Ulykka har skjedd i samband med anleggsarbeid på eit steinbrot i Seljestokken. Krimteknikarar frå politiet har laurdag undersøkt ulykkesstaden....</p>
                     </div>
                 </div>
             
@@ -437,18 +575,6 @@ Den pågrepne er gutt i midten av tenårene, som politiet har kjennsk...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vt1FLvAkge-stK576o6MnA0XazJHcUj3-kjLGu4sXuAQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 13:40:52 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/iran-starter-militaerovelse-1.17750467" target="_blank">Spent mellom USA og Iran – søndag starter Iran militærøvelse</a></h2>
-                        <p>Iran advarer USA og Israel mot angrep....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143453921.jpg%3F%26accessToken%3Dedbcb8a42279a918827ef65dd1d8e1d8cd4ca5230177f9e4830d66d3db276686" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -509,69 +635,6 @@ Den pågrepne er gutt i midten av tenårene, som politiet har kjennsk...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/SyQKpnsNWBJShdzIccXTxAZ3CEKW0sBb1s5D_xq1kgpw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 12:33:07 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/xl/mette-blei-blind-av-reseptfrie-smertestillande-1.17725067" target="_blank">– Det var faktisk deilig å bli blind</a></h2>
-                        <p>Heilt vanlege smertestillande førte til at Mette Havnaas mista synet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 12:17:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/melding-om-eksplosjon-i-iransk-havneby-1.17750602" target="_blank">Melding om eksplosjon i iransk havneby</a></h2>
-                        <p>Ifølge statlige medier i Iran har det hørtes en eksplosjon i en bygning i havnebyen Bandar Abbas, som ligger ved Gulfkysten.
-Årsaken til eksplosjonen er foreløpig ukjent.
-Landets s...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 11:35:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/minst-23-personer-drept-i-angrep-i-gaza_-melder-helsepersonell-1.17750525" target="_blank">Minst 23 personer drept i angrep i Gaza, melder helsepersonell</a></h2>
-                        <p>Minst tolv personer ble drept i israelske angrep i Gaza tidlig lørdag, ifølge personell ved to av sykehusene i enklaven. Et separat angrep mot en politistasjon skal ha drept elleve...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/anoJdA5ovgmHLXQaNEL2LgV7GRavuslXZ96QQhp2HiGA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 12:03:56 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/nettavisen_-adrian-smiseth-sejersted-falt-pa-utfortrening-_-til-legesjekk-en-uke-for-ol-1.17750557" target="_blank">Nettavisen: Adrian Smiseth Sejersted falt på utfortrening – til legesjekk en uke før OL</a></h2>
-                        <p>Adrian Smiseth Sejersted (31) havnet i sikkerhetsnettet på lørdagens trening i utforbakken i Crans Montana. Uhellet gikk utover skulderen.
-Det opplyser de norske alpinistenes sport...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/9ablrX1cgctYTtyQAqfTegNVfHJaCYWODi3Y9xOFr3ww.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 11:26:18 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/klima/trump-stilte-sporsmal-ved-klimaendringer-etter-storm-_-far-klart-svar-1.17744348" target="_blank">Trump stilte spørsmål ved klimaendringer etter storm - får klart svar</a></h2>
-                        <p>Hva har skjedd med global oppvarming? spør president Donald Trump etter flere dager med kulderekorder og store snøfall i USA. I en varmere verden må vi vente mer av dette, sier kli...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143544558.jpg%3F%26accessToken%3Dca5d4700e7f9c70a0be38740d5c5e0dc30c48e07dc459846b0b4a59ae930e469" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -604,30 +667,6 @@ Det opplyser de norske alpinistenes sport...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/tjenester/2026/01/31/8322315/vekst-media-med-jonathan-aaen-og-sondre-pedersen-er-spesialister-pa-markedsforing-pa-some-og-google" target="_blank">Fra dametrøbbel til millionbutikk: 22-åringene omsetter for en halv million hver måned</a></h2>
                         <p>Vekst Media med Jonathan Aaen og Sondre Pedersen hjelper bedrifter med resultatbasert markedsføring og har spesialisert seg på betalt reklame og tjener penger hvis kampanjene går b...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/v8HhZ0qij5o0N0G4ZRPY4glXKzMSXJvWt7O74_SrS9uw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 10:29:18 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyttig/slik-reparerer-du-odelagte-hvitevarer-1.17744424" target="_blank">Ser tørketrommelen slik ut? Ikke gi opp!</a></h2>
-                        <p>«Overlege» Thomas Grønli redder hvitevarer folk har gitt opp. Her er hans tips til førstehjelp som du kan utføre....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vAIwQWQVq2UWXRuNngbLlwqrv_eibfLMeXnDtBPyNOhQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 09:31:40 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/ordforar-i-leka-trekte-seg-fra-alle-verv-etter-_urettmessige-uttak-av-kommunale-midlar_-1.17745463" target="_blank">Ordførar trekte seg frå alle verv etter «urettmessige uttak av kommunale midlar»</a></h2>
-                        <p>Ordførar i Leka kommune Svein Pettersen mottok 178.000 kroner av kommunale midlar og trekte seg etter at det blei oppdaga....</p>
                     </div>
                 </div>
             
@@ -676,42 +715,6 @@ Det opplyser de norske alpinistenes sport...</p>
                         </div>
                         <h2><a href="https://e24.no/energi-og-klima/i/Wvqg2G/droemmer-om-barentshavet-roer-maa-finne-gassvolumer-foerst" target="_blank">Drømmer om Barentshavet-rør: – Må finne gassvolumer først</a></h2>
                         <p>Flertallet på Stortinget vil gjerne ha et gassrør til Barentshavet til over 50 milliarder. Men da må det finnes mer gass, mener analytiker....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/RiF0Jfinp7lRdV_OopgJAQU13DjDT-akAR82zWuo8xkg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 09:29:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/vil-hente-politietterforskere-utenfra_-nytt-studium-vedtatt-1.17743200" target="_blank">Politiet vil ha flere som ikke er politi: – Kriminalitetsbildet er stadig mer komplekst</a></h2>
-                        <p>Politiet trenger mer kunnskap, og oppretter nytt års-studium i etterforskning. En rekke ulike fagfolk står på ønskelisten....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/A0scYxIUjyVL85LnnW1rBwvhClGID2Z_OHnr6nJFGRvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 10:03:53 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/smartbriller-gir-blinde-anna-storre-frihet-og-trygghet-1.17727695" target="_blank">«Magisk» brille har endret hverdagen for blinde Anna</a></h2>
-                        <p>Anna Sun Tøndevold føler seg tryggere når hun bruker en smartbrille til å tolke omgivelsene når hun er ute. – Kommer til å bli mer vanlig, sier Blindeforbundet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ZMlFjOSv6ys-j2CKH3NFgQj_5o5Qyh0ERMpBkeulDQ9w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sat, 31 Jan 2026 07:41:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/vaepna-aksjon-i-grimstad_-politiet-har-pagripe-ein-mann-1.17750348" target="_blank">Væpna aksjon i Grimstad: Politiet har pågripe ein mann</a></h2>
-                        <p>Politiet kalla inn nasjonale styrkar då ein mann forskansa seg i ei hytte vest for Grimstad natt til laurdag. Etter fleire timar fekk politiet kontroll på mannen....</p>
                     </div>
                 </div>
             
@@ -787,7 +790,7 @@ Det opplyser de norske alpinistenes sport...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 01.02.2026 02:21</div>
+                <div class="footer">Sist oppdatert: 01.02.2026 02:25</div>
             </div>
         </body>
         </html>
