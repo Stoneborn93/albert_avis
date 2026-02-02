@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -84,67 +87,7 @@
                         <p>Per Buer og Varnish Software lanserer skytjeneste. Målet er å gjøre europeiske mediehus mer uavhengige av amerikanske giganter....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143590662.jpg%3F%26accessToken%3D247e5230bbc86efc9296e872c6cf56efb516db9e30c07e826d79ce0797b0abd0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 05:48:13 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/02/8324999/seoul-borsen-raser" target="_blank">Det er bredt fall på børsene i Asia. Seoul-børsen raser.</a></h2>
-                        <p>I Sør-Korea raser Kospi hele 4,64 prosent mandag morgen, og drar med seg store deler av regionen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F136948583.jpg%3F%26accessToken%3D63c3d3aec1ecb64f2fec655dd73ec63087cf4f25965dd68da4327e7a82302f6c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 06:13:46 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/02/8325002/dette-skjer-i-dag-mandag" target="_blank">Mandagens høydepunkter</a></h2>
-                        <p>Her er finanskalenderen og de viktigste nyhetene mandag 2. februar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143590843.jpg%3F%26accessToken%3Df5e7b189fd71fae62b0806bd5047939d5c7c78118c4ec865ffd57102d01e8fcc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 06:14:46 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/02/8325001/oljeprisen-stuper-etter-deeskalering-i-iran" target="_blank">Oljeprisen stuper etter deeskalering i Iran</a></h2>
-                        <p>Oljeprisen stuper fem prosent etter deeskalering mellom USA og Iran....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 05:39:50 GMT
-                        </div>
-                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/d4m0Oq/kraftig-oljeprisfall-etter-trump-utspill" target="_blank">Kraftig oljeprisfall etter Trump-utspill</a></h2>
-                        <p>Oljeprisen sendes ned etter utspill om forhandlinger mellom USA og Iran....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 05:47:23 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/7p5M5V/uro-i-markedene-gullprisen-raser-videre-og-asia-boerser-faller-kraftig" target="_blank">Uro i markedene: – Veldig nervøst</a></h2>
-                        <p>Gullprisen raser videre og det er nedgang på børsene....</p>
-                    </div>
-                </div>
-            
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/7RQRd3zOulXtfrLNWnLE4AhlZzGcYHB6bwlxEm_Vw5iA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -166,30 +109,6 @@
                         </div>
                         <h2><a href="https://www.nrk.no/trondelag/far-fedmesproyter_-_-sendes-hjem-uten-hjelp-1.17727478" target="_blank">Får fedmesprøyter: – Sendes hjem uten hjelp</a></h2>
                         <p>Kan i verste fall være uforsvarlig, ifølge forening....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 05:02:53 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/L416B9/kraftig-dollarfall-slik-kan-det-paavirke-oslo-boers" target="_blank">Kraftig dollarfall: Slik kan det påvirke Oslo Børs</a></h2>
-                        <p>Disse faktorene avgjør avkastningen, ifølge Robert Næss. Han finner tre mulige valutavinnere....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 05:03:29 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/lnznpo/naa-kaster-besteforeldrene-seg-over-kryptovaluta" target="_blank">Nå kaster besteforeldrene seg over kryptovaluta</a></h2>
-                        <p>Nordmenn har kryptovaluta for over seks milliarder hos Firi. Bitcoin er klart mest populær, men en annen coin har vokst frem som en sterk utfordrer i Norge....</p>
                     </div>
                 </div>
             
@@ -292,18 +211,6 @@ Prisene under London Critics' Circle Film ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F141835003.jpg%3F%26accessToken%3D3aa9d2793e01481fa036d6c33ed53f8ecec2a367a611406344fdbb01f8ed4c1f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Sun, 01 Feb 2026 20:31:36 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/motor/2026/02/01/8324992/toppsjef-i-ford-mener-usa-trenger-wakeupcall-vi-er-i-trobbel" target="_blank">– Vi er i trøbbel i landet vårt</a></h2>
-                        <p>– Vi snakker ikke nok om dette, sier Ford-sjefen, som mener USA trenger en wakeupcall....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/qn54IgLxZ8Yr5kkQkj2btQh0swd7ceJWCz9Kf6gsmdRg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -312,6 +219,200 @@ Prisene under London Critics' Circle Film ...</p>
                         </div>
                         <h2><a href="https://www.nrk.no/urix/trump_-_-kina-vil-spise-canada-levende-1.17751073" target="_blank">Trump: – Kina vil spise Canada levende</a></h2>
                         <p>USAs president har begynt å straffe Canada etter at Kina og Canada er enige om å sette en omfattende handelsavtale ut i livet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ezyP39gcTSJgmxjROPgJCgdWIfJw_PjuAWdXmz4bNfoQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 19:43:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyttig/slik-blir-du-bedre-pa-a-huske-ting-1.17728598" target="_blank">– Jeg skriver ting ned for å ikke glemme</a></h2>
+                        <p>Flere unge sliter med hukommelsen. Dette kan du gjøre for å bli bedre på å huske....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MGJx63CcITe90T6QVDubJAMoXqSdiwC6Q_tWJWpmNxvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 19:58:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/jagland_-_-enig-i-at-jeg-har-vist-darlig-dommekraft-1.17751483" target="_blank">Jagland: – Enig i at jeg har vist dårlig dømmekraft</a></h2>
+                        <p>I de frigitte Epstein-dokumentene kommer det fram at tidligere Ap-topp og statsminister Thorbjørn Jagland har hatt omfattende kontakt med seksualforbryteren Jeffrey Epstein.
+Det ty...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/TSpb0UaydtCN-hjz-LjD0gCY7iQ39fd1xXdUtK2EEvIg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 18:29:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/frustrert-haaland-mallos-igjen-_-gikk-pa-smell-etter-drommemal-1.17751342" target="_blank">Frustrert Haaland målløs igjen – gikk på smell etter drømmemål</a></h2>
+                        <p>Manchester City taper terreng i tittelkampen, og Erling Braut Haaland scorer fortsatt ikke mål i Premier League....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/GoUjjINu7-6v-WRPTdsdUwZonMeHvK4j743nquFAyyqQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 18:20:36 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/store_-darlig-dommekraft-fra-kronprinsessen-og-jagland-1.17751418" target="_blank">Støre: Dårlig dømmekraft fra kronprinsessen og Jagland</a></h2>
+                        <p>Statsministeren reagerer på nær kontakt mellom flere nordmenn og seksualforbryteren Jeffrey Epstein....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/uwuo8E_ddUJSGeYnSIDzYwKnGZuOr3dsHo9onYszQvog.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 18:05:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/store-om-epstein-dokumentene_-darlig-dommekraft-fra-kronprinsessen-og-jagland-1.17751361" target="_blank">Støre om Epstein-dokumentene: Dårlig dømmekraft fra kronprinsessen og Jagland</a></h2>
+                        <p>– Kronprinsessen har selv uttalt at hun har utvist dårlig dømmekraft, noe jeg er enig i. Det mener jeg også Thorbjørn Jagland har gjort.
+Det sier statsminister Jonas Gahr Støre til...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FZCYNxvM9PYjNEbDl-kQEgIi5Bfk1EuxwFNOEzwTAp6g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 17:01:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/epsteins-norske-forbindelser_-1.17751257" target="_blank">Epsteins norske forbindelser</a></h2>
+                        <p>Epstein-saken rammer direkte og indirekte de viktigste og mest prestisjetunge norske institusjonene: Det kongelige slott. Nobelkomiteen. Utenriksdepartementet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_4PdIK9G0dQVT2QV-ltxEgy6bT4aLQtd6p6rsCAysNag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 15:46:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/brystkreft_-oppdaga-fleire-svulstar-da-ki-hjelpte-til-1.17747498" target="_blank">Brystkreft: Oppdaga fleire svulstar da KI hjelpte til</a></h2>
+                        <p>­...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/5ptWpxUM5vC2iVwhhSWU0QmMBpnx7yYSIJEjyUwNanRA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 12:58:25 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/melanias-dokumentar-vil-aldri-ga-i-pluss.-men-hensikten-er-nok-en-annen-1.17747832" target="_blank">Melanias dokumentar vil aldri gå i pluss. Men hensikten er nok en annen</a></h2>
+                        <p>Internett ler av tomme kinosaler før visningen av Melania Trumps film om seg selv. Men er dokumentaren virkelig en fiasko?...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143590662.jpg%3F%26accessToken%3D247e5230bbc86efc9296e872c6cf56efb516db9e30c07e826d79ce0797b0abd0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 05:48:13 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/02/8324999/seoul-borsen-raser" target="_blank">Det er bredt fall på børsene i Asia. Seoul-børsen raser.</a></h2>
+                        <p>I Sør-Korea raser Kospi hele 4,64 prosent mandag morgen, og drar med seg store deler av regionen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F136948583.jpg%3F%26accessToken%3D63c3d3aec1ecb64f2fec655dd73ec63087cf4f25965dd68da4327e7a82302f6c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 06:13:46 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/02/8325002/dette-skjer-i-dag-mandag" target="_blank">Mandagens høydepunkter</a></h2>
+                        <p>Her er finanskalenderen og de viktigste nyhetene mandag 2. februar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143590843.jpg%3F%26accessToken%3Df5e7b189fd71fae62b0806bd5047939d5c7c78118c4ec865ffd57102d01e8fcc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 06:14:46 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/02/02/8325001/oljeprisen-stuper-etter-deeskalering-i-iran" target="_blank">Oljeprisen stuper etter deeskalering i Iran</a></h2>
+                        <p>Oljeprisen stuper fem prosent etter deeskalering mellom USA og Iran....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 05:39:50 GMT
+                        </div>
+                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/d4m0Oq/kraftig-oljeprisfall-etter-trump-utspill" target="_blank">Kraftig oljeprisfall etter Trump-utspill</a></h2>
+                        <p>Oljeprisen sendes ned etter utspill om forhandlinger mellom USA og Iran....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 05:47:23 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/7p5M5V/uro-i-markedene-gullprisen-raser-videre-og-asia-boerser-faller-kraftig" target="_blank">Uro i markedene: – Veldig nervøst</a></h2>
+                        <p>Gullprisen raser videre og det er nedgang på børsene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 05:02:53 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/L416B9/kraftig-dollarfall-slik-kan-det-paavirke-oslo-boers" target="_blank">Kraftig dollarfall: Slik kan det påvirke Oslo Børs</a></h2>
+                        <p>Disse faktorene avgjør avkastningen, ifølge Robert Næss. Han finner tre mulige valutavinnere....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Mon, 02 Feb 2026 05:03:29 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/lnznpo/naa-kaster-besteforeldrene-seg-over-kryptovaluta" target="_blank">Nå kaster besteforeldrene seg over kryptovaluta</a></h2>
+                        <p>Nordmenn har kryptovaluta for over seks milliarder hos Firi. Bitcoin er klart mest populær, men en annen coin har vokst frem som en sterk utfordrer i Norge....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F141835003.jpg%3F%26accessToken%3D3aa9d2793e01481fa036d6c33ed53f8ecec2a367a611406344fdbb01f8ed4c1f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Sun, 01 Feb 2026 20:31:36 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/motor/2026/02/01/8324992/toppsjef-i-ford-mener-usa-trenger-wakeupcall-vi-er-i-trobbel" target="_blank">– Vi er i trøbbel i landet vårt</a></h2>
+                        <p>– Vi snakker ikke nok om dette, sier Ford-sjefen, som mener USA trenger en wakeupcall....</p>
                     </div>
                 </div>
             
@@ -376,31 +477,6 @@ Prisene under London Critics' Circle Film ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ezyP39gcTSJgmxjROPgJCgdWIfJw_PjuAWdXmz4bNfoQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 19:43:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyttig/slik-blir-du-bedre-pa-a-huske-ting-1.17728598" target="_blank">– Jeg skriver ting ned for å ikke glemme</a></h2>
-                        <p>Flere unge sliter med hukommelsen. Dette kan du gjøre for å bli bedre på å huske....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MGJx63CcITe90T6QVDubJAMoXqSdiwC6Q_tWJWpmNxvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 19:58:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/jagland_-_-enig-i-at-jeg-har-vist-darlig-dommekraft-1.17751483" target="_blank">Jagland: – Enig i at jeg har vist dårlig dømmekraft</a></h2>
-                        <p>I de frigitte Epstein-dokumentene kommer det fram at tidligere Ap-topp og statsminister Thorbjørn Jagland har hatt omfattende kontakt med seksualforbryteren Jeffrey Epstein.
-Det ty...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143558246.jpg%3F%26accessToken%3D6b32d40e20d2a290f2fb9837a1ad0991c710d8597367e7c466e1903eb24d5142" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -409,18 +485,6 @@ Det ty...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/01/8324948/marius-en-kongelig-skandale" target="_blank">En kongelig skandale. Marius Borg Høiby er heldigvis ikke prins, derfor må han svare for seg.</a></h2>
                         <p>Gutten er en kongelig skandale. Politiet sier at han ikke har hatt særfordeler ved kontroll av bil og slikt. Det er det vanskelig å tro på. Hvem skulle trodd han reiste jorden rund...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/TSpb0UaydtCN-hjz-LjD0gCY7iQ39fd1xXdUtK2EEvIg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 18:29:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/frustrert-haaland-mallos-igjen-_-gikk-pa-smell-etter-drommemal-1.17751342" target="_blank">Frustrert Haaland målløs igjen – gikk på smell etter drømmemål</a></h2>
-                        <p>Manchester City taper terreng i tittelkampen, og Erling Braut Haaland scorer fortsatt ikke mål i Premier League....</p>
                     </div>
                 </div>
             
@@ -445,18 +509,6 @@ Det ty...</p>
                         </div>
                         <h2><a href="https://e24.no/privatoekonomi/i/K8p8e7/advarer-slik-kan-du-tape-penger-paa-trumf" target="_blank">Advarer: Slik kan du tape penger på Trumf</a></h2>
                         <p>Trumf tilbyr bonus om du bestiller reise gjennom deres portal. Ett hotell var 72 prosent dyrere....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/GoUjjINu7-6v-WRPTdsdUwZonMeHvK4j743nquFAyyqQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 18:20:36 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/store_-darlig-dommekraft-fra-kronprinsessen-og-jagland-1.17751418" target="_blank">Støre: Dårlig dømmekraft fra kronprinsessen og Jagland</a></h2>
-                        <p>Statsministeren reagerer på nær kontakt mellom flere nordmenn og seksualforbryteren Jeffrey Epstein....</p>
                     </div>
                 </div>
             
@@ -493,19 +545,6 @@ Det ty...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/01/8324763/langsiktig-forvaltning-i-et-kortsiktig-marked" target="_blank">Langsiktig forvaltning i et kortsiktig marked</a></h2>
                         <p>Investorer kaller seg gjerne langsiktige, selv om markedene bærer preg av kortsiktighet. Langsiktighet er et valg som må tas på nytt hver dag, skriver Holberg-forvalter Andrea Moen...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/uwuo8E_ddUJSGeYnSIDzYwKnGZuOr3dsHo9onYszQvog.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 18:05:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/store-om-epstein-dokumentene_-darlig-dommekraft-fra-kronprinsessen-og-jagland-1.17751361" target="_blank">Støre om Epstein-dokumentene: Dårlig dømmekraft fra kronprinsessen og Jagland</a></h2>
-                        <p>– Kronprinsessen har selv uttalt at hun har utvist dårlig dømmekraft, noe jeg er enig i. Det mener jeg også Thorbjørn Jagland har gjort.
-Det sier statsminister Jonas Gahr Støre til...</p>
                     </div>
                 </div>
             
@@ -570,18 +609,6 @@ Det sier statsminister Jonas Gahr Støre til...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FZCYNxvM9PYjNEbDl-kQEgIi5Bfk1EuxwFNOEzwTAp6g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 17:01:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/epsteins-norske-forbindelser_-1.17751257" target="_blank">Epsteins norske forbindelser</a></h2>
-                        <p>Epstein-saken rammer direkte og indirekte de viktigste og mest prestisjetunge norske institusjonene: Det kongelige slott. Nobelkomiteen. Utenriksdepartementet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F100541088.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D593ba20760acb887cbb45f757017d8b13982edfabcf11076c8df9f9b0e8168bb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -614,18 +641,6 @@ Det sier statsminister Jonas Gahr Støre til...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/transport/2026/02/01/8324979/datterselskapet-av-thermo-tranist-fikk-bot-pa-720.000" target="_blank">Godsgigant fikk bot på 720.000</a></h2>
                         <p>Statens vegvesen og politiet mener sjåfører i et konkurstruet datterselskap av Thermo-Transit, har brutt kjøre og hviletidsbestemmelser hundrevis av ganger....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_4PdIK9G0dQVT2QV-ltxEgy6bT4aLQtd6p6rsCAysNag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 15:46:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/brystkreft_-oppdaga-fleire-svulstar-da-ki-hjelpte-til-1.17747498" target="_blank">Brystkreft: Oppdaga fleire svulstar da KI hjelpte til</a></h2>
-                        <p>­...</p>
                     </div>
                 </div>
             
@@ -762,18 +777,6 @@ Det sier statsminister Jonas Gahr Støre til...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/5ptWpxUM5vC2iVwhhSWU0QmMBpnx7yYSIJEjyUwNanRA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 12:58:25 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/melanias-dokumentar-vil-aldri-ga-i-pluss.-men-hensikten-er-nok-en-annen-1.17747832" target="_blank">Melanias dokumentar vil aldri gå i pluss. Men hensikten er nok en annen</a></h2>
-                        <p>Internett ler av tomme kinosaler før visningen av Melania Trumps film om seg selv. Men er dokumentaren virkelig en fiasko?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F102996677.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Da74d24708db61f6bd550dc325fa81b18152691a36ef7a1106a55d3d71270b4d9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -785,7 +788,7 @@ Det sier statsminister Jonas Gahr Støre til...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 02.02.2026 06:21</div>
+                <div class="footer">Sist oppdatert: 02.02.2026 06:25</div>
             </div>
         </body>
         </html>
