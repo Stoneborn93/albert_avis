@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -85,6 +88,18 @@
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/a13a35b0-5178-430d-ab1c-3b74ac059692?fit=crop&format=auto&h=900&w=1600&s=4622fcca28fcd41d3a678e860052c343a207e9f7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Teknologi">Teknologi</span> 
+                            Mon, 02 Feb 2026 12:19:59 GMT
+                        </div>
+                        <h2><a href="https://www.tek.no/i/q6Rrr0" target="_blank">AI-roboter har fått sitt eget sosiale nettverk</a></h2>
+                        <p>32.000 boter diskuterer uten menneskelig innblanding....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://images.gfx.no/1000/2909/2909701/c20aa8cf87b08d3d7d482583bdf67cfd.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -132,7 +147,165 @@
                         <p>Elon Musks romfartsselskap søker om å bygge et «orbitalt datasenter»....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 12:07:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-for-trusler-med-kniv-1.17752257" target="_blank">Marius Borg Høiby pågrepet: trusler med kniv</a></h2>
+                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 11:23:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/skytingen-pa-kuben_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Skytingen på Kuben: 16-åring siktet for drapsforsøk</a></h2>
+                        <p>Gutten som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo, er nå siktet for drapsforsøk....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 12:07:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-1.17752257" target="_blank">Pågrepet: Politiet vil fengsle Marius Borg Høiby</a></h2>
+                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 11:23:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/kuben-skytingen_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Kuben-skytingen: 16-åring siktet for drapsforsøk</a></h2>
+                        <p>16- åringen som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo er nå siktet for drapsforsøk....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MGJx63CcITe90T6QVDubJAMoXqSdiwC6Q_tWJWpmNxvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 10:41:18 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/jagland-varsler-omfattende-redegjorelse-om-epstein-saken_-opplyser-advokat-sigurd-klomsaet-til-ntb-1.17752073" target="_blank">Jagland varsler omfattende redegjørelse om Epstein-saken, opplyser advokat Sigurd Klomsæt til NTB</a></h2>
+                        <p>– Så fort som mulig vil vi uansett gå gjennom påstander og beskyldninger og svare på dem. Det er også avdekket at det er grunn til å nærmere ettergå ektheten i det fremlagte materi...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3QLZYYawEUsNaynAyMAlLATd2IuIUnO-bKVQLvHxu2wA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 10:58:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/blei-evakuert-etter-ncl-salten-trefte-land-pa-byneset-_-i-dag-flyttar-jostein-jorgensen-heim-1.17751686" target="_blank">Endeleg er Jostein heime etter åtte månader: – Fantastisk</a></h2>
+                        <p>Han og familien har vore evakuert frå heimen på Byneset sidan containerskipet «NCL Salten» trefte land i mai....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/RN_kyjUQF-fSTiac3__MwwLxdvSKgP14cioi0ya1MC9g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 10:59:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/jagland-varsler-redegjorelse-om-epstein-saken_-grunn-til-a-sjekke-om-dokumenter-er-ekte-1.17752101" target="_blank">Jagland varsler redegjørelse om Epstein-saken: Grunn til å sjekke om dokumenter er ekte</a></h2>
+                        <p>Tidligere statsminister Thorbjørn Jagland varsler en omfattende redegjørelse om Epstein-saken, opplyser hans talsperson advokat Sigurd Klomsæt til NTB. Jagland melder seg ikke ut a...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/HLKhaiTWLno7CkWUwcw6SgwhCMXeYIX8_E4epaJjAxrA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 11:08:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/navngir-ofrene-i-_epstein-dokumentene_-1.17751628" target="_blank">Epstein-ofre eksponert: 43 navn usladdet i dokumenter</a></h2>
+                        <p>En gjennomgang avisen Wall Street Journal har gjort, viser at navnene til 43 av de registrerte ofrene i «Epstein dokumentene» ikke er sladdet av det amerikanske justisdepartementet...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 10:01:50 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/mote-i-rode-kors-etter-avsloringene-om-mette-marits-kontakt-med-epstein-1.17751985" target="_blank">Møte i Røde Kors etter avsløringene om Mette-Marits kontakt med Epstein</a></h2>
+                        <p>Røde Kors sitter i et møte og diskuterer kronprinsesse Mette-Marit sin kontakt med overgrepsdømte Jeffery Epstein.
+Kronprinsessen er høye beskytter for Norges Røde Kors og har takk...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/igXbYOA22_4YfeM1PCm8gQ4jXENRUkfbOSWn_VSsDxiA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Sun, 01 Feb 2026 16:18:30 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/korrespondentbrevet-fra-usa_-_-vil-isfronten-tine_-1.17748620" target="_blank">Isfrontene over USA</a></h2>
+                        <p>Midt i den kaldeste vinteren i Minnesota på mange år, har USAs motsetninger nådd frysepunktet. Dette er en kamp uten vinnere, sier en demonstrant....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/DHNO3G_ZmHQVZJ_H4CCiSQWVrXChJKhXLq5PqIMJtJzw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 09:06:46 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/mdg-vil-ha-full-gransking-av-norske-epstein-bindinger-1.17751832" target="_blank">MDG vil ha full gransking av norske Epstein-bindinger</a></h2>
+                        <p>MDG krever at Stortinget setter ned en uavhengig granskingskommisjon for å komme til bunns i hva slags kontakt som har vært mellom folk med sentrale verv og posisjoner i det norske...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/-_WawnonHiAPwwo_uyPA-w8two4Yv8gx8FDcvaNBLigA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 06:49:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/trump-har-fatt-verden-til-a-se-mot-arktis.-statssekretaer-eivind-vad-petersson-i-ud-mener-det-er-bra-1.17746075" target="_blank">Trump har fått verden til å se mot Arktis: – På sett og vis bra, sier UD</a></h2>
+                        <p>Ingen snakket om Arktis, mens så kom Donald Trump. Statssekretær Eivind Vad Petersson mener det ikke bare er negativt at nordområdene er på verdens lepper under årets Arctic Fronti...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://static.nrk.no/kartoteket/01KGECWZ3NHZ9EQT6ZYMBM8ZPR/F169/1000w.png" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 04:18:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/millionbrekk-hos-gullsmed-pa-cc-vest-1.17751570" target="_blank">Millionbrekk hos gullsmed på CC Vest</a></h2>
+                        <p>Ifølge VG har det blitt stjlålet smykker for opp til to millioner.
+– Politiet har rykket ut til CC Vest etter at et vaktselskap varslet om at en alarm har blitt utløst like før klo...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143633356.jpg%3F%26accessToken%3D4eaf26041cb7c3ddce4f29dbaf3d58aa07b990a44351957261c9c9a9130d30d6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -178,42 +351,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/02/8325159/equinor-selger-portefolje-for-naer-11-mrd." target="_blank">Selger portefølje for nær 11 mrd.</a></h2>
                         <p>Equinor selger sin landbaserte portefølje i Argentina for 1,1 milliarder dollar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 11:23:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/skytingen-pa-kuben_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Skytingen på Kuben: 16-åring siktet for drapsforsøk</a></h2>
-                        <p>Gutten som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo, er nå siktet for drapsforsøk....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 12:07:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-1.17752257" target="_blank">Pågrepet: Politiet vil fengsle Marius Borg Høiby</a></h2>
-                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 11:23:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/kuben-skytingen_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Kuben-skytingen: 16-åring siktet for drapsforsøk</a></h2>
-                        <p>16- åringen som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo er nå siktet for drapsforsøk....</p>
                     </div>
                 </div>
             
@@ -290,54 +427,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MGJx63CcITe90T6QVDubJAMoXqSdiwC6Q_tWJWpmNxvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 10:41:18 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/jagland-varsler-omfattende-redegjorelse-om-epstein-saken_-opplyser-advokat-sigurd-klomsaet-til-ntb-1.17752073" target="_blank">Jagland varsler omfattende redegjørelse om Epstein-saken, opplyser advokat Sigurd Klomsæt til NTB</a></h2>
-                        <p>– Så fort som mulig vil vi uansett gå gjennom påstander og beskyldninger og svare på dem. Det er også avdekket at det er grunn til å nærmere ettergå ektheten i det fremlagte materi...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3QLZYYawEUsNaynAyMAlLATd2IuIUnO-bKVQLvHxu2wA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 10:58:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/blei-evakuert-etter-ncl-salten-trefte-land-pa-byneset-_-i-dag-flyttar-jostein-jorgensen-heim-1.17751686" target="_blank">Endeleg er Jostein heime etter åtte månader: – Fantastisk</a></h2>
-                        <p>Han og familien har vore evakuert frå heimen på Byneset sidan containerskipet «NCL Salten» trefte land i mai....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/RN_kyjUQF-fSTiac3__MwwLxdvSKgP14cioi0ya1MC9g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 10:59:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/jagland-varsler-redegjorelse-om-epstein-saken_-grunn-til-a-sjekke-om-dokumenter-er-ekte-1.17752101" target="_blank">Jagland varsler redegjørelse om Epstein-saken: Grunn til å sjekke om dokumenter er ekte</a></h2>
-                        <p>Tidligere statsminister Thorbjørn Jagland varsler en omfattende redegjørelse om Epstein-saken, opplyser hans talsperson advokat Sigurd Klomsæt til NTB. Jagland melder seg ikke ut a...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/HLKhaiTWLno7CkWUwcw6SgwhCMXeYIX8_E4epaJjAxrA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 11:08:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/navngir-ofrene-i-_epstein-dokumentene_-1.17751628" target="_blank">Epstein-ofre eksponert: 43 navn usladdet i dokumenter</a></h2>
-                        <p>En gjennomgang avisen Wall Street Journal har gjort, viser at navnene til 43 av de registrerte ofrene i «Epstein dokumentene» ikke er sladdet av det amerikanske justisdepartementet...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F94045699.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dacc10a504d4dec5ffcbd8595835c91fc3819659515de824d040a26b0f379a43d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -394,19 +483,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/02/8325091/ravarekollaps-for-lundin-familien-14-milliarder-barbert-siden-torsdag" target="_blank">Fullastet i råvarekollaps: 14 milliarder barbert siden torsdag</a></h2>
                         <p>Lundin-familien, som er tungt eksponert mot olje og metall, har et papirtap på 13 milliarder kroner siden torsdag etter kursras....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 10:01:50 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/mote-i-rode-kors-etter-avsloringene-om-mette-marits-kontakt-med-epstein-1.17751985" target="_blank">Møte i Røde Kors etter avsløringene om Mette-Marits kontakt med Epstein</a></h2>
-                        <p>Røde Kors sitter i et møte og diskuterer kronprinsesse Mette-Marit sin kontakt med overgrepsdømte Jeffery Epstein.
-Kronprinsessen er høye beskytter for Norges Røde Kors og har takk...</p>
                     </div>
                 </div>
             
@@ -495,30 +571,6 @@ Kronprinsessen er høye beskytter for Norges Røde Kors og har takk...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/igXbYOA22_4YfeM1PCm8gQ4jXENRUkfbOSWn_VSsDxiA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Sun, 01 Feb 2026 16:18:30 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/korrespondentbrevet-fra-usa_-_-vil-isfronten-tine_-1.17748620" target="_blank">Isfrontene over USA</a></h2>
-                        <p>Midt i den kaldeste vinteren i Minnesota på mange år, har USAs motsetninger nådd frysepunktet. Dette er en kamp uten vinnere, sier en demonstrant....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/DHNO3G_ZmHQVZJ_H4CCiSQWVrXChJKhXLq5PqIMJtJzw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 09:06:46 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/mdg-vil-ha-full-gransking-av-norske-epstein-bindinger-1.17751832" target="_blank">MDG vil ha full gransking av norske Epstein-bindinger</a></h2>
-                        <p>MDG krever at Stortinget setter ned en uavhengig granskingskommisjon for å komme til bunns i hva slags kontakt som har vært mellom folk med sentrale verv og posisjoner i det norske...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143603327.jpg%3F%26accessToken%3Dfe8e2f0cafed2f90fd749fc618db2e4b5bba3eb0ce64f0fb7575f267b368b6fc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -551,18 +603,6 @@ Kronprinsessen er høye beskytter for Norges Røde Kors og har takk...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/rrWrom/store-sprik-foer-tallslipp-et-av-vaare-store-veddemaal" target="_blank">Store sprik før tallslipp: – Et av våre store veddemål</a></h2>
                         <p>Teknologiaksjen har gått som en jojo på resultatdagen. Eksperter ser en klar risiko før tallslipp....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/-_WawnonHiAPwwo_uyPA-w8two4Yv8gx8FDcvaNBLigA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 06:49:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/trump-har-fatt-verden-til-a-se-mot-arktis.-statssekretaer-eivind-vad-petersson-i-ud-mener-det-er-bra-1.17746075" target="_blank">Trump har fått verden til å se mot Arktis: – På sett og vis bra, sier UD</a></h2>
-                        <p>Ingen snakket om Arktis, mens så kom Donald Trump. Statssekretær Eivind Vad Petersson mener det ikke bare er negativt at nordområdene er på verdens lepper under årets Arctic Fronti...</p>
                     </div>
                 </div>
             
@@ -635,19 +675,6 @@ Kronprinsessen er høye beskytter for Norges Røde Kors og har takk...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/M7126B/venter-markant-fall-paa-oslo-boers" target="_blank">Markant fall på Oslo Børs</a></h2>
                         <p>Uro i markedene, gullprisras og oljeprisfall sender Børsen nedover....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://static.nrk.no/kartoteket/01KGECWZ3NHZ9EQT6ZYMBM8ZPR/F169/1000w.png" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 04:18:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/millionbrekk-hos-gullsmed-pa-cc-vest-1.17751570" target="_blank">Millionbrekk hos gullsmed på CC Vest</a></h2>
-                        <p>Ifølge VG har det blitt stjlålet smykker for opp til to millioner.
-– Politiet har rykket ut til CC Vest etter at et vaktselskap varslet om at en alarm har blitt utløst like før klo...</p>
                     </div>
                 </div>
             
@@ -759,31 +786,7 @@ Kronprinsessen er høye beskytter for Norges Røde Kors og har takk...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143590843.jpg%3F%26accessToken%3Df5e7b189fd71fae62b0806bd5047939d5c7c78118c4ec865ffd57102d01e8fcc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 06:14:46 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/02/8325001/oljeprisen-stuper-etter-deeskalering-i-iran" target="_blank">Oljeprisen stuper etter deeskalering i Iran</a></h2>
-                        <p>Oljeprisen stuper fem prosent etter deeskalering mellom USA og Iran....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Mon, 02 Feb 2026 05:39:50 GMT
-                        </div>
-                        <h2><a href="https://e24.no/internasjonal-oekonomi/i/d4m0Oq/kraftig-oljeprisfall-etter-trump-utspill" target="_blank">Kraftig oljeprisfall etter Trump-utspill</a></h2>
-                        <p>Oljeprisen sendes ned etter utspill om forhandlinger mellom USA og Iran....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 02.02.2026 12:21</div>
+                <div class="footer">Sist oppdatert: 02.02.2026 12:25</div>
             </div>
         </body>
         </html>
