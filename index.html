@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -96,7 +99,201 @@
                         <p>32.000 boter diskuterer uten menneskelig innblanding....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Ib7vqfrLsEaPtKRRMT0MtwNB8DnFBFN0MTSFsYRIVYFw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 17:09:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/domd-for-tvangsmedisinering-av-inger-mari-eidsvik_-norsk-psykiatrisk-foreining-fryktar-byrakrati-1.17751751" target="_blank">Inger-Mari vann fram mot tvangsbehandling- psykiater fryktar konsekvensane</a></h2>
+                        <p>Psykiaterar er uroa for meir byråkrati etter dom om tvangsbehandling. Inger Mari Eidsvik fekk historisk siger i retten....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/u3Wlo75-E51zRJ-YQAkzcgaEe1pXqADL1d4ZjDGUFfZw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 16:00:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/na-dannes-en-ny-verdensorden_-_-trump-driver-med-maktpolitisk-selvskading-1.17749242" target="_blank">En ny verdensorden dannes: – Trump driver med maktpolitisk selvskading</a></h2>
+                        <p>USAs nærmeste allierte knytter nye bånd. Beskjeden er tydelig, mener eksperten. Men hva betyr det egentlig for verden?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 12:07:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/marius-borg-hoiby-fengsles-i-fire-uker-1.17752257" target="_blank">Marius Borg Høiby fengsles i fire uker</a></h2>
+                        <p>Oslo tingrett valgte i dag å fengsle Marius Borg Høiby i fire uker etter han ble pågrepet i går. Lovbruddene skal ha skjedd i helgen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3mVgYcOLMvk5Gnmx9f5jUwVgnCmkqdv1tVPpNdtvkU1Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 15:02:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/ntb_-mona-juul-om-epstein-kontakt_-_-burde-vaert-langt-mer-varsom-1.17752511" target="_blank">NTB: Mona Juul om Epstein-kontakt: – Burde vært langt mer varsom</a></h2>
+                        <p>I en uttalelse til NTB erkjenner ambassadør Mona Juul at det var «upresist» å beskrive kontakten med Jeffrey Epstein som minimal.
+– I lys av det som har kommet fram gjennom de såka...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ZuB2e0x92og4n-EJO8l5dQg-qpjazhE4lVP7fKu5-R9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 14:53:37 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/curling-ekteparet-kristin-skaslien-og-magnus-nedregotten-vil-krangle-seg-til-ny-ol-medalje-1.17746120" target="_blank">Kasta tomat på ektemannen: – Vi har blitt gamle nok til å gi f***</a></h2>
+                        <p>OL-ekteparet har prøvd psykologar, mindfulness og mentaltrenarar. No hevdar dei å ha funne løysinga: Å gi fullstendig faen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 15:14:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/marius-borg-hoiby-fengsles-i-fire-uker-1.17752581" target="_blank">Marius Borg Høiby fengsles i fire uker</a></h2>
+                        <p>Dagen før rettssaken mot kronprinsessens sønn starter, fengsles Marius Borg Høiby (29) i fire uker.
+Høiby ble pågrepet søndag kveld, siktet for kroppskrenkelse, trusler med kniv og...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/b8ZcnCG2Dr3O32gRaSsPNAFoZVuhD01tAcr2bozgugKw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 15:07:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/hakan-wallden-skada-pa-sats---fekk-tilbod-om-gratis-trening-1.17749171" target="_blank">Kunne ikkje trene etter skade på Sats - fekk tilbod om gratis trening</a></h2>
+                        <p>Treningsapparatet svikta og hovudet til Håkan Walldén small i bakken. Sats sitt forsøk på å gjere det godt att, gjorde han provosert. Nå fjernar dei apparatet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ClHX1_bsTZkzJ_uV67hz5wyRmVB1L6IR6TBU5JiQd7_Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 14:24:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/hvor-langt-strekker-empatien-seg_-1.17752386" target="_blank">Hvor langt strekker empatien seg?</a></h2>
+                        <p>Det er vanskelig å se for seg noen annen utvei enn full åpenhet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/AlZGjkoboIGyjIDpM4XWtwuc0Ptf6BhxTZ03MjQf23Kg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 14:21:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/dette-er-jeffrey-epstein-sitt-norske-nettverk-1.17751175" target="_blank">Dette er Jeffrey Epstein sitt norske nettverk</a></h2>
+                        <p>Den skandaliserte overgriparen Jeffrey Epstein hadde omfattande omgang med fleire norske makttoppar, viser ferske dokument....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 13:26:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/okokrim-vurderer-etterforskning-om-epstein-filene-1.17752412" target="_blank">Økokrim vurderer etterforskning om Epstein-filene</a></h2>
+                        <p>«På bakgrunn av informasjonen som har fremkommet i de såkalte Epstein-filene vurderer Økokrim om det er grunnlag for å iverksette etterforsking», skriver kommunikasjonssjef Katrine...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 13:21:46 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/politiet_-mistenker-ikke-noe-kriminelt-i-forbindelse-med-millehaugens-dodsfall-1.17752409" target="_blank">Politiet: Mistenker ikke noe kriminelt i forbindelse med Millehaugens dødsfall</a></h2>
+                        <p>Innlandet politidistrikt har mottatt den foreløpige obduksjonsrapporten fra rettsmedisinsk institutt. Politiet mistenker ikke at det har skjedd noe kriminelt i forbindelse med døds...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/YH3LyyMsww35OBNdEDvW4Ak1r1e2f8urRsrZVggIApAA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 12:05:57 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/nedgang-i-salet-av-nye-bilar-etter-dei-nye-momsreglane-1.17752038" target="_blank">Seigt nachspiel i bilbransjen: – Ein normal pustepause</a></h2>
+                        <p>Det blei selt 77 prosent færre nye bilar i januar samanlikna med same månad året før....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 12:07:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-for-trusler-med-kniv-1.17752257" target="_blank">Marius Borg Høiby pågrepet: trusler med kniv</a></h2>
+                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 11:23:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/skytingen-pa-kuben_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Skytingen på Kuben: 16-åring siktet for drapsforsøk</a></h2>
+                        <p>Gutten som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo, er nå siktet for drapsforsøk....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 12:07:03 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-1.17752257" target="_blank">Pågrepet: Politiet vil fengsle Marius Borg Høiby</a></h2>
+                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 11:23:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/kuben-skytingen_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Kuben-skytingen: 16-åring siktet for drapsforsøk</a></h2>
+                        <p>16- åringen som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo er nå siktet for drapsforsøk....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F139273765.jpg%3F%26accessToken%3Dbc4d6357f3ae9da9a4ccbfe38feda4d14e2e04e809790bb64a60a5b99cb244b7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -170,18 +367,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Ib7vqfrLsEaPtKRRMT0MtwNB8DnFBFN0MTSFsYRIVYFw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 17:09:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/domd-for-tvangsmedisinering-av-inger-mari-eidsvik_-norsk-psykiatrisk-foreining-fryktar-byrakrati-1.17751751" target="_blank">Inger-Mari vann fram mot tvangsbehandling- psykiater fryktar konsekvensane</a></h2>
-                        <p>Psykiaterar er uroa for meir byråkrati etter dom om tvangsbehandling. Inger Mari Eidsvik fekk historisk siger i retten....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F128338840.jpg%3F%26accessToken%3D42d793ec1e344113c2a39590fef813de70cd482b274037e03ae3e52e471c741f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -230,18 +415,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/u3Wlo75-E51zRJ-YQAkzcgaEe1pXqADL1d4ZjDGUFfZw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 16:00:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/na-dannes-en-ny-verdensorden_-_-trump-driver-med-maktpolitisk-selvskading-1.17749242" target="_blank">En ny verdensorden dannes: – Trump driver med maktpolitisk selvskading</a></h2>
-                        <p>USAs nærmeste allierte knytter nye bånd. Beskjeden er tydelig, mener eksperten. Men hva betyr det egentlig for verden?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F40907186.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dc6080fec738ebb64158065f706e4020761d0d7f20820a7be5ae97665799b0026" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -250,18 +423,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/02/8325222/endte-ned-oljepris-smell-pa-oslo-bors" target="_blank">Oslo Børs endte dagen ned 0,2 prosent etter et betydelig fall i oljeprisen.</a></h2>
                         <p>Oslo Børs endte ukens første handelsdag ned 0,2 prosent. Oljeaksjene fikk seg en smell etter et betydelig fall i oljeprisen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 12:07:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/marius-borg-hoiby-fengsles-i-fire-uker-1.17752257" target="_blank">Marius Borg Høiby fengsles i fire uker</a></h2>
-                        <p>Oslo tingrett valgte i dag å fengsle Marius Borg Høiby i fire uker etter han ble pågrepet i går. Lovbruddene skal ha skjedd i helgen....</p>
                     </div>
                 </div>
             
@@ -362,80 +523,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3mVgYcOLMvk5Gnmx9f5jUwVgnCmkqdv1tVPpNdtvkU1Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 15:02:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/ntb_-mona-juul-om-epstein-kontakt_-_-burde-vaert-langt-mer-varsom-1.17752511" target="_blank">NTB: Mona Juul om Epstein-kontakt: – Burde vært langt mer varsom</a></h2>
-                        <p>I en uttalelse til NTB erkjenner ambassadør Mona Juul at det var «upresist» å beskrive kontakten med Jeffrey Epstein som minimal.
-– I lys av det som har kommet fram gjennom de såka...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ZuB2e0x92og4n-EJO8l5dQg-qpjazhE4lVP7fKu5-R9Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 14:53:37 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/curling-ekteparet-kristin-skaslien-og-magnus-nedregotten-vil-krangle-seg-til-ny-ol-medalje-1.17746120" target="_blank">Kasta tomat på ektemannen: – Vi har blitt gamle nok til å gi f***</a></h2>
-                        <p>OL-ekteparet har prøvd psykologar, mindfulness og mentaltrenarar. No hevdar dei å ha funne løysinga: Å gi fullstendig faen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 15:14:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/marius-borg-hoiby-fengsles-i-fire-uker-1.17752581" target="_blank">Marius Borg Høiby fengsles i fire uker</a></h2>
-                        <p>Dagen før rettssaken mot kronprinsessens sønn starter, fengsles Marius Borg Høiby (29) i fire uker.
-Høiby ble pågrepet søndag kveld, siktet for kroppskrenkelse, trusler med kniv og...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/b8ZcnCG2Dr3O32gRaSsPNAFoZVuhD01tAcr2bozgugKw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 15:07:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/hakan-wallden-skada-pa-sats---fekk-tilbod-om-gratis-trening-1.17749171" target="_blank">Kunne ikkje trene etter skade på Sats - fekk tilbod om gratis trening</a></h2>
-                        <p>Treningsapparatet svikta og hovudet til Håkan Walldén small i bakken. Sats sitt forsøk på å gjere det godt att, gjorde han provosert. Nå fjernar dei apparatet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ClHX1_bsTZkzJ_uV67hz5wyRmVB1L6IR6TBU5JiQd7_Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 14:24:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/hvor-langt-strekker-empatien-seg_-1.17752386" target="_blank">Hvor langt strekker empatien seg?</a></h2>
-                        <p>Det er vanskelig å se for seg noen annen utvei enn full åpenhet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/AlZGjkoboIGyjIDpM4XWtwuc0Ptf6BhxTZ03MjQf23Kg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 14:21:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/dette-er-jeffrey-epstein-sitt-norske-nettverk-1.17751175" target="_blank">Dette er Jeffrey Epstein sitt norske nettverk</a></h2>
-                        <p>Den skandaliserte overgriparen Jeffrey Epstein hadde omfattande omgang med fleire norske makttoppar, viser ferske dokument....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143663098.jpg%3F%26accessToken%3D801279a0def3a0b78306209d1a704f0645c0fc52103f0d76887b728727e479ce" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -511,35 +598,11 @@ Høiby ble pågrepet søndag kveld, siktet for kroppskrenkelse, trusler med kniv
                     
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 13:26:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/okokrim-vurderer-etterforskning-om-epstein-filene-1.17752412" target="_blank">Økokrim vurderer etterforskning om Epstein-filene</a></h2>
-                        <p>«På bakgrunn av informasjonen som har fremkommet i de såkalte Epstein-filene vurderer Økokrim om det er grunnlag for å iverksette etterforsking», skriver kommunikasjonssjef Katrine...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
                             <span class="tag Økonomi">Økonomi</span> 
                             Mon, 02 Feb 2026 13:21:53 GMT
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/d4mBeO/aftenposten-oekokrim-vurderer-etterforskning-etter-epstein-avsloeringene" target="_blank">Økokrim vurderer etterforskning etter Epstein-avsløringene</a></h2>
                         <p>Det er på bakgrunn av informasjonen som har fremkommet i de såkalte Epstein-filene, skriver de til Aftenposten....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 13:21:46 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/politiet_-mistenker-ikke-noe-kriminelt-i-forbindelse-med-millehaugens-dodsfall-1.17752409" target="_blank">Politiet: Mistenker ikke noe kriminelt i forbindelse med Millehaugens dødsfall</a></h2>
-                        <p>Innlandet politidistrikt har mottatt den foreløpige obduksjonsrapporten fra rettsmedisinsk institutt. Politiet mistenker ikke at det har skjedd noe kriminelt i forbindelse med døds...</p>
                     </div>
                 </div>
             
@@ -604,30 +667,6 @@ Høiby ble pågrepet søndag kveld, siktet for kroppskrenkelse, trusler med kniv
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/YH3LyyMsww35OBNdEDvW4Ak1r1e2f8urRsrZVggIApAA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 12:05:57 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/nedgang-i-salet-av-nye-bilar-etter-dei-nye-momsreglane-1.17752038" target="_blank">Seigt nachspiel i bilbransjen: – Ein normal pustepause</a></h2>
-                        <p>Det blei selt 77 prosent færre nye bilar i januar samanlikna med same månad året før....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 12:07:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-for-trusler-med-kniv-1.17752257" target="_blank">Marius Borg Høiby pågrepet: trusler med kniv</a></h2>
-                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143633356.jpg%3F%26accessToken%3D4eaf26041cb7c3ddce4f29dbaf3d58aa07b990a44351957261c9c9a9130d30d6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -672,42 +711,6 @@ Høiby ble pågrepet søndag kveld, siktet for kroppskrenkelse, trusler med kniv
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/02/8325159/equinor-selger-portefolje-for-naer-11-mrd." target="_blank">Selger portefølje for nær 11 mrd.</a></h2>
                         <p>Equinor selger sin landbaserte portefølje i Argentina for 1,1 milliarder dollar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 11:23:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/skytingen-pa-kuben_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Skytingen på Kuben: 16-åring siktet for drapsforsøk</a></h2>
-                        <p>Gutten som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo, er nå siktet for drapsforsøk....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/16a2D0W4F59-jcriB4A4dg3WkvB3nzgSFU15NBJLEe7A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 12:07:03 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/pagrepet_-politiet-vil-fengsle-marius-borg-hoiby-1.17752257" target="_blank">Pågrepet: Politiet vil fengsle Marius Borg Høiby</a></h2>
-                        <p>Oslo tingrett skal avgjøre om Marius Borg Høiby skal fengsles. Saken mot ham starter i morgen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_py1JuOU4XSF-IwDh5xtjAeMsn8rP1nt03vE2l2a1UtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 11:23:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/kuben-skytingen_-16-aring-siktet-for-drapsforsok-1.17752185" target="_blank">Kuben-skytingen: 16-åring siktet for drapsforsøk</a></h2>
-                        <p>16- åringen som ble pågrepet etter skytingen ved Kuben videregående skole i Oslo er nå siktet for drapsforsøk....</p>
                     </div>
                 </div>
             
@@ -783,7 +786,7 @@ Høiby ble pågrepet søndag kveld, siktet for kroppskrenkelse, trusler med kniv
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 02.02.2026 17:21</div>
+                <div class="footer">Sist oppdatert: 02.02.2026 17:25</div>
             </div>
         </body>
         </html>
