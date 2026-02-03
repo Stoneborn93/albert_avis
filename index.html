@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -144,7 +147,103 @@
                         <p>Skal dele på basestasjoner, men ha egne kjernenett. Hevder det vil styrke, ikke svekke konkurransen....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:10:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/fotgjenger-pakjort-i-oslo-_-kritisk-skadd-1.17753485" target="_blank">Person påkjørt i Oslo – kritisk skadd</a></h2>
+                        <p>Det har vært en alvorlig trafikkulykke i Oslo....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/CDO92fZ8BrTP0Dd0LMaMMQ3Cc4JsxZNwtzpFo76_zVRQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:59:29 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/gjor-nye-undersokelser-etter-dodsbrannen-i-verdal-1.17753128" target="_blank">Gjør nye undersøkelser etter dødsbrannen i Verdal</a></h2>
+                        <p>Politiet vil i løpet av dagen gjennomføre ytterligere undersøkelser av åstedet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ViQeLnHRp0uEWIlupvpQ0QFeiWmHroJ8HC3nClRP2N7w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 09:57:11 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/denne-isen-er-minst-1_2-millioner-ar-gammel-1.17745966" target="_blank">Denne isen er minst 1,2 millioner år gammel</a></h2>
+                        <p>Issøylen fra Antarktis rommer klimahemmeligheter fra i dag og 1,2 millioner år bakover i historien. Nå skal forskere i Bergen analysere hver eneste millimeter av isen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/8Msv6Mae_QhBvWCtgarfsQfF6hIqGRIo0asV3E5rBQjQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:04:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/utvalg_-elbiler-bor-ogsa-betale-avgifter-for-a-bruke-veiene-1.17752139" target="_blank">Utvalg: Elbilister bør også betale avgifter for å bruke veiene</a></h2>
+                        <p>De har sluppet få betale for det lenge. Men nå bør også elbilistene i større grad betale avgifter for å bruke selve veinettet, mener et utvalg som gir råd til Finansdepartementet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/oeLXX0C8hsgnH5oo_sWZgwHgOdH26LmsBJblwYTG2wYA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:10:08 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sapmi/sametingsdirektoren-leide-bil-for-65.000-kroner-_-godkjente-regningen-selv-1.17748074" target="_blank">Sametingsdirektøren leide bil for 65.000 kroner – godkjente regningen selv</a></h2>
+                        <p>NRKs gjennomgang viser at Inger Marit Eira-Åhren selv sørget for at regningene ble betalt. Sametinget bekrefter at det har kommet varsel mot direktøren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9jppvDB72T6IM79DTPWaWQIKAADs6Lqa8mGmQRxO1kzg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 07:06:22 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/innbyggerundersokelsen_-nordmenns-tillit-til-offentlige-forvaltning-synker-1.17752007" target="_blank">Nordmenns tillit til offentlig forvaltning synker</a></h2>
+                        <p>Det er en økende tillit til regjeringen og Stortinget. Men tilliten til offentlig forvaltning går ned for andre gang på rad, viser ny undersøkelse....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Yo8agH8KgzSyStmpVoFR0wTFADECWAu76CGtpvsqpz1g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 07:34:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/rettssaken-mot-marius-borg-hoiby-starter-i-oslo-tingrett-1.17752242" target="_blank">Rettssaken mot Marius Borg Høiby starter i Oslo tingrett</a></h2>
+                        <p>Høiby nekter straffskyld for de mest alvorlige av de 38 tiltalepunktene mot ham....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pSgIIICTZd4VkVYTo0Y2JgiY4KSADOpyHDuj69rbbikg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 08:00:04 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/se-video_-her-bryter-tyven-seg-inn-pa-cc-vest-1.17753141" target="_blank">Stjal smykker for minst 2 millioner: Hadde på seg gassmaske</a></h2>
+                        <p>– Dette er det mest spektakulære innbruddet vi har opplevd, sier sjefen for David-Andersen til NRK....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F58828481.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dcf17442cc65956f29bf319e83f5f6cf352e5e5f00245bd136888805c86f90373" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -214,30 +313,6 @@
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/L41OQP/fransk-politi-har-ransaket-x-kontoret-i-paris" target="_blank">Politiraid mot X-kontoret i Paris</a></h2>
                         <p>Elon Musk er innkalt som vitne i saken, skriver Reuters....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:10:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/fotgjenger-pakjort-i-oslo-_-kritisk-skadd-1.17753485" target="_blank">Person påkjørt i Oslo – kritisk skadd</a></h2>
-                        <p>Det har vært en alvorlig trafikkulykke i Oslo....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/CDO92fZ8BrTP0Dd0LMaMMQ3Cc4JsxZNwtzpFo76_zVRQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:59:29 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/gjor-nye-undersokelser-etter-dodsbrannen-i-verdal-1.17753128" target="_blank">Gjør nye undersøkelser etter dødsbrannen i Verdal</a></h2>
-                        <p>Politiet vil i løpet av dagen gjennomføre ytterligere undersøkelser av åstedet....</p>
                     </div>
                 </div>
             
@@ -350,42 +425,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ViQeLnHRp0uEWIlupvpQ0QFeiWmHroJ8HC3nClRP2N7w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 09:57:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/denne-isen-er-minst-1_2-millioner-ar-gammel-1.17745966" target="_blank">Denne isen er minst 1,2 millioner år gammel</a></h2>
-                        <p>Issøylen fra Antarktis rommer klimahemmeligheter fra i dag og 1,2 millioner år bakover i historien. Nå skal forskere i Bergen analysere hver eneste millimeter av isen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/8Msv6Mae_QhBvWCtgarfsQfF6hIqGRIo0asV3E5rBQjQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:04:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/utvalg_-elbiler-bor-ogsa-betale-avgifter-for-a-bruke-veiene-1.17752139" target="_blank">Utvalg: Elbilister bør også betale avgifter for å bruke veiene</a></h2>
-                        <p>De har sluppet få betale for det lenge. Men nå bør også elbilistene i større grad betale avgifter for å bruke selve veinettet, mener et utvalg som gir råd til Finansdepartementet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/oeLXX0C8hsgnH5oo_sWZgwHgOdH26LmsBJblwYTG2wYA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:10:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sapmi/sametingsdirektoren-leide-bil-for-65.000-kroner-_-godkjente-regningen-selv-1.17748074" target="_blank">Sametingsdirektøren leide bil for 65.000 kroner – godkjente regningen selv</a></h2>
-                        <p>NRKs gjennomgang viser at Inger Marit Eira-Åhren selv sørget for at regningene ble betalt. Sametinget bekrefter at det har kommet varsel mot direktøren....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57516246.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D8d9227bea836de5d0470a3e7ce1a81604fd35db5e5e56452e7dcedeade8de721" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -418,18 +457,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325362/alex-karp-ice-motstandere-burde-demonstrere-for-mer-palantir" target="_blank">Avviser ICE-kritikk: – Dere burde demonstrere for mer Palantir</a></h2>
                         <p>Palantir knuste analytikerforventningene og stiger til himmels på børsen. Toppsjef Alex Karp svarer på ICE-kritikken og oppfordrer kritikerne til å demonstrere for mer Palantir....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/9jppvDB72T6IM79DTPWaWQIKAADs6Lqa8mGmQRxO1kzg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 07:06:22 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/innbyggerundersokelsen_-nordmenns-tillit-til-offentlige-forvaltning-synker-1.17752007" target="_blank">Nordmenns tillit til offentlig forvaltning synker</a></h2>
-                        <p>Det er en økende tillit til regjeringen og Stortinget. Men tilliten til offentlig forvaltning går ned for andre gang på rad, viser ny undersøkelse....</p>
                     </div>
                 </div>
             
@@ -502,30 +529,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/k03Ogj/oslo-boers-stiger-fra-start" target="_blank">Oppgang på Oslo Børs – IT-aksje faller kraftig</a></h2>
                         <p>Okea stiger etter tallslipp, mens Link Mobility faller kraftig etter oppdatering....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Yo8agH8KgzSyStmpVoFR0wTFADECWAu76CGtpvsqpz1g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 07:34:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/rettssaken-mot-marius-borg-hoiby-starter-i-oslo-tingrett-1.17752242" target="_blank">Rettssaken mot Marius Borg Høiby starter i Oslo tingrett</a></h2>
-                        <p>Høiby nekter straffskyld for de mest alvorlige av de 38 tiltalepunktene mot ham....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pSgIIICTZd4VkVYTo0Y2JgiY4KSADOpyHDuj69rbbikg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 08:00:04 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/se-video_-her-bryter-tyven-seg-inn-pa-cc-vest-1.17753141" target="_blank">Stjal smykker for minst 2 millioner: Hadde på seg gassmaske</a></h2>
-                        <p>– Dette er det mest spektakulære innbruddet vi har opplevd, sier sjefen for David-Andersen til NRK....</p>
                     </div>
                 </div>
             
@@ -781,7 +784,7 @@
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 03.02.2026 11:21</div>
+                <div class="footer">Sist oppdatert: 03.02.2026 11:25</div>
             </div>
         </body>
         </html>
