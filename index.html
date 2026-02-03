@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -168,7 +171,190 @@
                         <p>Kanzant-partner Geir Øyvind Gulliksen mener norske virksomheter i alt for lang tid har lent seg på enkeltleverandører som gjør at de mister handlefrihet....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9jppvDB72T6IM79DTPWaWQIKAADs6Lqa8mGmQRxO1kzg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 07:06:22 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ostfold/innbyggerundersokelsen_-nordmenns-tillit-til-offentlige-forvaltning-synker-1.17752007" target="_blank">Nordmenns tillit til offentlig forvaltning synker</a></h2>
+                        <p>Det er en økende tillit til regjeringen og Stortinget. Men tilliten til offentlig forvaltning går ned for andre gang på rad, viser ny undersøkelse....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Yo8agH8KgzSyStmpVoFR0wTFADECWAu76CGtpvsqpz1g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 07:34:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/rettssaken-mot-marius-borg-hoiby-starter-i-oslo-tingrett-1.17752242" target="_blank">Rettssaken mot Marius Borg Høiby starter i Oslo tingrett</a></h2>
+                        <p>Høiby nekter straffskyld for de mest alvorlige av de 38 tiltalepunktene mot ham....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/pSgIIICTZd4VkVYTo0Y2JgiY4KSADOpyHDuj69rbbikg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 08:00:04 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/se-video_-her-bryter-tyven-seg-inn-pa-cc-vest-1.17753141" target="_blank">Stjal smykker for minst 2 millioner: Hadde på seg gassmaske</a></h2>
+                        <p>– Dette er det mest spektakulære innbruddet vi har opplevd, sier sjefen for David-Andersen til NRK....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/kpKFTRRW93tZ47yX7RopxgxV90NUxJgVRSW3enfUsjAQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 21:52:51 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/musk_-spacex-og-xai-slas-sammen-1.17752936" target="_blank">Musk: SpaceX og xAI slås sammen</a></h2>
+                        <p>Elon Musk bekrefter at romfartsselskapet SpaceX blir slått sammen med KI-selskapet xAI, i en melding på nettsiden til SpaceX.
+Selskapets samlede verdi ventes å bli rundt 1250 milli...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/xB2fd1uvrVHriWETnuNFxw0So_FBbm8j4tz-oU-30IrQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 05:13:46 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/langrenn_-emil-iversen-far-nytt-ja-av-kjaeresten-bettina-burud-1.17748504" target="_blank">Iversen får nytt ja av kjæresten</a></h2>
+                        <p>Emil Iversen mener det er et sjokk at han er klar for sitt tredje OL. Nå fristes han av VM-satsing – med samboerens tillatelse....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/OQNImGSPbIJFzQ0VF1AOfQMtGVN8Mo19VVE0jbag4MUw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 04:25:14 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/temu-stal-strikkedesignet-til-stine-1.17739939" target="_blank">Stine fann strikkegenseren sin på Temu</a></h2>
+                        <p>Stine Erikstad fann genseren sin på Temu. Strikkedesignar seier det er vanskeleg å verne eigne produkt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/EaF_gjxQY8-vtkEqfsKXEgydUbMkzFfBBQC9aZ3xuKlQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 04:25:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/holder-digitale-enheter-tilbake_-_-bekymringsverdig-at-sikkerheten-ikke-er-sjekket-i-forkant-1.17737128" target="_blank">Full skjermstopp etter minister-brev: – Ansvarsfraskrivelse, mener foreldre</a></h2>
+                        <p>Etter et brev fra kunnskapsministeren har Solvang skole i Haugesund endret praksis for digitale enheter. Samtidig håndterer kommunene rundt om i landet rådene svært ulikt....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/GWAzFpFKBJXZWVZaADXFbgYkCVfr7Sl7tNRDd00EeSvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 23:31:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/clinton-paret-gar-med-pa-a-vitne-om-epstein-saken-i-kongressen-1.17752962" target="_blank">Clinton-paret går med på å vitne om Epstein-saken i Kongressen</a></h2>
+                        <p>USAs tidligere president Bill Clinton og Hillary Clinton går likevel med på vitne i en kongresshøring om Epstein-saken i Representantenes hus, skriver The New York Times.
+Dermed gi...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/05TjlN-kwgY4G01arHikmA422ieHLoguJ7te96IE5_kQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 21:54:44 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/direkte/xl/kronprinsessen-fikk-to-invitasjoner-til-_epstein-oyen_-1.17751233" target="_blank">Ble invitert minst to ganger til «Epstein-øyen»</a></h2>
+                        <p>På juleferie i Karibia ble kronprinsessen spurt av Epstein om hun ville komme til hans private øy. Senere skilte hun lag med familien og møtte ham i Florida....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/IN43YTN3QHQCJWAJYnw-fQiNM8C1Friz-iSSsLNS50rw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 21:56:49 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/borge-brende-om-sitt-forhold-til-epstein-1.17752804" target="_blank">Brende om Epstein: – Var helt uvitende om hans kriminelle handlinger</a></h2>
+                        <p>Børge Brende sier at Epstein var «et monster» og at han aldri ville hatt noe med han å gjøre om han visste om bakgrunnen hans....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 21:52:51 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/elon-musk_-spacex-og-xai-slas-sammen-1.17752936" target="_blank">Elon Musk: SpaceX og xAI slås sammen</a></h2>
+                        <p>Elon Musk bekrefter at romfartsselskapet SpaceX blir slått sammen med KI-selskapet xAI, i en melding på nettsiden til SpaceX.
+Selskapets samlede verdi ventes å bli rundt 1250 milli...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/o8W_qIKiXui_Zqk7I9qDmgFO8sy6a3c9riyuMASy5FiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 20:48:34 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/sterke-reaksjoner-etter-epstein-avsloringer-1.17752256" target="_blank">Sterke reaksjonar etter Epstein-avsløringar: – Forventar at alle kort blir lagt på bordet</a></h2>
+                        <p>Fleire reagerer på kontakten mellom norske samfunnstoppar og Jeffrey Epstein. Organisasjon bryt samarbeid med kronprinsesse Mette-Marit....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/QDdfiTk81z4TxZUctPRzCAIekZhZD6OgBYxXWN_OV1SA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 21:04:29 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/_enormt-medietrykk_-i-hoiby-saken_-frykter-navn-og-bilder-kommer-ut-1.17744400" target="_blank">«Enormt medietrykk» i Høiby-saken: Frykter navn og bilder kommer ut</a></h2>
+                        <p>Det er akkreditert nesten like mange utenlandske som norske medier til saken mot Marius Borg Høiby. Bistandsadvokatene frykter sensitive detaljer kommer ut....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3zZIIyPYSPaxnCV7bGGC8QS9bIOsU2Oe_V2Hy3SiMVEQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 19:46:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/gratis-er-aldri-gratis-1.17752144" target="_blank">Gratis er aldri gratis</a></h2>
+                        <p>Når en mektig person som sitter i et tillitsverv mottar store private fordeler fra en ekstremt rik privatperson, er det ikke lenger bare privat....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/sSUUFqjOloquxmZL9TRj7A_N7floLmp7BtYF3PRz64fA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Mon, 02 Feb 2026 20:10:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/storselgere-pa-finn.no-vil-ikke-oppgi-hvor-skiene-kommer-fra-1.17744597" target="_blank">Forbrukerrådet: – Sjekk grundig før du kjøper brukte ski</a></h2>
+                        <p>Skal du kjøpe brukte ski på Finn, kan det være lurt å sjekke grundig før du slår til. Ellers risikerer du å kjøpe tyvegods, advarer Forbrukerrådet....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143701140.jpg%3F%26accessToken%3D414ce1a2b17e7b0d1efc119c0529eb3071f26af523d6ebec3a5c030500b0b573" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -190,18 +376,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325362/alex-karp-ice-motstandere-burde-demonstrere-for-mer-palantir" target="_blank">Avviser ICE-kritikk: – Dere burde demonstrere for mer Palantir</a></h2>
                         <p>Palantir knuste analytikerforventningene og stiger til himmels på børsen. Toppsjef Alex Karp svarer på ICE-kritikken og oppfordrer kritikerne til å demonstrere for mer Palantir....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/9jppvDB72T6IM79DTPWaWQIKAADs6Lqa8mGmQRxO1kzg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 07:06:22 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ostfold/innbyggerundersokelsen_-nordmenns-tillit-til-offentlige-forvaltning-synker-1.17752007" target="_blank">Nordmenns tillit til offentlig forvaltning synker</a></h2>
-                        <p>Det er en økende tillit til regjeringen og Stortinget. Men tilliten til offentlig forvaltning går ned for andre gang på rad, viser ny undersøkelse....</p>
                     </div>
                 </div>
             
@@ -274,30 +448,6 @@
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/k03Ogj/oslo-boers-stiger-fra-start" target="_blank">Oppgang på Oslo Børs – IT-aksje faller kraftig</a></h2>
                         <p>Okea stiger etter tallslipp, mens Link Mobility faller kraftig etter oppdatering....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Yo8agH8KgzSyStmpVoFR0wTFADECWAu76CGtpvsqpz1g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 07:34:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/rettssaken-mot-marius-borg-hoiby-starter-i-oslo-tingrett-1.17752242" target="_blank">Rettssaken mot Marius Borg Høiby starter i Oslo tingrett</a></h2>
-                        <p>Høiby nekter straffskyld for de mest alvorlige av de 38 tiltalepunktene mot ham....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/pSgIIICTZd4VkVYTo0Y2JgiY4KSADOpyHDuj69rbbikg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 08:00:04 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/se-video_-her-bryter-tyven-seg-inn-pa-cc-vest-1.17753141" target="_blank">Stjal smykker for minst 2 millioner: Hadde på seg gassmaske</a></h2>
-                        <p>– Dette er det mest spektakulære innbruddet vi har opplevd, sier sjefen for David-Andersen til NRK....</p>
                     </div>
                 </div>
             
@@ -578,68 +728,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/kpKFTRRW93tZ47yX7RopxgxV90NUxJgVRSW3enfUsjAQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 21:52:51 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/musk_-spacex-og-xai-slas-sammen-1.17752936" target="_blank">Musk: SpaceX og xAI slås sammen</a></h2>
-                        <p>Elon Musk bekrefter at romfartsselskapet SpaceX blir slått sammen med KI-selskapet xAI, i en melding på nettsiden til SpaceX.
-Selskapets samlede verdi ventes å bli rundt 1250 milli...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/xB2fd1uvrVHriWETnuNFxw0So_FBbm8j4tz-oU-30IrQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 05:13:46 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/langrenn_-emil-iversen-far-nytt-ja-av-kjaeresten-bettina-burud-1.17748504" target="_blank">Iversen får nytt ja av kjæresten</a></h2>
-                        <p>Emil Iversen mener det er et sjokk at han er klar for sitt tredje OL. Nå fristes han av VM-satsing – med samboerens tillatelse....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/OQNImGSPbIJFzQ0VF1AOfQMtGVN8Mo19VVE0jbag4MUw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 04:25:14 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/temu-stal-strikkedesignet-til-stine-1.17739939" target="_blank">Stine fann strikkegenseren sin på Temu</a></h2>
-                        <p>Stine Erikstad fann genseren sin på Temu. Strikkedesignar seier det er vanskeleg å verne eigne produkt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/EaF_gjxQY8-vtkEqfsKXEgydUbMkzFfBBQC9aZ3xuKlQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 04:25:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/holder-digitale-enheter-tilbake_-_-bekymringsverdig-at-sikkerheten-ikke-er-sjekket-i-forkant-1.17737128" target="_blank">Full skjermstopp etter minister-brev: – Ansvarsfraskrivelse, mener foreldre</a></h2>
-                        <p>Etter et brev fra kunnskapsministeren har Solvang skole i Haugesund endret praksis for digitale enheter. Samtidig håndterer kommunene rundt om i landet rådene svært ulikt....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/GWAzFpFKBJXZWVZaADXFbgYkCVfr7Sl7tNRDd00EeSvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 23:31:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/clinton-paret-gar-med-pa-a-vitne-om-epstein-saken-i-kongressen-1.17752962" target="_blank">Clinton-paret går med på å vitne om Epstein-saken i Kongressen</a></h2>
-                        <p>USAs tidligere president Bill Clinton og Hillary Clinton går likevel med på vitne i en kongresshøring om Epstein-saken i Representantenes hus, skriver The New York Times.
-Dermed gi...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -648,43 +736,6 @@ Dermed gi...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/bOzbAd/elon-musk-spacex-kjoeper-xai" target="_blank">Elon Musk: SpaceX kjøper xAI</a></h2>
                         <p>Musk slår sammen romfart, kunstig intelligens og kommunikasjon ved å kombinere SpaceX og xAI....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/05TjlN-kwgY4G01arHikmA422ieHLoguJ7te96IE5_kQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 21:54:44 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/direkte/xl/kronprinsessen-fikk-to-invitasjoner-til-_epstein-oyen_-1.17751233" target="_blank">Ble invitert minst to ganger til «Epstein-øyen»</a></h2>
-                        <p>På juleferie i Karibia ble kronprinsessen spurt av Epstein om hun ville komme til hans private øy. Senere skilte hun lag med familien og møtte ham i Florida....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/IN43YTN3QHQCJWAJYnw-fQiNM8C1Friz-iSSsLNS50rw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 21:56:49 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/borge-brende-om-sitt-forhold-til-epstein-1.17752804" target="_blank">Brende om Epstein: – Var helt uvitende om hans kriminelle handlinger</a></h2>
-                        <p>Børge Brende sier at Epstein var «et monster» og at han aldri ville hatt noe med han å gjøre om han visste om bakgrunnen hans....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 21:52:51 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/elon-musk_-spacex-og-xai-slas-sammen-1.17752936" target="_blank">Elon Musk: SpaceX og xAI slås sammen</a></h2>
-                        <p>Elon Musk bekrefter at romfartsselskapet SpaceX blir slått sammen med KI-selskapet xAI, i en melding på nettsiden til SpaceX.
-Selskapets samlede verdi ventes å bli rundt 1250 milli...</p>
                     </div>
                 </div>
             
@@ -725,30 +776,6 @@ Selskapets samlede verdi ventes å bli rundt 1250 milli...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/o8W_qIKiXui_Zqk7I9qDmgFO8sy6a3c9riyuMASy5FiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 20:48:34 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/sterke-reaksjoner-etter-epstein-avsloringer-1.17752256" target="_blank">Sterke reaksjonar etter Epstein-avsløringar: – Forventar at alle kort blir lagt på bordet</a></h2>
-                        <p>Fleire reagerer på kontakten mellom norske samfunnstoppar og Jeffrey Epstein. Organisasjon bryt samarbeid med kronprinsesse Mette-Marit....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/QDdfiTk81z4TxZUctPRzCAIekZhZD6OgBYxXWN_OV1SA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 21:04:29 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/_enormt-medietrykk_-i-hoiby-saken_-frykter-navn-og-bilder-kommer-ut-1.17744400" target="_blank">«Enormt medietrykk» i Høiby-saken: Frykter navn og bilder kommer ut</a></h2>
-                        <p>Det er akkreditert nesten like mange utenlandske som norske medier til saken mot Marius Borg Høiby. Bistandsadvokatene frykter sensitive detaljer kommer ut....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F132535941.jpg%3F%26accessToken%3D663424658da23a255c7565baa357ec0b2905d360c24d6b84154fff5b0cb4c74e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -760,31 +787,7 @@ Selskapets samlede verdi ventes å bli rundt 1250 milli...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3zZIIyPYSPaxnCV7bGGC8QS9bIOsU2Oe_V2Hy3SiMVEQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 19:46:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/gratis-er-aldri-gratis-1.17752144" target="_blank">Gratis er aldri gratis</a></h2>
-                        <p>Når en mektig person som sitter i et tillitsverv mottar store private fordeler fra en ekstremt rik privatperson, er det ikke lenger bare privat....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/sSUUFqjOloquxmZL9TRj7A_N7floLmp7BtYF3PRz64fA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Mon, 02 Feb 2026 20:10:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/storselgere-pa-finn.no-vil-ikke-oppgi-hvor-skiene-kommer-fra-1.17744597" target="_blank">Forbrukerrådet: – Sjekk grundig før du kjøper brukte ski</a></h2>
-                        <p>Skal du kjøpe brukte ski på Finn, kan det være lurt å sjekke grundig før du slår til. Ellers risikerer du å kjøpe tyvegods, advarer Forbrukerrådet....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 03.02.2026 09:21</div>
+                <div class="footer">Sist oppdatert: 03.02.2026 09:25</div>
             </div>
         </body>
         </html>
