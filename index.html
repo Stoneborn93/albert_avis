@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -72,10 +69,22 @@
                             Tue, 03 Feb 2026 15:11:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/sword-of-the-sea-vant-grammy-for-beste-spillmusikk/519938" target="_blank">Sword of the Sea vant Grammy for beste spillmusikk</a></h2>
-                        <p>Mario-potpurri stakk også av med pris.</p>
+                        <p>Mario-potpurri stakk også av med pris....</p>
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://images.gfx.no/1000/2909/2909905/Telenor-Nkom-Tung-20251118-243_1.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Teknologi">Teknologi</span> 
+                            Tue, 03 Feb 2026 16:31:20 +0100
+                        </div>
+                        <h2><a href="https://www.digi.no/artikler/nkom-ber-telia-og-ice-gi-dem-flere-opplysninger-om-mobil-sammenslaing/567787" target="_blank">[Ekstra] Nkom ber Telia og Ice gi dem flere opplysninger om mobil-sammenslåing</a></h2>
+                        <p>Nkom-sjefen sier at tre nett har vært sentralt i arbeidet med å bedre mobilkonkurransen, og vil følge med på hvordan sammenslåingen kan påvirke den....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://images.gfx.no/1000/2883/2883282/COLOURBOX29566534.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -84,7 +93,7 @@
                             Tue, 03 Feb 2026 16:00:00 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/derfor-vil-elon-musk-sende-en-million-satellitter-ut-i-verdensrommet/567694" target="_blank">[Ekstra] Elon Musk: Vil bygge nettverk av datasentre i bane rundt jorden</a></h2>
-                        <p>Vil bygge et nettverk av datasentre i bane rundt jorden.</p>
+                        <p>Vil bygge et nettverk av datasentre i bane rundt jorden....</p>
                     </div>
                 </div>
             
@@ -96,7 +105,7 @@
                             Tue, 03 Feb 2026 14:45:51 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/notepad-kapret-av-statssponsede-hackere/567763" target="_blank">[Ekstra] Notepad++ kapret av statssponsede hackere</a></h2>
-                        <p>Brukere ble selektivt omdirigert til skadevare i nesten et halvt år. Sikkerhetseksperter har avdekket en avansert bakdør, som knyttes til Kina.</p>
+                        <p>Brukere ble selektivt omdirigert til skadevare i nesten et halvt år. Sikkerhetseksperter har avdekket en avansert bakdør, som knyttes til Kina....</p>
                     </div>
                 </div>
             
@@ -108,7 +117,7 @@
                             Tue, 03 Feb 2026 13:02:30 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/chat-gpt-vil-ha-pasientjournalen-din-leger-er-skeptiske/567492" target="_blank">[Ekstra] Chat GPT vil ha pasientjournalen din – leger er skeptiske</a></h2>
-                        <p>Flere forhold gjør leger skeptiske til den nye satsingen på KI-assistent.</p>
+                        <p>Flere forhold gjør leger skeptiske til den nye satsingen på KI-assistent....</p>
                     </div>
                 </div>
             
@@ -120,10 +129,96 @@
                             Tue, 03 Feb 2026 11:25:34 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/svensk-professor-apokalypse-for-europa-hvis-usa-kobler-ut-teknologien/567772" target="_blank">Svensk professor: «Apokalypse» for Europa hvis USA kobler ut teknologien</a></h2>
-                        <p>Deler av Europa gjør seg klar til en mulig framtid uten amerikansk teknologi – men full frakobling i dagens situasjon er helt umulig, ifølge professor.</p>
+                        <p>Deler av Europa gjør seg klar til en mulig framtid uten amerikansk teknologi – men full frakobling i dagens situasjon er helt umulig, ifølge professor....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 15:32:50 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325554/oslo-bors-endte-opp-4-aksjer-til-all-time-high-krakk-i-techaksje" target="_blank">Oljeprisen snudde opp og Oslo Børs steg. Fire aksjer til all-time high. Krakk i techaksje.</a></h2>
+                        <p>Børsoppdateringen med vinnere og tapere på Oslo Børs og oljeprisen...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143769552.jpg%3F%26accessToken%3Dd40dd19b199acff663dde1b7fe9fe24e11690b1e65f271c2f9479a2f49a33da9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 16:03:04 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/medier/2026/02/03/8325552/tjener-1-mill.-i-maneden-pa-putin-propaganda" target="_blank">Glenn Diesen tjener en million i måneden på Putin-propaganda på Youtube</a></h2>
+                        <p>Forsvarsminister Tore O. Sandvik høvlet over Glenn Diesen for russisk propaganda i sin årlige forsvarstale. Men en hær av abonnenter, seere og lyttere gir ham en million i måneden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143774081.jpg%3F%26accessToken%3Dc08c560c6b1471f2fa6185eb870d5838e2c6887f426f89d3159ce3c1c872eba2" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 16:05:20 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/03/8325567/mulig-ny-modell-for-sykehus" target="_blank">Mulig ny modell for sykehus</a></h2>
+                        <p>Frp fikk nylig flertall i helse- og omsorgskomiteen om ny finansieringsmodell for sykehus. Den nye modellen kan få store konsekvenser for statlige helseforetak....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 16:16:30 GMT
+                        </div>
+                        <h2><a href="https://e24.no/norsk-oekonomi/i/JOJPMJ/regjeringens-skattebombe-burde-visst-at-dette-ville-ramme-flere-enn-de-rikeste" target="_blank">Regjeringens «skattebombe»: – Burde visst at dette ville ramme flere enn de rikeste</a></h2>
+                        <p>Skatteeksperter mener regjeringens nye beregningsmodell for boligverdi oppleves urimelig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 15:15:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/rakjoring-i-boligomrade-pa-tranby-_-to-ungdommer-involvert--1.17754185" target="_blank">Råkjøring i boligområde på Tranby – to ungdommer involvert</a></h2>
+                        <p>Politiet har fått melding fra flere i et boligområde på Tranby i Lier om råkjøring med bil.
+Bilen har kjørt ned et gjerde og stanset rett ved en husvegg.
+Det er to personer involve...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wyclKBMEJcMRMjffFh6TuALmPpqMWg4sLNWuk6NW8YbA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 16:03:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/trenger-faerre-tester-for-livmorhalskreft-i-framtida-1.17746626" target="_blank">Norsk forskning: Vi trenger færre tester for livmorhals­kreft i framtida</a></h2>
+                        <p>­...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F125873812.jpg%3F%26accessToken%3Dd11ae99d7a0180a52b614dc6f3cb127706c2bcb94595ae78d1a2a23589a956eb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 15:26:28 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325549/palantir-aksjonaerene-jubler" target="_blank">Palantir-aksjonærene jubler</a></h2>
+                        <p>Det AI-fokuserte programvareselskapet Palantirs seneste kvartalsrapport bidro til 6 prosent kursoppgang tirsdag. Et par europeiske IT-aksjer fikk derimot juling....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/_Od7q1uGGcMHl9FxvUy88QfvoEh2wkFQWUqso3adHbmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -132,7 +227,43 @@
                             Tue, 03 Feb 2026 14:30:52 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sport/kilde-dropper-ol_-_-kropp-og-hode-er-ikke-klar-1.17754106" target="_blank">Kilde dropper OL: – Kropp og hode er ikke klar</a></h2>
-                        <p>I to år har det blitt spekulert om Aleksaner Aamodt Kilde kom til å rekke OL i Italia. I ettermiddag kom beskjeden.</p>
+                        <p>I to år har det blitt spekulert om Aleksaner Aamodt Kilde kom til å rekke OL i Italia. I ettermiddag kom beskjeden....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143762229.jpg%3F%26accessToken%3D27a621571be0e449bad6939c2e322a7d885f30de59cb421c6361677014e97e2e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 14:33:18 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325537/wall-street-apner-rett-opp-gull-og-solv-gjor-comeback" target="_blank">Wall Street åpner rett opp og gull og sølv gjør comeback</a></h2>
+                        <p>Et par minutter etter at handelen åpnet i New York steg de ledende indeksene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143239214.jpg%3F%26accessToken%3D8d2e83ca4ee1e569a4930d2ef9318d000d82245c58b71e9ce8abb1222f922813" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 14:52:30 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/ravarer/2026/02/03/8325547/solvprisen-for-tidlig-a-si-hvor-bunnen-er" target="_blank">Sølvprisen: – For tidlig å si hvor bunnen er</a></h2>
+                        <p>Etter et historisk fall er sølvprisen i et «bear market», men flere strateger mener nedturen kan bli kortvarig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 14:32:10 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/8pB8Ed/wall-street-stiger-videre" target="_blank">Wall Street vender nedover</a></h2>
+                        <p>Flere av USA-indeksene snur nedover etter kort tids handel tirsdag. Flere gruveaksjer hopper etter Trumps plan om et nytt metall-lager, og Palantir hopper etter at gårsdagens tall ...</p>
                     </div>
                 </div>
             
@@ -144,7 +275,7 @@
                             Tue, 03 Feb 2026 12:46:11 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/vestland/kritikk-mot-noregspris_-regjeringa-sitt-eige-utval-atvarar-mot-uheldige-konsekvensar-1.17753764" target="_blank">Noregspris får slakt av eige regjeringsutval</a></h2>
-                        <p>Mens regjeringa hevdar noregspris gir tryggleik, meiner deira eigne ekspertar at ordninga er direkte ufornuftig.</p>
+                        <p>Mens regjeringa hevdar noregspris gir tryggleik, meiner deira eigne ekspertar at ordninga er direkte ufornuftig....</p>
                     </div>
                 </div>
             
@@ -156,7 +287,7 @@
                             Tue, 03 Feb 2026 14:30:52 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sport/aleksander-aamodt-kilde-dropper-ol-1.17754106" target="_blank">Aleksander Aamodt Kilde dropper OL</a></h2>
-                        <p>Det bekrefter forbundet via en pressemelding.</p>
+                        <p>Det bekrefter forbundet via en pressemelding....</p>
                     </div>
                 </div>
             
@@ -168,7 +299,7 @@
                             Tue, 03 Feb 2026 15:08:08 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/tromsogfinnmark/diplomatiske-gnisninger-etter-mote-i-nyhetsmorgen_-_the-check-is-in-the-mail_-1.17753836" target="_blank">Trumps utsending til Grønlands-politiker: – «The check is in the mail»</a></h2>
-                        <p>Det som skulle være et vanlig studiointervju, endte i et diplomatisk sammenstøt i NRKs Nyhetsmorgen. Da Trumps Arktis-utsending forlot, kom han med en bemerkning til grønlandske Aaja Chemnitz som fikk henne til å koke.</p>
+                        <p>Det som skulle være et vanlig studiointervju, endte i et diplomatisk sammenstøt i NRKs Nyhetsmorgen. Da Trumps Arktis-utsending forlot, kom han med en bemerkning til grønlandske Aa...</p>
                     </div>
                 </div>
             
@@ -181,202 +312,7 @@
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/britisk-politiker-forlater-overhuset-som-folge-av-epstein-forbindelser-1.17754033" target="_blank">Britisk politiker forlater Overhuset som følge av Epstein-forbindelser</a></h2>
                         <p>Den britiske politikeren Peter Mandelson, forlater Overhuset, som følge av en gransking av hans forbindelser til den avdøde amerikanske seksualforbryteren Jeffrey Epstein.
-Mandelson vil formelt gå av 4. februar, opplyser Lord Forsyth av Drumlean, tirsdag formiddag, ifølge Skynews.
-Mandelson forlot søndag Labour-partiet som følge av avsløringene.
-Statsminister Keir Starmer har bedt om en gransking av forbindelsene mellom Mandelson og Epstein.
-Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på grunn av sine tidligere forbindelser med Jeffrey Epstein.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/9yB5JCU7Hs0C4sQ8HfZI9Aakrg6-xosa8CwnUXyVPLkQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 13:40:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/derfor-dekker-nrk-rettssaken_mot-marius-borg-hoiby-1.17753688" target="_blank">Derfor dekker NRK rettssaken mot Marius Borg Høiby</a></h2>
-                        <p>Rettssaken mot Marius Borg Høiby setter NRK i krevende dilemmaer. Vi skal ta hensyn til enkeltpersoner og deres rett til et privatliv, samtidig som saken har stor offentlig interesse.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wwxKNauIQtMxCFIT-cH4DQsh74cMs50KAG-sZp6HvqlA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 13:49:59 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/forklarer-seg-om-pastatt-voldtekt-pa-skaugum_-_-jeg-sitter-her-og-skjelver-1.17753666" target="_blank">Forklarer seg om påstått voldtekt på Skaugum: – Jeg sitter her og skjelver</a></h2>
-                        <p>Høiby nekter for å ha voldtatt en kvinne på Skaugum i 2018. Den fornærmede kvinnen forklarer seg i retten nå.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/dmrJd1DyZHHyDoAwh8pLDQGNKy15HQB2WklC7ur8ViQA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 13:51:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/mann-omkom-i-arbeidsulykke-i-askvoll-1.17754009" target="_blank">Mann omkom i arbeidsulykke i Askvoll</a></h2>
-                        <p>Ein mann miste livet i ei arbeidsulykke utanfor rådhuset i Askvoll tysdag formiddag. Kommunen har sett kriseteam for å følgje opp kollegaer og pårørande.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FiYBNmMq5Bs1WOSqMOMQswJ6-Qk7REivmG2pQhyV50Sw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 11:45:36 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/na-er-det-bestemt_-besok-til-skolehelsetjenesten-skal-ikke-gi-fravaer-1.17753667" target="_blank">Nå er det bestemt: Besøk til skolehelsetjenesten skal ikke gi fravær</a></h2>
-                        <p>Stortinget overkjører regjeringa og slår fast at besøk hos skolehelsetjenesten ikke skal telles med innenfor fraværsgrensa.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/-IALK6iaYPENAuf7CJz38QrX4xC3In_GJieZAm8tyeXw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:57:07 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/eus-utenrikssjef-kaja-kallas-og-utenriksministeren-pa-arctic-frontiers-i-tromso-1.17749096" target="_blank">EUs utenrikssjef vil øke forsvaret av Arktis: – Aldri vært viktigere</a></h2>
-                        <p>Kaja Kallas mener alle de europeiske landene må investere i våpensystemer som snakker sammen, for å styrke forsvaret.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:10:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/mann-funnet-dod-under-sin-egen-bil-1.17753485" target="_blank">Oslo: Mann funnet død under sin egen bil</a></h2>
-                        <p>En eldre mann er erklært død etter en alvorlig trafikkulykke i Oslo sentrum.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:10:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/mann-havnet-under-egen-bil-_-kritisk-skadd-1.17753485" target="_blank">Mann havnet under egen bil – kritisk skadd</a></h2>
-                        <p>Det har vært en alvorlig trafikkulykke i Oslo.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:10:26 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/fotgjenger-pakjort-i-oslo-_-kritisk-skadd-1.17753485" target="_blank">Person påkjørt i Oslo – kritisk skadd</a></h2>
-                        <p>Det har vært en alvorlig trafikkulykke i Oslo.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/CDO92fZ8BrTP0Dd0LMaMMQ3Cc4JsxZNwtzpFo76_zVRQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:59:29 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/gjor-nye-undersokelser-etter-dodsbrannen-i-verdal-1.17753128" target="_blank">Gjør nye undersøkelser etter dødsbrannen i Verdal</a></h2>
-                        <p>Politiet vil i løpet av dagen gjennomføre ytterligere undersøkelser av åstedet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ViQeLnHRp0uEWIlupvpQ0QFeiWmHroJ8HC3nClRP2N7w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 09:57:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/denne-isen-er-minst-1_2-millioner-ar-gammel-1.17745966" target="_blank">Denne isen er minst 1,2 millioner år gammel</a></h2>
-                        <p>Issøylen fra Antarktis rommer klimahemmeligheter fra i dag og 1,2 millioner år bakover i historien. Nå skal forskere i Bergen analysere hver eneste millimeter av isen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/8Msv6Mae_QhBvWCtgarfsQfF6hIqGRIo0asV3E5rBQjQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:04:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/utvalg_-elbiler-bor-ogsa-betale-avgifter-for-a-bruke-veiene-1.17752139" target="_blank">Utvalg: Elbilister bør også betale avgifter for å bruke veiene</a></h2>
-                        <p>De har sluppet få betale for det lenge. Men nå bør også elbilistene i større grad betale avgifter for å bruke selve veinettet, mener et utvalg som gir råd til Finansdepartementet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/oeLXX0C8hsgnH5oo_sWZgwHgOdH26LmsBJblwYTG2wYA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 10:10:08 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sapmi/sametingsdirektoren-leide-bil-for-65.000-kroner-_-godkjente-regningen-selv-1.17748074" target="_blank">Sametingsdirektøren leide bil for 65.000 kroner – godkjente regningen selv</a></h2>
-                        <p>NRKs gjennomgang viser at Inger Marit Eira-Åhren selv sørget for at regningene ble betalt. Sametinget bekrefter at det har kommet varsel mot direktøren.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F125873812.jpg%3F%26accessToken%3Dd11ae99d7a0180a52b614dc6f3cb127706c2bcb94595ae78d1a2a23589a956eb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 15:26:28 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325549/palantir-aksjonaerene-jubler" target="_blank">Palantir-aksjonærene jubler</a></h2>
-                        <p>Det AI-fokuserte programvareselskapet Palantirs seneste kvartalsrapport bidro til 6 prosent kursoppgang tirsdag. Et par europeiske IT-aksjer fikk derimot juling.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143762229.jpg%3F%26accessToken%3D27a621571be0e449bad6939c2e322a7d885f30de59cb421c6361677014e97e2e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 14:33:18 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325537/wall-street-apner-rett-opp-gull-og-solv-gjor-comeback" target="_blank">Wall Street åpner rett opp og gull og sølv gjør comeback</a></h2>
-                        <p>Et par minutter etter at handelen åpnet i New York steg de ledende indeksene.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143239214.jpg%3F%26accessToken%3D8d2e83ca4ee1e569a4930d2ef9318d000d82245c58b71e9ce8abb1222f922813" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 14:52:30 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/ravarer/2026/02/03/8325547/solvprisen-for-tidlig-a-si-hvor-bunnen-er" target="_blank">Sølvprisen: – For tidlig å si hvor bunnen er</a></h2>
-                        <p>Etter et historisk fall er sølvprisen i et «bear market», men flere strateger mener nedturen kan bli kortvarig.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 14:32:10 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/8pB8Ed/wall-street-stiger-videre" target="_blank">Wall Street vender nedover</a></h2>
-                        <p>Flere av USA-indeksene snur nedover etter kort tids handel tirsdag. Flere gruveaksjer hopper etter Trumps plan om et nytt metall-lager, og Palantir hopper etter at gårsdagens tall slo forventningene.</p>
+Mandelso...</p>
                     </div>
                 </div>
             
@@ -388,7 +324,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 14:19:27 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/vrO73m/ny-disney-sjef-faar-gigantisk-loennspakke" target="_blank">Ny Disney-sjef får gigantisk lønnspakke</a></h2>
-                        <p>Den inkluderer en signeringsbonus på mer enn 94 millioner norske kroner.</p>
+                        <p>Den inkluderer en signeringsbonus på mer enn 94 millioner norske kroner....</p>
                     </div>
                 </div>
             
@@ -400,7 +336,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:48:07 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/03/8325534/listhaug-mette-marit-ma-rydde-opp" target="_blank">Listhaug: Mette-Marit må rydde opp</a></h2>
-                        <p>Frp-leder Sylvi Listhaug mener det har vært en ukultur blant toppdiplomater knyttet til Epstein-saken. Hun mener også det er nødvendig at kronprinsessen rydder opp.</p>
+                        <p>Frp-leder Sylvi Listhaug mener det har vært en ukultur blant toppdiplomater knyttet til Epstein-saken. Hun mener også det er nødvendig at kronprinsessen rydder opp....</p>
                     </div>
                 </div>
             
@@ -412,7 +348,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:56:39 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8324246/trump-vinner-slaget-men-ikke-krigen" target="_blank">Trump vinner slaget, men ikke krigen</a></h2>
-                        <p>Den amerikanske presidenten er trolig svært fornøyd med Opec+ sine produksjonsøkninger og den relativt lave oljeprisen. Mye taler imidlertid for et strammere marked fremover, og ironisk nok kan mesteparten tilskrives USA. Saudi-Arabia tar siste stikk i oljemarkedet.</p>
+                        <p>Den amerikanske presidenten er trolig svært fornøyd med Opec+ sine produksjonsøkninger og den relativt lave oljeprisen. Mye taler imidlertid for et strammere marked fremover, og ir...</p>
                     </div>
                 </div>
             
@@ -424,7 +360,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 14:01:34 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/02/03/8325507/abg-sundal-collier-raolje-er-kongen" target="_blank">– Råolje er kongen</a></h2>
-                        <p>Stortank har ifølge ABG Sundal Collier gjenerobret tronen som det mest innflytelsesrike segmentet i tankmarkedet. I 2026 venter meglerhuset snittrater på 75.000 dollar dagen for en VLCC.</p>
+                        <p>Stortank har ifølge ABG Sundal Collier gjenerobret tronen som det mest innflytelsesrike segmentet i tankmarkedet. I 2026 venter meglerhuset snittrater på 75.000 dollar dagen for en...</p>
                     </div>
                 </div>
             
@@ -436,7 +372,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 14:09:22 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325530/hedgefondlegenden-ray-dalio-hevder-en-kapitalkrig-er-naert-forestaende" target="_blank">– Vi er på randen av kapitalkrig</a></h2>
-                        <p>Hedgefondlegenden Ray Dalio hevder en kapitalkrig rykker stadig nærmere.</p>
+                        <p>Hedgefondlegenden Ray Dalio hevder en kapitalkrig rykker stadig nærmere....</p>
                     </div>
                 </div>
             
@@ -448,7 +384,43 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 14:15:39 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/motor/2026/02/03/8325468/hyundai-ioniq-6-bombe-av-gode-tall" target="_blank">Rekkevidde, lading og pris: Bombe av gode tall</a></h2>
-                        <p>Hyundai Ioniq 6: Fasongen er nok ikke for folk flest, men så kan det være andre egenskaper ved oppdaterte Hyundai Ioniq 6 som mer enn veier opp for det.</p>
+                        <p>Hyundai Ioniq 6: Fasongen er nok ikke for folk flest, men så kan det være andre egenskaper ved oppdaterte Hyundai Ioniq 6 som mer enn veier opp for det....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9yB5JCU7Hs0C4sQ8HfZI9Aakrg6-xosa8CwnUXyVPLkQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 13:40:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/derfor-dekker-nrk-rettssaken_mot-marius-borg-hoiby-1.17753688" target="_blank">Derfor dekker NRK rettssaken mot Marius Borg Høiby</a></h2>
+                        <p>Rettssaken mot Marius Borg Høiby setter NRK i krevende dilemmaer. Vi skal ta hensyn til enkeltpersoner og deres rett til et privatliv, samtidig som saken har stor offentlig interes...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wwxKNauIQtMxCFIT-cH4DQsh74cMs50KAG-sZp6HvqlA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 13:49:59 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/forklarer-seg-om-pastatt-voldtekt-pa-skaugum_-_-jeg-sitter-her-og-skjelver-1.17753666" target="_blank">Forklarer seg om påstått voldtekt på Skaugum: – Jeg sitter her og skjelver</a></h2>
+                        <p>Høiby nekter for å ha voldtatt en kvinne på Skaugum i 2018. Den fornærmede kvinnen forklarer seg i retten nå....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/dmrJd1DyZHHyDoAwh8pLDQGNKy15HQB2WklC7ur8ViQA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 13:51:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/mann-omkom-i-arbeidsulykke-i-askvoll-1.17754009" target="_blank">Mann omkom i arbeidsulykke i Askvoll</a></h2>
+                        <p>Ein mann miste livet i ei arbeidsulykke utanfor rådhuset i Askvoll tysdag formiddag. Kommunen har sett kriseteam for å følgje opp kollegaer og pårørande....</p>
                     </div>
                 </div>
             
@@ -460,7 +432,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:03:55 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/03/8325508/nye-massive-angrep-utnytter-vinterens-kaldeste-dager" target="_blank">Nye massive angrep: Utnytter vinterens kaldeste dager</a></h2>
-                        <p>Ukrainas president Volodymyr Zelenskyj sier at Ukraina skal justere forhandlingsposisjonen i Abu Dhabi etter det massive russiske angrepet natt til tirsdag.</p>
+                        <p>Ukrainas president Volodymyr Zelenskyj sier at Ukraina skal justere forhandlingsposisjonen i Abu Dhabi etter det massive russiske angrepet natt til tirsdag....</p>
                     </div>
                 </div>
             
@@ -472,7 +444,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:08:55 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/industri/2026/02/03/8325372/investorer-trakk-seg-pa-follum-politisk-systemsvikt" target="_blank">Investorer trakk seg: – Politisk systemsvikt</a></h2>
-                        <p>Seks år etter at Follum ble lansert som et grønt industrieventyr, står vi igjen uten fabrikk og uten investorer. Ikke et markedsuhell, men politisk systemsvikt, skriver Olav Breivik i Viken Skog.</p>
+                        <p>Seks år etter at Follum ble lansert som et grønt industrieventyr, står vi igjen uten fabrikk og uten investorer. Ikke et markedsuhell, men politisk systemsvikt, skriver Olav Breivi...</p>
                     </div>
                 </div>
             
@@ -484,7 +456,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:09:11 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325478/russland-har-ikke-hort-noe-fra-india-om-stans-av-oljekjop" target="_blank">Storkunde sår tvil: – Har ikke hørt noe</a></h2>
-                        <p>India har lovet USA å stanse russiske oljekjøp, men den beskjeden hevder Kreml ikke å ha fått.</p>
+                        <p>India har lovet USA å stanse russiske oljekjøp, men den beskjeden hevder Kreml ikke å ha fått....</p>
                     </div>
                 </div>
             
@@ -496,7 +468,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:12:45 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/jus/2026/02/03/8325518/hoibys-forsvarer-tsunami-av-negativ-omtale" target="_blank">Langet ut mot pressen: – Tsunami av negativ omtale</a></h2>
-                        <p>Mediedekningen av straffesaken mot Marius Borg Høiby fikk mye plass da hans forsvarer Ellen Holager Andenæs kom med sine bemerkninger under rettssakens første dag.</p>
+                        <p>Mediedekningen av straffesaken mot Marius Borg Høiby fikk mye plass da hans forsvarer Ellen Holager Andenæs kom med sine bemerkninger under rettssakens første dag....</p>
                     </div>
                 </div>
             
@@ -508,7 +480,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 13:13:48 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/03/8325175/hvitvaskingssjokk-for-klokker-gull-og-kunst" target="_blank">Hvitvaskings-sjokk for klokker, gull og kunst. – Tag Heuer-klokker til 95.000 kan bli populære.</a></h2>
-                        <p>Nye EU-krav med trusler om enorme bøter vil tvinge mange urmakere til å stoppe salget av dyre klokker. Også gullsmeder og kunsthandlere blir rammet.</p>
+                        <p>Nye EU-krav med trusler om enorme bøter vil tvinge mange urmakere til å stoppe salget av dyre klokker. Også gullsmeder og kunsthandlere blir rammet....</p>
                     </div>
                 </div>
             
@@ -520,7 +492,19 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:30:25 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325475/fransk-politi-ransaket-x-kontor-i-paris" target="_blank">Razzia mot Musks X</a></h2>
-                        <p>Franske myndigheter har ransaket X’ kontorer i Paris. Både Elon Musk og tidligere toppsjef Linda Yaccarino er innkalt til frivillige avhør.</p>
+                        <p>Franske myndigheter har ransaket X’ kontorer i Paris. Både Elon Musk og tidligere toppsjef Linda Yaccarino er innkalt til frivillige avhør....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FiYBNmMq5Bs1WOSqMOMQswJ6-Qk7REivmG2pQhyV50Sw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 11:45:36 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/na-er-det-bestemt_-besok-til-skolehelsetjenesten-skal-ikke-gi-fravaer-1.17753667" target="_blank">Nå er det bestemt: Besøk til skolehelsetjenesten skal ikke gi fravær</a></h2>
+                        <p>Stortinget overkjører regjeringa og slår fast at besøk hos skolehelsetjenesten ikke skal telles med innenfor fraværsgrensa....</p>
                     </div>
                 </div>
             
@@ -532,7 +516,19 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:20:24 GMT
                         </div>
                         <h2><a href="https://e24.no/karriere-og-ledelse/i/JOEg0j/til-deg-som-ikke-fikk-jobben" target="_blank">Til deg som ikke fikk jobben</a></h2>
-                        <p>Her karriererådgiverens syv råd til de som har fått litt for mange avslag på jobbsøknader i det siste.</p>
+                        <p>Her karriererådgiverens syv råd til de som har fått litt for mange avslag på jobbsøknader i det siste....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/-IALK6iaYPENAuf7CJz38QrX4xC3In_GJieZAm8tyeXw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:57:07 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/eus-utenrikssjef-kaja-kallas-og-utenriksministeren-pa-arctic-frontiers-i-tromso-1.17749096" target="_blank">EUs utenrikssjef vil øke forsvaret av Arktis: – Aldri vært viktigere</a></h2>
+                        <p>Kaja Kallas mener alle de europeiske landene må investere i våpensystemer som snakker sammen, for å styrke forsvaret....</p>
                     </div>
                 </div>
             
@@ -544,7 +540,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:09:23 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/shipping/2026/02/03/8325400/iran-spenning-sender-tankratene-til-himmels" target="_blank">Iran-spenning: Sender tankratene til himmels</a></h2>
-                        <p>Etter et kraftig raterally før helgen fortsatte oppgangen mandag, og inntjeningen på nøkkelruten er nær 129.000 dollar dagen.</p>
+                        <p>Etter et kraftig raterally før helgen fortsatte oppgangen mandag, og inntjeningen på nøkkelruten er nær 129.000 dollar dagen....</p>
                     </div>
                 </div>
             
@@ -556,7 +552,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:09:50 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325463/finanspolitikkutvalget-norgespris-bidrar-til-okt-kraftforbruk" target="_blank">Finanspolitikkutvalget: Norgespris bidrar til økt kraftforbruk</a></h2>
-                        <p>Norgespris virker uheldig på kraftmarkedet ved at det svekker prissignalene og bidrar til økt forbruk, sier det rådgivende utvalg for finanspolitiske analyser.</p>
+                        <p>Norgespris virker uheldig på kraftmarkedet ved at det svekker prissignalene og bidrar til økt forbruk, sier det rådgivende utvalg for finanspolitiske analyser....</p>
                     </div>
                 </div>
             
@@ -568,7 +564,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:18:25 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/03/8325472/utvalg-om-skatteforlik-bor-inneholde-forbedringer-i-formuesskatten" target="_blank">Utvalg om skatteforlik: Bør inneholde forbedringer i formuesskatten</a></h2>
-                        <p></p>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -580,7 +576,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:18:49 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325388/rekordtall-for-norstat-etter-triton-exit" target="_blank">Rekordtall etter Triton-exit</a></h2>
-                        <p>Pengemaskinen Norstat fortsetter å ese ut med nye eiere. I fjor økte brutto driftsresultat med nesten 10 prosent.</p>
+                        <p>Pengemaskinen Norstat fortsetter å ese ut med nye eiere. I fjor økte brutto driftsresultat med nesten 10 prosent....</p>
                     </div>
                 </div>
             
@@ -592,7 +588,19 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 12:21:31 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/03/8325480/trumps-gronland-radgiver-ikke-interessert-i-svalbard" target="_blank">Trumps Grønland-rådgiver: – Ikke interessert i Svalbard</a></h2>
-                        <p>USA er ikke interessert i Svalbard på samme måte som Grønland, sier Donald Trumps Grønland-rådgiver Thomas Emanuel Dans.</p>
+                        <p>USA er ikke interessert i Svalbard på samme måte som Grønland, sier Donald Trumps Grønland-rådgiver Thomas Emanuel Dans....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:10:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/mann-funnet-dod-under-sin-egen-bil-1.17753485" target="_blank">Oslo: Mann funnet død under sin egen bil</a></h2>
+                        <p>En eldre mann er erklært død etter en alvorlig trafikkulykke i Oslo sentrum....</p>
                     </div>
                 </div>
             
@@ -604,7 +612,19 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 11:25:48 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325407/kursras-etter-resultatvarsel-forvalter-satset-stort-i-link-mobility-og-bommet" target="_blank">150 millioner i tap på kursras: Forvalter satset stort – og bommet</a></h2>
-                        <p>En «vidunderlig cocktail», kalte Odin-forvalter Atle Hauge aksjen og kjøpte for flere hundre millioner. Nå krakker kursen på et resultatvarsel.</p>
+                        <p>En «vidunderlig cocktail», kalte Odin-forvalter Atle Hauge aksjen og kjøpte for flere hundre millioner. Nå krakker kursen på et resultatvarsel....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:10:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/mann-havnet-under-egen-bil-_-kritisk-skadd-1.17753485" target="_blank">Mann havnet under egen bil – kritisk skadd</a></h2>
+                        <p>Det har vært en alvorlig trafikkulykke i Oslo....</p>
                     </div>
                 </div>
             
@@ -616,7 +636,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:36:59 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325369/advarer-mot-oljeaksje-dette-er-ren-fysikk" target="_blank">Advarer mot oljeaksje: – Dette er ren fysikk</a></h2>
-                        <p>Pareto advarer mot risiko i Aker BP og Equinor i forkant av resultatfremleggelser og 2026-guiding.</p>
+                        <p>Pareto advarer mot risiko i Aker BP og Equinor i forkant av resultatfremleggelser og 2026-guiding....</p>
                     </div>
                 </div>
             
@@ -628,7 +648,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:40:53 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325387/uventet-innstramming" target="_blank">Uventet innstramming</a></h2>
-                        <p>Bankene i eurosonen har i løpet av høsten uventet strammet inn på utlånene til sine bedriftskunder.</p>
+                        <p>Bankene i eurosonen har i løpet av høsten uventet strammet inn på utlånene til sine bedriftskunder....</p>
                     </div>
                 </div>
             
@@ -640,7 +660,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:41:44 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325352/john-olaisen-spar-utbytteregn-etter-lang-torke" target="_blank">Spår utbytteregn etter lang tørke</a></h2>
-                        <p>ABG-analytiker John Olaisen mener pengene vil strømme inn hos Okea og spår comeback for et svært etterlengtet utbytte.</p>
+                        <p>ABG-analytiker John Olaisen mener pengene vil strømme inn hos Okea og spår comeback for et svært etterlengtet utbytte....</p>
                     </div>
                 </div>
             
@@ -652,7 +672,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 11:04:33 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325403/frykter-gigantiske-mislighold-fullstendig-loan-ageddon" target="_blank">Frykter gigantiske mislighold: – Fullstendig «loan-ageddon»</a></h2>
-                        <p>Frykt for AI-disrupsjon i programvaresektoren skaper hodepine i private credit, der enkelte analytikere anslår eksponeringen til opp mot 20 prosent.</p>
+                        <p>Frykt for AI-disrupsjon i programvaresektoren skaper hodepine i private credit, der enkelte analytikere anslår eksponeringen til opp mot 20 prosent....</p>
                     </div>
                 </div>
             
@@ -664,7 +684,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 11:19:08 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325424/oslo-bors-i-rodt-tre-aksjer-faller-til-all-time-low" target="_blank">Oslo Børs i rødt: Oljeprisen svakt opp. To aksjer stiger til all-time high. Tre til all-time low.</a></h2>
-                        <p></p>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -676,7 +696,31 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:34:39 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/L41OQP/fransk-politi-har-ransaket-x-kontoret-i-paris" target="_blank">Politiraid mot X-kontoret i Paris</a></h2>
-                        <p>Elon Musk er innkalt som vitne i saken, skriver Reuters.</p>
+                        <p>Elon Musk er innkalt som vitne i saken, skriver Reuters....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LSCFfz1Qe_WfQMNiJLqOdgwjCo5Diezwx_7imyynajcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:10:26 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/fotgjenger-pakjort-i-oslo-_-kritisk-skadd-1.17753485" target="_blank">Person påkjørt i Oslo – kritisk skadd</a></h2>
+                        <p>Det har vært en alvorlig trafikkulykke i Oslo....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/CDO92fZ8BrTP0Dd0LMaMMQ3Cc4JsxZNwtzpFo76_zVRQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 10:59:29 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/gjor-nye-undersokelser-etter-dodsbrannen-i-verdal-1.17753128" target="_blank">Gjør nye undersøkelser etter dødsbrannen i Verdal</a></h2>
+                        <p>Politiet vil i løpet av dagen gjennomføre ytterligere undersøkelser av åstedet....</p>
                     </div>
                 </div>
             
@@ -688,7 +732,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:30:05 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/02/03/8325408/jubler-om-ekspertforslagene" target="_blank">Sjeføkonom Harald Magnus Andreassen jubler om ekspertforslagene: – Amen</a></h2>
-                        <p>Harald Magnus Andreassen jubler over Torvik-utvalgets budsjettrefs og over forslagene om store skatteendringer.</p>
+                        <p>Harald Magnus Andreassen jubler over Torvik-utvalgets budsjettrefs og over forslagene om store skatteendringer....</p>
                     </div>
                 </div>
             
@@ -700,7 +744,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 09:45:40 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/03/8325392/naer-halvparten-mener-mette-marit-er-uegnet-som-dronning" target="_blank">Nær halvparten mener Mette-Marit er uegnet som dronning</a></h2>
-                        <p>Støtten til monarkiet forblir sterkt, men nær halvparten av befolkningen mener Mette-Marit er uegnet til å bli dronning.</p>
+                        <p>Støtten til monarkiet forblir sterkt, men nær halvparten av befolkningen mener Mette-Marit er uegnet til å bli dronning....</p>
                     </div>
                 </div>
             
@@ -712,7 +756,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 09:50:27 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325373/venter-pa-modi-trump-utspill-skaper-oljeuro-i-india" target="_blank">Venter på Modi: Trump-utspill skaper oljeuro</a></h2>
-                        <p>Trump sier India vil slutte å kjøpe russisk råolje, men Modi selv sier ingenting om oljen. Nå etterlyser indiske raffinerier en avklaring rundt russisk råolje.</p>
+                        <p>Trump sier India vil slutte å kjøpe russisk råolje, men Modi selv sier ingenting om oljen. Nå etterlyser indiske raffinerier en avklaring rundt russisk råolje....</p>
                     </div>
                 </div>
             
@@ -724,7 +768,7 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:00:09 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/skatt/2026/02/03/8325039/ekspertutvalg-stoltenberg-far-skatte-ros" target="_blank">Stoltenbergs skattegrep får ros av ekspertutvalg – som også vil skjerpe formuesskatt</a></h2>
-                        <p>Flere av Stoltenbergs skattegrep får tommel opp av regjeringens ekspertutvalg. Også de vil stramme inn i formuesskatten.</p>
+                        <p>Flere av Stoltenbergs skattegrep får tommel opp av regjeringens ekspertutvalg. Også de vil stramme inn i formuesskatten....</p>
                     </div>
                 </div>
             
@@ -736,59 +780,11 @@ Mandelson ble sparket som Storbritannias ambassadør til USA i fjor høst på gr
                             Tue, 03 Feb 2026 10:01:34 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/02/03/8325036/ekspertutvalg-slakter-budsjettet" target="_blank">Ekspertutvalg: Slakter budsjettet</a></h2>
-                        <p>Statsbudsjettet for 2026 endte «i strid med god budsjettpraksis», mener Finanspolitikkutvalget. De enorme økningene til forsvaret bekymrer.</p>
+                        <p>Statsbudsjettet for 2026 endte «i strid med god budsjettpraksis», mener Finanspolitikkutvalget. De enorme økningene til forsvaret bekymrer....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143718290.jpg%3F%26accessToken%3Ddc370ee48619313478a544b9fe7a6388aeed6d75656c7fd92b45f53246e1a5f0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 10:19:56 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/03/8325380/beijing-slapp-konseptvideo-av-gigantisk-romskip" target="_blank">Lanserer enormt «Star Wars»-skip</a></h2>
-                        <p>Beijing har publisert en konseptvideo av et gigantisk «Star Wars-lignende» romskip som kan angripe med missil-utstyrte, ubemannede jagerfly, uten et forsvarssystem å ta hensyn til.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 09:38:46 GMT
-                        </div>
-                        <h2><a href="https://e24.no/privatoekonomi/i/n1wbbm/trekk-boligskatten-tilbake-vent-paa-skattekommisjonen" target="_blank">Trekk boligskatten tilbake. Vent på skattekommisjonen</a></h2>
-                        <p>Før skattekommisjonen har gjort jobben sin, må den nye boligmodellen trekkes tilbake. Ellers bryter regjeringen klare løfter – og gjentar feilen fra fergesaken og utdanningsstøtten.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 10:00:04 GMT
-                        </div>
-                        <h2><a href="https://e24.no/norsk-oekonomi/i/8pB1n1/advarer-mot-aa-oeke-selskapsskatten" target="_blank">Advarer mot å øke selskapsskatten</a></h2>
-                        <p>Ekspertutvalg har klare ønsker til skattekommisjonen: Lavere skatt på arbeid, fjerne boligfordeler, bedre formuesskatt og ny modell for utbytteskatt.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 10:00:09 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/n1wP6Q/finanspolitisk-utvalg-ber-om-kutt-i-sykepenger-og-stroemstoette" target="_blank">Finanspolitisk utvalg ber om kutt i sykepenger og strømstøtte</a></h2>
-                        <p>Totalt foreslås det tiltak som kunne spart staten for over 40 milliarder kroner.</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 03.02.2026 15:30</div>
+                <div class="footer">Sist oppdatert: 03.02.2026 16:21</div>
             </div>
         </body>
         </html>
