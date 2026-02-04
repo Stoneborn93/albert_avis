@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -82,18 +85,6 @@
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/overhodet-ikke-verdt-alt-hatet/519910" target="_blank">Overhodet ikke verdt alt hatet</a></h2>
                         <p>Highguard er bare et helt OK skytespill, som må få være lov....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://i.bo3.no/image/379359/Jason_Duval_06.jpg?c=0&h=337&w=599" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Spill">Spill</span> 
-                            Wed, 04 Feb 2026 06:48:00 +0100
-                        </div>
-                        <h2><a href="https://www.gamer.no/artikler/markedsforing-for-grand-theft-auto-vi-begynner-for-alvor-til-sommeren/519942" target="_blank">Markedsføring for Grand Theft Auto VI begynner for alvor til sommeren</a></h2>
-                        <p>Planen er fortsatt lansering i november....</p>
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
@@ -132,7 +123,196 @@
                         <p>Markedsføringen starter til sommeren....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 11:41:33 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/frp-ber-om-uavhengig-gransking-i-epstein-saka-1.17755056" target="_blank">Frp ber om uavhengig gransking i Epstein-saka</a></h2>
+                        <p>Framstegspartiet har sendt brev til statsminister Jonas Gahr Støre (Ap) der dei ber om ei uavhengig gransking av utanrikstenesta og Epstein-saka, skriv dei i ei pressemelding.
+I de...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/94AyDsIQA9GE4Yg-SbkxPAfAqcdP7mAg1t2fvIGYFBiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 11:45:53 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/marius-borg-hoiby-skal-starte-sin-forklaring-1.17754738" target="_blank">Marius Borg Høiby forklarer seg: – Helt vanvittig vanskelig å snakke</a></h2>
+                        <p>29-åringen har tatt plass i vitneboksen i Oslo tingrett. Han vil svare for anklagene om en voldtekt på Skaugum i 2018....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 10:58:02 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/cato-husabo-fossen-gir-seg-i-hoyre-1.17754850" target="_blank">Cato Husabø Fossen gir seg i Høyre</a></h2>
+                        <p>Høyres pressesjef Cato Husabø Fossen gir seg i partiet når Erna Solberg trer av som partileder.
+Det sier han i et lengre intervju med VG.
+– Det føles riktig å gi seg nå. Fem år er ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 08:59:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/mette-marit-utsetter-planlagt-reise-1.17754823" target="_blank">Mette-Marit utsetter planlagt reise</a></h2>
+                        <p>Kronprinsessen skulle etter planen på en privat reise, som hun nå har utsatt.
+– Kronprinsessen har inntil videre utsatt den planlagte reisen, sier Sara Svanemyr ved Slottet til NRK...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/JtSx8yfEYkuZgMCKj2nNqw79Ub0vj-t_ffahpDf1VlCQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 05:15:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/evaluering-av-elsparkesykler-klar_-anbefaler-fortsatt-16.000-1.17751951" target="_blank">Stort flertall i måling: – Elsparkesyklister tar ikke hensyn</a></h2>
+                        <p>Over 20 millioner turer. Utslåtte tenner og brukne bein. Og sju av ti Oslo-folk mener elsparkesykler skaper mer utrygghet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/xDuWmxFhF5y0kVedzmHdiAhr2rrEVMBQwBCqNzQ7wMrw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 09:57:52 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sorlandet/hjelper-politisk-motstander-i-kampen-mot-kreften-1.17753561" target="_blank">Hjelper politisk motstander i kampen mot kreften</a></h2>
+                        <p>Da tidligere ordfører Ole Magne (69) fikk kreft, meldte politikerkollega Robin (33) seg umiddelbart som personlig trener. Å trene i forkant av kreftbehandling får nå nasjonalt foku...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 10:01:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/bustadprisane-steig-med-3_6-prosent-i-januar-1.17754804" target="_blank">Bustadprisane steig med 3,6 prosent i januar</a></h2>
+                        <p>Etter eit fall i bustadprisane med 1 prosent i desember, steig prisane med 3,6 prosent i januar.
+Det viser tal frå Eiendom Norge som blei lagt fram onsdag.
+Korrigert for sesongvari...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 08:59:43 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/mette-marit-utsetter-planlagt-tur-til-utlandet-1.17754823" target="_blank">Mette-Marit utsetter planlagt tur til utlandet</a></h2>
+                        <p>Kronprinsessen skulle etter planen på en privat reise, som hun nå har utsatt.
+– Kronprinsessen har inntil vudere utsatt den planlagte reisen, sier Sara Svanemyr ved Slottet til NRK...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/lvB01ZtTRhga4iFfK5HPDAamAfxv02FLodTo62ocjayg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 07:47:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/hoiby-skal-starte-sin-forklaring-i-dag-1.17754697" target="_blank">Høiby skal starte sin forklaring i dag</a></h2>
+                        <p>Marius Borg Høiby skal etter planen starte sin forklaring i dag. Rettssaken mot ham varer i syv uker.
+Først skal kvinnen som etter tiltalen er fornærmet i voldtektssaken på Skaugum...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ny1bW_gHEsD4raheaCWkugLZrmxoQEBPFwJD_A8v4Hdg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 06:09:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/prestisje-sykehuset-i-drammen_-ikke-en-avdeling-har-dedikert-pauserom-1.17749922" target="_blank">Prestisje-sykehuset i Drammen: Ikke én avdeling har dedikert pauserom</a></h2>
+                        <p>Ved avdelingene på det splitter nye sykehuset i Drammen finnes det ikke et eneste rom som utelukkende er for pause. – På grensen til det uforsvarlige, sier advokat i Fagforbundet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/fO17pJ94FDxoyL6yQWOhxQt1cbLn24jMMZGv64sOtwJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 07:22:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/store_-eg-har-aldri-mott-epstein-1.17754645" target="_blank">Støre: Eg har aldri møtt Epstein</a></h2>
+                        <p>Offentleggjeringa av Epstein-dokumenta har avdekt at finansmannen hadde kontakt norske diplomatar og kongelege.
+Statsminister Jonas Gahr Støre (Ap) seier til NRK at han er glad for...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/JurXEdkLCvMioQIT1UfFnAJPEpMyJCmhvZmwr5j-6Ngw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 06:53:33 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/pressekonferanse-med-statsminister-jonas-gahr-store-pa-arctic-frontiers-i-tromso-1.17753605" target="_blank">SE DIREKTE: Statsminister Jonas Gahr Støre taler på Arctic Frontiers i Tromsø</a></h2>
+                        <p>Statsministeren deltar på nordområdekonferansen Arctic Frontiers i Tromsø. Se talen hans her fra klokka 08.15....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LCKk9z8XQ6y4NUvqigphQQUDCOadLtvc0d1UY1v5RtFg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 05:48:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/no-er-tala-her_-slik-gjekk-det-med-equinor-i-2025-1.17753762" target="_blank">No er tala her: Slik gjekk det med Equinor i 2025</a></h2>
+                        <p>Equinor-resultatet fell, men dei sit framleis att med milliardar etter dei siste tre månadane i fjor....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/jBrY9-e7HBsR2Ou9i72PLA1b8Kd_M7OS--P8E1qDjS9w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 06:10:09 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/vi-ruster-oss-til-feil-krig-1.17743861" target="_blank">– Vi ruster oss til feil krig</a></h2>
+                        <p>Det er ikke sannsynlig at Russland går til krig mot Europa, mener forsvarsekspert. De vil derimot angripe oss der vi er svakest....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F117188022.png%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dc39982c5d478ba3fb6eb127d9e8b0f7047676717159335b896a19886ee782542" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 12:22:34 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/shipping/2026/02/04/8323794/cmb.tech-opp-eller-ned" target="_blank">Tørrbulkgiganten: Uenighet om risiko og verdsettelse</a></h2>
+                        <p>CMB.TECH opp eller ned?...</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F50963462.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Df9f523ed006b6506c25375ce1f0e4ffa4102ae53463557bfe85efc3e2f2868e5" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -166,31 +346,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325813/store-i-melding-til-trump-russland-ma-forlenge-bombepausen" target="_blank">Støre i melding til Trump: Russland må forlenge bombepausen</a></h2>
                         <p>Statsminister Jonas Gahr Støre har sendt en ny melding direkte til USAs president Donald Trump....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 11:41:33 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/frp-ber-om-uavhengig-gransking-i-epstein-saka-1.17755056" target="_blank">Frp ber om uavhengig gransking i Epstein-saka</a></h2>
-                        <p>Framstegspartiet har sendt brev til statsminister Jonas Gahr Støre (Ap) der dei ber om ei uavhengig gransking av utanrikstenesta og Epstein-saka, skriv dei i ei pressemelding.
-I de...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/94AyDsIQA9GE4Yg-SbkxPAfAqcdP7mAg1t2fvIGYFBiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 11:45:53 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/marius-borg-hoiby-skal-starte-sin-forklaring-1.17754738" target="_blank">Marius Borg Høiby forklarer seg: – Helt vanvittig vanskelig å snakke</a></h2>
-                        <p>29-åringen har tatt plass i vitneboksen i Oslo tingrett. Han vil svare for anklagene om en voldtekt på Skaugum i 2018....</p>
                     </div>
                 </div>
             
@@ -251,20 +406,6 @@ I de...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325794/nho-og-lo-advarer-mot-melkoya-vedtak-dramatisk" target="_blank">NHO og LO advarer mot Melkøya-vedtak: – Dramatisk</a></h2>
                         <p>Dersom Stortinget torsdag vedtar at kraften som er avsatt til Melkøya, skal frigis, vil det sette tilliten til norsk politikk på spill, advarer NHO og LO....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 10:58:02 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/cato-husabo-fossen-gir-seg-i-hoyre-1.17754850" target="_blank">Cato Husabø Fossen gir seg i Høyre</a></h2>
-                        <p>Høyres pressesjef Cato Husabø Fossen gir seg i partiet når Erna Solberg trer av som partileder.
-Det sier han i et lengre intervju med VG.
-– Det føles riktig å gi seg nå. Fem år er ...</p>
                     </div>
                 </div>
             
@@ -377,57 +518,6 @@ Det sier han i et lengre intervju med VG.
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 08:59:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/mette-marit-utsetter-planlagt-reise-1.17754823" target="_blank">Mette-Marit utsetter planlagt reise</a></h2>
-                        <p>Kronprinsessen skulle etter planen på en privat reise, som hun nå har utsatt.
-– Kronprinsessen har inntil videre utsatt den planlagte reisen, sier Sara Svanemyr ved Slottet til NRK...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/JtSx8yfEYkuZgMCKj2nNqw79Ub0vj-t_ffahpDf1VlCQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 05:15:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/evaluering-av-elsparkesykler-klar_-anbefaler-fortsatt-16.000-1.17751951" target="_blank">Stort flertall i måling: – Elsparkesyklister tar ikke hensyn</a></h2>
-                        <p>Over 20 millioner turer. Utslåtte tenner og brukne bein. Og sju av ti Oslo-folk mener elsparkesykler skaper mer utrygghet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/xDuWmxFhF5y0kVedzmHdiAhr2rrEVMBQwBCqNzQ7wMrw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 09:57:52 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sorlandet/hjelper-politisk-motstander-i-kampen-mot-kreften-1.17753561" target="_blank">Hjelper politisk motstander i kampen mot kreften</a></h2>
-                        <p>Da tidligere ordfører Ole Magne (69) fikk kreft, meldte politikerkollega Robin (33) seg umiddelbart som personlig trener. Å trene i forkant av kreftbehandling får nå nasjonalt foku...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 10:01:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/bustadprisane-steig-med-3_6-prosent-i-januar-1.17754804" target="_blank">Bustadprisane steig med 3,6 prosent i januar</a></h2>
-                        <p>Etter eit fall i bustadprisane med 1 prosent i desember, steig prisane med 3,6 prosent i januar.
-Det viser tal frå Eiendom Norge som blei lagt fram onsdag.
-Korrigert for sesongvari...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143794618.jpg%3F%26accessToken%3D423af1cc0cab8adcd26ad184cb88790c0381df003d0d83819c1bc7dde70e5395" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -448,19 +538,6 @@ Korrigert for sesongvari...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8325720/mona-juul-beholder-lonnen" target="_blank">Under granskning: Juul beholder lønnen</a></h2>
                         <p>Utenriksdepartementet kartlegger nå Norges ambassadør til Jordan og Irak, Mona Juuls, bindinger til Jeffrey Epstein. Hun er derfor fritatt fra arbeidsplikt, men behold fortsatt løn...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 08:59:43 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/mette-marit-utsetter-planlagt-tur-til-utlandet-1.17754823" target="_blank">Mette-Marit utsetter planlagt tur til utlandet</a></h2>
-                        <p>Kronprinsessen skulle etter planen på en privat reise, som hun nå har utsatt.
-– Kronprinsessen har inntil vudere utsatt den planlagte reisen, sier Sara Svanemyr ved Slottet til NRK...</p>
                     </div>
                 </div>
             
@@ -537,31 +614,6 @@ Korrigert for sesongvari...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/lvB01ZtTRhga4iFfK5HPDAamAfxv02FLodTo62ocjayg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 07:47:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/hoiby-skal-starte-sin-forklaring-i-dag-1.17754697" target="_blank">Høiby skal starte sin forklaring i dag</a></h2>
-                        <p>Marius Borg Høiby skal etter planen starte sin forklaring i dag. Rettssaken mot ham varer i syv uker.
-Først skal kvinnen som etter tiltalen er fornærmet i voldtektssaken på Skaugum...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ny1bW_gHEsD4raheaCWkugLZrmxoQEBPFwJD_A8v4Hdg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 06:09:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/prestisje-sykehuset-i-drammen_-ikke-en-avdeling-har-dedikert-pauserom-1.17749922" target="_blank">Prestisje-sykehuset i Drammen: Ikke én avdeling har dedikert pauserom</a></h2>
-                        <p>Ved avdelingene på det splitter nye sykehuset i Drammen finnes det ikke et eneste rom som utelukkende er for pause. – På grensen til det uforsvarlige, sier advokat i Fagforbundet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F102218718.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dc928a6216a1271afbdf8a7a1ee4121c86c865f21b0dafcf6fd581b6c7fb09595" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -582,19 +634,6 @@ Først skal kvinnen som etter tiltalen er fornærmet i voldtektssaken på Skaugu
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/aJWnJM/equinors-tilbakekjoeps-sjokk" target="_blank">Tilbakekjøps-sjokket</a></h2>
                         <p>Equinor hamrer ned tilbakekjøpene av egne aksjer med 70 prosent. Dét vil ikke bli godt tatt imot av aksjemarkedet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/fO17pJ94FDxoyL6yQWOhxQt1cbLn24jMMZGv64sOtwJw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 07:22:20 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/store_-eg-har-aldri-mott-epstein-1.17754645" target="_blank">Støre: Eg har aldri møtt Epstein</a></h2>
-                        <p>Offentleggjeringa av Epstein-dokumenta har avdekt at finansmannen hadde kontakt norske diplomatar og kongelege.
-Statsminister Jonas Gahr Støre (Ap) seier til NRK at han er glad for...</p>
                     </div>
                 </div>
             
@@ -655,18 +694,6 @@ Statsminister Jonas Gahr Støre (Ap) seier til NRK at han er glad for...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/wr8jjG/dnb-tjente-13-4-milliarder-foer-skatt-i-fjerde-kvartal-vil-dele-ut-26-6-milliarder-i-utbytte" target="_blank">DNB tjente 54 milliarder i fjor</a></h2>
                         <p>DNB åpner regnskapsbøkene for fjorårets siste kvartal. Storbanken varsler at utbyttet jekkes opp til 26,6 milliarder....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/JurXEdkLCvMioQIT1UfFnAJPEpMyJCmhvZmwr5j-6Ngw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 06:53:33 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/pressekonferanse-med-statsminister-jonas-gahr-store-pa-arctic-frontiers-i-tromso-1.17753605" target="_blank">SE DIREKTE: Statsminister Jonas Gahr Støre taler på Arctic Frontiers i Tromsø</a></h2>
-                        <p>Statsministeren deltar på nordområdekonferansen Arctic Frontiers i Tromsø. Se talen hans her fra klokka 08.15....</p>
                     </div>
                 </div>
             
@@ -766,31 +793,7 @@ Statsminister Jonas Gahr Støre (Ap) seier til NRK at han er glad for...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LCKk9z8XQ6y4NUvqigphQQUDCOadLtvc0d1UY1v5RtFg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 05:48:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/no-er-tala-her_-slik-gjekk-det-med-equinor-i-2025-1.17753762" target="_blank">No er tala her: Slik gjekk det med Equinor i 2025</a></h2>
-                        <p>Equinor-resultatet fell, men dei sit framleis att med milliardar etter dei siste tre månadane i fjor....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/jBrY9-e7HBsR2Ou9i72PLA1b8Kd_M7OS--P8E1qDjS9w.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 06:10:09 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/vi-ruster-oss-til-feil-krig-1.17743861" target="_blank">– Vi ruster oss til feil krig</a></h2>
-                        <p>Det er ikke sannsynlig at Russland går til krig mot Europa, mener forsvarsekspert. De vil derimot angripe oss der vi er svakest....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 04.02.2026 12:21</div>
+                <div class="footer">Sist oppdatert: 04.02.2026 12:25</div>
             </div>
         </body>
         </html>
