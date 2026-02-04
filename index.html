@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -96,43 +99,7 @@
                         <p>Nkom-sjefen sier at tre nett har vært sentralt i arbeidet med å bedre mobilkonkurransen, og vil følge med på hvordan sammenslåingen kan påvirke den....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F118240445.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D1ea1a32cef95069b38e36e054f7bbcd0fa8254f90baeb0b5e91c59fc6f19cd40" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 21:41:17 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325633/frp-vil-gjenopplive-norsk-kullproduksjon" target="_blank">FrP vil gjenopplive norsk kullproduksjon</a></h2>
-                        <p>Norges siste kullgruve ble nedlagt i fjor, men nå tar Sylvi Listhaug til orde for gjenoppliving av kulldrift på Svalbard....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143774081.jpg%3F%26accessToken%3Dc08c560c6b1471f2fa6185eb870d5838e2c6887f426f89d3159ce3c1c872eba2" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 21:49:26 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/03/8325567/mulig-ny-finansieringsmodell-for-sykehus" target="_blank">Mulig ny finansieringsmodell for sykehus</a></h2>
-                        <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Tue, 03 Feb 2026 21:39:42 GMT
-                        </div>
-                        <h2><a href="https://e24.no/energi-og-klima/i/Ar3wen/oljekjemper-ut-mot-stortingets-melkoeya-grep" target="_blank">Oljekjemper ut mot Stortingets Melkøya-grep</a></h2>
-                        <p>Melkøya-partnerne Vår Energi, Petoro og Harbour Energy advarer mot å frigi prosjektets kraft. – Bekymret når spillereglene endres underveis, sier Petoro-sjef Kristin Kragseth....</p>
-                    </div>
-                </div>
-            
+            <h2 class='section-title'>🔥 Toppsaker</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/VSza5Ur-nQcqt9hT-nmksgCM0mLdCUgAUSjqMFencwvw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -169,6 +136,267 @@ Arsenal ledet 3-2 etter den første ka...</p>
                         <h2><a href="https://www.nrk.no/nyheter/fire-personer-til-sykehus-etter-redningsaksjon-i-jotunheimen-1.17754505" target="_blank">Fire personer til sykehus etter redningsaksjon i Jotunheimen</a></h2>
                         <p>Fire personer blir fløyet til Førde sykehus etter en redningsaksjon i Jotunheimen sent tirsdag kveld. Tilstanden deres er ukjent.
 Politiet i Innlandet meldte ved 22-tiden om at de ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/x2VaV9Z571OpqJkwOAm4AAk5rB9YkIrRdLqrv1xH3Fpg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 19:00:19 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/sjohus-med-turistar-i-moskenes-i-lofoten-blaste-pa-havet-_-rettssaka-i-gang-1.17753261" target="_blank">I denne hytta låg turistar og sov: – Har ikkje gått ein dag utan eg har tenkt på det</a></h2>
+                        <p>Fire turistar bles på havet i Lofoten då sjøboda dei leigde vart teken av stormen og knust til pinneved. Dei tre tiltalte utbyggjarane nekta i retten straffskuld....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://static.nrk.no/kartoteket/01KGJNX4WH5YY3DEVWZ938BHNQ/F169/1000w.png" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 21:07:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/redningsaksjon-i-jotunheimen-etter-turfolge-pa-15-personer-1.17754505" target="_blank">Redningsaksjon i Jotunheimen etter turfølge på 15 personer</a></h2>
+                        <p>Politiet i Innlandet opplyser sent tirsdag kveld at det er satt i gang en redningsaksjon etter et turfølge på 15 personer i Jotunheimen.
+– Det er startet en redningsaksjon etter en...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/EPTG_jjtOVsMhoEdA_D3DwCTW5q7Hq1kUBWpCjQwoe2g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:25:30 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/kaldaste-januar-pa-16-ar-i-noreg-_-pa-marstein-i-rauma-har-det-ogsa-vore-rekordtort-1.17752752" target="_blank">Slike kuldeperiodar som no blir sjeldnare</a></h2>
+                        <p>Januar blei både kald og tørr mange stader i landet. – I framtida vil det bli færre slike kalde dagar, seier klimaforskar....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ZFoADiiSnCnYgU7RupVuUQ3L4a5UgoWvZ0d2aS_XekgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 20:11:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/han-har-hentet-i-mat-i-15-ar-1.17747895" target="_blank">Han har hentet mat i 15 år</a></h2>
+                        <p>Matutdeling har for mange blitt et varig behov, ikke bare nødhjelp. Ny FAFO-rapport viser nesten en dobling i de som har hentet mat i over to år....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/5tguqK-nDsAfindYrBlROA-cxZ82QLCZPWoIpkGfzKWw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:50:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/martin-odegaard-ikke-i-troppen---arteta-bekrefter-skade-1.17754316" target="_blank">Martin Ødegaard ikke i troppen - Arteta bekrefter skade</a></h2>
+                        <p>Martin Ødegaard er ikke i Arsenals tropp til kveldens semifinalekamp i ligacupen mot Chelsea. Arsenal leder 3-2.
+– Martin (Ødegaard) hadde en liten kjenning, i går var han ikke hel...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_AhQcYCRPeOgksQNGapsaAKHmeEMa75XK9_LBP0ohG2A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:14:30 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/mens-kompisene-jublet-stod-oscar-andreas-sandvik-og-grat_-_-folte-jeg-hadde-sviktet-1.17752516" target="_blank">Mens kompisene jublet stod han og gråt: – Følte jeg hadde sviktet</a></h2>
+                        <p>Henrik Kristoffersen og Atle Lie McGrath jublet for seier og andreplass. Ved siden av stod Oscar Andreas Sandvik med tårer i øynene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/cpXWuTjOCzREY7Fm5sigJwivn64aTPiOQhct9zq5o_ug.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:52:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/hun-skal-ha-sendt-bildet-av-kronprinsesse-mette-marit-til-jeffrey-epstein-etter-besoket-i-palm-beach-1.17752650" target="_blank">Skal ha sendt kronprinsesse-bilde: – Epstein brukte bildene som trofeer</a></h2>
+                        <p>Bildet ble knipset mens kronprinsesse Mette-Marit bodde i seksualforbryter Jeffrey Epsteins luksusvilla i Florida, forteller kvinnen til NRK....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/5tguqK-nDsAfindYrBlROA-cxZ82QLCZPWoIpkGfzKWw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:50:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/martin-odegaard-ikke-i-troppen-1.17754316" target="_blank">Martin Ødegaard ikke i troppen</a></h2>
+                        <p>Martin Ødegaard er ikke i Arsenals tropp til kveldens semifinalekamp i ligacupen mot Chelsea. Arsenal leder 3-2.
+Ifølge football.london og TV 2 har Ødegaard en liten skade, men vil...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/zUj4V6dnxvyjBlbfDhZ6DQU1gU5jBQ3BmQeTDL6kZE_Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:59:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/fekk-tilbod-om-7-millionar-etter-ulykke-_-retten-gav-han-dobbelt-sa-mykje-1.17740933" target="_blank">Fekk tilbod om 7 millionar etter ulykke – retten gav han dobbelt så mykje</a></h2>
+                        <p>Stian blei lam i ei motorsykkelulykke for fire år sidan. No vil retten gi han dobbelt så mykje i erstatning som forsikringsselskapet tilbaud....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_AhQcYCRPeOgksQNGapsaAKHmeEMa75XK9_LBP0ohG2A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 18:14:30 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/mens-kompisene-jublet-stod-han-og-grat_-_-folte-jeg-hadde-sviktet-1.17752516" target="_blank">Mens kompisene jublet stod han og gråt: – Følte jeg hadde sviktet</a></h2>
+                        <p>Henrik Kristoffersen og Atle Lie McGrath jublet for seier og andreplass. Ved siden av stod Oscar Andreas Sandvik med tårer i øynene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 17:25:29 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/usa-har-skutt-ned-iransk-drone-naer-amerikansk-hangarskip--1.17754250" target="_blank">USA har skutt ned iransk drone nær amerikansk hangarskip</a></h2>
+                        <p>Det amerikanske militæret har skutt ned en iransk drone som nærmet seg det amerikanske hangarskipet USS Abraham Lincoln i Arabiahavet, opplyste en ikke navngitt amerikansk tjeneste...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/gWP9mfvp48-FAsCKVwF8RgLL0XdpN9RIzr-0u47r0a4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 15:36:01 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/drapsdomt-var-psykotisk-da-han-drepte-thea-halvorsen-braavold-1.17749586" target="_blank">Drapsdømt flyttes fra forvaring til tvunget psykisk helsevern</a></h2>
+                        <p>Jarl Ronny Lundberg (51) var utilregnelig da han drepte kjæresten med kniv i 2020, ifølge lagmannsretten....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/N8gcnGOWNdQ-kLbhIOwS-QT1AdvyPLzoLk4DBxI2WNVg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 16:19:40 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/aursnes-gjor-comeback-for-norge-1.17754254" target="_blank">Aursnes gjør comeback for Norge</a></h2>
+                        <p>Fredrik Aursnes (30) har sagt ja til å gjøre comeback med for Norge.
+Det bekrefter landslagssjef Ståle Solbakken til TV 2.
+– Jeg er veldig glad for at Fredrik nå har stilt seg til ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/jlSZXBP69o_tckcVKJWjsQCa-syDsuViHR0bcmlDdCiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 16:57:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/interne-tall-viste-kostnadssprekk-og-forsinkelse-_-stortinget-ble-ikke-varslet-1.17743921" target="_blank">Visste om milliardsprekk i månedsvis – Stortinget ble ikke varslet</a></h2>
+                        <p>I flere måneder visste Bane Nor at prosjektet kunne bli kraftig forsinket og langt dyrere enn planlagt. Selv hevder statsråden at han ikke satt på informasjonen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/N8gcnGOWNdQ-kLbhIOwS-QT1AdvyPLzoLk4DBxI2WNVg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 16:19:40 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/tv-2_-aursnes-gjor-comeback-for-norge-1.17754254" target="_blank">TV 2: Aursnes gjør comeback for Norge</a></h2>
+                        <p>Fredrik Aursnes (30) sagt ja til å gjøre comeback med flagget på brystet.
+Det bekrefter landslagssjef Ståle Solbakken til TV 2.
+– Jeg er veldig glad for at Fredrik nå har stilt seg...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 15:15:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/rakjoring-i-boligomrade-pa-tranby-_-to-ungdommer-involvert--1.17754185" target="_blank">Råkjøring i boligområde på Tranby – to ungdommer involvert</a></h2>
+                        <p>Politiet har fått melding fra flere i et boligområde på Tranby i Lier om råkjøring med bil.
+Bilen har kjørt ned et gjerde og stanset rett ved en husvegg.
+Det er to personer involve...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wyclKBMEJcMRMjffFh6TuALmPpqMWg4sLNWuk6NW8YbA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 16:03:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/trenger-faerre-tester-for-livmorhalskreft-i-framtida-1.17746626" target="_blank">Norsk forskning: Vi trenger færre tester for livmorhals­kreft i framtida</a></h2>
+                        <p>­...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_Od7q1uGGcMHl9FxvUy88QfvoEh2wkFQWUqso3adHbmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Tue, 03 Feb 2026 14:30:52 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/sport/kilde-dropper-ol_-_-kropp-og-hode-er-ikke-klar-1.17754106" target="_blank">Kilde dropper OL: – Kropp og hode er ikke klar</a></h2>
+                        <p>I to år har det blitt spekulert om Aleksaner Aamodt Kilde kom til å rekke OL i Italia. I ettermiddag kom beskjeden....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F118240445.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D1ea1a32cef95069b38e36e054f7bbcd0fa8254f90baeb0b5e91c59fc6f19cd40" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 21:41:17 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/02/03/8325633/frp-vil-gjenopplive-norsk-kullproduksjon" target="_blank">FrP vil gjenopplive norsk kullproduksjon</a></h2>
+                        <p>Norges siste kullgruve ble nedlagt i fjor, men nå tar Sylvi Listhaug til orde for gjenoppliving av kulldrift på Svalbard....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143774081.jpg%3F%26accessToken%3Dc08c560c6b1471f2fa6185eb870d5838e2c6887f426f89d3159ce3c1c872eba2" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 21:49:26 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/03/8325567/mulig-ny-finansieringsmodell-for-sykehus" target="_blank">Mulig ny finansieringsmodell for sykehus</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Tue, 03 Feb 2026 21:39:42 GMT
+                        </div>
+                        <h2><a href="https://e24.no/energi-og-klima/i/Ar3wen/oljekjemper-ut-mot-stortingets-melkoeya-grep" target="_blank">Oljekjemper ut mot Stortingets Melkøya-grep</a></h2>
+                        <p>Melkøya-partnerne Vår Energi, Petoro og Harbour Energy advarer mot å frigi prosjektets kraft. – Bekymret når spillereglene endres underveis, sier Petoro-sjef Kristin Kragseth....</p>
                     </div>
                 </div>
             
@@ -245,55 +473,6 @@ Politiet i Innlandet meldte ved 22-tiden om at de ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/x2VaV9Z571OpqJkwOAm4AAk5rB9YkIrRdLqrv1xH3Fpg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 19:00:19 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/sjohus-med-turistar-i-moskenes-i-lofoten-blaste-pa-havet-_-rettssaka-i-gang-1.17753261" target="_blank">I denne hytta låg turistar og sov: – Har ikkje gått ein dag utan eg har tenkt på det</a></h2>
-                        <p>Fire turistar bles på havet i Lofoten då sjøboda dei leigde vart teken av stormen og knust til pinneved. Dei tre tiltalte utbyggjarane nekta i retten straffskuld....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://static.nrk.no/kartoteket/01KGJNX4WH5YY3DEVWZ938BHNQ/F169/1000w.png" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 21:07:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/redningsaksjon-i-jotunheimen-etter-turfolge-pa-15-personer-1.17754505" target="_blank">Redningsaksjon i Jotunheimen etter turfølge på 15 personer</a></h2>
-                        <p>Politiet i Innlandet opplyser sent tirsdag kveld at det er satt i gang en redningsaksjon etter et turfølge på 15 personer i Jotunheimen.
-– Det er startet en redningsaksjon etter en...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/EPTG_jjtOVsMhoEdA_D3DwCTW5q7Hq1kUBWpCjQwoe2g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:25:30 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/kaldaste-januar-pa-16-ar-i-noreg-_-pa-marstein-i-rauma-har-det-ogsa-vore-rekordtort-1.17752752" target="_blank">Slike kuldeperiodar som no blir sjeldnare</a></h2>
-                        <p>Januar blei både kald og tørr mange stader i landet. – I framtida vil det bli færre slike kalde dagar, seier klimaforskar....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ZFoADiiSnCnYgU7RupVuUQ3L4a5UgoWvZ0d2aS_XekgQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 20:11:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/han-har-hentet-i-mat-i-15-ar-1.17747895" target="_blank">Han har hentet mat i 15 år</a></h2>
-                        <p>Matutdeling har for mange blitt et varig behov, ikke bare nødhjelp. Ny FAFO-rapport viser nesten en dobling i de som har hentet mat i over to år....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143782124.jpg%3F%26accessToken%3D956943b40eaf7d603edf41d9708802d99e5f2043f0ed0047ba832e0860ab2068" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -350,19 +529,6 @@ Politiet i Innlandet meldte ved 22-tiden om at de ...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/03/8325617/tidligere-britisk-usa-ambassador-etterforskes-som-folge-av-epstein-forbindelser" target="_blank">Tidligere britisk USA-ambassadør etterforskes som følge av Epstein-forbindelser</a></h2>
                         <p>...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/5tguqK-nDsAfindYrBlROA-cxZ82QLCZPWoIpkGfzKWw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:50:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/martin-odegaard-ikke-i-troppen---arteta-bekrefter-skade-1.17754316" target="_blank">Martin Ødegaard ikke i troppen - Arteta bekrefter skade</a></h2>
-                        <p>Martin Ødegaard er ikke i Arsenals tropp til kveldens semifinalekamp i ligacupen mot Chelsea. Arsenal leder 3-2.
-– Martin (Ødegaard) hadde en liten kjenning, i går var han ikke hel...</p>
                     </div>
                 </div>
             
@@ -439,67 +605,6 @@ Politiet i Innlandet meldte ved 22-tiden om at de ...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_AhQcYCRPeOgksQNGapsaAKHmeEMa75XK9_LBP0ohG2A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:14:30 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/mens-kompisene-jublet-stod-oscar-andreas-sandvik-og-grat_-_-folte-jeg-hadde-sviktet-1.17752516" target="_blank">Mens kompisene jublet stod han og gråt: – Følte jeg hadde sviktet</a></h2>
-                        <p>Henrik Kristoffersen og Atle Lie McGrath jublet for seier og andreplass. Ved siden av stod Oscar Andreas Sandvik med tårer i øynene....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/cpXWuTjOCzREY7Fm5sigJwivn64aTPiOQhct9zq5o_ug.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:52:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/hun-skal-ha-sendt-bildet-av-kronprinsesse-mette-marit-til-jeffrey-epstein-etter-besoket-i-palm-beach-1.17752650" target="_blank">Skal ha sendt kronprinsesse-bilde: – Epstein brukte bildene som trofeer</a></h2>
-                        <p>Bildet ble knipset mens kronprinsesse Mette-Marit bodde i seksualforbryter Jeffrey Epsteins luksusvilla i Florida, forteller kvinnen til NRK....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/5tguqK-nDsAfindYrBlROA-cxZ82QLCZPWoIpkGfzKWw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:50:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/martin-odegaard-ikke-i-troppen-1.17754316" target="_blank">Martin Ødegaard ikke i troppen</a></h2>
-                        <p>Martin Ødegaard er ikke i Arsenals tropp til kveldens semifinalekamp i ligacupen mot Chelsea. Arsenal leder 3-2.
-Ifølge football.london og TV 2 har Ødegaard en liten skade, men vil...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/zUj4V6dnxvyjBlbfDhZ6DQU1gU5jBQ3BmQeTDL6kZE_Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:59:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/fekk-tilbod-om-7-millionar-etter-ulykke-_-retten-gav-han-dobbelt-sa-mykje-1.17740933" target="_blank">Fekk tilbod om 7 millionar etter ulykke – retten gav han dobbelt så mykje</a></h2>
-                        <p>Stian blei lam i ei motorsykkelulykke for fire år sidan. No vil retten gi han dobbelt så mykje i erstatning som forsikringsselskapet tilbaud....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_AhQcYCRPeOgksQNGapsaAKHmeEMa75XK9_LBP0ohG2A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 18:14:30 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/mens-kompisene-jublet-stod-han-og-grat_-_-folte-jeg-hadde-sviktet-1.17752516" target="_blank">Mens kompisene jublet stod han og gråt: – Følte jeg hadde sviktet</a></h2>
-                        <p>Henrik Kristoffersen og Atle Lie McGrath jublet for seier og andreplass. Ved siden av stod Oscar Andreas Sandvik med tårer i øynene....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143484278.jpg%3F%26accessToken%3D0f7a0dd1c5af6102a5803165e30639f41b9b2f014f7c8889354a60dcd9316c7b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -544,30 +649,6 @@ Ifølge football.london og TV 2 har Ødegaard en liten skade, men vil...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/reise-og-fritid/2026/02/03/8325563/prisnivaet-pa-super-bowl-billetter-skyter-i-vaeret" target="_blank">Super Bowl: Milliardærenes lekegrind</a></h2>
                         <p>Årets Super Bowl er den nest dyreste i historien...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 17:25:29 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/usa-har-skutt-ned-iransk-drone-naer-amerikansk-hangarskip--1.17754250" target="_blank">USA har skutt ned iransk drone nær amerikansk hangarskip</a></h2>
-                        <p>Det amerikanske militæret har skutt ned en iransk drone som nærmet seg det amerikanske hangarskipet USS Abraham Lincoln i Arabiahavet, opplyste en ikke navngitt amerikansk tjeneste...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/gWP9mfvp48-FAsCKVwF8RgLL0XdpN9RIzr-0u47r0a4A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 15:36:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/drapsdomt-var-psykotisk-da-han-drepte-thea-halvorsen-braavold-1.17749586" target="_blank">Drapsdømt flyttes fra forvaring til tvunget psykisk helsevern</a></h2>
-                        <p>Jarl Ronny Lundberg (51) var utilregnelig da han drepte kjæresten med kniv i 2020, ifølge lagmannsretten....</p>
                     </div>
                 </div>
             
@@ -644,46 +725,6 @@ Ifølge football.london og TV 2 har Ødegaard en liten skade, men vil...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/N8gcnGOWNdQ-kLbhIOwS-QT1AdvyPLzoLk4DBxI2WNVg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 16:19:40 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/aursnes-gjor-comeback-for-norge-1.17754254" target="_blank">Aursnes gjør comeback for Norge</a></h2>
-                        <p>Fredrik Aursnes (30) har sagt ja til å gjøre comeback med for Norge.
-Det bekrefter landslagssjef Ståle Solbakken til TV 2.
-– Jeg er veldig glad for at Fredrik nå har stilt seg til ...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/jlSZXBP69o_tckcVKJWjsQCa-syDsuViHR0bcmlDdCiQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 16:57:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/interne-tall-viste-kostnadssprekk-og-forsinkelse-_-stortinget-ble-ikke-varslet-1.17743921" target="_blank">Visste om milliardsprekk i månedsvis – Stortinget ble ikke varslet</a></h2>
-                        <p>I flere måneder visste Bane Nor at prosjektet kunne bli kraftig forsinket og langt dyrere enn planlagt. Selv hevder statsråden at han ikke satt på informasjonen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/N8gcnGOWNdQ-kLbhIOwS-QT1AdvyPLzoLk4DBxI2WNVg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 16:19:40 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/tv-2_-aursnes-gjor-comeback-for-norge-1.17754254" target="_blank">TV 2: Aursnes gjør comeback for Norge</a></h2>
-                        <p>Fredrik Aursnes (30) sagt ja til å gjøre comeback med flagget på brystet.
-Det bekrefter landslagssjef Ståle Solbakken til TV 2.
-– Jeg er veldig glad for at Fredrik nå har stilt seg...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -732,32 +773,6 @@ Det bekrefter landslagssjef Ståle Solbakken til TV 2.
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 15:15:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/rakjoring-i-boligomrade-pa-tranby-_-to-ungdommer-involvert--1.17754185" target="_blank">Råkjøring i boligområde på Tranby – to ungdommer involvert</a></h2>
-                        <p>Politiet har fått melding fra flere i et boligområde på Tranby i Lier om råkjøring med bil.
-Bilen har kjørt ned et gjerde og stanset rett ved en husvegg.
-Det er to personer involve...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wyclKBMEJcMRMjffFh6TuALmPpqMWg4sLNWuk6NW8YbA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 16:03:20 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/trenger-faerre-tester-for-livmorhalskreft-i-framtida-1.17746626" target="_blank">Norsk forskning: Vi trenger færre tester for livmorhals­kreft i framtida</a></h2>
-                        <p>­...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F125873812.jpg%3F%26accessToken%3Dd11ae99d7a0180a52b614dc6f3cb127706c2bcb94595ae78d1a2a23589a956eb" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -766,18 +781,6 @@ Det er to personer involve...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/03/8325549/palantir-aksjonaerene-jubler" target="_blank">Palantir-aksjonærene jubler</a></h2>
                         <p>Det AI-fokuserte programvareselskapet Palantirs seneste kvartalsrapport bidro til 6 prosent kursoppgang tirsdag. Et par europeiske IT-aksjer fikk derimot juling....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/_Od7q1uGGcMHl9FxvUy88QfvoEh2wkFQWUqso3adHbmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Tue, 03 Feb 2026 14:30:52 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/sport/kilde-dropper-ol_-_-kropp-og-hode-er-ikke-klar-1.17754106" target="_blank">Kilde dropper OL: – Kropp og hode er ikke klar</a></h2>
-                        <p>I to år har det blitt spekulert om Aleksaner Aamodt Kilde kom til å rekke OL i Italia. I ettermiddag kom beskjeden....</p>
                     </div>
                 </div>
             
@@ -793,7 +796,7 @@ Det er to personer involve...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 04.02.2026 01:21</div>
+                <div class="footer">Sist oppdatert: 04.02.2026 01:25</div>
             </div>
         </body>
         </html>
