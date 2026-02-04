@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -63,19 +60,7 @@
         <body>
             <div class="container">
                 <h1>📰 Albert Avis</h1>
-                <h2 class='section-title'>🎮 Spill</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://i.bo3.no/image/390754/ss_c65877619b70c51d6be030c20b5c37bcfaf2e248.1920x1080.jpg?c=0&h=337&w=599" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Spill">Spill</span> 
-                            Wed, 04 Feb 2026 15:00:00 +0100
-                        </div>
-                        <h2><a href="https://www.gamer.no/artikler/dette-er-arets-beste-actionspill/519940" target="_blank">Dette er årets beste actionspill</a></h2>
-                        <p>Team Ninja smeller til med en tidlig kandidat for årets spill.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💻 Teknologi</h2>
+                <h2 class='section-title'>💻 Teknologi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/e1d18aec-e33d-4340-93e3-8bbc98937eac?fit=crop&format=auto&h=820&w=1600&s=50a13c3fd504b66e28893604ccae7aa0327dcc89" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -84,22 +69,82 @@
                             Wed, 04 Feb 2026 15:00:00 GMT
                         </div>
                         <h2><a href="https://www.tek.no/i/L41b71" target="_blank">Epic Games-sjef innrømmer: – Spillbutikken vår suger</a></h2>
-                        <p>Lover bedre app og nye funksjoner i år.</p>
+                        <p>Lover bedre app og nye funksjoner i år....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F141098362.jpg%3F%26accessToken%3D0a26b14d691d7ccd56ef982b9897042437706dc369adc0a6dbb9713503a8f409" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 21:47:53 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326037/atomavtale-utloper-russland-lover-a-opptre-ansvarlig" target="_blank">Atomavtale utløper: Russland lover å «opptre ansvarlig»</a></h2>
+                        <p>Verken Russland eller USA er lenger bundet av begrensningene i den siste atomavtalen mellom landene når den utløper torsdag, konstaterer russiske myndigheter....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://images.gfx.no/1000/2909/2909082/3a9047010a72ce482a86aaba83a9495a.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://gfx.nrk.no/xJsMmU7z3sAVtMDarz2ItQPpZxVoHEp0BRHTfUyhFFcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Teknologi">Teknologi</span> 
-                            Wed, 04 Feb 2026 15:02:01 +0100
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 21:50:41 GMT
                         </div>
-                        <h2><a href="https://www.digi.no/artikler/microsoft-utleverer-krypteringsnokler-til-fbi/567826" target="_blank">[Ekstra] Microsoft: Utleverer krypteringsnøkler til FBI: – Svært bekymringsfullt</a></h2>
-                        <p>Nå kommer professor med advarsel til danske kunder.</p>
+                        <h2><a href="https://www.nrk.no/urix/iran-bekrefter-mote-med-usa_-her-er-4-mulige-scenarioer-1.17752371" target="_blank">Iran bekrefter møte med USA: Her er 4 mulige scenarioer</a></h2>
+                        <p>Mens mange iranere fortsatt er i sjokk etter regimets brutale maktbruk, jobber nå arabiske land på spreng for å få til samtaler mellom Iran og USA....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143869378.jpg%3F%26accessToken%3Df36ee85e4881cc65bfdeda5fad092d88184e5d8cbc67e3944ac355be7ea1fe9d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 20:45:42 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326032/colombiansk-narkomilits-setter-fredssamtaler-pa-pause-etter-trump-avtale" target="_blank">Colombiansk narkomilits: Setter  fredssamtaler på pause etter Trump-avtale</a></h2>
+                        <p>Colombias mektigste narkokartell pauser fredsforhandlingene med regjeringen etter at president Gustavo Petro og Donald Trump lovet å jakte på kartellets leder....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F131717949.jpg%3F%26accessToken%3D0004fa569de025a66e481c6b13c380f5e0ec3ed07cba3178f36cf0873158e008" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 21:02:53 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8326022/wall-street-blandet-chip-aksje-dundret-ned-etter-tall" target="_blank">Wall Street blandet: Chip-aksje dundret ned etter tall</a></h2>
+                        <p>De toneangivende indeksene på Wall Street endte blandet onsdag. Nvidia-konkurrent dundret ned etter svake kvartalstall....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F122094584.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D23c82338065b25172d79a545b4b1f51eb0fa6e17e0d572c6c648d5a8869a0604" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 21:07:53 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8326016/alphabet-slo-forventningene" target="_blank">Alphabet slo forventningene</a></h2>
+                        <p>Onsdag kveld la Alphabet frem tall for fjerde kvartal....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 21:02:57 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/j0z5Gn/alphabet-gjoer-det-bedre-enn-ventet" target="_blank">Google-eier Alphabet slår forventningene</a></h2>
+                        <p>Google-eieren vil investere inntil 1.780 milliarder kroner i år....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/iTTAwM_SCh_TlX83NuajLgjkLmRr4E3IiQu1jqZ0BzzQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -108,7 +153,7 @@
                             Wed, 04 Feb 2026 20:29:58 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/urix/golden-dome-skal-gjore-usa-uangripelig_-_-det-ultimate-pressmiddelet-1.17746598" target="_blank">Golden Dome skal gjøre USA uangripelig: – Det ultimate pressmiddelet</a></h2>
-                        <p>Planen gikk i arv fra Ronald til Donald, men kalles et forfengelighets­­prosjekt. Er Trumps gull­skimrende forsvars­drøm bare juggel?</p>
+                        <p>Planen gikk i arv fra Ronald til Donald, men kalles et forfengelighets­­prosjekt. Er Trumps gull­skimrende forsvars­drøm bare juggel?...</p>
                     </div>
                 </div>
             
@@ -120,13 +165,55 @@
                             Wed, 04 Feb 2026 20:52:15 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/emma-ellingsen-nevnt-i-epstein-dokumentene--1.17756069" target="_blank">Emma Ellingsen nevnt i Epstein-dokumentene</a></h2>
-                        <p>– Jeg våknet fra en blund til en melding om at navnet mitt er i Epstein-dokumentene fordi en kvinne sendte ham Instagram-profilen min i 2019 fordi du er en transkvinne som er «pen, med en liten overraskelse».
-Det skriver Ellingsen på en TikTok-video onsdag kveld.
-I Epstein-dokumentene som nylig ble frigitt fikk Jeffrey Epstein tilsendt Ellingens sin Instagram-profil.
-– Kan ikke tro det. En pen jente med en liten overraskelse, skriver personen videre.
-– UH oh, svarte Epstein.
-I en ny video på TikTok forteller Ellingens at hun var 17 år på den tiden og skulle snart fylle 18. år.
-– Takk gud for at det ikke var noe mer. Jeg vet ikke, jeg bare våknet opp i sjokk, sier hun.</p>
+                        <p>– Jeg våknet fra en blund til en melding om at navnet mitt er i Epstein-dokumentene fordi en kvinne sendte ham Instagram-profilen min i 2019 fordi du er en transkvinne som er «pen,...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 20:28:32 GMT
+                        </div>
+                        <h2><a href="https://e24.no/energi-og-klima/i/XM6m67/frykter-ikke-kraftmangel-i-vinter" target="_blank">Frykter ikke kraftmangel i vinter</a></h2>
+                        <p>Vinterkulde gjør vannmagasinene tappes. – Vi er ikke bekymret, beroliger Inga Nordberg i NVE....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143868495.jpg%3F%26accessToken%3D1fc72a1e23ac4a88c6ee15288aaf5084eebfd034225cea0f55a5732cfc6fc975" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 19:47:17 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326025/zelenskyj-etter-samtaler-med-russland-ma-fore-til-reell-fred" target="_blank">Zelenskyj etter samtaler med Russland: – Må føre til reell fred</a></h2>
+                        <p>Samtalene med Russland og USA må føre til reell fred, sier president Volodymyr Zelenskyj etter første dag av Ukraina-samtalene i De forente arabiske emirater....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143819240.jpg%3F%26accessToken%3Daf8db35dc3277c7b3f204e79e5aa9bd25c83a257eeb337b933449660c09bb97c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 20:00:04 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/helse/2026/02/04/8325791/10-milliarder-i-tap-for-nordmenn-i-novo-nordisk-pa-en-dag" target="_blank">10 milliarder i tap for nordmenn i én aksje – på én dag</a></h2>
+                        <p>Når Nordens største selskap stuper 18 prosent på én dag, taper de norske aksjonærene rundt 10 milliarder kroner. – Vi er positive til aksjen, ellers ville vi ikke eid den, sier inv...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142554706.jpg%3F%26accessToken%3D0fa18bffab66b9dbb8cee343748b52cc8af813fedbf9f64ba829ca3ed84f90ec" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 20:20:37 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8326028/trump-til-irans-leder-han-bor-vaere-veldig-redd" target="_blank">Trump til Irans leder: – Han bør være veldig redd</a></h2>
+                        <p>President Donald Trump kommer med en klar advarsel til Iran. Han vil at landet ikke skal starte et nytt atomprogram....</p>
                     </div>
                 </div>
             
@@ -139,9 +226,43 @@ I en ny video på TikTok forteller Ellingens at hun var 17 år på den tiden og 
                         </div>
                         <h2><a href="https://www.nrk.no/stor-oslo/alvorlig-voldshendelse-i-aurskog-holand-1.17756041" target="_blank">Alvorlig voldshendelse i Aurskog-Høland</a></h2>
                         <p>Politiet har rykket ut med flere enheter etter en voldshendelse i Aurskog-Høland.
-Hendelsen skal ha skjedd utendørs og det er en person som har blitt utsatt for vold og han er kjørt til sykehus.
-Politiet har kontroll på mistenkte og jobber nå med å finne ut hva som har skjedd.
-Både den fornærmede og den siktede er mindreårige gutter.</p>
+Hendelsen skal ha skjedd utendørs og det er en person som har blitt utsatt for vold og han er kjør...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143865046.jpg%3F%26accessToken%3D97f3c7f82da3d1a86cf4b7a38905d31a2877c57a16b19a10e17595bd5e5a6dc9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:39:01 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8326013/oljeprisen-stiger-kraftig-atomsamtaler-pa-randen-av-kollaps" target="_blank">Oljeprisen stiger kraftig: Atomsamtaler på randen av kollaps</a></h2>
+                        <p>USA–Iran-atomsamtalene henger i en tynn tråd etter at USA avslo Irans ønske om å endre formatet på møtet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143867106.jpg%3F%26accessToken%3Dac1d7bd739998096dde0e4b72c97987912a5f1a15b3462ed8eafde0b68c03c3d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 18:43:53 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326020/argentina-ber-usa-utlevere-nicolas-maduro" target="_blank">Argentina ber USA utlevere Nicolás Maduro</a></h2>
+                        <p>En argentinsk dommer ber USA utlevere Venezuelas president Nicolás Maduro til Argentina, hvor han anklages for brudd på menneskerettighetene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143819312.jpg%3F%26accessToken%3D9bf4fc30b43d1c5c064b16bbfe1a11a753ac18c595dd5b9c99f72e33c504eb3f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 19:00:10 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325784/hoibys-forsvarer-helt-pa-jordet" target="_blank">Marius Borg Høibys forsvarer er helt på jordet. For mye? Ikke i det hele tatt!</a></h2>
+                        <p>Det er klart det blir noen tusen nye avissider, skriver Trygve Hegnar i lederen....</p>
                     </div>
                 </div>
             
@@ -153,7 +274,7 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 18:23:50 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ol/johann-andre-forfang-fullforer-pappaens-siste-onske-nar-han-skal-hoppe-ol.-1.17755587" target="_blank">Flytter farens begravelse for OL-drømmen: – Skal hoppe for pappa resten av karrieren</a></h2>
-                        <p>Det er under én uke siden Johann André Forfang mistet faren sin. Nå skal han gjennomføre pappaens siste ønske.</p>
+                        <p>Det er under én uke siden Johann André Forfang mistet faren sin. Nå skal han gjennomføre pappaens siste ønske....</p>
                     </div>
                 </div>
             
@@ -165,7 +286,7 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 15:51:38 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/rogaland/flertall-for-ny-finansieringsmodell-for-sykehusbygg-1.17755032" target="_blank">Milliardgjeld og avlyste operasjoner: Nå kan nytt flertall tvinge regjeringen til å snu</a></h2>
-                        <p>Nå varsler et nytt flertall på Stortinget at de vil endre måten sykehusbygg finansieres på, men MDG kan velte hele planen.</p>
+                        <p>Nå varsler et nytt flertall på Stortinget at de vil endre måten sykehusbygg finansieres på, men MDG kan velte hele planen....</p>
                     </div>
                 </div>
             
@@ -177,7 +298,7 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 18:41:02 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/vestland/xl/bomoen-saka-som-splittar-vossabygda-1.17736715" target="_blank">Dette området splittar Vossabygda</a></h2>
-                        <p>Bømoen er kjent for ekstremsport og Kompani Lauritzen. Men området er også gjenstand for ein lang og vond konflikt.</p>
+                        <p>Bømoen er kjent for ekstremsport og Kompani Lauritzen. Men området er også gjenstand for ein lang og vond konflikt....</p>
                     </div>
                 </div>
             
@@ -189,7 +310,43 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 19:17:32 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sport/skiskyting_-ola-lunde-gir-seg-som-ekspertkommentator-i-nrk-1.17744898" target="_blank">Ola Lunde gir seg etter sesongen: – En levende legende</a></h2>
-                        <p>Ola Lunde har vært involvert i norsk skiskyting i over 54 år. Etter denne sesongen gir han seg.</p>
+                        <p>Ola Lunde har vært involvert i norsk skiskyting i over 54 år. Etter denne sesongen gir han seg....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F70666606.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db107f45b4ad9d5dc82a3d20a60984aefe17f72f93ce51f887db2b126a909d23b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:13:22 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/bolig/2026/02/04/8326006/kjoper-hytten-til-jenny-stray-spetalen" target="_blank">Kjøper hytten til Jenny Stray Spetalen</a></h2>
+                        <p>Jenny Stray Spetalen har solgt en fritidseiendom i Sandefjord for 31,5 millioner kroner til investor Espen Westeren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143865046.jpg%3F%26accessToken%3D97f3c7f82da3d1a86cf4b7a38905d31a2877c57a16b19a10e17595bd5e5a6dc9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:39:01 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8326013/oljeprisen-stiger-kraftig-atom-samtaler-pa-randen-av-kollaps" target="_blank">Oljeprisen stiger kraftig: Atom-samtaler på randen av kollaps</a></h2>
+                        <p>USA–Iran-atomsamtalene henger i en tynn tråd etter at USA avslo Irans ønske om å endre formatet på møtet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F132011823.jpg%3F%26accessToken%3De7715457f74eeeb065358f4bda25acf617f99eb079c3d2821795a64d2ce4f88e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 18:00:21 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8326004/nasdaq-dundrer-ned-ai-aksje-kollapser-etter-tall" target="_blank">Nasdaq dundrer ned: AI-aksje kollapser etter tall</a></h2>
+                        <p>De toneangivende indeksene på New York-børsen er blandet onsdag. Nvidia-konkurrent stuper etter svake kvartalstall....</p>
                     </div>
                 </div>
             
@@ -201,7 +358,91 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 17:34:11 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/norge/slik-brukte-terje-rod-larsen-epstein-som-boligutpresser_-_-det-var-sa-jaevlig-1.17752905" target="_blank">Slik brukte Terje Rød-Larsen Epstein som boligutpresser: – Det var så jævlig</a></h2>
-                        <p>I flere e-poster presset seksualforbryter Jeffery Epstein to nordmenn for å få dem til å selge leilighetene sine.</p>
+                        <p>I flere e-poster presset seksualforbryter Jeffery Epstein to nordmenn for å få dem til å selge leilighetene sine....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143864615.jpg%3F%26accessToken%3Da23beff8c3ae5ccfe9ce005a43e2bcd3a85624d3de33715e4da5510347a848bd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:28:40 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8326011/slik-skapte-anthropic-gjennombrudd-i-ai-koding" target="_blank">Slik skapte Anthropic gjennombrudd i AI-koding</a></h2>
+                        <p>Nye AI-verktøy fra Anthropic gjør avansert programvareutvikling tilgjengelig for langt flere, og skaper uro i bransjer som jus, reklame og teknologi....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F110691702.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3De7bd3d1c985482d0204c371e40d93be5de0d8e2986a9333c916347f2c56821de" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 16:32:59 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8325995/krise-for-teknologi-gjeld" target="_blank">Krise for teknologi-gjeld</a></h2>
+                        <p>Programvarebransjen rystes av AI-frykt, og investorer kvitter seg med lån i panikk. Mange amerikanske teknologilån har falt til krisenivåer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143035418.jpg%3F%26accessToken%3De910a58d4bdbe508d43424bc1333e7b4a2f714cee04293e64063bfd7e392c21d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 16:36:10 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325873/borsorakel-ankit-winther-spilte-bort-vennens-arv" target="_blank">Gikk fra barnevern til børssuksess. Politianmeldt for å spille bort vennenes penger.</a></h2>
+                        <p>Ankit Winther var barnevernsgutten som ble rik på aksjer. På veien spilte han bort farsarven til kompisen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57532291.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D9538272b6f96d73c2af3078c5406746afc17b091ba64b15d4b7a9d02193b247d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:13:06 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325959/guidingen-avgjor" target="_blank">Guidingen avgjør</a></h2>
+                        <p>Både Novo Nordisk og Enphase publiserte uventet sterke kvartalsrapporter. En av aksjene stupte 13 prosent, den andre steg 33 prosent....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143864233.jpg%3F%26accessToken%3D04b261bf6a95ee60967a55624a97f1e057f59873970f56e902b2103d8503d1b7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:13:08 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8326009/kong-harald-uten-kommentar-til-epstein-avsloringer" target="_blank">Uten kommentar til Epstein-avsløringer</a></h2>
+                        <p>Kongen var taus om både saken mot Marius Borg Høiby og de nylig frigitte Epstein-filene onsdag kveld....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F70666606.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db107f45b4ad9d5dc82a3d20a60984aefe17f72f93ce51f887db2b126a909d23b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:13:22 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8326006/kjoper-hytten-til-jenny-stray-spetalen" target="_blank">Kjøper hytten til Jenny Stray Spetalen</a></h2>
+                        <p>Jenny Stray Spetalen har solgt en fritidseiendom i Sandefjord for 31,5 millioner kroner til investor Espen Westeren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 17:03:33 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/3p6GRM/roed-larsen-dro-inn-brende-foer-boligkjoep" target="_blank">Rød-Larsen dro inn Brende før boligkjøp</a></h2>
+                        <p>– Jeg er overrasket og uforstående til at Terje Rød-Larsen har brukt meg og mitt navn på denne måten, sier Børge Brende....</p>
                     </div>
                 </div>
             
@@ -213,7 +454,7 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 16:14:41 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/buskerud/fire-folkehogskoleelever-sendt-til-sykehus-etter-redningsaksjon-i-jotunheimen-1.17755688" target="_blank">Dramatisk fjelltur i Jotunheimen – fire elever måtte reddes</a></h2>
-                        <p>Fire elever ved Hallingdal folkehøgskole ble fløyet til sykehus etter å ha blitt nedkjølt under en tur i Jotunheimen.</p>
+                        <p>Fire elever ved Hallingdal folkehøgskole ble fløyet til sykehus etter å ha blitt nedkjølt under en tur i Jotunheimen....</p>
                     </div>
                 </div>
             
@@ -225,7 +466,91 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 16:29:55 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/tromsogfinnmark/vil-ha-flere-kvinner-og-mer-mangfold-i-kunstig-intelligens-1.17722834" target="_blank">Lara (16) startet med programmering som niåring</a></h2>
-                        <p>Få kvinner søker seg til fag innenfor kunstig intelligens. Det kan skape blindsoner, mener ekspert.</p>
+                        <p>Få kvinner søker seg til fag innenfor kunstig intelligens. Det kan skape blindsoner, mener ekspert....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F140676753.jpg%3F%26accessToken%3D73d3d46e50f73564385ca9fd4e51f309a773da22ff0afef9c1751003f3f4fbd8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 16:27:33 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/industri/2026/02/04/8325909/fanget-i-kursras-vi-kjopte-novo-nordisk-aksjer-i-dag" target="_blank">Fanget i kursras: – Vi kjøpte aksjer i dag</a></h2>
+                        <p>To av Gaute Eies favorittaksjer føk vegg-i-mellom onsdag. Han valgte å kjøpe seg opp i Novo Nordisk, som stupte i København....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143857053.jpg%3F%26accessToken%3D06be36fd6d94a8aad1484eba6e52a46ab352b0a4f301c9137f93d9b1573632b4" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 15:34:24 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/medier/2026/02/04/8325968/the-washington-post-en-tredjedel-mister-jobben" target="_blank">The Washington Post: Én tredjedel mister jobben</a></h2>
+                        <p>En tredel av de ansatte i alle avdelinger i den amerikanske storavisen The Washington Post mister jobben i en omfattende kuttrunde....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143587853.jpg%3F%26accessToken%3Df1ebeb2afd5c400e92d3ae6f3dcd0bab973e225a47ce2073d5aa66a0c492bc0a" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 15:50:34 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8325976/brende-erkjenner-at-han-kunne-undersokt-epstein-grundigere" target="_blank">Brende: – Var helt uvitende om Epsteins fortid</a></h2>
+                        <p>Direktør Børge Brende i Verdens økonomiske forum (WEF) uttrykker en viss anger for sine forbindelser til Jeffrey Epstein....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F129860486.jpg%3F%26accessToken%3Df8647a23c20e0ac42babbb0bbde734d9317a50789b0479c6ec1ef788a605caf8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 16:03:02 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325832/dnb-forvalter-2.230-milliarder-ser-muligheter-i-trumps-dollarsvekkelse" target="_blank">DNB forvalter 2.230 milliarder: Ser muligheter i Trumps dollarsvekkelse</a></h2>
+                        <p>DNB Wealth Management-sjef Håkon Hansen tror Donald Trumps nedsabling av dollarkursen vil gjøre vekstmarkeder til den store vinneren i 2026....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143859764.jpg%3F%26accessToken%3D98562cf8853e8d354aa66ba31339123136c84d9507e77fc348557445c39e0b87" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 16:06:50 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/motor/2026/02/04/8325965/knuser-usa-tyskland-er-nest-storst-pa-elbil" target="_blank">Knuser USA: Nest størst i verden</a></h2>
+                        <p>Bare Kina produserte flere elbiler enn tyskerne i fjor. – Vi presser resolutt på, sier tysk bransjetopp etter ny rekord....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143858832.jpg%3F%26accessToken%3D30dbfddf49ab69b6a1db9b5c54dda422a81c5006b1159b595d79c2f3e49a7621" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 16:10:05 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325686/omfattende-kontakt-i-arevis-for-boligsalget-epstein-koblet-norsk-skipsreder-til-korrupt-politiker" target="_blank">Morits Skaugen hadde kontakt med Jeffrey Epstein i flere år før Terje Rød-Larsen kjøpte Frogner-leilighet på billigsalg</a></h2>
+                        <p>Dokumenter viser at Morits Skaugen ble satt i kontakt med politiske toppfigurer i Afrika, Midtøsten og Asia gjennom Terje Rød-Larsen og Jeffrey Epstein tilbake i 2012. – The Norweg...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 15:44:34 GMT
+                        </div>
+                        <h2><a href="https://e24.no/norsk-oekonomi/i/d4mE3J/stor-oversikt-saa-mye-stiger-boligprisene-der-du-bor" target="_blank">Stor oversikt: Så mye stiger bolig­prisene der du bor</a></h2>
+                        <p>Disse byene kan bli prisvinnerne fremover, ifølge Eiendom Norge-sjefen....</p>
                     </div>
                 </div>
             
@@ -237,7 +562,103 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                             Wed, 04 Feb 2026 15:36:13 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ytring/skjerp-dere-og-svar-1.17755089" target="_blank">Skjerp dere og svar</a></h2>
-                        <p>Denne tausheten holder ikke lenger.</p>
+                        <p>Denne tausheten holder ikke lenger....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57513367.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db7c54349ca71e39a58c2bc530ec7cc1ab1cdb021dd653fc3b0ffd69a529a4ab3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 15:29:45 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325919/ny-rekord-pa-oslo-bors-kursfest-i-dnb-aker-bp-stupte" target="_blank">All-time high på Oslo Børs etter DNB-fest – Aker BP stupte etter Equinor-uttalelse</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143845344.jpg%3F%26accessToken%3Dc9d3cc1ae0e39d9516bf32895f1dbedc63e2ec3d004f9edabfdeaa634a8b7bc9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 14:35:31 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325905/wall-street-tesla-faller-etter-gode-kina-tall" target="_blank">Tesla faller på Wall Street etter gode Kina-tall</a></h2>
+                        <p>Wall Street: Tesla faller etter gode Kina-tall...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F122193589.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3De92e0cda779e9136bb37a95324c943588311559a8132c1125aca99c5e8985936" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 14:50:39 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8325952/sv-snur-om-melkoy-enige-med-ap-om-ny-losning" target="_blank">SV snur om Melkøy: Enige med Ap om ny løsning</a></h2>
+                        <p>SV varsler at de dropper å stemme for forslaget som ville fratatt gassanlegget på Melkøya landstrømmen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143846360.jpg%3F%26accessToken%3D41f1ee5e1bd638a3cbb4f5b42fcd8839a2e8f0bd9c7c21b9d666d895874fb7a6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 14:52:24 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325902/amalie-gunnufsen-fortsetter-vi-som-na-kollapser-velferdsstaten" target="_blank">Høyre-politiker med radikalt grep mot offentlige utgifter</a></h2>
+                        <p>Amalie Gunnufsen vil ha med partiet på ett stort kutt – færre valg: – Valgkamp påvirker politikernes atferd....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143854234.jpg%3F%26accessToken%3D7ae06ddd40d57d2510acda96314e4a90634238678987b1c8cac054413c53ae93" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 15:09:10 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8325844/ga-innsideinfo-til-epstein-har-forradt-landet-vart" target="_blank">Ga innsideinfo til Epstein: – Har forrådt landet vårt</a></h2>
+                        <p>Britenes statsminister Keir Starmer visste at Peter Mandelson hadde Epstein-koblinger før han ble utnevnt som ambassadør til USA....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143855270.jpg%3F%26accessToken%3D3913eabe4033527f307346c9ea3ec5f8b9f5efa40678d905e066c0dbfe6da1e6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 15:19:29 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/jus/2026/02/04/8325963/dagbladet-terje-rod-larsen-er-kalt-inn-til-avhor" target="_blank">Dagbladet: Terje Rød-Larsen er kalt inn til avhør</a></h2>
+                        <p>Den tidligere statsråden og toppdiplomaten Terje Rød-Larsen skal være innkalt til politiavhør i forbindelse med sine økonomiske bindinger til Jeffrey Epstein....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 14:31:16 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/WvqPlG/blandet-paa-wall-street" target="_blank">Blandet på Wall Street</a></h2>
+                        <p>Brikkegigant stuper etter kvartalstall....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 14:49:06 GMT
+                        </div>
+                        <h2><a href="https://e24.no/energi-og-klima/i/ExweJK/sv-snur-i-melkoeya-saken-equinor-faar-beholde-kraften" target="_blank">SV snur i Melkøya-saken: Equinor får beholde kraften</a></h2>
+                        <p>SV kan ikke gå med på å la gasskraften på Melkøya fortsette å slippe ut enorme mengder CO₂. Partiet vil ikke stemme for å frigi kraften fra anlegget torsdag....</p>
                     </div>
                 </div>
             
@@ -250,13 +671,7 @@ Både den fornærmede og den siktede er mindreårige gutter.</p>
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/sv-snur-om-melkoya-1.17755676" target="_blank">SV snur om Melkøya</a></h2>
                         <p>SV vedtok på sitt gruppemøte onsdag ettermiddag å trekke støtten til forslaget som innebærer å tildele strømmen fra Melkøya til andre næringsaktører.
-– Melkøya er et gigantisk utslippspunkt, det tilsvarer 320 000 privatbiler årlig. Derfor vil vi elektrifisere Melkøya, men det vil vi gjøre med karbonfangst- og lagring, og med havvind. Det er en løsning som kutter utslipp, og tar vare på naturen, sier han.
-Det sier SV-nestleder Lars Haltbrekken.
-Haltbrekken mener at problemet med forslaget som har vært på bordet til nå, er at de ikke stanser et eneste vindkraftverk.
-– Dessuten risikerer vi at det bygges ut gasskraft, som vil øke utslippene og ikke kutte dem. Det kan ikke vi støtte, sier han videre.
-Elektrifiseringen av Melkøya-anlegget i Hammerfest har vært et stridsspørsmål helt siden det først ble besluttet av regjeringen i august 2023.
-Ønsket er at man skal bruke strøm fra land istedenfor gass til å drive LNG-anlegget hvor Equinor produserer gass for eksport.
-Regjeringens argument er at det sikrer driften av anlegget i flere tiår framover, og samtidig bidrar til å redusere klimagassutslipp ved å legge ned gasskraftverket på anlegget.</p>
+– Melkøya er et gigantisk utsl...</p>
                     </div>
                 </div>
             
@@ -268,7 +683,19 @@ Regjeringens argument er at det sikrer driften av anlegget i flere tiår framove
                             Wed, 04 Feb 2026 15:12:14 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/norge/sv-snur_-gar-ut-av-melkoya-flertall-1.17755720" target="_blank">SV snur: Går ut av Melkøya-flertall</a></h2>
-                        <p>SV ønsker likevel ikke å støtte et forslag fra Rødt om å frigi strøm som var ment til gasskraftverket på Melkøya.</p>
+                        <p>SV ønsker likevel ikke å støtte et forslag fra Rødt om å frigi strøm som var ment til gasskraftverket på Melkøya....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F127349486.jpg%3F%26accessToken%3Db03d1ac1b3a3c07697c1cd93e7d528f4de48bbe97f77f394c6bf4187135d9885" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Wed, 04 Feb 2026 14:25:39 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8325718/kollaps-i-it-sjokkbolger-for-pe-milliardaerer" target="_blank">IT-kollaps skaper sjokkbølger i private equity – to norske milliardærer blør</a></h2>
+                        <p>Amerikanske programvareselskaper har kollapset på børs og sendt sjokkbølger inn i private equity. På to dager er EQT ned 14 prosent, og påført Christian Sinding og Anders Misund mi...</p>
                     </div>
                 </div>
             
@@ -281,463 +708,7 @@ Regjeringens argument er at det sikrer driften av anlegget i flere tiår framove
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/700-agenter-skal-trekkes-ut-av-minnesota-umiddelbart-1.17755555" target="_blank">700 agenter skal trekkes ut av Minnesota umiddelbart</a></h2>
                         <p>700 føderale betjenter som er sendt til delstaten Minnesota i kampen mot innvandring, skal fjernes umiddelbart.
-Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/nOEWYWTJERxsmTDlwrU3YAM-VwW6DuAfOCft5mVmtQmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 13:58:07 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/kronprinsessens-e-post-og-mobilnummer-lekket_-_-en-sikkerhetstrussel-1.17754770" target="_blank">Kronprinsessens e-post og mobilnummer lekket: – En sikkerhetstrussel</a></h2>
-                        <p>Kronprinsesse Mette-Marits tidligere e-postadresse og mobilnummer fremtrer usladdet i Epstein-dokumentene.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143869378.jpg%3F%26accessToken%3Df36ee85e4881cc65bfdeda5fad092d88184e5d8cbc67e3944ac355be7ea1fe9d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 20:45:42 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326032/colombiansk-narkomilits-setter-fredssamtaler-pa-pause-etter-trump-avtale" target="_blank">Colombiansk narkomilits: Setter  fredssamtaler på pause etter Trump-avtale</a></h2>
-                        <p>Colombias mektigste narkokartell pauser fredsforhandlingene med regjeringen etter at president Gustavo Petro og Donald Trump lovet å jakte på kartellets leder.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F131717949.jpg%3F%26accessToken%3D0004fa569de025a66e481c6b13c380f5e0ec3ed07cba3178f36cf0873158e008" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 21:02:53 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8326022/wall-street-blandet-chip-aksje-dundret-ned-etter-tall" target="_blank">Wall Street blandet: Chip-aksje dundret ned etter tall</a></h2>
-                        <p>De toneangivende indeksene på Wall Street endte blandet onsdag. Nvidia-konkurrent dundret ned etter svake kvartalstall.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F122094584.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D23c82338065b25172d79a545b4b1f51eb0fa6e17e0d572c6c648d5a8869a0604" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 21:07:53 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8326016/alphabet-slo-forventningene" target="_blank">Alphabet slo forventningene</a></h2>
-                        <p>Onsdag kveld la Alphabet frem tall for fjerde kvartal.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 21:02:57 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/j0z5Gn/alphabet-gjoer-det-bedre-enn-ventet" target="_blank">Google-eier Alphabet slår forventningene</a></h2>
-                        <p>Google-eieren vil investere inntil 1.780 milliarder kroner i år.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 20:28:32 GMT
-                        </div>
-                        <h2><a href="https://e24.no/energi-og-klima/i/XM6m67/frykter-ikke-kraftmangel-i-vinter" target="_blank">Frykter ikke kraftmangel i vinter</a></h2>
-                        <p>Vinterkulde gjør vannmagasinene tappes. – Vi er ikke bekymret, beroliger Inga Nordberg i NVE.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143868495.jpg%3F%26accessToken%3D1fc72a1e23ac4a88c6ee15288aaf5084eebfd034225cea0f55a5732cfc6fc975" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 19:47:17 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326025/zelenskyj-etter-samtaler-med-russland-ma-fore-til-reell-fred" target="_blank">Zelenskyj etter samtaler med Russland: – Må føre til reell fred</a></h2>
-                        <p>Samtalene med Russland og USA må føre til reell fred, sier president Volodymyr Zelenskyj etter første dag av Ukraina-samtalene i De forente arabiske emirater.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143819240.jpg%3F%26accessToken%3Daf8db35dc3277c7b3f204e79e5aa9bd25c83a257eeb337b933449660c09bb97c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 20:00:04 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/helse/2026/02/04/8325791/10-milliarder-i-tap-for-nordmenn-i-novo-nordisk-pa-en-dag" target="_blank">10 milliarder i tap for nordmenn i én aksje – på én dag</a></h2>
-                        <p>Når Nordens største selskap stuper 18 prosent på én dag, taper de norske aksjonærene rundt 10 milliarder kroner. – Vi er positive til aksjen, ellers ville vi ikke eid den, sier investeringsdirektør Alexander Miller i Odin.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F142554706.jpg%3F%26accessToken%3D0fa18bffab66b9dbb8cee343748b52cc8af813fedbf9f64ba829ca3ed84f90ec" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 20:20:37 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8326028/trump-til-irans-leder-han-bor-vaere-veldig-redd" target="_blank">Trump til Irans leder: – Han bør være veldig redd</a></h2>
-                        <p>President Donald Trump kommer med en klar advarsel til Iran. Han vil at landet ikke skal starte et nytt atomprogram.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143865046.jpg%3F%26accessToken%3D97f3c7f82da3d1a86cf4b7a38905d31a2877c57a16b19a10e17595bd5e5a6dc9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:39:01 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8326013/oljeprisen-stiger-kraftig-atomsamtaler-pa-randen-av-kollaps" target="_blank">Oljeprisen stiger kraftig: Atomsamtaler på randen av kollaps</a></h2>
-                        <p>USA–Iran-atomsamtalene henger i en tynn tråd etter at USA avslo Irans ønske om å endre formatet på møtet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143867106.jpg%3F%26accessToken%3Dac1d7bd739998096dde0e4b72c97987912a5f1a15b3462ed8eafde0b68c03c3d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 18:43:53 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326020/argentina-ber-usa-utlevere-nicolas-maduro" target="_blank">Argentina ber USA utlevere Nicolás Maduro</a></h2>
-                        <p>En argentinsk dommer ber USA utlevere Venezuelas president Nicolás Maduro til Argentina, hvor han anklages for brudd på menneskerettighetene.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143819312.jpg%3F%26accessToken%3D9bf4fc30b43d1c5c064b16bbfe1a11a753ac18c595dd5b9c99f72e33c504eb3f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 19:00:10 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325784/hoibys-forsvarer-helt-pa-jordet" target="_blank">Marius Borg Høibys forsvarer er helt på jordet. For mye? Ikke i det hele tatt!</a></h2>
-                        <p>Det er klart det blir noen tusen nye avissider, skriver Trygve Hegnar i lederen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F70666606.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db107f45b4ad9d5dc82a3d20a60984aefe17f72f93ce51f887db2b126a909d23b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:13:22 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/bolig/2026/02/04/8326006/kjoper-hytten-til-jenny-stray-spetalen" target="_blank">Kjøper hytten til Jenny Stray Spetalen</a></h2>
-                        <p>Jenny Stray Spetalen har solgt en fritidseiendom i Sandefjord for 31,5 millioner kroner til investor Espen Westeren.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143865046.jpg%3F%26accessToken%3D97f3c7f82da3d1a86cf4b7a38905d31a2877c57a16b19a10e17595bd5e5a6dc9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:39:01 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8326013/oljeprisen-stiger-kraftig-atom-samtaler-pa-randen-av-kollaps" target="_blank">Oljeprisen stiger kraftig: Atom-samtaler på randen av kollaps</a></h2>
-                        <p>USA–Iran-atomsamtalene henger i en tynn tråd etter at USA avslo Irans ønske om å endre formatet på møtet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F132011823.jpg%3F%26accessToken%3De7715457f74eeeb065358f4bda25acf617f99eb079c3d2821795a64d2ce4f88e" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 18:00:21 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8326004/nasdaq-dundrer-ned-ai-aksje-kollapser-etter-tall" target="_blank">Nasdaq dundrer ned: AI-aksje kollapser etter tall</a></h2>
-                        <p>De toneangivende indeksene på New York-børsen er blandet onsdag. Nvidia-konkurrent stuper etter svake kvartalstall.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143864615.jpg%3F%26accessToken%3Da23beff8c3ae5ccfe9ce005a43e2bcd3a85624d3de33715e4da5510347a848bd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:28:40 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8326011/slik-skapte-anthropic-gjennombrudd-i-ai-koding" target="_blank">Slik skapte Anthropic gjennombrudd i AI-koding</a></h2>
-                        <p>Nye AI-verktøy fra Anthropic gjør avansert programvareutvikling tilgjengelig for langt flere, og skaper uro i bransjer som jus, reklame og teknologi.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F110691702.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3De7bd3d1c985482d0204c371e40d93be5de0d8e2986a9333c916347f2c56821de" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 16:32:59 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8325995/krise-for-teknologi-gjeld" target="_blank">Krise for teknologi-gjeld</a></h2>
-                        <p>Programvarebransjen rystes av AI-frykt, og investorer kvitter seg med lån i panikk. Mange amerikanske teknologilån har falt til krisenivåer.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143035418.jpg%3F%26accessToken%3De910a58d4bdbe508d43424bc1333e7b4a2f714cee04293e64063bfd7e392c21d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 16:36:10 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325873/borsorakel-ankit-winther-spilte-bort-vennens-arv" target="_blank">Gikk fra barnevern til børssuksess. Politianmeldt for å spille bort vennenes penger.</a></h2>
-                        <p>Ankit Winther var barnevernsgutten som ble rik på aksjer. På veien spilte han bort farsarven til kompisen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57532291.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D9538272b6f96d73c2af3078c5406746afc17b091ba64b15d4b7a9d02193b247d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:13:06 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325959/guidingen-avgjor" target="_blank">Guidingen avgjør</a></h2>
-                        <p>Både Novo Nordisk og Enphase publiserte uventet sterke kvartalsrapporter. En av aksjene stupte 13 prosent, den andre steg 33 prosent.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143864233.jpg%3F%26accessToken%3D04b261bf6a95ee60967a55624a97f1e057f59873970f56e902b2103d8503d1b7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:13:08 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8326009/kong-harald-uten-kommentar-til-epstein-avsloringer" target="_blank">Uten kommentar til Epstein-avsløringer</a></h2>
-                        <p>Kongen var taus om både saken mot Marius Borg Høiby og de nylig frigitte Epstein-filene onsdag kveld.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F70666606.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db107f45b4ad9d5dc82a3d20a60984aefe17f72f93ce51f887db2b126a909d23b" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:13:22 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8326006/kjoper-hytten-til-jenny-stray-spetalen" target="_blank">Kjøper hytten til Jenny Stray Spetalen</a></h2>
-                        <p>Jenny Stray Spetalen har solgt en fritidseiendom i Sandefjord for 31,5 millioner kroner til investor Espen Westeren.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 17:03:33 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/3p6GRM/roed-larsen-dro-inn-brende-foer-boligkjoep" target="_blank">Rød-Larsen dro inn Brende før boligkjøp</a></h2>
-                        <p>– Jeg er overrasket og uforstående til at Terje Rød-Larsen har brukt meg og mitt navn på denne måten, sier Børge Brende.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F140676753.jpg%3F%26accessToken%3D73d3d46e50f73564385ca9fd4e51f309a773da22ff0afef9c1751003f3f4fbd8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 16:27:33 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/industri/2026/02/04/8325909/fanget-i-kursras-vi-kjopte-novo-nordisk-aksjer-i-dag" target="_blank">Fanget i kursras: – Vi kjøpte aksjer i dag</a></h2>
-                        <p>To av Gaute Eies favorittaksjer føk vegg-i-mellom onsdag. Han valgte å kjøpe seg opp i Novo Nordisk, som stupte i København.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143857053.jpg%3F%26accessToken%3D06be36fd6d94a8aad1484eba6e52a46ab352b0a4f301c9137f93d9b1573632b4" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 15:34:24 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/medier/2026/02/04/8325968/the-washington-post-en-tredjedel-mister-jobben" target="_blank">The Washington Post: Én tredjedel mister jobben</a></h2>
-                        <p>En tredel av de ansatte i alle avdelinger i den amerikanske storavisen The Washington Post mister jobben i en omfattende kuttrunde.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143587853.jpg%3F%26accessToken%3Df1ebeb2afd5c400e92d3ae6f3dcd0bab973e225a47ce2073d5aa66a0c492bc0a" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 15:50:34 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8325976/brende-erkjenner-at-han-kunne-undersokt-epstein-grundigere" target="_blank">Brende: – Var helt uvitende om Epsteins fortid</a></h2>
-                        <p>Direktør Børge Brende i Verdens økonomiske forum (WEF) uttrykker en viss anger for sine forbindelser til Jeffrey Epstein.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F129860486.jpg%3F%26accessToken%3Df8647a23c20e0ac42babbb0bbde734d9317a50789b0479c6ec1ef788a605caf8" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 16:03:02 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325832/dnb-forvalter-2.230-milliarder-ser-muligheter-i-trumps-dollarsvekkelse" target="_blank">DNB forvalter 2.230 milliarder: Ser muligheter i Trumps dollarsvekkelse</a></h2>
-                        <p>DNB Wealth Management-sjef Håkon Hansen tror Donald Trumps nedsabling av dollarkursen vil gjøre vekstmarkeder til den store vinneren i 2026.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143859764.jpg%3F%26accessToken%3D98562cf8853e8d354aa66ba31339123136c84d9507e77fc348557445c39e0b87" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 16:06:50 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/motor/2026/02/04/8325965/knuser-usa-tyskland-er-nest-storst-pa-elbil" target="_blank">Knuser USA: Nest størst i verden</a></h2>
-                        <p>Bare Kina produserte flere elbiler enn tyskerne i fjor. – Vi presser resolutt på, sier tysk bransjetopp etter ny rekord.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143858832.jpg%3F%26accessToken%3D30dbfddf49ab69b6a1db9b5c54dda422a81c5006b1159b595d79c2f3e49a7621" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 16:10:05 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325686/omfattende-kontakt-i-arevis-for-boligsalget-epstein-koblet-norsk-skipsreder-til-korrupt-politiker" target="_blank">Morits Skaugen hadde kontakt med Jeffrey Epstein i flere år før Terje Rød-Larsen kjøpte Frogner-leilighet på billigsalg</a></h2>
-                        <p>Dokumenter viser at Morits Skaugen ble satt i kontakt med politiske toppfigurer i Afrika, Midtøsten og Asia gjennom Terje Rød-Larsen og Jeffrey Epstein tilbake i 2012. – The Norwegian guy with the fleet of LNG-ships.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 15:44:34 GMT
-                        </div>
-                        <h2><a href="https://e24.no/norsk-oekonomi/i/d4mE3J/stor-oversikt-saa-mye-stiger-boligprisene-der-du-bor" target="_blank">Stor oversikt: Så mye stiger bolig­prisene der du bor</a></h2>
-                        <p>Disse byene kan bli prisvinnerne fremover, ifølge Eiendom Norge-sjefen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57513367.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db7c54349ca71e39a58c2bc530ec7cc1ab1cdb021dd653fc3b0ffd69a529a4ab3" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 15:29:45 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325919/ny-rekord-pa-oslo-bors-kursfest-i-dnb-aker-bp-stupte" target="_blank">All-time high på Oslo Børs etter DNB-fest – Aker BP stupte etter Equinor-uttalelse</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143845344.jpg%3F%26accessToken%3Dc9d3cc1ae0e39d9516bf32895f1dbedc63e2ec3d004f9edabfdeaa634a8b7bc9" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 14:35:31 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/04/8325905/wall-street-tesla-faller-etter-gode-kina-tall" target="_blank">Tesla faller på Wall Street etter gode Kina-tall</a></h2>
-                        <p>Wall Street: Tesla faller etter gode Kina-tall</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F122193589.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3De92e0cda779e9136bb37a95324c943588311559a8132c1125aca99c5e8985936" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 14:50:39 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8325952/sv-snur-om-melkoy-enige-med-ap-om-ny-losning" target="_blank">SV snur om Melkøy: Enige med Ap om ny løsning</a></h2>
-                        <p>SV varsler at de dropper å stemme for forslaget som ville fratatt gassanlegget på Melkøya landstrømmen.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143846360.jpg%3F%26accessToken%3D41f1ee5e1bd638a3cbb4f5b42fcd8839a2e8f0bd9c7c21b9d666d895874fb7a6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 14:52:24 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325902/amalie-gunnufsen-fortsetter-vi-som-na-kollapser-velferdsstaten" target="_blank">Høyre-politiker med radikalt grep mot offentlige utgifter</a></h2>
-                        <p>Amalie Gunnufsen vil ha med partiet på ett stort kutt – færre valg: – Valgkamp påvirker politikernes atferd.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143854234.jpg%3F%26accessToken%3D7ae06ddd40d57d2510acda96314e4a90634238678987b1c8cac054413c53ae93" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 15:09:10 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8325844/ga-innsideinfo-til-epstein-har-forradt-landet-vart" target="_blank">Ga innsideinfo til Epstein: – Har forrådt landet vårt</a></h2>
-                        <p>Britenes statsminister Keir Starmer visste at Peter Mandelson hadde Epstein-koblinger før han ble utnevnt som ambassadør til USA.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143855270.jpg%3F%26accessToken%3D3913eabe4033527f307346c9ea3ec5f8b9f5efa40678d905e066c0dbfe6da1e6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 15:19:29 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/jus/2026/02/04/8325963/dagbladet-terje-rod-larsen-er-kalt-inn-til-avhor" target="_blank">Dagbladet: Terje Rød-Larsen er kalt inn til avhør</a></h2>
-                        <p>Den tidligere statsråden og toppdiplomaten Terje Rød-Larsen skal være innkalt til politiavhør i forbindelse med sine økonomiske bindinger til Jeffrey Epstein.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 14:31:16 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/WvqPlG/blandet-paa-wall-street" target="_blank">Blandet på Wall Street</a></h2>
-                        <p>Brikkegigant stuper etter kvartalstall.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 14:49:06 GMT
-                        </div>
-                        <h2><a href="https://e24.no/energi-og-klima/i/ExweJK/sv-snur-i-melkoeya-saken-equinor-faar-beholde-kraften" target="_blank">SV snur i Melkøya-saken: Equinor får beholde kraften</a></h2>
-                        <p>SV kan ikke gå med på å la gasskraften på Melkøya fortsette å slippe ut enorme mengder CO₂. Partiet vil ikke stemme for å frigi kraften fra anlegget torsdag.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F127349486.jpg%3F%26accessToken%3Db03d1ac1b3a3c07697c1cd93e7d528f4de48bbe97f77f394c6bf4187135d9885" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 14:25:39 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8325718/kollaps-i-it-sjokkbolger-for-pe-milliardaerer" target="_blank">IT-kollaps skaper sjokkbølger i private equity – to norske milliardærer blør</a></h2>
-                        <p>Amerikanske programvareselskaper har kollapset på børs og sendt sjokkbølger inn i private equity. På to dager er EQT ned 14 prosent, og påført Christian Sinding og Anders Misund milliardtap.</p>
+Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag...</p>
                     </div>
                 </div>
             
@@ -749,7 +720,7 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag.</p>
                             Wed, 04 Feb 2026 13:34:11 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/mat-og-drikke/2026/02/04/8325865/bitastad-og-bjorn-vidar-tessem-i-2019-baguetter-og-boller-faller-i-smak" target="_blank">Baguetter og boller faller i smak</a></h2>
-                        <p>Bitastad og Bjørn Vidar Tessem i 2019: Baguetter og boller faller i smak</p>
+                        <p>Bitastad og Bjørn Vidar Tessem i 2019: Baguetter og boller faller i smak...</p>
                     </div>
                 </div>
             
@@ -761,7 +732,7 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag.</p>
                             Wed, 04 Feb 2026 13:47:28 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8325711/clarksons-analytiker-oyner-sterkere-oljepris-anbefaler-tre-toppvalg" target="_blank">Clarksons-analytiker øyner sterkere oljepris – anbefaler tre toppvalg</a></h2>
-                        <p>Analytiker Christoffer Bachke venter sterkere oljepris i 2027. Dette er aksjene han satser på nå.</p>
+                        <p>Analytiker Christoffer Bachke venter sterkere oljepris i 2027. Dette er aksjene han satser på nå....</p>
                     </div>
                 </div>
             
@@ -773,7 +744,7 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag.</p>
                             Wed, 04 Feb 2026 14:07:32 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/04/8325871/toppsjef-i-shell-kan-fa-lonnsokning-pa-minst-60-mill." target="_blank">Nytt forslag: Lønnsøkning på minst 60 millioner</a></h2>
-                        <p>Totalt kan Shell-sjefen potensielt tjene en kvart milliard kroner i året. Det blir imidlertid småpenger om man sammenligner med de amerikanske konkurrentene.</p>
+                        <p>Totalt kan Shell-sjefen potensielt tjene en kvart milliard kroner i året. Det blir imidlertid småpenger om man sammenligner med de amerikanske konkurrentene....</p>
                     </div>
                 </div>
             
@@ -785,7 +756,7 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag.</p>
                             Wed, 04 Feb 2026 14:07:51 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/04/8325903/kinesiske-medier-trump-har-snakket-med-xi-jinping" target="_blank">Kinesiske medier: Trump har snakket med Xi Jinping</a></h2>
-                        <p>Kinas president Xi Jinping og USAs president Donald Trump har snakket sammen på telefonen, melder den kinesiske statskanalen CCTV.</p>
+                        <p>Kinas president Xi Jinping og USAs president Donald Trump har snakket sammen på telefonen, melder den kinesiske statskanalen CCTV....</p>
                     </div>
                 </div>
             
@@ -797,11 +768,23 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag.</p>
                             Wed, 04 Feb 2026 14:08:21 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8325827/internasjonale-borskjemper-hardt-ut-mot-stortinget-svekker-tilliten-til-norge" target="_blank">Internasjonale børskjemper hardt ut mot Stortinget: – Svekker tilliten til Norge</a></h2>
-                        <p>TotalEnergies og Harbour Energy feller hard dom over Stortingets Melkøya-drakamp: – Svekker tilliten til Norge.</p>
+                        <p>TotalEnergies og Harbour Energy feller hard dom over Stortingets Melkøya-drakamp: – Svekker tilliten til Norge....</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 04.02.2026 21:30</div>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/nOEWYWTJERxsmTDlwrU3YAM-VwW6DuAfOCft5mVmtQmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 13:58:07 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/kronprinsessens-e-post-og-mobilnummer-lekket_-_-en-sikkerhetstrussel-1.17754770" target="_blank">Kronprinsessens e-post og mobilnummer lekket: – En sikkerhetstrussel</a></h2>
+                        <p>Kronprinsesse Mette-Marits tidligere e-postadresse og mobilnummer fremtrer usladdet i Epstein-dokumentene....</p>
+                    </div>
+                </div>
+            
+                <div class="footer">Sist oppdatert: 04.02.2026 22:21</div>
             </div>
         </body>
         </html>
