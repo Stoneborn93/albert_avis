@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -120,7 +123,168 @@
                         <p>Utviklere har gjort det enkelt å søke gjennom tusenvis av filer....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/LVrtFlDewfgXutoLlnw5-Qd_10NZAYaYAaqgCl_DSEYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 16:14:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/fire-folkehogskoleelever-sendt-til-sykehus-etter-redningsaksjon-i-jotunheimen-1.17755688" target="_blank">Dramatisk fjelltur i Jotunheimen – fire elever måtte reddes</a></h2>
+                        <p>Fire elever ved Hallingdal folkehøgskole ble fløyet til sykehus etter å ha blitt nedkjølt under en tur i Jotunheimen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vnK0Np2OafzoJ7yeU7WadgQw2SAkdw-B0pTP2tOaFKtg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 16:29:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/vil-ha-flere-kvinner-og-mer-mangfold-i-kunstig-intelligens-1.17722834" target="_blank">Lara (16) startet med programmering som niåring</a></h2>
+                        <p>Få kvinner søker seg til fag innenfor kunstig intelligens. Det kan skape blindsoner, mener ekspert....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/FZCYNxvM9PYjNEbDl-kQEgIi5Bfk1EuxwFNOEzwTAp6g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 15:36:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/skjerp-dere-og-svar-1.17755089" target="_blank">Skjerp dere og svar</a></h2>
+                        <p>Denne tausheten holder ikke lenger....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 14:49:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/sv-snur-om-melkoya-1.17755676" target="_blank">SV snur om Melkøya</a></h2>
+                        <p>SV vedtok på sitt gruppemøte onsdag ettermiddag å trekke støtten til forslaget som innebærer å tildele strømmen fra Melkøya til andre næringsaktører.
+– Melkøya er et gigantisk utsl...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Ra-L9k6SQiSlEnYeNpBpmg7d4tdGq6aJKhbbJoH_xf5Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 15:12:14 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/sv-snur_-gar-ut-av-melkoya-flertall-1.17755720" target="_blank">SV snur: Går ut av Melkøya-flertall</a></h2>
+                        <p>SV ønsker likevel ikke å støtte et forslag fra Rødt om å frigi strøm som var ment til gasskraftverket på Melkøya....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 14:18:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/700-agenter-skal-trekkes-ut-av-minnesota-umiddelbart-1.17755555" target="_blank">700 agenter skal trekkes ut av Minnesota umiddelbart</a></h2>
+                        <p>700 føderale betjenter som er sendt til delstaten Minnesota i kampen mot innvandring, skal fjernes umiddelbart.
+Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/nOEWYWTJERxsmTDlwrU3YAM-VwW6DuAfOCft5mVmtQmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 13:58:07 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/kronprinsessens-e-post-og-mobilnummer-lekket_-_-en-sikkerhetstrussel-1.17754770" target="_blank">Kronprinsessens e-post og mobilnummer lekket: – En sikkerhetstrussel</a></h2>
+                        <p>Kronprinsesse Mette-Marits tidligere e-postadresse og mobilnummer fremtrer usladdet i Epstein-dokumentene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 13:11:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/betalingsproblemer-over-hele-landet-er-lost--1.17755432" target="_blank">Betalingsproblemer over hele landet er løst</a></h2>
+                        <p>Kortbetalingsløsningen Nets hadde tidligere onsdag trøbbel, noe som førte til betalingsproblemer over hele landet. Problememet skal klokken 14.20 være løst.
+– Problemene startet ru...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/YxKKlSqTR8Homqsr3POwJQRX4-bUJaUcCGZX32gj5kOA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 11:00:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/miljodirektoratet-onsker-a-forby-mange-fremmede-arter-1.17747565" target="_blank">Ønsker å forby disse plantene</a></h2>
+                        <p>Miljødirektoratet ønsker å forby en rekke planter. Men slapp av – du skal få beholde dem du har i hagen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/6iw66kFdSaW-lyqH8dBmvwUGY5y56xnTZwzUkw_7hNoA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 12:27:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/ikke-malt-en-kaldere-januar-siden-2010-1.17753701" target="_blank">Kaldeste januar på 16 år</a></h2>
+                        <p>Januar bød på skikkelig vinter i store deler av landet. Ifølge meteorologene har de ikke målt en kaldere start på året siden 2010....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/b6DlSFXh6cbV-3HzPPbETwik2qUMhe-7mK-x4pLS7Rng.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 12:46:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/tre-organisasjoner-i-felles-brev_-ber-kongehuset-gjore-rede-for-kronprinsessens-epstein-kontakt-1.17755352" target="_blank">Tre organisasjoner i felles brev: Ber kongehuset gjøre rede for kronprinsessens Epstein-kontakt</a></h2>
+                        <p>Hamsundagene, Førdefestivalen og Nynorsk kultursentrum ber Slottet om å gjøre grundig rede for kronprinsessens kontakt med Jeffrey Epstein.
+Alle de tre organisasjonene har til fell...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/b6DlSFXh6cbV-3HzPPbETwik2qUMhe-7mK-x4pLS7Rng.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 12:52:45 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/fordefestivalen-vil-ha-avklaring-om-epstein-mailene-for-de-vurderer-videre-samarbeid-1.17755385" target="_blank">Flere organisasjoner krever avklaring fra Slottet om Epstein-kontakten til Mette-Marit</a></h2>
+                        <p>Kravet kommer frem i et brev sendt til Slottet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 13:11:38 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/dagbladet_-nets-nede-i-norge-_-betalingsproblemer-over-hele-landet-1.17755432" target="_blank">Dagbladet: Nets nede i Norge – betalingsproblemer over hele landet</a></h2>
+                        <p>Kortbetalingsløsningen Nets har trøbbel, noe som fører til betalingsproblemer over hele landet.
+– Problemene startet rundt klokken 13.30, og vårt tekniske team jobber med å finne å...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F110691702.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3De7bd3d1c985482d0204c371e40d93be5de0d8e2986a9333c916347f2c56821de" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -190,30 +354,6 @@
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/3p6GRM/roed-larsen-dro-inn-brende-foer-boligkjoep" target="_blank">Rød-Larsen dro inn Brende før boligkjøp</a></h2>
                         <p>– Jeg er overrasket og uforstående til at Terje Rød-Larsen har brukt meg og mitt navn på denne måten, sier Børge Brende....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/LVrtFlDewfgXutoLlnw5-Qd_10NZAYaYAaqgCl_DSEYg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 16:14:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/fire-folkehogskoleelever-sendt-til-sykehus-etter-redningsaksjon-i-jotunheimen-1.17755688" target="_blank">Dramatisk fjelltur i Jotunheimen – fire elever måtte reddes</a></h2>
-                        <p>Fire elever ved Hallingdal folkehøgskole ble fløyet til sykehus etter å ha blitt nedkjølt under en tur i Jotunheimen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vnK0Np2OafzoJ7yeU7WadgQw2SAkdw-B0pTP2tOaFKtg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 16:29:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/vil-ha-flere-kvinner-og-mer-mangfold-i-kunstig-intelligens-1.17722834" target="_blank">Lara (16) startet med programmering som niåring</a></h2>
-                        <p>Få kvinner søker seg til fag innenfor kunstig intelligens. Det kan skape blindsoner, mener ekspert....</p>
                     </div>
                 </div>
             
@@ -298,18 +438,6 @@
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/d4mE3J/stor-oversikt-saa-mye-stiger-boligprisene-der-du-bor" target="_blank">Stor oversikt: Så mye stiger bolig­prisene der du bor</a></h2>
                         <p>Disse byene kan bli prisvinnerne fremover, ifølge Eiendom Norge-sjefen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/FZCYNxvM9PYjNEbDl-kQEgIi5Bfk1EuxwFNOEzwTAp6g.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 15:36:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/skjerp-dere-og-svar-1.17755089" target="_blank">Skjerp dere og svar</a></h2>
-                        <p>Denne tausheten holder ikke lenger....</p>
                     </div>
                 </div>
             
@@ -410,31 +538,6 @@
                 </div>
             
                 <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 14:49:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/sv-snur-om-melkoya-1.17755676" target="_blank">SV snur om Melkøya</a></h2>
-                        <p>SV vedtok på sitt gruppemøte onsdag ettermiddag å trekke støtten til forslaget som innebærer å tildele strømmen fra Melkøya til andre næringsaktører.
-– Melkøya er et gigantisk utsl...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Ra-L9k6SQiSlEnYeNpBpmg7d4tdGq6aJKhbbJoH_xf5Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 15:12:14 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/sv-snur_-gar-ut-av-melkoya-flertall-1.17755720" target="_blank">SV snur: Går ut av Melkøya-flertall</a></h2>
-                        <p>SV ønsker likevel ikke å støtte et forslag fra Rødt om å frigi strøm som var ment til gasskraftverket på Melkøya....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F127349486.jpg%3F%26accessToken%3Db03d1ac1b3a3c07697c1cd93e7d528f4de48bbe97f77f394c6bf4187135d9885" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -443,19 +546,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/04/8325718/kollaps-i-it-sjokkbolger-for-pe-milliardaerer" target="_blank">IT-kollaps skaper sjokkbølger i private equity – to norske milliardærer blør</a></h2>
                         <p>Amerikanske programvareselskaper har kollapset på børs og sendt sjokkbølger inn i private equity. På to dager er EQT ned 14 prosent, og påført Christian Sinding og Anders Misund mi...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 14:18:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/700-agenter-skal-trekkes-ut-av-minnesota-umiddelbart-1.17755555" target="_blank">700 agenter skal trekkes ut av Minnesota umiddelbart</a></h2>
-                        <p>700 føderale betjenter som er sendt til delstaten Minnesota i kampen mot innvandring, skal fjernes umiddelbart.
-Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag...</p>
                     </div>
                 </div>
             
@@ -520,18 +610,6 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/nOEWYWTJERxsmTDlwrU3YAM-VwW6DuAfOCft5mVmtQmw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 13:58:07 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/kronprinsessens-e-post-og-mobilnummer-lekket_-_-en-sikkerhetstrussel-1.17754770" target="_blank">Kronprinsessens e-post og mobilnummer lekket: – En sikkerhetstrussel</a></h2>
-                        <p>Kronprinsesse Mette-Marits tidligere e-postadresse og mobilnummer fremtrer usladdet i Epstein-dokumentene....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143836627.jpg%3F%26accessToken%3Dac69e23aeef7e97c4335e3133439fce19811cd75c017d561d1d46c3aef746dcc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -564,19 +642,6 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/02/04/8325856/tror-inflasjonen-holder-seg-hoy" target="_blank">Tror inflasjonen holder seg høy</a></h2>
                         <p>Kommende ukes konsumpristall for januar vil trolig viste bortimot uendret inflasjon, tror både Handelsbanken Capital Markets og DNB Carnegie....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 13:11:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/betalingsproblemer-over-hele-landet-er-lost--1.17755432" target="_blank">Betalingsproblemer over hele landet er løst</a></h2>
-                        <p>Kortbetalingsløsningen Nets hadde tidligere onsdag trøbbel, noe som førte til betalingsproblemer over hele landet. Problememet skal klokken 14.20 være løst.
-– Problemene startet ru...</p>
                     </div>
                 </div>
             
@@ -665,68 +730,6 @@ Det opplyser USAs grensesjef Tom Homan på en pressekonferanse onsdag...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/YxKKlSqTR8Homqsr3POwJQRX4-bUJaUcCGZX32gj5kOA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 11:00:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/miljodirektoratet-onsker-a-forby-mange-fremmede-arter-1.17747565" target="_blank">Ønsker å forby disse plantene</a></h2>
-                        <p>Miljødirektoratet ønsker å forby en rekke planter. Men slapp av – du skal få beholde dem du har i hagen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/6iw66kFdSaW-lyqH8dBmvwUGY5y56xnTZwzUkw_7hNoA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 12:27:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/ikke-malt-en-kaldere-januar-siden-2010-1.17753701" target="_blank">Kaldeste januar på 16 år</a></h2>
-                        <p>Januar bød på skikkelig vinter i store deler av landet. Ifølge meteorologene har de ikke målt en kaldere start på året siden 2010....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/b6DlSFXh6cbV-3HzPPbETwik2qUMhe-7mK-x4pLS7Rng.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 12:46:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/tre-organisasjoner-i-felles-brev_-ber-kongehuset-gjore-rede-for-kronprinsessens-epstein-kontakt-1.17755352" target="_blank">Tre organisasjoner i felles brev: Ber kongehuset gjøre rede for kronprinsessens Epstein-kontakt</a></h2>
-                        <p>Hamsundagene, Førdefestivalen og Nynorsk kultursentrum ber Slottet om å gjøre grundig rede for kronprinsessens kontakt med Jeffrey Epstein.
-Alle de tre organisasjonene har til fell...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/b6DlSFXh6cbV-3HzPPbETwik2qUMhe-7mK-x4pLS7Rng.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 12:52:45 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/fordefestivalen-vil-ha-avklaring-om-epstein-mailene-for-de-vurderer-videre-samarbeid-1.17755385" target="_blank">Flere organisasjoner krever avklaring fra Slottet om Epstein-kontakten til Mette-Marit</a></h2>
-                        <p>Kravet kommer frem i et brev sendt til Slottet....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 13:11:38 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/dagbladet_-nets-nede-i-norge-_-betalingsproblemer-over-hele-landet-1.17755432" target="_blank">Dagbladet: Nets nede i Norge – betalingsproblemer over hele landet</a></h2>
-                        <p>Kortbetalingsløsningen Nets har trøbbel, noe som fører til betalingsproblemer over hele landet.
-– Problemene startet rundt klokken 13.30, og vårt tekniske team jobber med å finne å...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135885273.jpg%3F%26accessToken%3De67bceaba4cbbfbd5fe3f29f1bf4361cdfa1886df126c2ee3f72e2c95e0b7191" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -786,7 +789,7 @@ Alle de tre organisasjonene har til fell...</p>
                     </div>
                 </div>
             
-                <div class="footer">Sist oppdatert: 04.02.2026 17:21</div>
+                <div class="footer">Sist oppdatert: 04.02.2026 17:25</div>
             </div>
         </body>
         </html>
