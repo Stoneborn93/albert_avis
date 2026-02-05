@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -63,7 +60,19 @@
         <body>
             <div class="container">
                 <h1>📰 Albert Avis</h1>
-                <h2 class='section-title'>💻 Teknologi</h2>
+                <h2 class='section-title'>🎮 Spill</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://i.bo3.no/image/390811/ss_f79d2066dfaf32bbe87868d36db4845f771eddbd.jpg?c=0&h=337&w=599" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Spill">Spill</span> 
+                            Thu, 05 Feb 2026 23:33:00 +0100
+                        </div>
+                        <h2><a href="https://www.gamer.no/artikler/stardew-valley-har-fremdeles-noe-uoppdaget/519947" target="_blank">Stardew Valley har fremdeles noe uoppdaget</a></h2>
+                        <p>Etter 10 år er det én ting i spillet som utvikleren Eric Barone ikke har sett at noen har funnet....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💻 Teknologi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://images.gfx.no/1000/2910/2910196/original.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -72,10 +81,10 @@
                             Thu, 05 Feb 2026 15:48:06 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/krever-full-stans-i-tolletatens-bruk-av-palantir/567883" target="_blank">[Ekstra] Tolletaten: – Palantir er ikke et overvåkingsselskap – de leverer en programvare</a></h2>
-                        <p>Tolletaten: – Palantir er ikke et overvåkingsselskap, de leverer en programvare.</p>
+                        <p>Tolletaten: – Palantir er ikke et overvåkingsselskap, de leverer en programvare....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://gfx.nrk.no/l3B9_Co74n4LaAy3b46GNwbmLPzp8rwagvuJSX_hH3BQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -84,7 +93,7 @@
                             Thu, 05 Feb 2026 22:20:02 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/norge/pagrepet-etter-livsfarlig-biljakt_-svensker-skal-ha-vaert-i-norge-for-a-kidnappe-mann-1.17754710" target="_blank">Pågrepet etter livsfarlig biljakt: Skal ha vært i Norge for å kidnappe mann</a></h2>
-                        <p>Fornærmede skal ha blitt forsøkt bortført for å kreve inn gjeld til et kriminelt nettverk. Samme sommer skulle tanten hans drepes av en 15 år gammel gutt.</p>
+                        <p>Fornærmede skal ha blitt forsøkt bortført for å kreve inn gjeld til et kriminelt nettverk. Samme sommer skulle tanten hans drepes av en 15 år gammel gutt....</p>
                     </div>
                 </div>
             
@@ -96,7 +105,7 @@
                             Thu, 05 Feb 2026 21:17:54 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/mr/bilistar-pa-orskogfjellet-fekk-gebyr-fordi-dei-plundra-med-a-ta-fram-forarkort-appen-1.17753176" target="_blank">Fekk gebyr fordi dei ikkje var raske nok til å ta fram førarkort-appen</a></h2>
-                        <p>Sjølv om bilistane hadde gyldige elektronisk førarkort på mobilen fekk dei 500 kroner i gebyr og sju dagars betalingsfrist. No må politiet slette gebyra.</p>
+                        <p>Sjølv om bilistane hadde gyldige elektronisk førarkort på mobilen fekk dei 500 kroner i gebyr og sju dagars betalingsfrist. No må politiet slette gebyra....</p>
                     </div>
                 </div>
             
@@ -108,7 +117,55 @@
                             Thu, 05 Feb 2026 21:44:10 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ol/snowboard_-ellevilt-drama-i-sluttminuttene-_-her-ser-marcus-kleveland-finaleplassen-ryke-1.17757577" target="_blank">Ellevilt drama i sluttminuttene – her ser Kleveland finaleplassen ryke</a></h2>
-                        <p>Det ble drama helt til siste sekund da ingen av de norske klarte å ta seg til finalen. For Marcus Kleveland glapp det på siste kjører.</p>
+                        <p>Det ble drama helt til siste sekund da ingen av de norske klarte å ta seg til finalen. For Marcus Kleveland glapp det på siste kjører....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F96379559.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Da1a338da3db05e85f610424ba76d32207f86912362c1be9adf71027867430447" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 20:40:55 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326353/inngatt-handelsavtale-med-usa" target="_blank">Inngått handelsavtale med USA</a></h2>
+                        <p>Argentina har inngått en ny handels- og investeringsavtale med USA, et viktig skritt i president Javier Mileis strategi for å liberalisere landets økonomi....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F131717949.jpg%3F%26accessToken%3D0004fa569de025a66e481c6b13c380f5e0ec3ed07cba3178f36cf0873158e008" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 21:02:11 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326359/frykten-til-himmels-blodbad-for-krypto-og-tek-aksjer" target="_blank">Frykten til himmels: Blodbad for krypto og tek-aksjer</a></h2>
+                        <p>De toneangivende indeksene på Wall Street endte ned torsdag. En rekke tek-aksjer falt kraftig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F138282540.jpg%3F%26accessToken%3Dc1dec4bf0c49af92ac355768741362be92c660d5cefa637f0a73a6cb6ac60afe" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 21:06:19 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8326361/amazon-legger-frem-tall-dundrer-ned-i-etterhandelen" target="_blank">Amazon legger frem tall: Dundrer ned i etterhandelen</a></h2>
+                        <p>Netthandelgiganten Amazon legger frem tall for fjerde kvartal torsdag....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 21:02:57 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/lnzGk9/amazon-leverer-noe-sterkere-omsetning-enn-forventet" target="_blank">Amazon skuffer på guiding</a></h2>
+                        <p>Amazon-aksjen faller kraftig i etterhandelen etter at selskapet torsdag kveld la frem resultater for fjerde kvartal...</p>
                     </div>
                 </div>
             
@@ -121,8 +178,7 @@
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/krf-stotter-ogsa-uavhengig-gransking-av-ud-_-sikrer-flertall-1.17757704" target="_blank">KrF støtter også uavhengig gransking av UD – sikrer flertall</a></h2>
                         <p>KrF er enig i at en uavhengig gransking av Utenriksdepartementet er nødvendig. Partiet sikrer dermed flertall i Stortinget for dette.
-– Vi støtter fullt ut en uavhengig granskningskommisjon av UD. Sakene som nå kommer fram, er dypt alvorlige, og det er helt avgjørende at alt legges på bordet slik at det kan ryddes skikkelig opp, skriver partileder Dag-Inge Ulstein i KrF i en melding til NTB.
-– Jeg blir oppgitt over at regjeringen tilsynelatende ikke forstår alvoret når de ikke vil ha full gransking av saken. Det eneste riktige nå er full åpenhet, skriver Ulstein videre.</p>
+– Vi støtter fullt ut en uavhengig gransknings...</p>
                     </div>
                 </div>
             
@@ -134,7 +190,7 @@
                             Thu, 05 Feb 2026 21:12:26 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ytring/nar-laerernormen-ryker_-ryker-flere-barn-med-1.17724329" target="_blank">Når lærernormen ryker, ryker flere barn med</a></h2>
-                        <p>Uten nok lærere i klasserommet blir det umulig å gi sårbare barn den starten de trenger.</p>
+                        <p>Uten nok lærere i klasserommet blir det umulig å gi sårbare barn den starten de trenger....</p>
                     </div>
                 </div>
             
@@ -146,7 +202,7 @@
                             Thu, 05 Feb 2026 21:03:54 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ytring/kontrasten-til-festtalene-blir-stadig-grellere-1.17755413" target="_blank">Kontrasten til festtalene blir stadig grellere</a></h2>
-                        <p>Dessverre måles ikke nordområdenes suksess i konferanser og festtaler. Kan trusselen fra Trump få politikerne til å erstatte store ord med handling?</p>
+                        <p>Dessverre måles ikke nordområdenes suksess i konferanser og festtaler. Kan trusselen fra Trump få politikerne til å erstatte store ord med handling?...</p>
                     </div>
                 </div>
             
@@ -159,8 +215,67 @@
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/jaglands-advokat-til-vg_-ser-rolig-pa-utfallet--1.17757692" target="_blank">Jaglands advokat til VG: Ser rolig på utfallet</a></h2>
                         <p>Jaglands forsvarer, Anders Brosveet, sier til VG at de i utgangspunktet ser positivt på at Økokrim skal etterforske hans klient for grov korrupsjon.
-– De skal gjøre jobben sin og få avklart dette. Vi kommer til å oversende det vi har av sentrale funn og dokumentasjon til Økokrim så snart som praktisk mulig, sier han.
-– Og basert på det vi har funnet så ser vi rolig på utfallet. Det er først og fremst bra for Jagland å få en autoritativ avklaring fra Økokrims side, fremfor at hele pressekobbelet skal drive hver sin lille privatetterforskning.</p>
+– De skal gjøre jobben sin og f...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143275649.jpg%3F%26accessToken%3Df1cdebe41f1b8b0a3518c4add8cb358767573c36cd903c3ac9e5e4b7af608149" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 19:39:08 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326347/apner-for-ny-atomtraktat-med-russland-og-kina" target="_blank">Åpner for ny atomtraktat med Russland og Kina</a></h2>
+                        <p>Trump vil erstatte New START med en ny og bedre avtale, og få Kina med på forhandlingsbordet,...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143952937.jpg%3F%26accessToken%3D16e186cc9c454a34ea0150ad081676611480e2d88690e6f2eba068cc6179051d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 19:56:39 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326351/hoyre-onsker-uavhengig-granskning-av-utenrikstjenesten" target="_blank">Høyre: Ønsker uavhengig granskning av utenrikstjenesten</a></h2>
+                        <p>Høyre ønsker en uavhengig granskning av relevante forhold i utenrikstjenesten i forbindelse med det som er avdekket i Epstein-filene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143927247.jpg%3F%26accessToken%3Dbda35b9ea745fe1d03690e1021856eb7d207f3a386a21ec8d5e13190d02f6f20" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 20:00:11 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/bolig/2026/02/05/8326279/solgt-etter-fire-ar-dansker-med-prisrekord" target="_blank">Brukte fire år på å selge hytta. Dansker satte prisrekord</a></h2>
+                        <p>Fire år måtte Ole Topaas vente før den rette kjøperen kom på banen. Hyttemarkedet er langt unna friskmelding....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57421131.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D92d61b8f0105e0adc12884659e3604c661ef01da8890df8c2e49bcdc7dedbf5f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 20:03:56 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326354/okokrim-apner-etterforskning-mot-jagland" target="_blank">Økokrim åpner etterforskning: Mistenkt for grov korrupsjon</a></h2>
+                        <p>Økokrim har besluttet å åpne etterforskning etter opplysninger i Epstein-filene, sier Økokrim-sjef Pål K. Lønseth....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 19:57:50 GMT
+                        </div>
+                        <h2><a href="https://e24.no/naeringsliv/i/WvqEGr/oekokrim-aapner-etterforskning-mot-thorbjoern-jagland" target="_blank">Økokrim åpner etterforskning mot Thorbjørn Jagland</a></h2>
+                        <p>Økokrim mistenker Norges tidligere statsminsiter Thorbjørn Jagland for grov korrupsjon etter funn i Epstein-filene....</p>
                     </div>
                 </div>
             
@@ -172,7 +287,7 @@
                             Thu, 05 Feb 2026 19:27:27 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/rogaland/bilbransjen-mener-2g-utfasingen-kan-koste-samfunnet-milliarder-1.17735039" target="_blank">Bilbransjen advarer: Denne lille knappen kan koste samfunnet milliarder</a></h2>
-                        <p>Når 2G-nettet slukkes mister 700.000 norske biler nødknappen. Det vil føre til flere dødsulykker og milliardregning for samfunnet, ifølge bilbransjen.</p>
+                        <p>Når 2G-nettet slukkes mister 700.000 norske biler nødknappen. Det vil føre til flere dødsulykker og milliardregning for samfunnet, ifølge bilbransjen....</p>
                     </div>
                 </div>
             
@@ -184,7 +299,7 @@
                             Thu, 05 Feb 2026 19:25:20 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sport/hans-inge-klette-klatret-475.000-hoydemetere-pa-ett-ar-med-ski-og-joggesko-pa-beina-1.17725282" target="_blank">OL-håpets elleville trening - «klatret» Mount Everest 54 ganger på ett år</a></h2>
-                        <p>Hans-Inge Klette spiser høydemetere til frokost, lunsj og middag. Tallene hans får ekspertene til å sperre opp øynene.</p>
+                        <p>Hans-Inge Klette spiser høydemetere til frokost, lunsj og middag. Tallene hans får ekspertene til å sperre opp øynene....</p>
                     </div>
                 </div>
             
@@ -196,7 +311,7 @@
                             Thu, 05 Feb 2026 19:56:35 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/norge/okokrim-starter-etterforskning-av-thorbjorn-jagland-for-grov-korrupsjon-1.17757411" target="_blank">Økokrim starter etterforskning av Thorbjørn Jagland for grov korrupsjon</a></h2>
-                        <p>Bakgrunnen er avsløringer i de såkalte «Epstein-filene» om mulige fordelsoverføringer til Jagland mens han satt i internasjonale toppverv.</p>
+                        <p>Bakgrunnen er avsløringer i de såkalte «Epstein-filene» om mulige fordelsoverføringer til Jagland mens han satt i internasjonale toppverv....</p>
                     </div>
                 </div>
             
@@ -209,225 +324,7 @@
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/utenriksministeren-foreslar-at-thorbjorn-jaglands-immunitet-oppheves-1.17757667" target="_blank">Utenriksministeren foreslår at Thorbjørn Jaglands immunitet oppheves</a></h2>
                         <p>Økokrim informerte torsdag Utenriksdepartementet om at de ønsker å åpne etterforskning mot Thorbjørn Jagland på bakgrunn av opplysninger som framkommer i Epstein-papirene.
-Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immunitet mot straffeforfølgelse av tjenestehandlinger han har foretatt som generalsekretær.
-Økokrim har nå bedt om UDs bistand til å få opphevet Jaglands immunitet.
-– Det er viktig at denne saken opplyses. Da kan ikke Jaglands immunitet stå i veien for en etterforskning. Jeg har derfor besluttet at Norge vil legge fram et forslag for Europarådets ministerkomité om at Jaglands immunitet oppheves, sier Eide.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/--HEJQAEfuOqGzCnvci3Gg6KgwtC8X25GZFIzdcyfwAQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 18:16:23 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/frp-mer-populaere-blant-innvandrere-1.17756351" target="_blank">Frp fosser frem blant innvandrere: Peker på streng innvandringspolitikk</a></h2>
-                        <p>­</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/uuiggdX3wrmKq1jPNBHUCwb9v_0lcNCn900t5yZk6BCw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 18:40:21 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/heradsstyret-i-voss-har-kome-til-ei-avgjerd-om-bomoen-1.17756352" target="_blank">Samles for å følge oppgjør om «Kompani Lauritzen»-område</a></h2>
-                        <p>Eit knapt fleirtal vippa saka som i årevis har splitta vossabygda. Likevel er den langt unna ei avslutning.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/78xdxesO86P361hsTtBq_wDdK3fKJj8hbUzEG52ke17Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 17:19:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/kultur/festivalsjef-tjener-penger-pa-artisters-t-skjorter_-_-bor-leve-av-musikken-1.17755448" target="_blank">Festivalsjef tjener penger på artistenes T-skjorter: – Bør leve av musikken</a></h2>
-                        <p>En avgjørende del av inntekten vår, svarer artister.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/X9I-JMfD-NvaDJ8F7U3QWgeoR-k2MI7XaUJOAX2D_Hjw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 16:57:17 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/rogaland/gutt-_8_-fikk-betongblokk-over-seg-i-sandnes-_-kan-miste-beinet-1.17755923" target="_blank">Åtte år gammel gutt fikk betongblokk over seg – i fare for å miste beinet</a></h2>
-                        <p>Beinet til gutten er brukket seks steder etter at den usikrede konstruksjonen veltet over ham. Politiet henla saken, men nå er den gjenåpnet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/g61hQG8gd7D5jWA_JSLh0ACllDz20fE632DlBBY5Qgsg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 17:58:27 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ol/nbc-profilen-savannah-guthrie-sin-mor-skal-vaere-bortfort-1.17756470" target="_blank">TV-profilen må bli hjemme fra OL – vil ha kontakt med morens kidnappere</a></h2>
-                        <p>Programlederen for amerikansk TV sin sending fra åpningsseremonien i OL har måttet trekke seg. Moren er ifølge politiet trolig bortført.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/E83fVHyG6x7uGKHqthXAUgsoySfDm1lqqpyu6gopAVdg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 16:08:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/ingrid-alexandra-pa-lukket-instagram-konto_-_nar-er-det-nok_-1.17757109" target="_blank">Ingrid Alexandra på lukket Instagram-konto: «Når er det nok»</a></h2>
-                        <p>Prinsessen tar et kraftig oppgjør med pressen i et innlegg på en lukket Instagram-konto. «Det er viktig å ikke komme med påstander man ikke har grunnlag for».</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/wwxKNauIQtMxCFIT-cH4DQ4zUyN_zAFrCQsn0zaNIpog.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 14:28:32 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/gardist-om-hoiby-og-skaugum-fornaermet_-_-virket-som-de-hadde-et-fint-forhold-1.17757131" target="_blank">Gardist om Høiby og Skaugum-fornærmet: – Virket som de hadde et fint forhold</a></h2>
-                        <p>Få minutter etter at politiet mener Marius Borg Høiby filmet et overgrep mot kvinnen, møtte hun en gardist.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/vmqblgJ4yQyia2UX4dosRAJ8b1Fl2Vcj3RDFCf4D3bPg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 15:08:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/verdens-okonomiske-forum-iverksetter-gransking-av-borge-brende-1.17754080" target="_blank">Vil granske Børge Brende</a></h2>
-                        <p>Verdens økonomiske forum iverksetter gransking av Børge Brende etter Epstein-kontakten.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/MQm5cdSHeAAS8Qw8Mrdv-QS6O_LrlF0IXsmkXnOSncmQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 11:54:47 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/21-blir-melde-for-ulovleg-koyring-pa-isen-1.17756669" target="_blank">Her køyrer dei ulovleg: 21 blir melde for ulovleg køyring på isen</a></h2>
-                        <p>Statens naturoppsyn oppdaga mistenkjelege spor på isen. Det førte til ein aksjon der 21 personar blir melde for ulovleg køyring. – Kan føra til farlege situasjonar, åtvarar politiet.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F96379559.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Da1a338da3db05e85f610424ba76d32207f86912362c1be9adf71027867430447" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 20:40:55 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326353/inngatt-handelsavtale-med-usa" target="_blank">Inngått handelsavtale med USA</a></h2>
-                        <p>Argentina har inngått en ny handels- og investeringsavtale med USA, et viktig skritt i president Javier Mileis strategi for å liberalisere landets økonomi.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F131717949.jpg%3F%26accessToken%3D0004fa569de025a66e481c6b13c380f5e0ec3ed07cba3178f36cf0873158e008" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 21:02:11 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326359/frykten-til-himmels-blodbad-for-krypto-og-tek-aksjer" target="_blank">Frykten til himmels: Blodbad for krypto og tek-aksjer</a></h2>
-                        <p>De toneangivende indeksene på Wall Street endte ned torsdag. En rekke tek-aksjer falt kraftig.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F138282540.jpg%3F%26accessToken%3Dc1dec4bf0c49af92ac355768741362be92c660d5cefa637f0a73a6cb6ac60afe" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 21:06:19 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8326361/amazon-legger-frem-tall-dundrer-ned-i-etterhandelen" target="_blank">Amazon legger frem tall: Dundrer ned i etterhandelen</a></h2>
-                        <p>Netthandelgiganten Amazon legger frem tall for fjerde kvartal torsdag.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 21:02:57 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/lnzGk9/amazon-leverer-noe-sterkere-omsetning-enn-forventet" target="_blank">Amazon skuffer på guiding</a></h2>
-                        <p>Amazon-aksjen faller kraftig i etterhandelen etter at selskapet torsdag kveld la frem resultater for fjerde kvartal</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143275649.jpg%3F%26accessToken%3Df1cdebe41f1b8b0a3518c4add8cb358767573c36cd903c3ac9e5e4b7af608149" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 19:39:08 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326347/apner-for-ny-atomtraktat-med-russland-og-kina" target="_blank">Åpner for ny atomtraktat med Russland og Kina</a></h2>
-                        <p>Trump vil erstatte New START med en ny og bedre avtale, og få Kina med på forhandlingsbordet,</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143952937.jpg%3F%26accessToken%3D16e186cc9c454a34ea0150ad081676611480e2d88690e6f2eba068cc6179051d" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 19:56:39 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326351/hoyre-onsker-uavhengig-granskning-av-utenrikstjenesten" target="_blank">Høyre: Ønsker uavhengig granskning av utenrikstjenesten</a></h2>
-                        <p>Høyre ønsker en uavhengig granskning av relevante forhold i utenrikstjenesten i forbindelse med det som er avdekket i Epstein-filene.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143927247.jpg%3F%26accessToken%3Dbda35b9ea745fe1d03690e1021856eb7d207f3a386a21ec8d5e13190d02f6f20" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 20:00:11 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/bolig/2026/02/05/8326279/solgt-etter-fire-ar-dansker-med-prisrekord" target="_blank">Brukte fire år på å selge hytta. Dansker satte prisrekord</a></h2>
-                        <p>Fire år måtte Ole Topaas vente før den rette kjøperen kom på banen. Hyttemarkedet er langt unna friskmelding.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F57421131.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D92d61b8f0105e0adc12884659e3604c661ef01da8890df8c2e49bcdc7dedbf5f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 20:03:56 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326354/okokrim-apner-etterforskning-mot-jagland" target="_blank">Økokrim åpner etterforskning: Mistenkt for grov korrupsjon</a></h2>
-                        <p>Økokrim har besluttet å åpne etterforskning etter opplysninger i Epstein-filene, sier Økokrim-sjef Pål K. Lønseth.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 19:57:50 GMT
-                        </div>
-                        <h2><a href="https://e24.no/naeringsliv/i/WvqEGr/oekokrim-aapner-etterforskning-mot-thorbjoern-jagland" target="_blank">Økokrim åpner etterforskning mot Thorbjørn Jagland</a></h2>
-                        <p>Økokrim mistenker Norges tidligere statsminsiter Thorbjørn Jagland for grov korrupsjon etter funn i Epstein-filene.</p>
+Eide vis...</p>
                     </div>
                 </div>
             
@@ -439,7 +336,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 18:34:14 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/02/05/8326241/uendret-rente-minste-mulige-margin" target="_blank">Uendret rente: Minste mulige margin</a></h2>
-                        <p>Både Bank of England og ESB holder renten i ro, men det var på hengende håret.</p>
+                        <p>Både Bank of England og ESB holder renten i ro, men det var på hengende håret....</p>
                     </div>
                 </div>
             
@@ -451,7 +348,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 18:56:06 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8326338/cramer-er-bull-nvidia-markedets-muhammad-ali" target="_blank">Cramer er bull Nvidia: Markedets Muhammad Ali</a></h2>
-                        <p>Jim Cramer ber investorer beholde roen etter kursfallet i Nvidia, og omtaler selskapet som tidenes beste i sin klasse.</p>
+                        <p>Jim Cramer ber investorer beholde roen etter kursfallet i Nvidia, og omtaler selskapet som tidenes beste i sin klasse....</p>
                     </div>
                 </div>
             
@@ -463,7 +360,31 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 19:00:06 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/05/8326159/joda-boligfesten-kommer" target="_blank">Joda, boligfesten kommer. Prisøkningen kan lett bli tosifret.</a></h2>
-                        <p>Hvis ikke prisene i bruktmarkedet tar seg opp, vil ikke boligprodusentene bygge nok, skriver Trygve Hegnar i lederen,</p>
+                        <p>Hvis ikke prisene i bruktmarkedet tar seg opp, vil ikke boligprodusentene bygge nok, skriver Trygve Hegnar i lederen,...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/--HEJQAEfuOqGzCnvci3Gg6KgwtC8X25GZFIzdcyfwAQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 18:16:23 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/frp-mer-populaere-blant-innvandrere-1.17756351" target="_blank">Frp fosser frem blant innvandrere: Peker på streng innvandringspolitikk</a></h2>
+                        <p>­...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/uuiggdX3wrmKq1jPNBHUCwb9v_0lcNCn900t5yZk6BCw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 18:40:21 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/heradsstyret-i-voss-har-kome-til-ei-avgjerd-om-bomoen-1.17756352" target="_blank">Samles for å følge oppgjør om «Kompani Lauritzen»-område</a></h2>
+                        <p>Eit knapt fleirtal vippa saka som i årevis har splitta vossabygda. Likevel er den langt unna ei avslutning....</p>
                     </div>
                 </div>
             
@@ -475,7 +396,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 17:33:52 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/bolig/2026/02/05/8326220/okte-boligverdier-og-formuesskatt-skatteregningen-for-utleiere-vil-sla-hardt-papeker-nejra-macic" target="_blank">Økte boligverdier og formuesskatt: – Skatteregningen for utleiere vil slå hardt, påpeker sjeføkonom.</a></h2>
-                        <p>Formuesverdien av primærboliger er 25 prosent opptil 10 millioner og 70 prosent av overskytende. For utleieboliger beregnes det dog 100 prosent. Og med økte beregninger av faktisk markedsverdi, rammer det utleierne ekstra hardt. – Dette kan føre til at enda flere utleiere vil selge, påpeker en bekymret Nejra Macic i Prognosesenteret.</p>
+                        <p>Formuesverdien av primærboliger er 25 prosent opptil 10 millioner og 70 prosent av overskytende. For utleieboliger beregnes det dog 100 prosent. Og med økte beregninger av faktisk ...</p>
                     </div>
                 </div>
             
@@ -487,7 +408,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 18:00:20 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326331/rodt-pa-wall-street-alphabet-faller-etter-investeringsplaner" target="_blank">Rødt på Wall Street: Alphabet faller etter investeringsplaner</a></h2>
-                        <p>De toneangivende indeksene på New York-børsen faller torsdag. Google-eier faller etter å ha lagt frem tall for fjerde kvartal.</p>
+                        <p>De toneangivende indeksene på New York-børsen faller torsdag. Google-eier faller etter å ha lagt frem tall for fjerde kvartal....</p>
                     </div>
                 </div>
             
@@ -499,7 +420,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 18:11:47 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326335/nye-toner-fra-trump-om-militaerbase-etter-starmer-samtale" target="_blank">Nye toner fra Trump om militærbase</a></h2>
-                        <p>USAs president Donald Trump sier han har hatt «veldig produktive» samtaler med Storbritannias statsminister Keir Starmer om militærbasen på Diego Garcia.</p>
+                        <p>USAs president Donald Trump sier han har hatt «veldig produktive» samtaler med Storbritannias statsminister Keir Starmer om militærbasen på Diego Garcia....</p>
                     </div>
                 </div>
             
@@ -511,7 +432,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 18:18:24 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/05/8326334/scott-bessent-spokte-om-federal-reserve-soksmal-i-senatet" target="_blank">Dro Trump-spøk i Kongressen</a></h2>
-                        <p>Vil Kevin Warsh bli saksøkt derom han ikke kutter renten slik president Donald Trump ønsker? spurte senator Elizabeth Warren. Finansminister Scott Bessent svarte med en spøk.</p>
+                        <p>Vil Kevin Warsh bli saksøkt derom han ikke kutter renten slik president Donald Trump ønsker? spurte senator Elizabeth Warren. Finansminister Scott Bessent svarte med en spøk....</p>
                     </div>
                 </div>
             
@@ -523,7 +444,43 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 18:14:26 GMT
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/ExwVpP/epstein-instruerte-overfoering-av-250k-til-roed-larsen" target="_blank">Epstein instruerte overføring av «250k» til Rød-Larsen</a></h2>
-                        <p>I desember 2015 sendte Terje Rød-Larsen kontoopplysninger til den overgrepsdømte milliardæren. To dager senere bekreftet regnskapsfører at pengene var overført.</p>
+                        <p>I desember 2015 sendte Terje Rød-Larsen kontoopplysninger til den overgrepsdømte milliardæren. To dager senere bekreftet regnskapsfører at pengene var overført....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/78xdxesO86P361hsTtBq_wDdK3fKJj8hbUzEG52ke17Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 17:19:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/kultur/festivalsjef-tjener-penger-pa-artisters-t-skjorter_-_-bor-leve-av-musikken-1.17755448" target="_blank">Festivalsjef tjener penger på artistenes T-skjorter: – Bør leve av musikken</a></h2>
+                        <p>En avgjørende del av inntekten vår, svarer artister....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/X9I-JMfD-NvaDJ8F7U3QWgeoR-k2MI7XaUJOAX2D_Hjw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 16:57:17 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/rogaland/gutt-_8_-fikk-betongblokk-over-seg-i-sandnes-_-kan-miste-beinet-1.17755923" target="_blank">Åtte år gammel gutt fikk betongblokk over seg – i fare for å miste beinet</a></h2>
+                        <p>Beinet til gutten er brukket seks steder etter at den usikrede konstruksjonen veltet over ham. Politiet henla saken, men nå er den gjenåpnet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/g61hQG8gd7D5jWA_JSLh0ACllDz20fE632DlBBY5Qgsg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 17:58:27 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ol/nbc-profilen-savannah-guthrie-sin-mor-skal-vaere-bortfort-1.17756470" target="_blank">TV-profilen må bli hjemme fra OL – vil ha kontakt med morens kidnappere</a></h2>
+                        <p>Programlederen for amerikansk TV sin sending fra åpningsseremonien i OL har måttet trekke seg. Moren er ifølge politiet trolig bortført....</p>
                     </div>
                 </div>
             
@@ -535,7 +492,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 17:24:45 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/handel/2026/02/05/8326330/ralph-lauren-varsler-trobbel-med-trump-toll" target="_blank">Varsler trøbbel med Trump-toll</a></h2>
-                        <p>Ralph Lauren banket konsensus med sine ferske kvartalstall, men en ventet Trump-smell i marginene sender moteaksjen rett ned.</p>
+                        <p>Ralph Lauren banket konsensus med sine ferske kvartalstall, men en ventet Trump-smell i marginene sender moteaksjen rett ned....</p>
                     </div>
                 </div>
             
@@ -547,7 +504,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:33:36 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/industri/2026/02/05/8326322/hexagon-purus-selger-virksomhet-til-spacex" target="_blank">Norsk tapssluk: Selger til Elon Musk</a></h2>
-                        <p></p>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -559,7 +516,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:48:49 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326325/mona-juul-mister-tilgang-til-gradert-informasjon" target="_blank">Mona Juul: Mister tilgang til gradert informasjon</a></h2>
-                        <p>Ambassadør Mona Juul har ikke lenger tilgang til sikkerhetsgraderte opplysninger, ifølge Utenriksdepartementet (UD).</p>
+                        <p>Ambassadør Mona Juul har ikke lenger tilgang til sikkerhetsgraderte opplysninger, ifølge Utenriksdepartementet (UD)....</p>
                     </div>
                 </div>
             
@@ -571,7 +528,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:55:27 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/05/8325383/tom-jacobsen-og-sedicon-krever-millionoppgjor-fra-kunder-i-irak-og-mexico" target="_blank">Traff jackpot: Nå krever han millioner</a></h2>
-                        <p>Tom Jacobsen og Sedicon krever millionoppgjør fra kunder i Irak og Mexico</p>
+                        <p>Tom Jacobsen og Sedicon krever millionoppgjør fra kunder i Irak og Mexico...</p>
                     </div>
                 </div>
             
@@ -583,7 +540,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 17:01:32 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/05/8326328/usa-og-russland-gjenopptar-militaer-dialog" target="_blank">USA og Russland: Gjenopptar militær dialog</a></h2>
-                        <p>USA og Russland er enige om å gjenoppta militær dialog etter samtaler i Abu Dhabi, ifølge det amerikanske forsvaret.</p>
+                        <p>USA og Russland er enige om å gjenoppta militær dialog etter samtaler i Abu Dhabi, ifølge det amerikanske forsvaret....</p>
                     </div>
                 </div>
             
@@ -595,7 +552,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:40:22 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/n1wdvB/deler-av-hexagon-purus-selges-til-spacex" target="_blank">Deler av Hexagon Purus selges til SpaceX</a></h2>
-                        <p>Hexagon Purus’ luftfartsvirksomhet Hexagon Masterworks Inc. selges til Elon Musk-selskapet SpaceX.</p>
+                        <p>Hexagon Purus’ luftfartsvirksomhet Hexagon Masterworks Inc. selges til Elon Musk-selskapet SpaceX....</p>
                     </div>
                 </div>
             
@@ -607,7 +564,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:24:47 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326306/tung-torsdag-i-aksjemarkedet" target="_blank">Tung torsdag i aksjemarkedet</a></h2>
-                        <p>Høreapparatprodusenten GN Store, kosmetikkgiganten Estée Lauder og kryptoinvestoren Strategy var blant aksjene som fikk mest juling. Også amerikanske arbeidsledighetstall skuffet.</p>
+                        <p>Høreapparatprodusenten GN Store, kosmetikkgiganten Estée Lauder og kryptoinvestoren Strategy var blant aksjene som fikk mest juling. Også amerikanske arbeidsledighetstall skuffet....</p>
                     </div>
                 </div>
             
@@ -619,7 +576,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:20:23 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/PdyMp7/novo-nordisk-varsler-grep-mot-billig-pille" target="_blank">Novo Nordisk varsler grep mot billig-pille</a></h2>
-                        <p>Hims & Hers vil selge en billigversjon av vektkontroll-pillen Wegovy. Novo Nordisk beskylder dem for ulovlig masseproduksjon og varsler juridiske grep.</p>
+                        <p>Hims & Hers vil selge en billigversjon av vektkontroll-pillen Wegovy. Novo Nordisk beskylder dem for ulovlig masseproduksjon og varsler juridiske grep....</p>
                     </div>
                 </div>
             
@@ -631,7 +588,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 15:36:31 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/ravarer/2026/02/05/8326316/rio-tinto-og-glencore-vraker-planer-om-sammenslaing" target="_blank">Skulle bli verdens største: Havari – for tredje gang</a></h2>
-                        <p></p>
+                        <p>...</p>
                     </div>
                 </div>
             
@@ -643,7 +600,19 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 16:03:43 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/05/8326320/ekstra-kald-januar-okte-stromforbruket" target="_blank">Strømforbruket til værs: – Det er helt naturlig</a></h2>
-                        <p>Januar i år var den kaldeste siden 2010. Norske strømkunder – både med og uten norgespris – hadde økt forbruk forrige måned sammenlignet med januar i fjor.</p>
+                        <p>Januar i år var den kaldeste siden 2010. Norske strømkunder – både med og uten norgespris – hadde økt forbruk forrige måned sammenlignet med januar i fjor....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/E83fVHyG6x7uGKHqthXAUgsoySfDm1lqqpyu6gopAVdg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 16:08:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/ingrid-alexandra-pa-lukket-instagram-konto_-_nar-er-det-nok_-1.17757109" target="_blank">Ingrid Alexandra på lukket Instagram-konto: «Når er det nok»</a></h2>
+                        <p>Prinsessen tar et kraftig oppgjør med pressen i et innlegg på en lukket Instagram-konto. «Det er viktig å ikke komme med påstander man ikke har grunnlag for»....</p>
                     </div>
                 </div>
             
@@ -655,7 +624,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 15:29:24 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326305/tech-aksje-til-himmels-taperen-stupte-89-prosent" target="_blank">Oslo Børs steg 0,1 prosent: Rally i Nordic Semi etter sterk guiding – krakk i Røkkes Aker Horizons</a></h2>
-                        <p>Oslo Børs steg 0,1 prosent: Rally i Nordic Semi etter sterk guiding – krakk i Røkkes Aker Horizons.</p>
+                        <p>Oslo Børs steg 0,1 prosent: Rally i Nordic Semi etter sterk guiding – krakk i Røkkes Aker Horizons....</p>
                     </div>
                 </div>
             
@@ -667,7 +636,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 15:21:54 GMT
                         </div>
                         <h2><a href="https://e24.no/internasjonal-oekonomi/i/6qkGXo/brendes-meldinger-med-epstein-missing-you-sir" target="_blank">Brendes meldinger med Epstein: «Missing you Sir»</a></h2>
-                        <p>Børge Brende sier kontakten mellom ham og Jeffrey Epstein kun var i forbindelse med 2–3 middager. Dokumentene viser over 120 meldinger fordelt på 30 ulike dager.</p>
+                        <p>Børge Brende sier kontakten mellom ham og Jeffrey Epstein kun var i forbindelse med 2–3 middager. Dokumentene viser over 120 meldinger fordelt på 30 ulike dager....</p>
                     </div>
                 </div>
             
@@ -679,7 +648,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 14:31:22 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326278/solid-borsfall-frykten-oker-pa-wall-street" target="_blank">New York-børsen åpner torsdagens handel i rødt. Samtidig stiger fryktindeksen 15 prosent.</a></h2>
-                        <p>New York-børsen åpner torsdagens handel i rødt. Samtidig stiger fryktindeksen 15 prosent.</p>
+                        <p>New York-børsen åpner torsdagens handel i rødt. Samtidig stiger fryktindeksen 15 prosent....</p>
                     </div>
                 </div>
             
@@ -691,7 +660,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 14:36:57 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/handel/2026/02/05/8326264/coop-mega-skal-bli-storre-med-mindre-butikker" target="_blank">Mega skal bli større med mindre butikker</a></h2>
-                        <p>Coop Mega lanserer nå et mer kompakt butikkonsept, men lover likevel at det ikke vil gå på bekostning av vareutvalget. Det er planlagt å åpne 15 butikker med mindre areal de kommende to-tre årene.</p>
+                        <p>Coop Mega lanserer nå et mer kompakt butikkonsept, men lover likevel at det ikke vil gå på bekostning av vareutvalget. Det er planlagt å åpne 15 butikker med mindre areal de kommen...</p>
                     </div>
                 </div>
             
@@ -703,7 +672,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 14:57:52 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326308/frp-mdg-og-venstre-ber-om-uavhengig-granskning-av-epstein-saken" target="_blank">Ber om Epstein-granskning: – Jeg får helt vondt i magen</a></h2>
-                        <p>Frp, MDG og Venstre vil ha en uavhengig granskningskommisjon til å gå igjennom de norske forbindelsene i Epstein-saken.</p>
+                        <p>Frp, MDG og Venstre vil ha en uavhengig granskningskommisjon til å gå igjennom de norske forbindelsene i Epstein-saken....</p>
                     </div>
                 </div>
             
@@ -715,7 +684,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 15:07:15 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/helse/2026/02/05/8326303/lansering-av-billig-wegovy-kopi-utloser-ny-novo-smell" target="_blank">Nytt, kraftig kursfall: Slankekuren fortsetter</a></h2>
-                        <p>Hims &amp; Hers lanserer kopi av Wegovy-pillen i USA til en tredjedel av prisen hos Novo Nordisk. Aksjen stuper videre.</p>
+                        <p>Hims &amp; Hers lanserer kopi av Wegovy-pillen i USA til en tredjedel av prisen hos Novo Nordisk. Aksjen stuper videre....</p>
                     </div>
                 </div>
             
@@ -727,7 +696,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 15:07:18 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326312/world-economic-forum-starter-granskning-av-borge-brende" target="_blank">World Economic Forum: Starter granskning av Børge Brende</a></h2>
-                        <p>Verdens økonomiske forum iverksetter granskning av Børge Brende, ifølge sveitsisk kringkaster.</p>
+                        <p>Verdens økonomiske forum iverksetter granskning av Børge Brende, ifølge sveitsisk kringkaster....</p>
                     </div>
                 </div>
             
@@ -739,7 +708,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 14:31:49 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/7p52aB/tek-fall-paa-wall-street" target="_blank">Bred nedgang på Wall Street</a></h2>
-                        <p>Kryptorelaterte aksjer stuper på Wall Street etter kraftig nedgang i bitcoin-prisen.</p>
+                        <p>Kryptorelaterte aksjer stuper på Wall Street etter kraftig nedgang i bitcoin-prisen....</p>
                     </div>
                 </div>
             
@@ -751,7 +720,43 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 14:44:07 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/K8pVle/torstein-tvenge-flytter-aksjer-inn-i-stiftelse" target="_blank">Torstein Tvenge flytter aksjer inn i stiftelse</a></h2>
-                        <p>Torstein Tvenge har opprettet en stiftelse, men holder inntil videre tett om hvordan den skal fungere.</p>
+                        <p>Torstein Tvenge har opprettet en stiftelse, men holder inntil videre tett om hvordan den skal fungere....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/wwxKNauIQtMxCFIT-cH4DQ4zUyN_zAFrCQsn0zaNIpog.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 14:28:32 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/gardist-om-hoiby-og-skaugum-fornaermet_-_-virket-som-de-hadde-et-fint-forhold-1.17757131" target="_blank">Gardist om Høiby og Skaugum-fornærmet: – Virket som de hadde et fint forhold</a></h2>
+                        <p>Få minutter etter at politiet mener Marius Borg Høiby filmet et overgrep mot kvinnen, møtte hun en gardist....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/vmqblgJ4yQyia2UX4dosRAJ8b1Fl2Vcj3RDFCf4D3bPg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 15:08:01 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/verdens-okonomiske-forum-iverksetter-gransking-av-borge-brende-1.17754080" target="_blank">Vil granske Børge Brende</a></h2>
+                        <p>Verdens økonomiske forum iverksetter gransking av Børge Brende etter Epstein-kontakten....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/MQm5cdSHeAAS8Qw8Mrdv-QS6O_LrlF0IXsmkXnOSncmQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 11:54:47 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/21-blir-melde-for-ulovleg-koyring-pa-isen-1.17756669" target="_blank">Her køyrer dei ulovleg: 21 blir melde for ulovleg køyring på isen</a></h2>
+                        <p>Statens naturoppsyn oppdaga mistenkjelege spor på isen. Det førte til ein aksjon der 21 personar blir melde for ulovleg køyring. – Kan føra til farlege situasjonar, åtvarar politie...</p>
                     </div>
                 </div>
             
@@ -763,7 +768,7 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 14:22:58 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/medier/2026/02/05/8326293/washington-post-tredjedel-sies-opp" target="_blank">Washington Post: Tredjedel sies opp</a></h2>
-                        <p>Blant 300 journalister og fotografer som er sagt opp i Washington Post, er Ukraina-korrespondenten og hele Midtøsten-staben.</p>
+                        <p>Blant 300 journalister og fotografer som er sagt opp i Washington Post, er Ukraina-korrespondenten og hele Midtøsten-staben....</p>
                     </div>
                 </div>
             
@@ -775,23 +780,11 @@ Eide viser til at Jagland som tidligere generalsekretær i Europarådet har immu
                             Thu, 05 Feb 2026 13:40:21 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/makro/2026/02/05/8326270/overraskende-stor-okning-i-jobless-claims" target="_blank">Nye på dagpenger i USA: Overraskende stor økning</a></h2>
-                        <p>Antallet nye på dagpenger i USA var i forrige uke mye høyere enn ventet.</p>
+                        <p>Antallet nye på dagpenger i USA var i forrige uke mye høyere enn ventet....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F92222486.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Deb110a71478677b322194dbbef6eb61fb00741bcd97082e82b41815c61a0d97c" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 13:47:24 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/industri/2026/02/05/8326271/sannsynlig-brudd-pa-lanebetingelser" target="_blank">DNB Carnegie varsler lånebrudd i Norske Skog</a></h2>
-                        <p>Kredittanalytikerne i DNB Carnegie frykter nå brudd på lånebetingelsene for Norske Skog. Og mener selskapet bør forberede ny emisjon.</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 05.02.2026 22:30</div>
+                <div class="footer">Sist oppdatert: 05.02.2026 23:21</div>
             </div>
         </body>
         </html>
