@@ -12,30 +12,28 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
+                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; 
+                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
                     overflow: hidden;
-                    align-items: stretch;
+                    align-items: center;
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; 
-                    width: 240px; 
-                    min-height: 150px;
-                    background: #000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-shrink: 0; /* Ikke krymp bildet */
+                    width: 200px; 
+                    height: 100%;
+                    min-height: 140px;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; 
+                    object-fit: cover; /* Fyller ruten pent */
                     display: block;
                 }
 
@@ -49,11 +47,10 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
-                .tag.Toppsaker { background: #bb86fc; color: black; }
-                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
+                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -72,7 +69,7 @@
                             Thu, 05 Feb 2026 10:54:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/overwatch-2-kaster-2-tallet-i-gigantisk-overhaling/519944" target="_blank">Overwatch 2 kaster 2-tallet i gigantisk overhaling</a></h2>
-                        <p>Blizzard ruller ut fem nye helter allerede neste uke.</p>
+                        <p>Blizzard ruller ut fem nye helter allerede neste uke....</p>
                     </div>
                 </div>
             
@@ -84,7 +81,7 @@
                             Thu, 05 Feb 2026 08:45:00 +0100
                         </div>
                         <h2><a href="https://www.gamer.no/artikler/disse-spillene-gleder-vi-oss-mest-til-i-2026/519922" target="_blank">Disse spillene gleder vi oss mest til i 2026</a></h2>
-                        <p>Det ligger an til å bli enda et bra spillår. Her er de titlene vi ser aller mest fram til  – som vi vet om.</p>
+                        <p>Det ligger an til å bli enda et bra spillår. Her er de titlene vi ser aller mest fram til  – som vi vet om....</p>
                     </div>
                 </div>
             <h2 class='section-title'>💻 Teknologi</h2>
@@ -96,7 +93,7 @@
                             Thu, 05 Feb 2026 10:55:25 +0100
                         </div>
                         <h2><a href="https://www.digi.no/artikler/44-kommuner-har-valgt-journal-na-ryker-skanneren-og-papiret/567613" target="_blank">[Ekstra] 44 kommuner har valgt journal – nå ryker skanneren og papiret</a></h2>
-                        <p>Gigantinnkjøp gir 20.000 ansatte skybasert verktøy. Flere store leverandører gikk tapende ut av konkurransen.</p>
+                        <p>Gigantinnkjøp gir 20.000 ansatte skybasert verktøy. Flere store leverandører gikk tapende ut av konkurransen....</p>
                     </div>
                 </div>
             
@@ -108,34 +105,202 @@
                             Thu, 05 Feb 2026 08:28:27 GMT
                         </div>
                         <h2><a href="https://www.tek.no/i/zOrpdv" target="_blank">Valve utsetter Steam Machine på grunn av RAM-krise</a></h2>
-                        <p>Prisene på minnebrikker har skutt i været.</p>
+                        <p>Prisene på minnebrikker har skutt i været....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>🌍 Siste nytt</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143901520.png%3F%26accessToken%3Db6be976e3476564e7b483213ddf6f770cc591931277e0f7091b3b636769be98f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 12:01:04 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326089/dagens-aksjetips-roper-kjop-med-25-prosent-oppside" target="_blank">Norne jekker opp havbruksteknologi og mener aksjen bør gå 25 prosent.</a></h2>
+                        <p>Norne Securities ser oppside på over 25 prosent i havbruksteknologi-aksje, mens analytikerkorpset gjør en rekke justeringer etter resultatrush....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://images.gfx.no/1000/2910/2910076/Tampnet%20Elie%20Hanna.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135611413.jpg%3F%26accessToken%3D139c434277f0dfce22f2289d2a19072e5683995bacdf998325d2806cb87bc67f" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Teknologi">Teknologi</span> 
-                            Thu, 05 Feb 2026 07:34:06 +0100
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 12:02:58 GMT
                         </div>
-                        <h2><a href="https://www.digi.no/artikler/norsk-sjofiberkjempe-gar-i-land/567841" target="_blank">[Ekstra] Norsk sjøfiberkjempe går i land</a></h2>
-                        <p>Tampnet skal bygge ut bredbånd til raffinerier, lagre og havneanlegg.</p>
+                        <h2><a href="https://www.finansavisen.no/ravarer/2026/02/05/8326209/solvprisen-stuper-igjen" target="_blank">Sølvprisen stuper igjen</a></h2>
+                        <p>Analytikere ventet store svingninger etter det kraftige fallet. Torsdag stuper sølvprisen igjen....</p>
                     </div>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://shared.cdn.smp.schibsted.com/v2/images/13135af8-d979-4ce8-9040-d258e5503412?fit=crop&format=auto&h=900&w=1600&s=b17b44a1b2124567ead22ecff8ad7050ae2c03ae" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F111105287.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Da734b4bffcfe7669938d5c0c7dda664f5e44fc55dd0f8c74de34879164bf72ee" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
-                            <span class="tag Teknologi">Teknologi</span> 
-                            Thu, 05 Feb 2026 06:30:16 GMT
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 12:04:34 GMT
                         </div>
-                        <h2><a href="https://www.tek.no/i/d4m9dq" target="_blank">– Snakker vi årets gøyeste sportsspill?</a></h2>
-                        <p>Vi tok turen til Nintendo for å sjekke ut vårens utgivelser.</p>
+                        <h2><a href="https://www.finansavisen.no/makro/2026/02/05/8326222/splittelse-i-bank-of-england-dropper-nytt-rentekutt" target="_blank">Splittelse i Bank of England: Dropper nytt rentekutt</a></h2>
+                        <p>Bank of England lar styringsrenten være – som ventet. Men flere i den pengepolitiske komiteen stemte for nytt kutt....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🔥 Toppsaker</h2>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F121752660.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Df85e4eb87bcc6bae91b577a1a64aa1e67d0b08c892e7b422866a4519e38b49a1" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 12:14:30 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8326093/vend-sjefen-teppebombes-med-ai-sporsmal-etter-kurskollaps" target="_blank">Teppebombes med spørsmål etter kurskollaps: – Det har vært enorm interesse</a></h2>
+                        <p>Vend-aksjen har kollapset på børs de siste månedene på grunn av AI-frykt. – Vi er i en posisjon til å utvikle de beste AI-baserte produktene, svarer Christian Printzell Halvorsen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143547710.jpg%3F%26accessToken%3D3995ed31b1c1e28874f727212e2aab6fe63945fcc63f2c6c0f1f5fa1978616e7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 12:16:02 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/politikk/2026/02/05/8326229/frp-vil-ha-epstein-gransking-i-stortinget" target="_blank">Epstein-saken: Frp vil ha gransking i Stortinget</a></h2>
+                        <p>Fremskrittspartiet (Frp) ba først statsminister Jonas Gahr Støre (Ap) om å sette ned en gransking av Epstein-saken. Nå vil de at Stortinget skal ta roret....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:45:52 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/q6R5Wg/bitcoin-under-70-000-dollar" target="_blank">Bitcoin under 70.000 dollar</a></h2>
+                        <p>Kryptovalutaen er på sitt laveste siden Trumps valgseier....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9jH6prv7X-83RwPoN730LQL5NsNaUDmb_IeaWjP9y-yA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 10:40:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ol/ol_-curling_-klaget-pa-isen_-_-fy-faen-for-en-dritt-is-1.17756520" target="_blank">Så rødt i nytt tap: – Fy faen, for en dritt-is</a></h2>
+                        <p>Isen får det glatte lag av curlingprofilen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:22:10 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326189/romerike-sparebank-webcast-q4-2025" target="_blank">Romerike Sparebank Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:23:32 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326191/arcticzymes-technologies-webcast-q4-2025" target="_blank">ArcticZymes Technologies Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:25:12 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326193/link-mobility-audiocast-q4-2025" target="_blank">Link Mobility Audiocast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:15:29 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326179/komplett-webcast-q4-2025" target="_blank">Komplett Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:18:27 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326181/tgs-webcast-q4-2025" target="_blank">TGS Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143902465.jpg%3F%26accessToken%3D245e5380aec4c48deea1ba8eea245c9d75ec44119fded86f09e1bd9a42691916" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:18:52 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326180/kreml-avviser-at-epstein-var-russisk-spion" target="_blank">Avviser at Epstein var russisk spion</a></h2>
+                        <p>Påstandene om at Jeffrey Epstein kan ha vært knyttet til russisk etterretning, avvises som latterlige av Russlands regjering....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:20:22 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326187/reach-subsea-webcast-q4-2025" target="_blank">Reach Subsea Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:21:10 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326188/polaris-media-webcast-q4-2025" target="_blank">Polaris Media Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 11:04:10 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/V61V5r/analytiker-om-telenor-aksjen-skal-opp" target="_blank">Analytiker om Telenor: – Aksjen skal opp</a></h2>
+                        <p>Fredag legger Telenor frem kvartalstall. Det er særling tre ting som er spennende om vi får svar på, mener analytiker....</p>
+                    </div>
+                </div>
+            
                 <div class="card">
                     
                     <div class="card-content">
@@ -145,10 +310,7 @@
                         </div>
                         <h2><a href="https://www.nrk.no/nyheter/revmatikarforbundet-ber-slottet-avklare-epstein-kontakt-1.17756598" target="_blank">Revmatikarforbundet ber Slottet avklare Epstein-kontakt</a></h2>
                         <p>Norsk Revmatikerforbund (NRF) har sendt brev til Slottet der dei ber om ei utgreiing om kontakten kronprinsesse Mette-Marit har hatt med den overgrepsdømde Jeffrey Epstein.
-Kronprinsessa er kongeleg beskyttar for forbundet.
-– Det er ein alvorleg situasjon, og vi opplever ei aukande uro i organisasjonen. Det er viktig å få ei utgreiing, seier generalsekretær Ingeborg Dybvig i ei pressemelding.
-Justisdepartementet i USA publiserte fleire millionar dokument i Epstein-saka fredag. Der kom det fram at kronprinsessa og Epstein hadde kontakt ved fleire høve.
-Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på kor tett denne kontakten var.</p>
+Kronpri...</p>
                     </div>
                 </div>
             
@@ -160,7 +322,7 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 10:40:35 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sport/ol_-curling_-klaget-pa-isen_-_-fy-faen-for-en-dritt-is-1.17756520" target="_blank">Så rødt i nytt tap: – Fy faen, for en dritt-is</a></h2>
-                        <p>Isen får det glatte lag av curlingprofilen.</p>
+                        <p>Isen får det glatte lag av curlingprofilen....</p>
                     </div>
                 </div>
             
@@ -172,7 +334,7 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 09:59:28 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/vestland/flere-dode-fugler-i-bergen-_-har-pavist-fugleinfluensa-1.17753594" target="_blank">Har funnet flere titalls døde fugler - har påvist fugleinfluensa</a></h2>
-                        <p>Prøvesvar viser at flere av de døde fuglene har vært smittet med fugleinfluensa.</p>
+                        <p>Prøvesvar viser at flere av de døde fuglene har vært smittet med fugleinfluensa....</p>
                     </div>
                 </div>
             
@@ -184,7 +346,19 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 10:54:07 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sorlandet/reagerer-pa-vektpress-pa-helsestasjonen-_-amma-og-pumpa-heile-dognet-1.17715982" target="_blank">Reagerer på vektpress på helsestasjonen: – Var aldri bra nok</a></h2>
-                        <p>Ida (32) måtte vege dottera tre gonger i veka. No får helsestasjonane kritikk av barnelege for å sjå seg blinde på vekstkurver framfor helsa til barnet.</p>
+                        <p>Ida (32) måtte vege dottera tre gonger i veka. No får helsestasjonane kritikk av barnelege for å sjå seg blinde på vekstkurver framfor helsa til barnet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F96131531.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Daa4c6d567bad09bb26d6e048a0169ec484884251384a5d565e9434cce90ab995" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 10:30:24 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/industri/2026/02/05/8326100/norske-skog-sjefen-vi-banker-konkurrentene-ned-i-stovlene" target="_blank">– Vi banker konkurrentene ned i støvlene</a></h2>
+                        <p>Norske Skog reduserer kostnadene og øker markedsandelen innenfor publikasjonspapir. – Kuttene slår inn i regnskapet, sier konsernsjef Geir Drangsland....</p>
                     </div>
                 </div>
             
@@ -196,7 +370,7 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 10:24:44 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/ostfold/kristopher-schau-og-christoffer-schou-fant-hverandre-i-navnet_-_-vi-er-et-veldig-sittete-band-1.17738218" target="_blank">Navnebrødre-duoen: – Vi er et veldig «sittete» band</a></h2>
-                        <p>Etter 25 år med rykter fant Kristopher Schau og Christoffer Schou hverandre. Da oppstod det «søt musikk».</p>
+                        <p>Etter 25 år med rykter fant Kristopher Schau og Christoffer Schou hverandre. Da oppstod det «søt musikk»....</p>
                     </div>
                 </div>
             
@@ -208,7 +382,67 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 10:21:57 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/kultur/tegneseriebokene-i-sjangeren-_nordisk-manga-_-blir-bare-mer-og-mer-populaert-1.17746536" target="_blank">De norsk-japanske bøkene «alle barn» leser: – Bisart hvor mye det har tatt av</a></h2>
-                        <p>Tegneseriebøker i sjangeren «nordisk manga» scorer høyt på listene over mest solgte og mest utlånte bøker.</p>
+                        <p>Tegneseriebøker i sjangeren «nordisk manga» scorer høyt på listene over mest solgte og mest utlånte bøker....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 10:02:46 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326148/appear-webcast-q4-2025" target="_blank">Appear Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 10:03:36 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326149/autostore-webcast-q4-2025" target="_blank">Autostore Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135885330.jpg%3F%26accessToken%3D2d72608379c90a06270aa240bfacb123784851121ab33640f40366c3dc9c7acd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 10:09:06 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/skatt/2026/02/05/8326124/ble-advart-mot-skatteparadis" target="_blank">Regjeringen advart om skatteparadis for politikere og offentlig ansatte. Ga blaffen.</a></h2>
+                        <p>Regjeringen fikk kraftig signal både om de enorme skattefordelene i samfunnselitens pensjoner og den sosiale skjevheten. Rådet var å utrede. Slik svarer sosialister og borgerlige....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143892405.jpg%3F%26accessToken%3D3e27845d443bb54e2fa6cf6db2b11acf3cc70e1df70a2a4ccafb2fcc372fa978" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 10:10:03 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326153/frp-krever-gransking-av-jagland-i-europaradet" target="_blank">Krever gransking av Jagland i Europarådet</a></h2>
+                        <p>Fremskrittspartiet (Frp) krever gransking av Thorbjørn Jagland i Europarådet. Med på laget har de europeiske søsterpartiet....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F93529248.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D65c1575b253cb0505ce3dfd1724b70d84849079032adbad70642db1d95f28ffc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 10:21:03 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/energi/2026/02/05/8326094/goldman-sachs-ser-risiko-i-aker-bp-for-rapport" target="_blank">Goldman Sachs advarer: Risikoaksje før rapport</a></h2>
+                        <p>Goldman Sachs slenger seg seg på Oslo-meglernes salgspitch i Kjell Inge Røkkes oljeselskap....</p>
                     </div>
                 </div>
             
@@ -220,7 +454,7 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 09:43:17 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/vestfoldogtelemark/farevarsel-om-sno-pa-ostlandet-_-kan-komme-opptil-25-cm-1.17756558" target="_blank">Kan komme opptil 25 cm med snø på Østlandet</a></h2>
-                        <p>Fredag kan det bli store mengder snø og utfordrende kjøreforhold på Østlandet. – Ta det med ro i trafikken, advarer trafikkoperatør.</p>
+                        <p>Fredag kan det bli store mengder snø og utfordrende kjøreforhold på Østlandet. – Ta det med ro i trafikken, advarer trafikkoperatør....</p>
                     </div>
                 </div>
             
@@ -232,7 +466,19 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                             Thu, 05 Feb 2026 09:49:13 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/sapmi/sametingsdirektoren-godkjente-egen-regning_-nordkalottfolket-mener-hun-ma-ga-dersom-det-stemmer-1.17755803" target="_blank">Direktøren godkjente egen regning: – Med på å skade Sametingets renommé</a></h2>
-                        <p>Vibeke Larsen i Nordkalottfolket mener sametingsdirektøren må gå, dersom NRKs funn stemmer. Direktøren svarer at hun trenger tid til å sette seg inn i anklagene.</p>
+                        <p>Vibeke Larsen i Nordkalottfolket mener sametingsdirektøren må gå, dersom NRKs funn stemmer. Direktøren svarer at hun trenger tid til å sette seg inn i anklagene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 09:23:40 GMT
+                        </div>
+                        <h2><a href="https://e24.no/boers-og-finans/i/zOrqPO/e24-podden-nye-titusener-kaster-seg-over-boersen" target="_blank">E24-podden: Nye titusener kaster seg over børsen</a></h2>
+                        <p>Hva skyldes denne økte interessen?...</p>
                     </div>
                 </div>
             
@@ -245,11 +491,67 @@ Fleire organisasjonar som har kronprinsessa som beskyttar har bede om svar på k
                         </div>
                         <h2><a href="https://www.nrk.no/vestfoldogtelemark/farevarsel-om-sno-pa-ostlandet-_-kan-komme-opptil-25-cm-1.17756312" target="_blank">Farevarsel om snø på Østlandet – kan komme opptil 25 cm</a></h2>
                         <p>Meteorologene advarer om utfordrende kjøreforhold og store mengder snø på Østlandet vest for Oslofjorden fredag.
-– Det er ventet 10 til 25 cm snø på Sør- og Østlandet i morgen, og langs kysten vil det blåse nordøstlig stiv til sterk kuling, skriver meteorologene i en melding på Yr.
-Det gule farevarselet gjelder hovedsakelig fra Drammen til Arendal, og det omfatter deler av Buskerud, Vestfold, Telemark og Agder.
-– Kombinasjonen snø og vind gir snøfokk og utfordrende kjøreforhold, så vær obs om du skal ut i trafikken! skriver meteorologene.
-I tillegg er det sendt ut et gult farevarsel om snøfokk for deler av fjellet i Sør-Norge.
-(NTB)</p>
+– Det er ventet 10 til 25 cm snø på Sør- og Østlandet i morgen, og ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 09:12:30 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326116/elopak-webcast-q4-2025" target="_blank">Elopak Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 09:14:50 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326117/olav-thon-eiendomsselskap-webcast-q4-2025" target="_blank">Olav Thon Eiendomsselskap Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 09:16:41 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326118/himalaya-shipping-audiocast-q4-2025" target="_blank">Himalaya Shipping Audiocast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 09:18:04 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326119/selvaag-bolig-webcast-q4-2025" target="_blank">Selvaag Bolig Webcast Q4 2025</a></h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F123845744.jpg%3F%26accessToken%3D773c246302d1c9cf254205239e0e6e0f048601d2f5d5f9381cab44bab0a8a8ea" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Økonomi">Økonomi</span> 
+                            Thu, 05 Feb 2026 09:19:22 GMT
+                        </div>
+                        <h2><a href="https://www.finansavisen.no/personlig-okonomi/2026/02/05/8326024/hoyre-foreslar-endring-av-ask-reglene-vil-inkludere-euronext-growth" target="_blank">Vil endre reglene for aksjesparekonto: – Bedre muligheter for småsparere</a></h2>
+                        <p>Aksjer på Euronext Growth er i dag stengt ute fra aksjesparekontoen. Det vil Høyres Nikolai Astrup gjøre noe med. Nå fremmer han et forslag om å slippe småsparere inn i markedet fo...</p>
                     </div>
                 </div>
             
@@ -261,7 +563,7 @@ I tillegg er det sendt ut et gult farevarsel om snøfokk for deler av fjellet i 
                             Thu, 05 Feb 2026 08:24:10 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/norge/hoiby-fortsetter-forklaringen-_-databeslag-og-nachspiel-gjester-blir-tema-1.17756306" target="_blank">Høiby fortsetter forklaringen – databeslag og nachspiel-gjester blir tema</a></h2>
-                        <p>29-åringen fortsetter sin forklaring om den påståtte voldtekten på Skaugum, som han nekter for.</p>
+                        <p>29-åringen fortsetter sin forklaring om den påståtte voldtekten på Skaugum, som han nekter for....</p>
                     </div>
                 </div>
             
@@ -274,7 +576,7 @@ I tillegg er det sendt ut et gult farevarsel om snøfokk for deler av fjellet i 
                         </div>
                         <h2><a href="https://www.nrk.no/buskerud/alvorlig-trafikkulykke-i-drammen-1.17756258" target="_blank">Alvorlig trafikkulykke i Drammen</a></h2>
                         <p>En person er påkjørt i Bjørnstjerne Bjørnsons gate i Drammen.
-Det pågår livreddende nødhjelp på stedet</p>
+Det pågår livreddende nødhjelp på stedet...</p>
                     </div>
                 </div>
             
@@ -286,295 +588,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 08:27:11 GMT
                         </div>
                         <h2><a href="https://www.nrk.no/buskerud/alvorlig-trafikkulykke-i-drammen-1.17756391" target="_blank">Alvorlig trafikkulykke i Drammen</a></h2>
-                        <p>En person er påkjørt i Drammen sentrum.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/0IAfP97d5pfiU85163h7kwUFe1z2YkT_6gX26OyIGQtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 05:12:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/pci-forslag-opp-i-stortinget-_-alf-willy-var-heldig-som-fikk-behandling-i-bodo-1.17744620" target="_blank">Alf Willy fikk hjertestans på riktig tidspunkt: – Som å vinne i Lotto</a></h2>
-                        <p>Alf Willy Johansen mener det hadde alt å si at han fikk hjerteinfarkt i vanlig arbeidstid. Torsdag skal Stortinget ta stilling til om pasienter som han skal få behandling i Bodø hele døgnet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/zcO-3caeVo5H_wFeDgdZdQxjaVAUsLrXujyAhOI5Pskw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 08:01:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/som-dei-forste-i-verda-har-forskarar-ved-ntnu-avdekt-nye-kjenneteikn-for-aggressiv-prostatakreft-1.17743369" target="_blank">Fann bane­brytande metode for å avdekke aggressiv kreftform</a></h2>
-                        <p>­</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rDs-k20nMwhE0x8mmlYQMg1zaAnwMYcztiuTRXdYCcTw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 06:01:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/norsk-oppdrettslaks_-dodelegheita-under-15-prosent-for-forste-gong-pa-fleire-ar-1.17755381" target="_blank">Norsk oppdrettslaks: Dødelegheita under 15 prosent for første gong på fleire år</a></h2>
-                        <p>Etter år med dystre rekordar og omdømmekrise, viser nye tal at pilene endeleg peikar rett veg for norsk laks.</p>
-                    </div>
-                </div>
-            <h2 class='section-title'>💰 Økonomi</h2>
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:22:10 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326189/romerike-sparebank-webcast-q4-2025" target="_blank">Romerike Sparebank Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:23:32 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326191/arcticzymes-technologies-webcast-q4-2025" target="_blank">ArcticZymes Technologies Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:25:12 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326193/link-mobility-audiocast-q4-2025" target="_blank">Link Mobility Audiocast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:15:29 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326179/komplett-webcast-q4-2025" target="_blank">Komplett Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:18:27 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326181/tgs-webcast-q4-2025" target="_blank">TGS Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143902465.jpg%3F%26accessToken%3D245e5380aec4c48deea1ba8eea245c9d75ec44119fded86f09e1bd9a42691916" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:18:52 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326180/kreml-avviser-at-epstein-var-russisk-spion" target="_blank">Avviser at Epstein var russisk spion</a></h2>
-                        <p>Påstandene om at Jeffrey Epstein kan ha vært knyttet til russisk etterretning, avvises som latterlige av Russlands regjering.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:20:22 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326187/reach-subsea-webcast-q4-2025" target="_blank">Reach Subsea Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:21:10 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326188/polaris-media-webcast-q4-2025" target="_blank">Polaris Media Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 11:04:10 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/V61V5r/analytiker-om-telenor-aksjen-skal-opp" target="_blank">Analytiker om Telenor: – Aksjen skal opp</a></h2>
-                        <p>Fredag legger Telenor frem kvartalstall. Det er særling tre ting som er spennende om vi får svar på, mener analytiker.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F96131531.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Daa4c6d567bad09bb26d6e048a0169ec484884251384a5d565e9434cce90ab995" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 10:30:24 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/industri/2026/02/05/8326100/norske-skog-sjefen-vi-banker-konkurrentene-ned-i-stovlene" target="_blank">– Vi banker konkurrentene ned i støvlene</a></h2>
-                        <p>Norske Skog reduserer kostnadene og øker markedsandelen innenfor publikasjonspapir. – Kuttene slår inn i regnskapet, sier konsernsjef Geir Drangsland.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 10:02:46 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326148/appear-webcast-q4-2025" target="_blank">Appear Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 10:03:36 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326149/autostore-webcast-q4-2025" target="_blank">Autostore Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F135885330.jpg%3F%26accessToken%3D2d72608379c90a06270aa240bfacb123784851121ab33640f40366c3dc9c7acd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 10:09:06 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/skatt/2026/02/05/8326124/ble-advart-mot-skatteparadis" target="_blank">Regjeringen advart om skatteparadis for politikere og offentlig ansatte. Ga blaffen.</a></h2>
-                        <p>Regjeringen fikk kraftig signal både om de enorme skattefordelene i samfunnselitens pensjoner og den sosiale skjevheten. Rådet var å utrede. Slik svarer sosialister og borgerlige.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143892405.jpg%3F%26accessToken%3D3e27845d443bb54e2fa6cf6db2b11acf3cc70e1df70a2a4ccafb2fcc372fa978" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 10:10:03 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326153/frp-krever-gransking-av-jagland-i-europaradet" target="_blank">Krever gransking av Jagland i Europarådet</a></h2>
-                        <p>Fremskrittspartiet (Frp) krever gransking av Thorbjørn Jagland i Europarådet. Med på laget har de europeiske søsterpartiet.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F93529248.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D65c1575b253cb0505ce3dfd1724b70d84849079032adbad70642db1d95f28ffc" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 10:21:03 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/05/8326094/goldman-sachs-ser-risiko-i-aker-bp-for-rapport" target="_blank">Goldman Sachs advarer: Risikoaksje før rapport</a></h2>
-                        <p>Goldman Sachs slenger seg seg på Oslo-meglernes salgspitch i Kjell Inge Røkkes oljeselskap.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 09:23:40 GMT
-                        </div>
-                        <h2><a href="https://e24.no/boers-og-finans/i/zOrqPO/e24-podden-nye-titusener-kaster-seg-over-boersen" target="_blank">E24-podden: Nye titusener kaster seg over børsen</a></h2>
-                        <p>Hva skyldes denne økte interessen?</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 09:12:30 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326116/elopak-webcast-q4-2025" target="_blank">Elopak Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 09:14:50 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326117/olav-thon-eiendomsselskap-webcast-q4-2025" target="_blank">Olav Thon Eiendomsselskap Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 09:16:41 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326118/himalaya-shipping-audiocast-q4-2025" target="_blank">Himalaya Shipping Audiocast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 09:18:04 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/fatv/kvartalspresentasjoner/2026/02/05/8326119/selvaag-bolig-webcast-q4-2025" target="_blank">Selvaag Bolig Webcast Q4 2025</a></h2>
-                        <p></p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F123845744.jpg%3F%26accessToken%3D773c246302d1c9cf254205239e0e6e0f048601d2f5d5f9381cab44bab0a8a8ea" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 09:19:22 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/personlig-okonomi/2026/02/05/8326024/hoyre-foreslar-endring-av-ask-reglene-vil-inkludere-euronext-growth" target="_blank">Vil endre reglene for aksjesparekonto: – Bedre muligheter for småsparere</a></h2>
-                        <p>Aksjer på Euronext Growth er i dag stengt ute fra aksjesparekontoen. Det vil Høyres Nikolai Astrup gjøre noe med. Nå fremmer han et forslag om å slippe småsparere inn i markedet for vekstaksjer.</p>
+                        <p>En person er påkjørt i Drammen sentrum....</p>
                     </div>
                 </div>
             
@@ -586,7 +600,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 08:24:31 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/motor/2026/02/05/8326081/full-kurskollaps-i-volvo-cars-estimatene-ned-50-prosent-eller-mer" target="_blank">Full kurskollaps: – Estimatene ned 50 prosent eller mer</a></h2>
-                        <p>Volvo Cars-aksjen stuper nær 20 prosent etter svake kvartalstall.</p>
+                        <p>Volvo Cars-aksjen stuper nær 20 prosent etter svake kvartalstall....</p>
                     </div>
                 </div>
             
@@ -598,7 +612,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:34:13 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8326076/panikksalg-i-programvare-visma-vurderer-a-utsette-borsnotering" target="_blank">Panikksalg i programvare: Visma vurderer å utsette børsnotering</a></h2>
-                        <p>Visma kan komme til å utsette en planlagt børsnotering i London, etter økt uro og et bredt kursfall i programvaresektoren.</p>
+                        <p>Visma kan komme til å utsette en planlagt børsnotering i London, etter økt uro og et bredt kursfall i programvaresektoren....</p>
                     </div>
                 </div>
             
@@ -610,7 +624,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:49:20 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/energi/2026/02/05/8326079/ravarestrateg-betydelig-usikkerhet" target="_blank">Råvarestrateg: – Betydelig usikkerhet</a></h2>
-                        <p>Oljeprisen faller for første gang på tre dager, etter at Iran bekreftet at landet nå vil forhandle med USA.</p>
+                        <p>Oljeprisen faller for første gang på tre dager, etter at Iran bekreftet at landet nå vil forhandle med USA....</p>
                     </div>
                 </div>
             
@@ -622,7 +636,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:51:09 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8326080/gar-av-bors-smuler-igjen-til-dagens-aksjonaerer" target="_blank">Går av børs: Smuler igjen til dagens aksjonærer</a></h2>
-                        <p>Aker Horizons kaster kortene og vil avvikle selskapet. Til aksjonærene er det smuler igjen sammenlignet med onsdagens børsverdi.</p>
+                        <p>Aker Horizons kaster kortene og vil avvikle selskapet. Til aksjonærene er det smuler igjen sammenlignet med onsdagens børsverdi....</p>
                     </div>
                 </div>
             
@@ -634,7 +648,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 08:03:35 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326090/oslo-bors-apner-rett-ned" target="_blank">Oslo Børs åpner rett ned. Vend går mot strømmen med kraftig oppgang etter tall.</a></h2>
-                        <p>Oslo Børs åpner rett ned. Vend går mot strømmen med kraftig oppgang etter tall.</p>
+                        <p>Oslo Børs åpner rett ned. Vend går mot strømmen med kraftig oppgang etter tall....</p>
                     </div>
                 </div>
             
@@ -646,7 +660,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:49:43 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/k0356j/kraftig-knekk-for-soelvprisen" target="_blank">Kraftig knekk for sølvprisen</a></h2>
-                        <p>Uroen fortsetter i metallprisen etter flere dager med oppgang.</p>
+                        <p>Uroen fortsetter i metallprisen etter flere dager med oppgang....</p>
                     </div>
                 </div>
             
@@ -658,7 +672,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 08:01:10 GMT
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/43zP1R/vend-hopper-5-prosent-paa-oslo-boers-etter-solid-rapport" target="_blank">Nordic Semiconductor bykser på Oslo Børs</a></h2>
-                        <p>Både Vend og Nordic Semiconductor gjør det bra etter tallslipp.</p>
+                        <p>Både Vend og Nordic Semiconductor gjør det bra etter tallslipp....</p>
                     </div>
                 </div>
             
@@ -670,7 +684,31 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 08:05:10 GMT
                         </div>
                         <h2><a href="https://e24.no/karriere-og-ledelse/i/Ar3AbA/aapenhet-er-ikke-nok-styreverv-krever-doemmekraft" target="_blank">Åpenhet er ikke nok – styreverv krever dømmekraft</a></h2>
-                        <p>Når politikere påtar seg styreverv i selskaper som er tett koblet til offentlig forvaltning, utløses et tilbakevendende mønster i norsk offentlighet: en habilitetsdebatt, en presisering av formelle regler – og til slutt en avgang.</p>
+                        <p>Når politikere påtar seg styreverv i selskaper som er tett koblet til offentlig forvaltning, utløses et tilbakevendende mønster i norsk offentlighet: en habilitetsdebatt, en presis...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/0IAfP97d5pfiU85163h7kwUFe1z2YkT_6gX26OyIGQtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 05:12:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/pci-forslag-opp-i-stortinget-_-alf-willy-var-heldig-som-fikk-behandling-i-bodo-1.17744620" target="_blank">Alf Willy fikk hjertestans på riktig tidspunkt: – Som å vinne i Lotto</a></h2>
+                        <p>Alf Willy Johansen mener det hadde alt å si at han fikk hjerteinfarkt i vanlig arbeidstid. Torsdag skal Stortinget ta stilling til om pasienter som han skal få behandling i Bodø he...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/zcO-3caeVo5H_wFeDgdZdQxjaVAUsLrXujyAhOI5Pskw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 08:01:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/som-dei-forste-i-verda-har-forskarar-ved-ntnu-avdekt-nye-kjenneteikn-for-aggressiv-prostatakreft-1.17743369" target="_blank">Fann bane­brytande metode for å avdekke aggressiv kreftform</a></h2>
+                        <p>­...</p>
                     </div>
                 </div>
             
@@ -682,7 +720,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 06:32:42 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8326056/dette-vil-pavirke-oslo-bors-torsdag" target="_blank">Det var blandet på Wall Street onsdag, mens Asia-børsene faller bredt. Oljeprisen svekkes, men analytiker spår Oslo Børs opp.</a></h2>
-                        <p>Her er faktorene som vil påvirke Oslo Børs torsdag 5. februar.</p>
+                        <p>Her er faktorene som vil påvirke Oslo Børs torsdag 5. februar....</p>
                     </div>
                 </div>
             
@@ -694,7 +732,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 06:39:45 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/samfunn/2026/02/05/8326057/die-welt-derfor-lykkes-ikke-ukraina-samtalene" target="_blank">Die Welt: – Derfor lykkes ikke Ukraina-samtalene</a></h2>
-                        <p>Die Welt: – Derfor lykkes ikke Ukraina-samtalene</p>
+                        <p>Die Welt: – Derfor lykkes ikke Ukraina-samtalene...</p>
                     </div>
                 </div>
             
@@ -706,7 +744,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 06:48:45 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/8325799/dnb-carnegies-ukjente-pengemaskin" target="_blank">Dette er DNB Carnegies «ukjente» pengemaskin</a></h2>
-                        <p>De fleste forbinder meglerhus med aksjer og rådgivning. Hos DNB Carnegie var det renter, valuta og råvarer som ga høyest inntekter i fjor.</p>
+                        <p>De fleste forbinder meglerhus med aksjer og rådgivning. Hos DNB Carnegie var det renter, valuta og råvarer som ga høyest inntekter i fjor....</p>
                     </div>
                 </div>
             
@@ -718,7 +756,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:09:45 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/reise-og-fritid/2026/02/05/8326073/gjennomgaende-hoy-ettersporsel" target="_blank">– Gjennomgående høy etterspørsel</a></h2>
-                        <p>Norwegian-konsernet fraktet 1,52 millioner passasjerer i januar. Konsernsjef Geir Karlsen sier bookingene for resten av vinteren «ser veldig bra ut».</p>
+                        <p>Norwegian-konsernet fraktet 1,52 millioner passasjerer i januar. Konsernsjef Geir Karlsen sier bookingene for resten av vinteren «ser veldig bra ut»....</p>
                     </div>
                 </div>
             
@@ -730,7 +768,7 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:11:21 GMT
                         </div>
                         <h2><a href="https://www.finansavisen.no/finans/2026/02/05/7806953/nod-og-vend-imponerer-eqnr-rally-i-usa-og-tech-aksjer-falt-igjen" target="_blank">10 ting du må vite før børsåpning: NOD og Vend imponerer, EQNR-rally i USA og tech-aksjer falt igjen</a></h2>
-                        <p>10 ting du må vite før børsåpning</p>
+                        <p>10 ting du må vite før børsåpning...</p>
                     </div>
                 </div>
             
@@ -742,59 +780,11 @@ Det pågår livreddende nødhjelp på stedet</p>
                             Thu, 05 Feb 2026 07:11:03 GMT
                         </div>
                         <h2><a href="https://e24.no/karriere-og-ledelse/i/GxQAo4/kevin-24-jobber-i-yrket-med-hoeyest-loenn" target="_blank">Kevin (24) jobber i yrket med høyest lønn</a></h2>
-                        <p>Kevin Tjørhom har ingen høyere utdanning, men fikk likevel jobb i Norges best betalte yrke, ifølge nye SSB-tall.</p>
+                        <p>Kevin Tjørhom har ingen høyere utdanning, men fikk likevel jobb i Norges best betalte yrke, ifølge nye SSB-tall....</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F93528557.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Db118d32d2dd3d138e8c4bcf2c81f0f0480493d19f3d77a6e34ed9bf4cbe73180" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 06:00:48 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/shipping/2026/02/05/8326049/rederisjef-ser-fundamentalt-skifte-vil-endre-prisdynamikken" target="_blank">Rederisjef ser «fundamentalt skifte»: – Vil endre prisdynamikken</a></h2>
-                        <p>VLCC-kjøpene til Sinokor og Gianluigi Apontes MSC «vil sannsynligvis endre prisdynamikken og legge press på tilgjengeligheten av skip», sier rederisjef Moxnes Harfjeld.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F117944459.jpg%3F%26accessToken%3De09159693f83582b1d4cf98992db7a0b491f2b5f9732b3c262ec8deb42a612c7" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 06:01:10 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/teknologi/2026/02/05/8325597/nordic-semiconductor-omsatte-for-170-millioner-dollar-i-4.-kvartal" target="_blank">Nordic Semiconductor omsatte for 170 millioner dollar i 4. kvartal</a></h2>
-                        <p>Nordic Semiconductor legger frem tallene for fjerde kvartal.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F92222488.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dbe48142785f67dc516373c8768600d15c719c74ffbace936608b0573c0a6f0f6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 06:02:57 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/industri/2026/02/05/8325600/litt-svakere-enn-ventet-fra-norske-skog" target="_blank">Litt svakere enn ventet fra Norske Skog</a></h2>
-                        <p>Norske Skog legger frem tallene for fjerde kvartal.</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F58697190.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3D048a788ffd7fb82f4b1b12ef61ae502227a16de69e25cc55e067293995eb49cd" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Thu, 05 Feb 2026 06:08:55 GMT
-                        </div>
-                        <h2><a href="https://www.finansavisen.no/energi/2026/02/05/8325586/kraftig-resultatfall-for-bw-energy" target="_blank">Kraftig resultatfall for BW Energy</a></h2>
-                        <p>BW Energy legger frem tallene for fjerde kvartal.</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 05.02.2026 11:30</div>
+                <div class="footer">Sist oppdatert: 05.02.2026 12:21</div>
             </div>
         </body>
         </html>
