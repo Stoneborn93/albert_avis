@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -132,7 +135,165 @@
                         <p>Telia måtte skru på 2G-nettet igjen etter ni timer for å sikre liv og helse....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/_O_I9_K2mt62BXNe4hGkiwVPOgISM_l8uEIqJRmh5SIg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 09:09:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestfoldogtelemark/farevarsel-om-sno-pa-ostlandet-_-kan-komme-opptil-25-cm-1.17756312" target="_blank">Farevarsel om snø på Østlandet – kan komme opptil 25 cm</a></h2>
+                        <p>Meteorologene advarer om utfordrende kjøreforhold og store mengder snø på Østlandet vest for Oslofjorden fredag.
+– Det er ventet 10 til 25 cm snø på Sør- og Østlandet i morgen, og ...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/9m3LSriaHgiJV5Nrf5W6QgAdQiPp0jcv0hddv4VePONg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 08:24:10 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/hoiby-fortsetter-forklaringen-_-databeslag-og-nachspiel-gjester-blir-tema-1.17756306" target="_blank">Høiby fortsetter forklaringen – databeslag og nachspiel-gjester blir tema</a></h2>
+                        <p>29-åringen fortsetter sin forklaring om den påståtte voldtekten på Skaugum, som han nekter for....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 08:24:24 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/alvorlig-trafikkulykke-i-drammen-1.17756258" target="_blank">Alvorlig trafikkulykke i Drammen</a></h2>
+                        <p>En person er påkjørt i Bjørnstjerne Bjørnsons gate i Drammen.
+Det pågår livreddende nødhjelp på stedet...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 08:27:11 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/buskerud/alvorlig-trafikkulykke-i-drammen-1.17756391" target="_blank">Alvorlig trafikkulykke i Drammen</a></h2>
+                        <p>En person er påkjørt i Drammen sentrum....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/0IAfP97d5pfiU85163h7kwUFe1z2YkT_6gX26OyIGQtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 05:12:12 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nordland/pci-forslag-opp-i-stortinget-_-alf-willy-var-heldig-som-fikk-behandling-i-bodo-1.17744620" target="_blank">Alf Willy fikk hjertestans på riktig tidspunkt: – Som å vinne i Lotto</a></h2>
+                        <p>Alf Willy Johansen mener det hadde alt å si at han fikk hjerteinfarkt i vanlig arbeidstid. Torsdag skal Stortinget ta stilling til om pasienter som han skal få behandling i Bodø he...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/zcO-3caeVo5H_wFeDgdZdQxjaVAUsLrXujyAhOI5Pskw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 08:01:48 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/trondelag/som-dei-forste-i-verda-har-forskarar-ved-ntnu-avdekt-nye-kjenneteikn-for-aggressiv-prostatakreft-1.17743369" target="_blank">Fann bane­brytande metode for å avdekke aggressiv kreftform</a></h2>
+                        <p>­...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/rDs-k20nMwhE0x8mmlYQMg1zaAnwMYcztiuTRXdYCcTw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 06:01:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/norsk-oppdrettslaks_-dodelegheita-under-15-prosent-for-forste-gong-pa-fleire-ar-1.17755381" target="_blank">Norsk oppdrettslaks: Dødelegheita under 15 prosent for første gong på fleire år</a></h2>
+                        <p>Etter år med dystre rekordar og omdømmekrise, viser nye tal at pilene endeleg peikar rett veg for norsk laks....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/aVYJdMmA4WKDHQRspTPwFgOqgT6s29TRhAXgkyBOGd8A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 06:07:40 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/xl/kurderne-frykter-for-fremtiden-i-syria-1.17744759" target="_blank">Kurderne frykter for fremtiden i Syria</a></h2>
+                        <p>– Det er et svik fra verdenssamfunnet, sier en kurder i Syria. Regjeringen har presset kurdiske styrker ut fra store områder....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/ysmtrhbm0tmmd9V6m34agALDFAMPtPy5Qn_eMM74o6fg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 05:00:28 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/tromsogfinnmark/rapport-fra-havforskningsinstituttet_-fiskebestandene-halvert-1.17754880" target="_blank">Fiskebestandene halvert: – Nå kan det bare gå oppover</a></h2>
+                        <p>Fiskebestandene har nådd et nytt bunnpunkt. Men hvis vi tar vare på havene, kan det bare gå oppover for torsken, mener forskningsdirektøren....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/HxyWoMfTBCeeG5HZXw3HBgKIQQFgfd6k4OB70QuNkwPg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 22:17:54 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/700-foderale-agenter-trekkes-ut-av-minneapolis-1.17755933" target="_blank">Føderale agenter fjernes fra Minneapolis: Endrer ingenting</a></h2>
+                        <p>Etter flere uker med demonstrasjoner trekkes nå 700 føderale agenter ut av Minneapolis – 2000 blir værende....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/xJsMmU7z3sAVtMDarz2ItQPpZxVoHEp0BRHTfUyhFFcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 21:50:41 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/iran-bekrefter-mote-med-usa_-her-er-4-mulige-scenarioer-1.17752371" target="_blank">Iran bekrefter møte med USA: Her er 4 mulige scenarioer</a></h2>
+                        <p>Mens mange iranere fortsatt er i sjokk etter regimets brutale maktbruk, jobber nå arabiske land på spreng for å få til samtaler mellom Iran og USA....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/iTTAwM_SCh_TlX83NuajLgjkLmRr4E3IiQu1jqZ0BzzQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 20:29:58 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/golden-dome-skal-gjore-usa-uangripelig_-_-det-ultimate-pressmiddelet-1.17746598" target="_blank">Golden Dome skal gjøre USA uangripelig: – Det ultimate pressmiddelet</a></h2>
+                        <p>Planen gikk i arv fra Ronald til Donald, men kalles et forfengelighets­­prosjekt. Er Trumps gull­skimrende forsvars­drøm bare juggel?...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/fcw47O6b9Yit7IUVHs2FJwRq4VtRVfappqqousw3AM7Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Wed, 04 Feb 2026 20:52:15 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/nyheter/emma-ellingsen-nevnt-i-epstein-dokumentene--1.17756069" target="_blank">Emma Ellingsen nevnt i Epstein-dokumentene</a></h2>
+                        <p>– Jeg våknet fra en blund til en melding om at navnet mitt er i Epstein-dokumentene fordi en kvinne sendte ham Instagram-profilen min i 2019 fordi du er en transkvinne som er «pen,...</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     
                     <div class="card-content">
@@ -190,43 +351,6 @@
                         </div>
                         <h2><a href="https://www.finansavisen.no/personlig-okonomi/2026/02/05/8326024/hoyre-foreslar-endring-av-ask-reglene-vil-inkludere-euronext-growth" target="_blank">Vil endre reglene for aksjesparekonto: – Bedre muligheter for småsparere</a></h2>
                         <p>Aksjer på Euronext Growth er i dag stengt ute fra aksjesparekontoen. Det vil Høyres Nikolai Astrup gjøre noe med. Nå fremmer han et forslag om å slippe småsparere inn i markedet fo...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/9m3LSriaHgiJV5Nrf5W6QgAdQiPp0jcv0hddv4VePONg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 08:24:10 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/hoiby-fortsetter-forklaringen-_-databeslag-og-nachspiel-gjester-blir-tema-1.17756306" target="_blank">Høiby fortsetter forklaringen – databeslag og nachspiel-gjester blir tema</a></h2>
-                        <p>29-åringen fortsetter sin forklaring om den påståtte voldtekten på Skaugum, som han nekter for....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 08:24:24 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/alvorlig-trafikkulykke-i-drammen-1.17756258" target="_blank">Alvorlig trafikkulykke i Drammen</a></h2>
-                        <p>En person er påkjørt i Bjørnstjerne Bjørnsons gate i Drammen.
-Det pågår livreddende nødhjelp på stedet...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 08:27:11 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/buskerud/alvorlig-trafikkulykke-i-drammen-1.17756391" target="_blank">Alvorlig trafikkulykke i Drammen</a></h2>
-                        <p>En person er påkjørt i Drammen sentrum....</p>
                     </div>
                 </div>
             
@@ -327,30 +451,6 @@ Det pågår livreddende nødhjelp på stedet...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/0IAfP97d5pfiU85163h7kwUFe1z2YkT_6gX26OyIGQtQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 05:12:12 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nordland/pci-forslag-opp-i-stortinget-_-alf-willy-var-heldig-som-fikk-behandling-i-bodo-1.17744620" target="_blank">Alf Willy fikk hjertestans på riktig tidspunkt: – Som å vinne i Lotto</a></h2>
-                        <p>Alf Willy Johansen mener det hadde alt å si at han fikk hjerteinfarkt i vanlig arbeidstid. Torsdag skal Stortinget ta stilling til om pasienter som han skal få behandling i Bodø he...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/zcO-3caeVo5H_wFeDgdZdQxjaVAUsLrXujyAhOI5Pskw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 08:01:48 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/trondelag/som-dei-forste-i-verda-har-forskarar-ved-ntnu-avdekt-nye-kjenneteikn-for-aggressiv-prostatakreft-1.17743369" target="_blank">Fann bane­brytande metode for å avdekke aggressiv kreftform</a></h2>
-                        <p>­...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F50963462.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Df9f523ed006b6506c25375ce1f0e4ffa4102ae53463557bfe85efc3e2f2868e5" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -419,18 +519,6 @@ Det pågår livreddende nødhjelp på stedet...</p>
                         </div>
                         <h2><a href="https://e24.no/karriere-og-ledelse/i/GxQAo4/kevin-24-jobber-i-yrket-med-hoeyest-loenn" target="_blank">Kevin (24) jobber i yrket med høyest lønn</a></h2>
                         <p>Kevin Tjørhom har ingen høyere utdanning, men fikk likevel jobb i Norges best betalte yrke, ifølge nye SSB-tall....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rDs-k20nMwhE0x8mmlYQMg1zaAnwMYcztiuTRXdYCcTw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 06:01:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/norsk-oppdrettslaks_-dodelegheita-under-15-prosent-for-forste-gong-pa-fleire-ar-1.17755381" target="_blank">Norsk oppdrettslaks: Dødelegheita under 15 prosent for første gong på fleire år</a></h2>
-                        <p>Etter år med dystre rekordar og omdømmekrise, viser nye tal at pilene endeleg peikar rett veg for norsk laks....</p>
                     </div>
                 </div>
             
@@ -515,18 +603,6 @@ Det pågår livreddende nødhjelp på stedet...</p>
                         </div>
                         <h2><a href="https://e24.no/boers-og-finans/i/wr8llA/nordic-semiconductor-fikk-inntekter-paa-169-5-millioner-dollar-i-fjerde-kvartal" target="_blank">Nordic Semiconductor fikk inntekter på 169,5 millioner dollar</a></h2>
                         <p>Selskapet som produserer databrikker åpner regnskapsbøkene for fjerde kvartal....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/aVYJdMmA4WKDHQRspTPwFgOqgT6s29TRhAXgkyBOGd8A.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 06:07:40 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/xl/kurderne-frykter-for-fremtiden-i-syria-1.17744759" target="_blank">Kurderne frykter for fremtiden i Syria</a></h2>
-                        <p>– Det er et svik fra verdenssamfunnet, sier en kurder i Syria. Regjeringen har presset kurdiske styrker ut fra store områder....</p>
                     </div>
                 </div>
             
@@ -651,30 +727,6 @@ Det pågår livreddende nødhjelp på stedet...</p>
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/ysmtrhbm0tmmd9V6m34agALDFAMPtPy5Qn_eMM74o6fg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 05:00:28 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/tromsogfinnmark/rapport-fra-havforskningsinstituttet_-fiskebestandene-halvert-1.17754880" target="_blank">Fiskebestandene halvert: – Nå kan det bare gå oppover</a></h2>
-                        <p>Fiskebestandene har nådd et nytt bunnpunkt. Men hvis vi tar vare på havene, kan det bare gå oppover for torsken, mener forskningsdirektøren....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/HxyWoMfTBCeeG5HZXw3HBgKIQQFgfd6k4OB70QuNkwPg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 22:17:54 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/700-foderale-agenter-trekkes-ut-av-minneapolis-1.17755933" target="_blank">Føderale agenter fjernes fra Minneapolis: Endrer ingenting</a></h2>
-                        <p>Etter flere uker med demonstrasjoner trekkes nå 700 føderale agenter ut av Minneapolis – 2000 blir værende....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F141098362.jpg%3F%26accessToken%3D0a26b14d691d7ccd56ef982b9897042437706dc369adc0a6dbb9713503a8f409" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -683,18 +735,6 @@ Det pågår livreddende nødhjelp på stedet...</p>
                         </div>
                         <h2><a href="https://www.finansavisen.no/politikk/2026/02/04/8326037/atomavtale-utloper-russland-lover-a-opptre-ansvarlig" target="_blank">Atomavtale utløper: Russland lover å «opptre ansvarlig»</a></h2>
                         <p>Verken Russland eller USA er lenger bundet av begrensningene i den siste atomavtalen mellom landene når den utløper torsdag, konstaterer russiske myndigheter....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/xJsMmU7z3sAVtMDarz2ItQPpZxVoHEp0BRHTfUyhFFcA.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 21:50:41 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/iran-bekrefter-mote-med-usa_-her-er-4-mulige-scenarioer-1.17752371" target="_blank">Iran bekrefter møte med USA: Her er 4 mulige scenarioer</a></h2>
-                        <p>Mens mange iranere fortsatt er i sjokk etter regimets brutale maktbruk, jobber nå arabiske land på spreng for å få til samtaler mellom Iran og USA....</p>
                     </div>
                 </div>
             
@@ -746,43 +786,7 @@ Det pågår livreddende nødhjelp på stedet...</p>
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/iTTAwM_SCh_TlX83NuajLgjkLmRr4E3IiQu1jqZ0BzzQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 20:29:58 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/golden-dome-skal-gjore-usa-uangripelig_-_-det-ultimate-pressmiddelet-1.17746598" target="_blank">Golden Dome skal gjøre USA uangripelig: – Det ultimate pressmiddelet</a></h2>
-                        <p>Planen gikk i arv fra Ronald til Donald, men kalles et forfengelighets­­prosjekt. Er Trumps gull­skimrende forsvars­drøm bare juggel?...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/fcw47O6b9Yit7IUVHs2FJwRq4VtRVfappqqousw3AM7Q.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Wed, 04 Feb 2026 20:52:15 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/nyheter/emma-ellingsen-nevnt-i-epstein-dokumentene--1.17756069" target="_blank">Emma Ellingsen nevnt i Epstein-dokumentene</a></h2>
-                        <p>– Jeg våknet fra en blund til en melding om at navnet mitt er i Epstein-dokumentene fordi en kvinne sendte ham Instagram-profilen min i 2019 fordi du er en transkvinne som er «pen,...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Økonomi">Økonomi</span> 
-                            Wed, 04 Feb 2026 20:28:32 GMT
-                        </div>
-                        <h2><a href="https://e24.no/energi-og-klima/i/XM6m67/frykter-ikke-kraftmangel-i-vinter" target="_blank">Frykter ikke kraftmangel i vinter</a></h2>
-                        <p>Vinterkulde gjør vannmagasinene tappes. – Vi er ikke bekymret, beroliger Inga Nordberg i NVE....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 05.02.2026 09:21</div>
+                <div class="footer">Sist oppdatert: 05.02.2026 09:25</div>
             </div>
         </body>
         </html>
