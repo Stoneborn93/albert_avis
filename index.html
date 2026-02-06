@@ -12,28 +12,30 @@
                 
                 .section-title { color: #03dac6; border-left: 4px solid #03dac6; padding-left: 10px; margin-top: 40px; margin-bottom: 15px; }
 
-                /* Kort Design (Flexbox for bilde til venstre) */
                 .card { 
                     background: #1e1e1e; 
                     margin-bottom: 20px; 
                     border-radius: 8px; 
                     box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-                    display: flex; /* Dette legger bilde og tekst ved siden av hverandre */
+                    display: flex; 
                     overflow: hidden;
-                    align-items: center;
+                    align-items: stretch; /* Sørg for at bildeboksen fyller høyden */
                 }
                 
                 .card-image { 
-                    flex-shrink: 0; /* Ikke krymp bildet */
-                    width: 200px; 
-                    height: 100%;
-                    min-height: 140px;
+                    flex-shrink: 0; 
+                    width: 240px; /* Litt bredere for bedre format */
+                    min-height: 150px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .card-image img { 
                     width: 100%; 
                     height: 100%; 
-                    object-fit: cover; /* Fyller ruten pent */
+                    object-fit: cover; 
                     display: block;
                 }
 
@@ -47,10 +49,11 @@
                 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; background: #333; }
                 .tag.Spill { background: #cf6679; color: black; }
                 .tag.Teknologi { background: #03dac6; color: black; }
+                .tag.Toppsaker { background: #bb86fc; color: black; }
+                .tag.Økonomi { background: #3700b3; color: white; }
 
                 .footer { text-align: center; color: #555; margin-top: 50px; font-size: 0.8rem; }
 
-                /* Mobil-tilpasning: Legg bilde over tekst hvis skjermen er liten */
                 @media (max-width: 600px) {
                     .card { flex-direction: column; }
                     .card-image { width: 100%; height: 200px; }
@@ -168,7 +171,151 @@
                         <p>Bruker salgsinntektene fra Pakistan og Thailand til å betale for Globalconnect-fiber, og ser etter mer å kjøpe i Norden. Aksjonærene får også milliarder....</p>
                     </div>
                 </div>
-            <h2 class='section-title'>🌍 Siste nytt</h2>
+            <h2 class='section-title'>🔥 Toppsaker</h2>
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Zk5Kwsx4T6hu7kuLU-bmwQ63OswIORFE56Hm20MBlpVg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 11:19:13 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/mr/tilsett-i-innovasjon-noreg-og-to-bedriftsleiarar-pa-sunnmore-domde-for-grov-korrupsjon-1.17739924" target="_blank">Tilsett i Innovasjon Noreg dømd for grov korrupsjon</a></h2>
+                        <p>Rådgjevaren i Innovasjon Noreg behandla lånesøknader frå to bedriftseigarar, mot å få pengar under bordet. No er alle tre dømde....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/UrIwKXffzRuYtye3J5p5iAAPfhmwIgnRbgs_t1RrU6iw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Thu, 05 Feb 2026 23:01:00 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/p3/best-akkurat-naa/best-akkurat-na-uke-6_-cowboyfrokost-er-_manedens-urort_-1.17755504" target="_blank">«Helt rå»</a></h2>
+                        <p>ANBEFALING: Disse låtene er best akkurat nå...</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/OMgnglAOOH4qI1gj-cnt3gDsl3BOZKZk67qQ5CEAESag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 10:26:55 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/stor-oslo/tre-pagrepet-etter-innbrudd-i-gullsmed-pa-cc-vest-1.17758333" target="_blank">Tre pågrepet etter innbrudd i gullsmed på CC Vest</a></h2>
+                        <p>De siktede er i 20- og 30-årene og kjent for politiet fra før....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/Yt9pfr4n5IkxEA9j91N4RA5wERu2XHn0FKhbK18VKVYw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 10:52:20 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/innlandet/tung-styrketrening-for-kvinner_-viser-seg-og-vaere-viktig-for-og-under-overgangsalder.-1.17727046" target="_blank">Hevder helsegevinstene er enorme – kvinner bør løfte tungt</a></h2>
+                        <p>Ny forskning viser at du skal løfte så tungt at du ikke orker mer....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/NUguPUKg8FzKhNFVfsXrkg2Sd0vpnf3xnAXmT8a6YhFw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 11:01:21 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/advarer-mot-snever-epstein-gransking_-_-ubegripelig-for-folk-1.17758250" target="_blank">Advarer mot snever Epstein-gransking: – Ubegripelig for folk</a></h2>
+                        <p>Det er ikke godt nok hvis en Epstein-gransking bare tar for seg Utenriksdepartementet, ifølge MDG-leder Arild Hermstad. Han mener Stortinget må gå lenger....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/1Z8rjBO52MP6raie0PrtYATGbqFHvvsaJfUPEG7RLjbw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 11:14:31 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/ratne-epler-eller-rattent-system_-1.17758083" target="_blank">Råtne epler eller råttent system?</a></h2>
+                        <p>Det er slett ikke rart flere spør om det finnes et mønster i alle skandalene....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/-pWhmoT1Ym1ChRYMpY0apQpQrCdAzrsfPftlCh8GHPNg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 09:31:40 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/bussar-utan-bagasjeplass-gir-stor-frustrasjon-for-reisande-pa-vestlandet-1.17756192" target="_blank">Nye bussar har ikkje bagasjeplass: Aleksander fekk nei til liten sekk og barneski</a></h2>
+                        <p>Nye bussar på Vestlandet skulle gjera det enklare å komma med. Men Aleksander Isdal opplevde det motsette då han ville ta med ski på bussen....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/rX1kJ8kG4GkjjUabqmZeTg-Dyifgjqn8BnOQPLNMH2Wg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 09:26:35 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/norge/kronprinsessen-motte-ghislaine-maxwell-pa-clinton-arrangement-i-new-york-i-2012-1.17758161" target="_blank">Kronprinsessen møtte Ghislaine Maxwell på Clinton-arrangement i New York i 2012</a></h2>
+                        <p>Under åpningen av det årlige møtet i Clinton Global Initiative (CGI) i 2012 møtte kronprinsesse Mette-Marit Jeffrey Epsteins ekskjæreste Ghislaine Maxwell....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/3mUqO26k5AzI7s2Q-31hvwZdc66g7XNrN-UBgdS58Yrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 10:14:06 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/vestland/hordaland-tingrett_-tre-menn-domt-for-overgrep-mot-14-ar-gammel-jente-i-bergen-1.17747909" target="_blank">Tre menn dømt for overgrep mot 14-åring</a></h2>
+                        <p>Aktor ville ha alle tre mennene fengslet for overgrep av en 14 år gammel jente i Bergen. Tingretten er enig....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/1Ap1WK5euzzXKfoAQthx7Qal5X491v7dZFMbqSOAkHkw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 04:46:01 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/slik-hjalp-rod-larsen-og-epstein-hverandre-med-rekruttering-1.17754499" target="_blank">Slik hjalp Rød-Larsen og Epstein hverandre med rekruttering</a></h2>
+                        <p>– Epstein lovet mange, mange ganger at jeg skulle få jobbe for FN, sammen med Terje Rød-Larsen, sier en av kvinnene til NRK....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/sWGCVtMVrXEeI0YUTxe0KgLhRSR8LAxOZjTfzO-GvmKw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 07:59:42 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/urix/e-tjenesten_-pst-og-nsm-legger-frem-sine-nasjonale-trusselvurderinger-1.17754778" target="_blank">E-tjenesten: – Verdens­ordenen er i oppløsning</a></h2>
+                        <p>Hvilke trusler utfordrer Norge? De hemmelige tjenestene legger frem sine vurderinger....</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-image"><img src="https://gfx.nrk.no/1IPpJrDWdO9IzbxKvfI3xAjeK0VDkwlAMzybpBuybGGQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span class="tag Toppsaker">Toppsaker</span> 
+                            Fri, 06 Feb 2026 06:33:40 GMT
+                        </div>
+                        <h2><a href="https://www.nrk.no/ytring/sapmi-i-en-urolig-verden-1.17748968" target="_blank">Sápmi i en urolig verden</a></h2>
+                        <p>Urfolksstemmen er viktigere enn noensinne....</p>
+                    </div>
+                </div>
+            <h2 class='section-title'>💰 Økonomi</h2>
                 <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F143986813.png%3F%26accessToken%3D276ebf73871455dfb7880180ff83031665b4177f0960b5b26e0727ebc4ab37e0" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
@@ -214,18 +361,6 @@
                         </div>
                         <h2><a href="https://e24.no/norsk-oekonomi/i/Ok3wOV/ap-vil-ha-gransking-av-utenrikstjenesten" target="_blank">Ap vil ha gransking av Epstein-sakene</a></h2>
                         <p>I kjølvannet av Epstein-filene ønsker statsministeren en gransking ledet av stortinget....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Zk5Kwsx4T6hu7kuLU-bmwQ63OswIORFE56Hm20MBlpVg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 11:19:13 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/mr/tilsett-i-innovasjon-noreg-og-to-bedriftsleiarar-pa-sunnmore-domde-for-grov-korrupsjon-1.17739924" target="_blank">Tilsett i Innovasjon Noreg dømd for grov korrupsjon</a></h2>
-                        <p>Rådgjevaren i Innovasjon Noreg behandla lånesøknader frå to bedriftseigarar, mot å få pengar under bordet. No er alle tre dømde....</p>
                     </div>
                 </div>
             
@@ -298,66 +433,6 @@
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/167mMM/nobelinstituttet-vil-ikke-gi-innsyn-i-gaveliste" target="_blank">Nobelinstituttet vil ikke gi innsyn i gaveliste</a></h2>
                         <p>Økokrim etterforsker Jagland for mulig grov korrupsjon. Men Nobelinstituttet vil ikke gi innsyn i gaver og andre ytelser til Nobelkomiteens medlemmer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/UrIwKXffzRuYtye3J5p5iAAPfhmwIgnRbgs_t1RrU6iw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Thu, 05 Feb 2026 23:01:00 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/p3/best-akkurat-naa/best-akkurat-na-uke-6_-cowboyfrokost-er-_manedens-urort_-1.17755504" target="_blank">«Helt rå»</a></h2>
-                        <p>ANBEFALING: Disse låtene er best akkurat nå...</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/OMgnglAOOH4qI1gj-cnt3gDsl3BOZKZk67qQ5CEAESag.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 10:26:55 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/stor-oslo/tre-pagrepet-etter-innbrudd-i-gullsmed-pa-cc-vest-1.17758333" target="_blank">Tre pågrepet etter innbrudd i gullsmed på CC Vest</a></h2>
-                        <p>De siktede er i 20- og 30-årene og kjent for politiet fra før....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/Yt9pfr4n5IkxEA9j91N4RA5wERu2XHn0FKhbK18VKVYw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 10:52:20 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/innlandet/tung-styrketrening-for-kvinner_-viser-seg-og-vaere-viktig-for-og-under-overgangsalder.-1.17727046" target="_blank">Hevder helsegevinstene er enorme – kvinner bør løfte tungt</a></h2>
-                        <p>Ny forskning viser at du skal løfte så tungt at du ikke orker mer....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/NUguPUKg8FzKhNFVfsXrkg2Sd0vpnf3xnAXmT8a6YhFw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 11:01:21 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/advarer-mot-snever-epstein-gransking_-_-ubegripelig-for-folk-1.17758250" target="_blank">Advarer mot snever Epstein-gransking: – Ubegripelig for folk</a></h2>
-                        <p>Det er ikke godt nok hvis en Epstein-gransking bare tar for seg Utenriksdepartementet, ifølge MDG-leder Arild Hermstad. Han mener Stortinget må gå lenger....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/1Z8rjBO52MP6raie0PrtYATGbqFHvvsaJfUPEG7RLjbw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 11:14:31 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/ratne-epler-eller-rattent-system_-1.17758083" target="_blank">Råtne epler eller råttent system?</a></h2>
-                        <p>Det er slett ikke rart flere spør om det finnes et mønster i alle skandalene....</p>
                     </div>
                 </div>
             
@@ -458,42 +533,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/-pWhmoT1Ym1ChRYMpY0apQpQrCdAzrsfPftlCh8GHPNg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 09:31:40 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/bussar-utan-bagasjeplass-gir-stor-frustrasjon-for-reisande-pa-vestlandet-1.17756192" target="_blank">Nye bussar har ikkje bagasjeplass: Aleksander fekk nei til liten sekk og barneski</a></h2>
-                        <p>Nye bussar på Vestlandet skulle gjera det enklare å komma med. Men Aleksander Isdal opplevde det motsette då han ville ta med ski på bussen....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/rX1kJ8kG4GkjjUabqmZeTg-Dyifgjqn8BnOQPLNMH2Wg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 09:26:35 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/norge/kronprinsessen-motte-ghislaine-maxwell-pa-clinton-arrangement-i-new-york-i-2012-1.17758161" target="_blank">Kronprinsessen møtte Ghislaine Maxwell på Clinton-arrangement i New York i 2012</a></h2>
-                        <p>Under åpningen av det årlige møtet i Clinton Global Initiative (CGI) i 2012 møtte kronprinsesse Mette-Marit Jeffrey Epsteins ekskjæreste Ghislaine Maxwell....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/3mUqO26k5AzI7s2Q-31hvwZdc66g7XNrN-UBgdS58Yrg.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 10:14:06 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/vestland/hordaland-tingrett_-tre-menn-domt-for-overgrep-mot-14-ar-gammel-jente-i-bergen-1.17747909" target="_blank">Tre menn dømt for overgrep mot 14-åring</a></h2>
-                        <p>Aktor ville ha alle tre mennene fengslet for overgrep av en 14 år gammel jente i Bergen. Tingretten er enig....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     
                     <div class="card-content">
                         <div class="meta">
@@ -586,18 +625,6 @@
                         </div>
                         <h2><a href="https://e24.no/naeringsliv/i/JOEAnR/nho-undersoekelse-tegn-til-bedring-i-byggenaeringen" target="_blank">NHO-undersøkelse: Tegn til bedring i byggenæringen</a></h2>
                         <p>Bransjens pessimisme har «avtatt markant», men situasjonen er fortsatt «svært krevende», ifølge arbeidsgivernes hovedorganisasjon....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/1Ap1WK5euzzXKfoAQthx7Qal5X491v7dZFMbqSOAkHkw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 04:46:01 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/slik-hjalp-rod-larsen-og-epstein-hverandre-med-rekruttering-1.17754499" target="_blank">Slik hjalp Rød-Larsen og Epstein hverandre med rekruttering</a></h2>
-                        <p>– Epstein lovet mange, mange ganger at jeg skulle få jobbe for FN, sammen med Terje Rød-Larsen, sier en av kvinnene til NRK....</p>
                     </div>
                 </div>
             
@@ -698,18 +725,6 @@
                 </div>
             
                 <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/sWGCVtMVrXEeI0YUTxe0KgLhRSR8LAxOZjTfzO-GvmKw.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 07:59:42 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/urix/e-tjenesten_-pst-og-nsm-legger-frem-sine-nasjonale-trusselvurderinger-1.17754778" target="_blank">E-tjenesten: – Verdens­ordenen er i oppløsning</a></h2>
-                        <p>Hvilke trusler utfordrer Norge? De hemmelige tjenestene legger frem sine vurderinger....</p>
-                    </div>
-                </div>
-            
-                <div class="card">
                     <div class="card-image"><img src="https://imaginary.finansavisen.no/resize?width=1280&force=false&url=https%3A%2F%2Fsmooth-storage.aptoma.no%2Fusers%2Fhegnar%2Fimages%2F115713032.jpg%3Ft%5Bquality%5D%3D100%26%26accessToken%3Dab83407cd69c8bed36bc5a3924dbc12f9eaaa0d92262e7d2f77bf6e42dce63e6" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
                     <div class="card-content">
                         <div class="meta">
@@ -769,19 +784,7 @@
                     </div>
                 </div>
             
-                <div class="card">
-                    <div class="card-image"><img src="https://gfx.nrk.no/1IPpJrDWdO9IzbxKvfI3xAjeK0VDkwlAMzybpBuybGGQ.jpg" alt="Nyhetsbilde" onerror="this.style.display='none'"></div>
-                    <div class="card-content">
-                        <div class="meta">
-                            <span class="tag Toppsaker">Toppsaker</span> 
-                            Fri, 06 Feb 2026 06:33:40 GMT
-                        </div>
-                        <h2><a href="https://www.nrk.no/ytring/sapmi-i-en-urolig-verden-1.17748968" target="_blank">Sápmi i en urolig verden</a></h2>
-                        <p>Urfolksstemmen er viktigere enn noensinne....</p>
-                    </div>
-                </div>
-            
-                <div class="footer">Sist oppdatert: 06.02.2026 12:21</div>
+                <div class="footer">Sist oppdatert: 06.02.2026 12:25</div>
             </div>
         </body>
         </html>
